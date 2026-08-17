@@ -41,6 +41,16 @@
 
   if (out.days) { tick(); }
 
+  /* ---------- focus the email field when arriving via #launch ---------- */
+  document.addEventListener('click', function (ev) {
+    var a = ev.target && ev.target.closest ? ev.target.closest('a[href="#launch"]') : null;
+    if (!a) { return; }
+    setTimeout(function () {
+      var input = document.getElementById('notify-email');
+      if (input && !input.disabled) { input.focus({ preventScroll: true }); }
+    }, 600);
+  }, false);
+
   /* ---------- waitlist form ---------- */
   var form = document.getElementById('notify-form');
   if (!form) { return; }

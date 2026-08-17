@@ -197,3 +197,23 @@ h3 { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
   .cd__unit { min-width: 62px; padding: 10px 2px; }
   .cd__num { font-size: 23px; }
 }
+
+/* --- przewijanie do formularza --- */
+html { scroll-behavior: smooth; }
+#launch { scroll-margin-top: 24px; }
+
+.cta {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; flex-wrap: wrap;
+  border: 1px solid var(--line); border-radius: 14px;
+  padding: 20px 24px; margin-top: 40px;
+}
+.cta__text { font-size: 16px; font-weight: 600; color: var(--ink); margin: 0; }
+.cta__btn {
+  font-size: 15px; font-weight: 600; padding: 11px 22px;
+  border-radius: 9px; background: var(--brand); color: #fff;
+  text-decoration: none; white-space: nowrap;
+}
+.cta__btn:hover { background: var(--brand-dark); text-decoration: none; }
+
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
