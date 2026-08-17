@@ -1,165 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy — Store Feed by GrowBoost</title>
-  <link rel="stylesheet" href="/assets/consent.css">
-  <script src="/assets/consent.js"></script>
-  </head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GrowBoost — Store Feed for Shopify</title>
+<meta name="description" content="GrowBoost builds Store Feed, a Shopify widget that makes your store feel alive to every customer that visits it.">
+<link rel="icon" type="image/png" href="/assets/favicon-64.png">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/consent.css">
+<script src="/assets/consent.js"></script>
+</head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WVR58V76"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <div class="container">
 
-    <div class="logo">
-      <div class="logo-mark">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <rect x="4" y="5" width="16" height="3.5" rx="1.75" fill="white"/>
-          <rect x="4" y="10.25" width="16" height="3.5" rx="1.75" fill="white"/>
-          <rect x="4" y="15.5" width="16" height="3.5" rx="1.75" fill="white"/>
-        </svg>
-      </div>
-      <div class="logo-name">Store Feed <span>by GrowBoost</span></div>
+<main class="wrap">
+
+  <a class="brand" href="/">
+    <svg class="brand__mark" viewBox="0 0 48 48" width="34" height="34" aria-hidden="true">
+      <rect width="48" height="48" rx="11" fill="#7F77DD"/>
+      <rect x="11" y="28" width="7" height="9" rx="3.5" fill="#fff"/>
+      <rect x="20.5" y="22" width="7" height="15" rx="3.5" fill="#fff"/>
+      <rect x="30" y="11" width="7" height="26" rx="3.5" fill="#fff"/>
+    </svg>
+    <span class="brand__name">Grow<span>Boost</span></span>
+  </a>
+
+  <h1>Makes your store feel alive<br>to every customer that visits it.</h1>
+  <p class="lead">Store Feed is a Shopify widget that surfaces your newest products, blog posts and promotions right where shoppers are looking.</p>
+
+  <div class="app">
+    <img class="app__icon" src="/assets/store-feed-icon.png" width="56" height="56" alt="">
+    <div>
+      <p class="app__name">Store Feed</p>
+      <p class="app__meta">Shopify App Store · Free and Starter plans</p>
     </div>
-
-    <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: July 7, 2026</p>
-
-    <p>
-      This Privacy Policy describes how GrowBoost ("we", "us", or "our") collects, uses, and
-      protects information when you install and use the <strong>Store Feed</strong> application
-      (the "App") available on the Shopify App Store.
-    </p>
-
-    <h2>1. Information We Collect</h2>
-    <p>When you install Store Feed, we collect and store the following information:</p>
-    <ul>
-      <li><strong>Shop domain</strong> — your Shopify store's permanent domain (e.g. yourstore.myshopify.com)</li>
-      <li><strong>Access token</strong> — a Shopify API access token that allows the App to read your store's products, blog articles, and price rules in order to build the feed</li>
-      <li><strong>App configuration</strong> — your widget settings (title, colors, icon set, visibility preferences, etc.)</li>
-      <li><strong>Aggregated analytics</strong> — anonymous, aggregated counts of widget impressions and clicks per day, broken down by device type (desktop, tablet, mobile). We do not collect or store any personal data about your store visitors.</li>
-    </ul>
-
-    <h2>2. Information We Do Not Collect</h2>
-    <p>We do not collect:</p>
-    <ul>
-      <li>Personal data of your store's customers (names, emails, addresses, payment information)</li>
-      <li>Customer browsing history or individual tracking data</li>
-      <li>Any data beyond what is necessary to operate the App</li>
-    </ul>
-
-    <h2>3. How We Use Your Information</h2>
-    <p>We use the collected information exclusively to:</p>
-    <ul>
-      <li>Display the Store Feed widget on your storefront with your products, blog posts, and promotions</li>
-      <li>Store and refresh the feed cache to ensure fast load times</li>
-      <li>Show aggregated analytics (impressions, clicks, CTR) in your app dashboard</li>
-      <li>Manage your subscription plan (Free or Starter)</li>
-    </ul>
-    <p>We do not sell, rent, share, or otherwise disclose your data to third parties for their own purposes.</p>
-
-    <h2>4. Data Storage and Security</h2>
-    <p>
-      Your data is stored in a PostgreSQL database hosted on Supabase (located in the United States).
-      Access to the database is restricted through Row-Level Security (RLS) and is only accessible
-      by the App's backend. We use industry-standard security practices to protect your data.
-    </p>
-    <p>
-      Your Shopify access token is stored securely in our database and is used solely to make
-      authorized API calls to your store. We do not log or share access tokens.
-    </p>
-
-    <h2>5. Data Retention</h2>
-    <p>
-      We retain your data for as long as the App is installed on your store. When you uninstall
-      the App, we mark your store as uninstalled and stop accessing your Shopify store data.
-      Upon receiving a <em>shop/redact</em> webhook from Shopify (typically 48 hours after
-      uninstall), we permanently delete all data associated with your store, including the
-      feed cache, analytics, and configuration.
-    </p>
-
-    <h2>6. Customer Data Requests</h2>
-    <p>
-      As Store Feed does not collect any personal data about your store's customers, we have
-      no customer data to provide or delete in response to customer data requests. We acknowledge
-      and comply with all Shopify mandatory privacy webhooks:
-    </p>
-    <ul>
-      <li><strong>customers/data_request</strong> — acknowledged; no customer data stored</li>
-      <li><strong>customers/redact</strong> — acknowledged; no customer data stored</li>
-      <li><strong>shop/redact</strong> — all shop data is permanently deleted</li>
-    </ul>
-
-    <h2>7. Third-Party Services</h2>
-    <p>Store Feed uses the following third-party services to operate:</p>
-    <ul>
-      <li><strong>Shopify</strong> — e-commerce platform and API provider (<a href="https://www.shopify.com/legal/privacy" target="_blank">Shopify Privacy Policy</a>)</li>
-      <li><strong>Supabase</strong> — database hosting (<a href="https://supabase.com/privacy" target="_blank">Supabase Privacy Policy</a>)</li>
-      <li><strong>Fly.io</strong> — application hosting (<a href="https://fly.io/legal/privacy-policy/" target="_blank">Fly.io Privacy Policy</a>)</li>
-    </ul>
-
-    <h2>8. Cookies and Tracking</h2>
-    <p>
-      The Store Feed widget uses <code>sessionStorage</code> (not cookies) to remember whether
-      a visitor has dismissed or minimized the widget. This data is stored locally in the
-      visitor's browser and is not transmitted to our servers. It is automatically cleared when
-      the browser session ends.
-    </p>
-
-
-<h2>9. Cookies on This Website</h2>
-    <p>
-      This section covers growboost.pl itself, not the Store Feed widget described above.
-    </p>
-    <p>
-      <strong>Strictly necessary.</strong> We store your cookie choice in your browser's
-      local storage (key <code>gb_consent_v1</code>) so the consent banner does not
-      reappear on every visit. This is set without consent under GDPR Art. 6(1)(f).
-    </p>
-    <p>
-      <strong>Analytics — consent only.</strong> With your permission we run Google
-      Analytics 4 via Google Tag Manager to count page views. The cookies
-      <code>_ga</code> and <code>_ga_&lt;ID&gt;</code> (2 years) are set only after you
-      click "Allow analytics". We use Google Consent Mode v2 with
-      <code>ad_storage</code>, <code>ad_user_data</code> and
-      <code>ad_personalization</code> permanently set to denied — we run no advertising
-      or remarketing cookies. Data is processed by Google Ireland Limited and retained
-      for 14 months.
-    </p>
-    <p>
-      You can change your choice at any time:
-      <a href="#" data-gb-consent-open>open cookie settings</a>.
-    </p>
-
-
-    <h2>10. Changes to This Policy</h2>
-    <p>
-      We may update this Privacy Policy from time to time. We will notify merchants of any
-      significant changes by updating the "Last updated" date at the top of this page.
-      Continued use of the App after changes are posted constitutes acceptance of the
-      updated policy.
-    </p>
-
-    <hr class="divider">
-
-    <div class="contact-box">
-      <h2>Contact Us</h2>
-      <p>
-        If you have any questions about this Privacy Policy or how we handle your data,
-        please contact us at:
-      </p>
-      <p>
-        <strong>GrowBoost</strong><br>
-        Email: <a href="mailto:support@growboost.pl">support@growboost.pl</a>
-      </p>
-    </div>
-
-    <footer>
-      <p>&copy; 2026 GrowBoost. All rights reserved.</p>
-    </footer>
-
   </div>
+
+  <h2>Contact</h2>
+  <p>Support: <a href="mailto:support@growboost.pl">support@growboost.pl</a></p>
+
+  <p class="meta">
+    <a href="/privacy-policy/">Privacy policy</a> ·
+    <a href="#" data-gb-consent-open>Cookie settings</a>
+  </p>
+</main>
 </body>
 </html>
