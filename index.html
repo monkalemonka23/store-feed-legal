@@ -21,6 +21,7 @@
 <link rel="stylesheet" href="/assets/site.css">
 <link rel="stylesheet" href="/assets/consent.css">
 <script src="/assets/consent.js"></script>
+<script src="/assets/launch.js" defer></script>
 
 <script type="application/ld+json">
 {
@@ -66,6 +67,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="app__meta">Free plan · Starter $5.99/month · No code required</p>
     </div>
   </div>
+
+  <section class="launch" aria-labelledby="launch-h">
+    <p class="launch__label" id="launch-h">Planned release date: 31 August 2026</p>
+
+    <div class="cd" id="countdown">
+      <span class="cd__unit"><strong class="cd__num" id="cd-days">–</strong><span class="cd__cap">days</span></span>
+      <span class="cd__unit"><strong class="cd__num" id="cd-hours">–</strong><span class="cd__cap">hours</span></span>
+      <span class="cd__unit"><strong class="cd__num" id="cd-minutes">–</strong><span class="cd__cap">minutes</span></span>
+      <span class="cd__unit"><strong class="cd__num" id="cd-seconds">–</strong><span class="cd__cap">seconds</span></span>
+    </div>
+
+    <form id="notify-form" novalidate>
+      <div class="nf__row">
+        <label class="nf__trap" for="notify-company">Company</label>
+        <input class="nf__trap" type="text" id="notify-company" name="company" tabindex="-1" autocomplete="off">
+
+        <label class="nf__trap" for="notify-email">Email address</label>
+        <input class="nf__input" type="email" id="notify-email" name="email"
+               placeholder="you@yourstore.com" autocomplete="email" required>
+
+        <button class="nf__btn" type="submit" id="notify-btn">Notify me</button>
+      </div>
+
+      <label class="nf__consent" for="notify-consent">
+        <input type="checkbox" id="notify-consent" required>
+        <span>I agree that GrowBoost may send me <strong>one</strong> email announcing the Store Feed launch.
+        No newsletter, no other marketing, no sharing with anyone else. My address is deleted after that
+        email is sent, and I can withdraw this consent at any time by writing to support@growboost.pl.</span>
+      </label>
+
+      <p class="nf__err" id="notify-error" role="alert" hidden></p>
+    </form>
+
+    <p class="nf__ok" id="notify-ok" tabindex="-1" hidden>Thanks — we'll email you once on launch day.</p>
+  </section>
 
   <h2>What your customers see</h2>
   <p class="sub">One feed, newest first. Every entry links straight to the product, article or collection behind it.</p>
