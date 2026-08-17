@@ -1,11 +1,12 @@
-/* growboost.pl — styl strony glownej.
-   Reguly banera cookies sa w assets/consent.css. */
+/* growboost.pl — strona glowna. Baner cookies: assets/consent.css */
 
 :root {
   --paper: #ffffff;
   --ink: #1a1a1a;
   --ink-soft: #4a4a55;
+  --ink-mute: #6b6b78;
   --brand: #7F77DD;
+  --brand-dark: #534AB7;
   --brand-soft: #f5f4fe;
   --line: #ececf5;
 }
@@ -21,83 +22,125 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-.wrap {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 60px 24px 80px;
-}
-
-/* --- logo --- */
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 11px;
-  margin-bottom: 56px;
-  text-decoration: none;
-}
-.brand__mark { display: block; border-radius: 8px; }
-.brand__name {
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  color: var(--ink);
-}
-.brand__name span { color: var(--brand); }
-
-/* --- tekst --- */
-h1 {
-  font-size: 34px;
-  line-height: 1.25;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  margin-bottom: 16px;
-}
-
-h2 {
-  font-size: 20px;
-  font-weight: 600;
-  margin: 48px 0 12px;
-}
+.wrap { max-width: 760px; margin: 0 auto; padding: 52px 24px 80px; }
 
 p { margin-bottom: 16px; color: #333; }
-
-.lead {
-  font-size: 18px;
-  color: var(--ink-soft);
-  max-width: 34em;
-}
-
 a { color: var(--brand); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
+/* --- logo --- */
+.brand {
+  display: inline-flex; align-items: center; gap: 11px;
+  margin-bottom: 60px; text-decoration: none;
+}
+.brand__mark { display: block; border-radius: 8px; }
+.brand__name { font-size: 18px; font-weight: 600; letter-spacing: -0.01em; color: var(--ink); }
+.brand__name span { color: var(--brand); }
+
+/* --- hero --- */
+.pill {
+  display: inline-block;
+  background: var(--brand-soft);
+  color: var(--brand-dark);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 5px 13px;
+  border-radius: 999px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 1.18;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  margin-bottom: 18px;
+}
+h1 em { font-style: normal; color: var(--brand); }
+
+.lead { font-size: 19px; line-height: 1.6; color: var(--ink-soft); max-width: 33em; margin-bottom: 28px; }
+
+h2 {
+  font-size: 24px; font-weight: 700; letter-spacing: -0.015em;
+  margin: 64px 0 10px;
+}
+h3 { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+
+.sub { color: var(--ink-mute); margin-bottom: 26px; max-width: 34em; }
+
 /* --- karta aplikacji --- */
 .app {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  background: var(--brand-soft);
-  border-radius: 14px;
-  padding: 20px 22px;
-  margin-top: 36px;
+  display: flex; align-items: center; gap: 16px;
+  background: var(--brand-soft); border-radius: 14px; padding: 18px 20px;
 }
 .app__icon { display: block; border-radius: 12px; flex: none; }
 .app__name { font-size: 17px; font-weight: 600; color: var(--ink); margin: 0; }
-.app__meta { font-size: 14px; color: #6b6b78; margin: 0; }
+.app__meta { font-size: 14px; color: var(--ink-mute); margin: 0; }
+
+/* --- podglad feedu --- */
+.feed {
+  border: 1px solid var(--line); border-radius: 14px;
+  padding: 18px 20px; margin-bottom: 8px;
+}
+.feed__head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding-bottom: 12px; margin-bottom: 4px; border-bottom: 1px solid var(--line);
+}
+.feed__title { font-size: 15px; font-weight: 600; }
+.feed__time { font-size: 12px; color: #9a9aa6; }
+.feed__row { display: flex; gap: 12px; align-items: flex-start; padding: 11px 0; }
+.feed__row + .feed__row { border-top: 1px solid #f6f6fa; }
+.feed__tag {
+  flex: none; font-size: 11px; font-weight: 600; letter-spacing: 0.03em;
+  text-transform: uppercase; padding: 3px 8px; border-radius: 6px;
+  margin-top: 2px; min-width: 74px; text-align: center;
+}
+.tag--product { background: #EEEDFE; color: #3C3489; }
+.tag--blog { background: #E1F5EE; color: #085041; }
+.tag--promo { background: #FAECE7; color: #712B13; }
+.feed__text { font-size: 15px; line-height: 1.45; }
+.feed__ago { display: block; font-size: 13px; color: #9a9aa6; }
+
+/* --- siatka cech --- */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; }
+.card {
+  border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px;
+}
+.card p { font-size: 15px; color: var(--ink-mute); margin: 0; }
+
+/* --- cennik --- */
+.plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+.plan { border: 1px solid var(--line); border-radius: 14px; padding: 22px; }
+.plan--hi { border: 2px solid var(--brand); }
+.plan__name { font-size: 14px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--brand-dark); margin-bottom: 6px; }
+.plan__price { font-size: 30px; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 14px; }
+.plan__price small { font-size: 15px; font-weight: 400; color: var(--ink-mute); letter-spacing: 0; }
+.plan ul { list-style: none; }
+.plan li { font-size: 15px; color: var(--ink-soft); padding-left: 22px; position: relative; margin-bottom: 7px; }
+.plan li::before {
+  content: ""; position: absolute; left: 4px; top: 9px;
+  width: 8px; height: 4px; border-left: 2px solid var(--brand);
+  border-bottom: 2px solid var(--brand); transform: rotate(-45deg);
+}
+
+/* --- faq --- */
+.faq { border-top: 1px solid var(--line); padding: 18px 0; }
+.faq h3 { margin-bottom: 6px; }
+.faq p { font-size: 15px; color: var(--ink-soft); margin: 0; }
 
 /* --- stopka --- */
 .meta {
-  margin-top: 56px;
-  padding-top: 20px;
-  border-top: 1px solid var(--line);
-  font-size: 14px;
-  color: #999;
+  margin-top: 64px; padding-top: 20px; border-top: 1px solid var(--line);
+  font-size: 14px; color: #999;
 }
 .meta a { color: #999; text-decoration: underline; }
 .meta a:hover { color: var(--brand); }
 
 @media (max-width: 560px) {
-  .wrap { padding: 40px 18px 60px; }
-  h1 { font-size: 27px; }
-  .lead { font-size: 16px; }
-  .app { padding: 16px 18px; gap: 13px; }
+  .wrap { padding: 36px 18px 60px; }
+  h1 { font-size: 29px; }
+  h2 { font-size: 21px; margin-top: 48px; }
+  .lead { font-size: 17px; }
+  .feed__tag { min-width: 0; }
 }
