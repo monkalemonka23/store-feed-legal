@@ -1,0 +1,140 @@
+/* growboost.pl — styl wspólny. Bez zewnętrznych fontów i CDN:
+   strona nie wysyła żadnego żądania do obcego serwera przed zgodą. */
+
+:root {
+  --paper: #F2F5F0;
+  --ink: #16231B;
+  --ink-soft: #4A5B50;
+  --forest: #2C6A4C;
+  --line: #D3DCD0;
+  --card: #FFFFFF;
+  --display: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --body: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.wrap {
+  max-width: 46rem;
+  margin: 0 auto;
+  padding: 3.5rem 1.25rem 6rem;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--forest);
+  margin: 0 0 0.75rem;
+  font-weight: 600;
+}
+
+h1 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(2rem, 6vw, 3rem);
+  line-height: 1.12;
+  margin: 0 0 0.5rem;
+}
+
+h2 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.25;
+  margin: 2.75rem 0 0.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--line);
+}
+
+h3 { font-size: 1rem; margin: 1.5rem 0 0.4rem; }
+
+p, li { color: var(--ink-soft); }
+p { margin: 0 0 1rem; }
+li { margin-bottom: 0.4rem; }
+
+.lead { font-size: 1.05rem; color: var(--ink); }
+
+a { color: var(--forest); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 1.5rem;
+  font-size: 0.92rem;
+}
+th, td {
+  text-align: left;
+  padding: 0.6rem 0.75rem;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+th { color: var(--ink); font-weight: 600; }
+td { color: var(--ink-soft); }
+
+.meta {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+/* --- baner cookies --- */
+.gb-consent {
+  position: fixed;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  max-width: 34rem;
+  margin-left: auto;
+  background: var(--card);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--forest);
+  border-radius: 4px;
+  padding: 1.1rem 1.25rem;
+  box-shadow: 0 12px 32px rgba(22, 35, 27, 0.14);
+  z-index: 9999;
+}
+
+.gb-consent__text {
+  margin: 0 0 0.9rem;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+.gb-consent__actions {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.gb-btn {
+  font: inherit;
+  font-size: 0.88rem;
+  padding: 0.55rem 1rem;
+  border-radius: 3px;
+  cursor: pointer;
+  border: 1px solid var(--forest);
+}
+
+.gb-btn--solid { background: var(--forest); color: #fff; }
+.gb-btn--ghost { background: transparent; color: var(--forest); }
+.gb-btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+
+@media (max-width: 480px) {
+  .gb-btn { flex: 1 1 auto; }
+}
