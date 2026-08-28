@@ -4,7 +4,7 @@
 (function () {
   'use strict';
 
-  var LAUNCH_ISO = '2026-08-31T00:00:00+02:00';
+  var LAUNCH_ISO = '2026-09-30T00:00:00+02:00';
 
   var GOOGLE_FORM_ID  = '1FAIpQLSeskbrcZf3ttK_oM5Q6zuBnhjsnauQIrLC_rvTTS4PV7dqijg';
   var ENTRY_EMAIL     = 'entry.1924395242';
