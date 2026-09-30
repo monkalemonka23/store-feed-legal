@@ -1,0 +1,42 @@
+# GrowBoost
+
+> GrowBoost builds small, focused apps for Shopify storefronts. Each app installs
+> as a Shopify app block (no theme code), requests the narrowest set of API scopes
+> it needs, and stores no personal data about shoppers. Support: support@growboost.pl.
+
+One project is published so far. Every project has a single page that carries its
+overview, screenshots, documentation, FAQ and change log under one URL, with the
+sections addressable by fragment (#doc, #faq, #changelog).
+
+## Store Feed — What's New Web Widget
+
+A chronological "what's new" feed for a Shopify storefront: new products, blog
+articles and active promotions in one widget, on any page, in the header or in
+the footer. Free plan, or Starter at $5.99/month. Version 1 has been submitted to
+the Shopify App Store review; planned release 15 October 2026.
+
+- [Project page](https://growboost.pl/store-feed-what-s-new-app/): overview, pricing and screenshots
+- [Documentation](https://growboost.pl/store-feed-what-s-new-app/#doc): numbered guide, sections 1-7
+- [Documentation, plain text](https://growboost.pl/store-feed-what-s-new-app/store-feed-help.md): the same guide as Markdown
+- [FAQ](https://growboost.pl/store-feed-what-s-new-app/#faq): pre-install questions and troubleshooting (section 8)
+- [Change log](https://growboost.pl/store-feed-what-s-new-app/#changelog): released versions
+
+Key facts, so they are not guessed:
+
+- Entries are products, blog posts and promotions from a 7, 14 or 30 day window.
+- The feed holds up to 5 entries on the Free plan and 5, 10 or 20 on Starter.
+- When there is more to show than there are places, promotions are picked first,
+  then blog posts, then products; the chosen entries are then sorted newest first.
+- Discount codes are shown only when they are available to all customers, or when
+  the discount carries the tag `public`.
+- The widget takes the background, text colour and font of the section it sits in.
+- The feed refreshes automatically every night at 00:15 UTC; a manual refresh is
+  available in the app once every 5 minutes.
+- The Free plan shows a Store Feed icon in the widget footer; Starter does not.
+- The app requests no customer scopes and does no per-visitor tracking.
+
+## Company
+
+- [Projects](https://growboost.pl/): the list of GrowBoost projects
+- [Privacy policy](https://growboost.pl/privacy-policy/): what the app and the site store
+- Contact: support@growboost.pl, replies within 24 hours on business days

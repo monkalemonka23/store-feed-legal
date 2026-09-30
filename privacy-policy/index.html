@@ -126,8 +126,27 @@
     }
     footer a { color: #aaa; text-decoration: underline; }
     footer a:hover { color: #7F77DD; }
+    .sitenav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0 0 40px;
+    }
+    .sitenav--bottom { margin: 40px 0 0; }
+    .sitenav a {
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 6px 13px;
+      border-radius: 999px;
+      background: #f5f4fe;
+      color: #534AB7;
+    }
+    .sitenav a:hover { background: #7F77DD; color: #fff; }
+    .sitenav a:focus-visible { outline: 2px solid #7F77DD; outline-offset: 2px; }
     @media (max-width: 560px) {
       .container { padding: 40px 18px 60px; }
+      .sitenav a { font-size: 13px; padding: 5px 10px; }
       h1 { font-size: 26px; }
       table { font-size: 13px; }
       th, td { padding: 8px; }
@@ -144,6 +163,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <img class="logo-mark" src="/assets/store-feed-icon.png" width="40" height="40" alt="">
       <span class="logo-name">Store Feed <span>by GrowBoost</span></span>
     </a>
+
+    <nav class="sitenav" aria-label="Site">
+      <a href="/">Projects</a>
+      <a href="/store-feed-what-s-new-app/">Store Feed</a>
+      <a href="/store-feed-what-s-new-app/#screens">Screenshots</a>
+      <a href="/store-feed-what-s-new-app/#doc">Documentation</a>
+      <a href="/store-feed-what-s-new-app/#faq">FAQ</a>
+      <a href="/store-feed-what-s-new-app/#changelog">Change log</a>
+    </nav>
 
     <h1>Privacy Policy</h1>
     <p class="updated">Last updated: August 17, 2026</p>
@@ -323,6 +351,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         Email: <a href="mailto:support@growboost.pl">support@growboost.pl</a>
       </p>
     </div>
+
+    <nav class="sitenav sitenav--bottom" aria-label="Site, footer">
+      <a href="/">Projects</a>
+      <a href="/store-feed-what-s-new-app/">Store Feed</a>
+      <a href="/store-feed-what-s-new-app/#screens">Screenshots</a>
+      <a href="/store-feed-what-s-new-app/#doc">Documentation</a>
+      <a href="/store-feed-what-s-new-app/#faq">FAQ</a>
+      <a href="/store-feed-what-s-new-app/#changelog">Change log</a>
+    </nav>
 
     <footer>
       <p>&copy; 2026 GrowBoost. All rights reserved. ·

@@ -266,7 +266,7 @@ html { scroll-behavior: smooth; }
 .pagenav a:hover { background: var(--brand); color: #fff; text-decoration: none; }
 
 /* --- dokumentacja --- */
-#overview, #doc, #faq, #changelog { scroll-margin-top: 78px; }
+#overview, #screens, #doc, #faq, #changelog { scroll-margin-top: 78px; }
 .doc > h3 {
   font-size: 19px; font-weight: 700; letter-spacing: -0.01em;
   margin: 44px 0 6px; padding-top: 18px; border-top: 1px solid var(--line);
@@ -320,6 +320,61 @@ html { scroll-behavior: smooth; }
   .project { flex-direction: column; gap: 12px; }
   .pagenav { gap: 6px; padding: 10px 0; }
   .pagenav a { font-size: 13px; padding: 5px 10px; }
-  #overview, #doc, #faq, #changelog { scroll-margin-top: 62px; }
+  #overview, #screens, #doc, #faq, #changelog { scroll-margin-top: 62px; }
   .doc h4, .doc > h3 { scroll-margin-top: 70px; }
 }
+
+/* ===========================================================
+   Galeria zrzutow ekranu + lightbox (2026-09-30)
+   Zrzuty sa szersze niz kolumna tekstu (.bleed), zeby dalo sie
+   odczytac tekst w widgecie bez powiekszania.
+   =========================================================== */
+
+.bleed { margin-inline: calc((100% - min(1080px, 100vw - 48px)) / 2 * -1); }
+.bleed > * { max-width: 1080px; margin-inline: auto; }
+
+.shots { display: grid; gap: 26px; }
+@media (min-width: 900px) {
+  .shots--two { grid-template-columns: 1fr 1fr; }
+}
+
+.shots__h { font-size: 19px; font-weight: 700; letter-spacing: -0.01em; margin: 46px 0 18px; }
+.shots__note { color: var(--brand-dark); font-weight: 600; }
+.shot { margin: 0; }
+.shot__btn {
+  display: block; width: 100%; padding: 0; border: 1px solid var(--line);
+  border-radius: 14px; overflow: hidden; background: #fff; cursor: zoom-in;
+  transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+.shot__btn:hover { border-color: var(--brand); box-shadow: 0 10px 30px rgba(83, 74, 183, 0.13); transform: translateY(-2px); }
+.shot__btn:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; }
+.shot__btn img { display: block; width: 100%; height: auto; }
+.shot figcaption { font-size: 14.5px; color: var(--ink-mute); margin-top: 10px; line-height: 1.55; }
+.shot figcaption b { color: var(--ink-soft); font-weight: 600; }
+
+/* --- lightbox --- */
+.lb {
+  border: 0; padding: 0; background: transparent;
+  max-width: 96vw; max-height: 96vh; overflow: visible;
+}
+.lb::backdrop { background: rgba(20, 18, 40, 0.82); }
+.lb img { display: block; max-width: 96vw; max-height: 84vh; width: auto; height: auto; border-radius: 10px; background: #fff; }
+.lb__cap { color: #fff; font-size: 14px; margin: 12px 0 0; max-width: 70ch; }
+.lb__close {
+  position: absolute; top: -14px; right: -14px; width: 36px; height: 36px;
+  border: 0; border-radius: 50%; background: #fff; color: var(--ink);
+  font-size: 20px; line-height: 1; cursor: pointer;
+}
+.lb__close:hover { background: var(--brand); color: #fff; }
+
+/* --- pojawianie sie przy przewijaniu --- */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal { opacity: 0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease; }
+  .reveal.is-in { opacity: 1; transform: none; }
+}
+
+@media (max-width: 899px) {
+  .shot figcaption { font-size: 14px; }
+}
+
+a.shot__btn { cursor: pointer; }
