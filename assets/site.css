@@ -217,3 +217,109 @@ html { scroll-behavior: smooth; }
 .cta__btn:hover { background: var(--brand-dark); text-decoration: none; }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* ===========================================================
+   Struktura wielu projektow (2026-09-30)
+   - strona glowna = lista projektow (.projects)
+   - podstrona projektu = jedna strona z sekcjami #doc, #faq,
+     #changelog (.pagenav, .doc, .chg)
+   =========================================================== */
+
+/* --- okruszki --- */
+.crumbs { font-size: 14px; color: var(--ink-mute); margin-bottom: 18px; }
+.crumbs a { color: var(--ink-mute); text-decoration: underline; }
+.crumbs a:hover { color: var(--brand); }
+.crumbs span { padding: 0 6px; color: #c7c7d4; }
+
+/* --- lista projektow (strona glowna) --- */
+.projects { display: grid; gap: 14px; }
+.project {
+  display: flex; gap: 18px; align-items: flex-start;
+  border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px;
+}
+.project__icon { display: block; border-radius: 12px; flex: none; }
+.project__body { min-width: 0; }
+.project__name { font-size: 18px; font-weight: 600; letter-spacing: -0.01em; margin: 0 0 2px; }
+.project__name a { color: var(--ink); }
+.project__name a:hover { color: var(--brand); text-decoration: none; }
+.project__desc { font-size: 15px; color: var(--ink-mute); margin: 0 0 12px; }
+.project__links { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 14px; font-weight: 500; margin: 0; }
+.badge {
+  display: inline-block; font-size: 12px; font-weight: 600;
+  letter-spacing: 0.03em; text-transform: uppercase;
+  padding: 3px 9px; border-radius: 999px; margin-bottom: 8px;
+  background: var(--brand-soft); color: var(--brand-dark);
+}
+.badge--soon { background: #FAECE7; color: #712B13; }
+
+/* --- nawigacja po sekcjach podstrony --- */
+.pagenav {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  padding: 14px 0; margin: 40px 0 0;
+  position: sticky; top: 0; background: var(--paper); z-index: 5;
+}
+.pagenav a {
+  font-size: 14px; font-weight: 600; padding: 6px 13px;
+  border-radius: 999px; background: var(--brand-soft); color: var(--brand-dark);
+}
+.pagenav a:hover { background: var(--brand); color: #fff; text-decoration: none; }
+
+/* --- dokumentacja --- */
+#overview, #doc, #faq, #changelog { scroll-margin-top: 78px; }
+.doc > h3 {
+  font-size: 19px; font-weight: 700; letter-spacing: -0.01em;
+  margin: 44px 0 6px; padding-top: 18px; border-top: 1px solid var(--line);
+}
+.doc h4 { font-size: 16px; font-weight: 600; margin: 26px 0 6px; }
+.doc h4:target, .doc > h3:target { color: var(--brand-dark); }
+.doc h4, .doc > h3 { scroll-margin-top: 86px; }
+.doc p, .doc li { font-size: 15px; color: var(--ink-soft); }
+.doc p.sub { font-size: 16px; color: var(--ink-mute); }
+.doc ol, .doc ul { margin: 0 0 16px 22px; }
+.doc li { margin-bottom: 5px; }
+.doc li > ul, .doc li > ol { margin-top: 5px; margin-bottom: 8px; }
+.doc code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 13.5px; background: #f3f3f8; border-radius: 5px; padding: 1px 5px;
+}
+.seealso { font-size: 14px; color: var(--ink-mute); margin-bottom: 16px; }
+
+.tblwrap { overflow-x: auto; margin-bottom: 20px; }
+.tbl { border-collapse: collapse; width: 100%; min-width: 420px; font-size: 14.5px; }
+.tbl th, .tbl td { border-bottom: 1px solid var(--line); padding: 8px 10px; text-align: left; }
+.tbl th { font-weight: 600; color: var(--ink); }
+.tbl thead th { border-bottom: 2px solid var(--line); }
+.tbl td + td, .tbl th + th { text-align: center; width: 90px; }
+.tbl td:first-child { color: var(--ink-soft); }
+
+.note {
+  border-left: 3px solid var(--brand); background: var(--brand-soft);
+  border-radius: 0 10px 10px 0; padding: 14px 18px; margin-bottom: 20px;
+}
+.note p { margin: 0; font-size: 15px; color: var(--ink-soft); }
+
+/* --- change log --- */
+.chg { border-top: 1px solid var(--line); padding: 20px 0; }
+.chg__head { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 4px; }
+.chg__ver { font-size: 18px; font-weight: 700; letter-spacing: -0.01em; }
+.chg__date { font-size: 14px; color: var(--ink-mute); }
+.chg__status {
+  font-size: 12px; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase;
+  padding: 3px 9px; border-radius: 999px; background: #FAECE7; color: #712B13;
+}
+.chg ul { list-style: none; margin-top: 10px; }
+.chg li { font-size: 15px; color: var(--ink-soft); padding-left: 22px; position: relative; margin-bottom: 6px; }
+.chg li::before {
+  content: ""; position: absolute; left: 4px; top: 9px;
+  width: 8px; height: 4px; border-left: 2px solid var(--brand);
+  border-bottom: 2px solid var(--brand); transform: rotate(-45deg);
+}
+
+@media (max-width: 560px) {
+  .project { flex-direction: column; gap: 12px; }
+  .pagenav { gap: 6px; padding: 10px 0; }
+  .pagenav a { font-size: 13px; padding: 5px 10px; }
+  #overview, #doc, #faq, #changelog { scroll-margin-top: 62px; }
+  .doc h4, .doc > h3 { scroll-margin-top: 70px; }
+}
