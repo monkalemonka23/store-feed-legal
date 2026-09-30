@@ -495,3 +495,19 @@ a.shot__btn { cursor: pointer; }
 .facts__note { font-size: 13.5px; color: var(--ink-mute); margin: 0; }
 #measured { scroll-margin-top: 78px; }
 @media (max-width: 700px) { #measured { scroll-margin-top: 58px; } }
+
+/* Spis wewnatrz sekcji dokumentacji/FAQ — bez tego .doc p przebija .toc__note */
+.doc .toc__note { font-size: 13.5px; color: var(--ink-mute); }
+.doc .toc li { margin-bottom: 5px; }
+.toc__h { scroll-margin-top: 86px; }
+
+/* Spis FAQ: dwie osobne listy, bo pytania ogolne nie maja numerow sekcji,
+   a rozdzial 8 ma — jedna wspolna lista numerowala 8 jako 7. */
+.toc__cols { display: grid; gap: 4px 34px; }
+@media (min-width: 760px) { .toc__cols { grid-template-columns: 1fr 1fr; } }
+.toc__group { font-size: 15px; font-weight: 600; color: var(--ink); margin: 0 0 6px; }
+.toc__group a { color: var(--ink); }
+.toc__group a:hover { color: var(--brand-ink); text-decoration: underline; }
+.toc__cols > div + div { margin-top: 14px; }
+@media (min-width: 760px) { .toc__cols > div + div { margin-top: 0; } }
+.doc .toc__group { font-size: 15px; color: var(--ink); }
