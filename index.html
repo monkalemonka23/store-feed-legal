@@ -47,12 +47,38 @@
   ]
 }
 </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "GrowBoost projects",
+  "itemListOrder": "https://schema.org/ItemListOrderAscending",
+  "numberOfItems": 1,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "url": "https://growboost.pl/store-feed-what-s-new-app/",
+      "item": {
+        "@type": "SoftwareApplication",
+        "name": "Store Feed — What's New Web Widget",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Shopify",
+        "url": "https://growboost.pl/store-feed-what-s-new-app/"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WVR58V76"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-<main class="wrap">
+<a class="skip" href="#projects">Skip to contents</a>
+
+<main class="wrap" id="main">
 
   <a class="brand" href="/">
     <svg class="brand__mark" viewBox="0 0 48 48" width="34" height="34" aria-hidden="true">
@@ -68,11 +94,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h1>Small apps that do <em>one thing</em> for your store.</h1>
   <p class="lead">GrowBoost builds focused apps for Shopify storefronts: no theme code for the merchant, no tracking of their customers. Every project below has its own page with documentation, FAQ and a change log.</p>
 
-  <h2>Projects</h2>
+
+  <nav class="toc toc--inline" aria-labelledby="htoc-h">
+    <h2 class="toc__h" id="htoc-h">On this page</h2>
+    <ol>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#how">How these apps are built</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="projects">Projects</h2>
   <p class="sub">One app so far. This list grows as the next one ships.</p>
 
-  <div class="projects">
-    <article class="project">
+  <ul class="projects">
+    <li><article class="project">
       <img class="project__icon" src="/assets/store-feed-icon.png" width="56" height="56" alt="Store Feed app icon">
       <div class="project__body">
         <p class="badge badge--soon">Launching 15 October 2026</p>
@@ -87,8 +123,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <a href="/store-feed-what-s-new-app/#launch">Launch email</a>
         </p>
       </div>
-    </article>
-  </div>
+    </article></li>
+  </ul>
 
 
   <figure class="shot reveal" style="margin-top:22px">
@@ -102,25 +138,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <figcaption>Store Feed on live storefronts — <a href="/store-feed-what-s-new-app/#screens">more screenshots</a>.</figcaption>
   </figure>
 
-  <h2>How these apps are built</h2>
+  <h2 id="how">How these apps are built</h2>
   <p class="sub">The same three rules apply to every project on this page.</p>
 
-  <div class="grid">
-    <div class="card">
+  <ul class="grid">
+    <li class="card">
       <h3>No theme code</h3>
       <p>Everything installs through Shopify app blocks in Theme Editor, so nothing is left behind in your theme when you uninstall.</p>
-    </div>
-    <div class="card">
+    </li>
+    <li class="card">
       <h3>No customer data</h3>
       <p>Apps request the narrowest set of scopes they need and store no personal data about your shoppers. Detail in the <a href="/privacy-policy/">privacy policy</a>.</p>
-    </div>
-    <div class="card">
+    </li>
+    <li class="card">
       <h3>Answered support</h3>
       <p>One address, one person behind it: a reply within 24 hours on business days.</p>
-    </div>
-  </div>
+    </li>
+  </ul>
 
-  <h2>Contact</h2>
+  <h2 id="contact">Contact</h2>
   <p>Questions, bug reports, feature requests: <a href="mailto:support@growboost.pl">support@growboost.pl</a></p>
 
   <p class="meta">
