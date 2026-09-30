@@ -79,30 +79,6 @@ h3 { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
 .app__name { font-size: 17px; font-weight: 600; color: var(--ink); margin: 0; }
 .app__meta { font-size: 14px; color: var(--ink-mute); margin: 0; }
 
-/* --- podglad feedu --- */
-.feed {
-  border: 1px solid var(--line); border-radius: 14px;
-  padding: 18px 20px; margin-bottom: 8px;
-}
-.feed__head {
-  display: flex; justify-content: space-between; align-items: baseline;
-  padding-bottom: 12px; margin-bottom: 4px; border-bottom: 1px solid var(--line);
-}
-.feed__title { font-size: 15px; font-weight: 600; }
-.feed__time { font-size: 12px; color: var(--ink-mute); }
-.feed__row { display: flex; gap: 12px; align-items: flex-start; padding: 11px 0; }
-.feed__row + .feed__row { border-top: 1px solid #f6f6fa; }
-.feed__tag {
-  flex: none; font-size: 11px; font-weight: 600; letter-spacing: 0.03em;
-  text-transform: uppercase; padding: 3px 8px; border-radius: 6px;
-  margin-top: 2px; min-width: 74px; text-align: center;
-}
-.tag--product { background: #EEEDFE; color: #3C3489; }
-.tag--blog { background: #E1F5EE; color: #085041; }
-.tag--promo { background: #FAECE7; color: #712B13; }
-.feed__text { font-size: 15px; line-height: 1.45; }
-.feed__ago { display: block; font-size: 13px; color: var(--ink-mute); }
-
 /* --- siatka cech --- */
 .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; list-style: none; margin: 0; padding: 0; }
 .card {
@@ -143,7 +119,6 @@ h3 { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
   h1 { font-size: 29px; }
   h2 { font-size: 21px; margin-top: 48px; }
   .lead { font-size: 17px; }
-  .feed__tag { min-width: 0; }
 }
 
 /* --- premiera: licznik + zapis --- */
@@ -332,7 +307,13 @@ html { scroll-behavior: smooth; }
    odczytac tekst w widgecie bez powiekszania.
    =========================================================== */
 
-.bleed { margin-inline: calc((100% - min(1080px, 100vw - 48px)) / 2 * -1); }
+.bleed {
+  /* ujemny margines rozpycha blok poza kolumne tekstu do min(1080px, szerokosc
+     okna - 48px). BEZ "* -1": (100% - cel)/2 jest juz ujemne, gdy cel jest
+     szerszy niz kolumna. Z mnoznikiem -1 blok zwezal sie do ~344 px na
+     desktopie (zmierzone w Chromium 2026-09-30). */
+  margin-inline: calc((100% - min(1080px, 100vw - 48px)) / 2);
+}
 .bleed > * { max-width: 1080px; margin-inline: auto; }
 
 .shots { display: grid; gap: 26px; list-style: none; margin: 0; padding: 0; }
@@ -341,6 +322,7 @@ html { scroll-behavior: smooth; }
 }
 
 .shots__h { font-size: 19px; font-weight: 700; letter-spacing: -0.01em; margin: 46px 0 18px; }
+.shots__h--first { margin-top: 28px; }
 .shots__note { color: var(--brand-dark); font-weight: 600; }
 .shot { margin: 0; }
 .shot__btn {
