@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Store Feed — What's New widget for Shopify | GrowBoost</title>
+<meta name="description" content="Store Feed adds a what's new feed to your Shopify store: new arrivals, blog posts and running promotions in one widget. Overview, documentation, FAQ and change log.">
+<link rel="canonical" href="https://growboost.pl/store-feed-what-s-new-app/">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://growboost.pl/store-feed-what-s-new-app/">
+<meta property="og:title" content="Store Feed — What's New widget for Shopify">
+<meta property="og:description" content="Show shoppers that your store keeps moving. New arrivals, blog posts and promotions in one chronological feed.">
+<meta property="og:image" content="https://growboost.pl/assets/shots/widget-light-themes-1200.jpg">
+<meta property="og:image:alt" content="The Store Feed widget on a Shopify storefront, listing new products, blog posts and promotions.">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon-64.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/consent.css">
+<script src="/assets/consent.js"></script>
+<script src="/assets/launch.js" defer></script>
+<script src="/assets/gallery.js" defer></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Store Feed — What's New Web Widget",
+  "alternateName": "Store Feed",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "Shopify app",
+  "operatingSystem": "Shopify",
+  "url": "https://growboost.pl/store-feed-what-s-new-app/",
+  "softwareVersion": "1",
+  "inLanguage": "en",
+  "description": "A chronological what's new feed for Shopify storefronts: new products, blog articles and active promotions in one widget, installed through Theme Editor app blocks.",
+  "featureList": [
+    "New products, blog posts and active promotions in one chronological feed",
+    "Installs as a Shopify app block — any page, header or footer, no theme code",
+    "Discount codes shown only when they are available to all customers",
+    "Buy X get Y promotions written out with links to the collections and products",
+    "Takes the background, text colours and font of the section it sits in",
+    "Time window of 7, 14 or 30 days and up to 20 entries",
+    "Nightly automatic refresh at 00:15 UTC plus manual refresh",
+    "Impressions, clicks and click-rate statistics split by device"
+  ],
+  "screenshot": [
+    "https://growboost.pl/assets/shots/widget-light-themes-1400.webp",
+    "https://growboost.pl/assets/shots/widget-dark-themes-1400.webp",
+    "https://growboost.pl/assets/shots/widget-states-1284.webp",
+    "https://growboost.pl/assets/shots/widget-promotions-1400.webp",
+    "https://growboost.pl/assets/shots/panel-content-1400.webp",
+    "https://growboost.pl/assets/shots/panel-appearance-1400.webp",
+    "https://growboost.pl/assets/shots/panel-analytics-1248.webp"
+  ],
+  "publisher": { "@type": "Organization", "name": "GrowBoost", "url": "https://growboost.pl/" },
+  "offers": [
+    { "@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD" },
+    { "@type": "Offer", "name": "Starter", "price": "5.99", "priceCurrency": "USD",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "price": "5.99", "priceCurrency": "USD",
+        "billingDuration": 1, "billingIncrement": 1,
+        "unitCode": "MON"
+      }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Projects", "item": "https://growboost.pl/" },
+    { "@type": "ListItem", "position": 2, "name": "Store Feed — What's New", "item": "https://growboost.pl/store-feed-what-s-new-app/" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Do I need to edit my theme code?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Store Feed installs as a Shopify app block, so you place it from Theme Editor. Online Store 2.0 themes are supported." } },
+    { "@type": "Question", "name": "Does Store Feed collect data about my customers?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. The app requests read access to products, blog articles and price rules only — no customer scopes, no per-visitor tracking." } },
+    { "@type": "Question", "name": "How often does the feed refresh?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Once a day, at 00:15 UTC. You can force an earlier refresh from the app dashboard, once every 5 minutes." } },
+    { "@type": "Question", "name": "Will the widget slow my store down?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The feed is cached, so it does not call the Shopify API on every page load." } },
+    { "@type": "Question", "name": "Can customers close the widget?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, and it stays closed for the rest of their browsing session." } },
+    { "@type": "Question", "name": "Can I put the widget in more than one place?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every copy shows the same list and uses the same settings from the app." } },
+    { "@type": "Question", "name": "How much does Store Feed cost?",
+      "acceptedAnswer": { "@type": "Answer", "text": "There is a free plan with up to 5 entries and new products only. The Starter plan is $5.99 per month and adds blog posts, promotions, up to 20 entries, custom colours and statistics." } }
+  ]
+}
+</script>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WVR58V76"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<main class="wrap">
+
+  <a class="brand" href="/">
+    <svg class="brand__mark" viewBox="0 0 48 48" width="34" height="34" aria-hidden="true">
+      <rect width="48" height="48" rx="11" fill="#7F77DD"/>
+      <rect x="11" y="28" width="7" height="9" rx="3.5" fill="#fff"/>
+      <rect x="20.5" y="22" width="7" height="15" rx="3.5" fill="#fff"/>
+      <rect x="30" y="11" width="7" height="26" rx="3.5" fill="#fff"/>
+    </svg>
+    <span class="brand__name">Grow<span>Boost</span></span>
+  </a>
+
+  <p class="crumbs"><a href="/">Projects</a><span>/</span>Store Feed — What's New</p>
+
+  <p class="pill">Shopify app</p>
+  <h1>Show shoppers your store <em>keeps moving</em>.</h1>
+  <p class="lead">Store Feed puts your new arrivals, blog posts and running promotions into one chronological what's new widget — so first-time visitors see a living store and returning customers see what changed.</p>
+
+  <div class="app">
+    <img class="app__icon" src="/assets/store-feed-icon.png" width="56" height="56" alt="Store Feed app icon">
+    <div>
+      <p class="app__name">Store Feed — What's New Web Widget</p>
+      <p class="app__meta">Free plan · Starter $5.99/month · No code required</p>
+    </div>
+  </div>
+
+  <section class="launch" id="launch" aria-labelledby="launch-h">
+    <p class="launch__label" id="launch-h">Planned release date: 15 October 2026</p>
+
+    <div class="cd" id="countdown">
+      <span class="cd__unit"><strong class="cd__num" id="cd-days">–</strong><span class="cd__cap">days</span></span>
+      <span class="cd__unit"><strong class="cd__num" id="cd-hours">–</strong><span class="cd__cap">hours</span></span>
+      <span class="cd__unit"><strong class="cd__num" id="cd-minutes">–</strong><span class="cd__cap">minutes</span></span>
+      <span class="cd__unit"><strong class="cd__num" id="cd-seconds">–</strong><span class="cd__cap">seconds</span></span>
+    </div>
+
+    <form id="notify-form" novalidate>
+      <div class="nf__row">
+        <label class="nf__trap" for="notify-company">Company</label>
+        <input class="nf__trap" type="text" id="notify-company" name="company" tabindex="-1" autocomplete="off">
+
+        <label class="nf__trap" for="notify-email">Email address</label>
+        <input class="nf__input" type="email" id="notify-email" name="email"
+               placeholder="you@yourstore.com" autocomplete="email" required>
+
+        <button class="nf__btn" type="submit" id="notify-btn">Notify me</button>
+      </div>
+
+      <label class="nf__consent" for="notify-consent">
+        <input type="checkbox" id="notify-consent" required>
+        <span>I agree that GrowBoost may send me <strong>one</strong> email announcing the Store Feed launch.
+        No newsletter, no other marketing, no sharing with anyone else. My address is deleted after that
+        email is sent, and I can withdraw this consent at any time by writing to support@growboost.pl.</span>
+      </label>
+
+      <p class="nf__err" id="notify-error" role="alert" hidden></p>
+    </form>
+
+    <p class="nf__ok" id="notify-ok" tabindex="-1" hidden>Thanks — we'll email you once on launch day.</p>
+  </section>
+
+  <nav class="pagenav" aria-label="Sections of this page">
+    <a href="#overview">Overview</a>
+    <a href="#screens">Screenshots</a>
+    <a href="#doc">Documentation</a>
+    <a href="#faq">FAQ</a>
+    <a href="#changelog">Change log</a>
+  </nav>
+
+  <section id="overview" aria-labelledby="overview-h">
+
+  <h2 id="overview-h">What your customers see</h2>
+  <p class="sub">One feed, newest first. Every entry links straight to the product, article or collection behind it.</p>
+
+  <div class="feed">
+    <div class="feed__head">
+      <span class="feed__title">✨ What's New</span>
+      <span class="feed__time">Updated today</span>
+    </div>
+    <div class="feed__row">
+      <span class="feed__tag tag--promo">Promo</span>
+      <span class="feed__text">Summer sale — 20% off outerwear
+        <span class="feed__ago">2 hours ago</span></span>
+    </div>
+    <div class="feed__row">
+      <span class="feed__tag tag--product">Product</span>
+      <span class="feed__text">Linen weekend shirt, three new colours
+        <span class="feed__ago">Yesterday</span></span>
+    </div>
+    <div class="feed__row">
+      <span class="feed__tag tag--blog">Blog</span>
+      <span class="feed__text">How we pick our fabric suppliers
+        <span class="feed__ago">4 days ago</span></span>
+    </div>
+  </div>
+
+  <h2>Why it works</h2>
+  <p class="sub">An announcement bar carries one message to everyone. A feed carries context — and context is what keeps people browsing.</p>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Proof of life</h3>
+      <p>A first-time visitor can tell in two seconds whether anything happens in your store.</p>
+    </div>
+    <div class="card">
+      <h3>A reason to return</h3>
+      <p>Returning customers see what changed since their last visit without digging through the catalogue.</p>
+    </div>
+    <div class="card">
+      <h3>Reaches everyone on site</h3>
+      <p>Email and social reach a slice of your audience. The feed reaches the person already looking at your store.</p>
+    </div>
+  </div>
+
+  <h2>How it works</h2>
+  <p class="sub">Three steps, no theme code.</p>
+
+  <div class="grid">
+    <div class="card">
+      <h3>1 · Install</h3>
+      <p>Add the app block in Theme Editor and drop the widget wherever it fits your layout.</p>
+    </div>
+    <div class="card">
+      <h3>2 · Choose sources</h3>
+      <p>Pick products, blog articles, promotions — or all three. Set the time window and how many entries to show.</p>
+    </div>
+    <div class="card">
+      <h3>3 · Match your theme</h3>
+      <p>One accent colour, three icon sets. The feed then updates itself from your store.</p>
+    </div>
+  </div>
+
+  <h2>Built without touching customer data</h2>
+  <p>Store Feed reads three things from your store — products, blog articles and price rules. It requests no customer scopes and stores no personal data about your visitors. Dismissing the widget is remembered in the visitor's browser session, not on our servers. Full detail in the <a href="/privacy-policy/">privacy policy</a>.</p>
+
+  <h2>Pricing</h2>
+  <p class="sub">Start free. Upgrade when the feed earns it.</p>
+
+  <div class="plans">
+    <div class="plan">
+      <p class="plan__name">Free</p>
+      <p class="plan__price">$0</p>
+      <ul>
+        <li>Up to 5 entries</li>
+        <li>New products only</li>
+        <li>Title, corner style, close button, per-device visibility</li>
+        <li>Emoticon icons</li>
+        <li>Store Feed icon in the widget footer</li>
+      </ul>
+    </div>
+    <div class="plan plan--hi">
+      <p class="plan__name">Starter</p>
+      <p class="plan__price">$5.99 <small>/ month</small></p>
+      <ul>
+        <li>5, 10 or 20 entries</li>
+        <li>Products, blog posts and promotions</li>
+        <li>Accent colour and icon style (Flat, 3D, Emoticon)</li>
+        <li>Chosen collections and blogs only, excluded tags</li>
+        <li>Views, clicks and click-rate statistics</li>
+        <li>Your own footer text, or no footer</li>
+      </ul>
+    </div>
+  </div>
+  <p class="sub">Full side-by-side list: <a href="#s1-1">Documentation 1.1</a>.</p>
+
+  </section>
+
+
+  <section id="screens" aria-labelledby="screens-h">
+  <h2 id="screens-h">Screenshots</h2>
+  <p class="sub">The widget on live storefronts and the app itself. Click any picture to open it full size.</p>
+
+  <div class="bleed">
+  <div class="shots">
+
+    <figure class="shot reveal">
+      <button class="shot__btn" type="button"
+              data-full="/assets/shots/widget-light-themes-1400.webp"
+              data-caption="The same feed with different titles, accent colours and icon sets, open and collapsed.">
+        <picture>
+          <source type="image/webp" srcset="/assets/shots/widget-light-themes-700.webp 700w, /assets/shots/widget-light-themes-1400.webp 1400w" sizes="(max-width: 1080px) 100vw, 1080px">
+          <img src="/assets/shots/widget-light-themes-1200.jpg" width="1400" height="784" loading="lazy" decoding="async"
+               alt="Six Store Feed widgets on light Shopify themes: titles such as New This Week and Hot Deals In Last 30 Days, an entry count badge, blog and promotion entries, a custom footer line, shown both open and collapsed.">
+        </picture>
+      </button>
+      <figcaption><b>One widget, your theme's look.</b> Title, accent colour, icon set and corner style are yours; the background, text colour and font come from the section the widget sits in. Every copy can be left open or collapsed to just the title bar.</figcaption>
+    </figure>
+
+    <figure class="shot reveal">
+      <button class="shot__btn" type="button"
+              data-full="/assets/shots/widget-dark-themes-1400.webp"
+              data-caption="Store Feed on dark themes: the widget reads the section's colours instead of forcing its own.">
+        <picture>
+          <source type="image/webp" srcset="/assets/shots/widget-dark-themes-700.webp 700w, /assets/shots/widget-dark-themes-1400.webp 1400w" sizes="(max-width: 1080px) 100vw, 1080px">
+          <img src="/assets/shots/widget-dark-themes-1200.jpg" width="1400" height="757" loading="lazy" decoding="async"
+               alt="Store Feed on dark Shopify themes: a Hot Deals widget with a promotion entry, a discount code with a Copy button and an end date, and product entries with 3D icons.">
+        </picture>
+      </button>
+      <figcaption><b>Dark themes work the same way.</b> No white box dropped on a dark page — the widget takes the section's background and switches its text to stay readable.</figcaption>
+    </figure>
+
+    <figure class="shot reveal">
+      <button class="shot__btn" type="button"
+              data-full="/assets/shots/widget-states-1284.webp"
+              data-caption="Collapsed and open, on a dark theme and on a store's own red section colour.">
+        <picture>
+          <source type="image/webp" srcset="/assets/shots/widget-states-700.webp 700w, /assets/shots/widget-states-1284.webp 1284w" sizes="(max-width: 1080px) 100vw, 1080px">
+          <img src="/assets/shots/widget-states-1200.jpg" width="1284" height="738" loading="lazy" decoding="async"
+               alt="Store Feed collapsed to a title bar and open, shown on a dark theme and on a deep red section: the count badge reads just the number in the narrow bars and the full entries wording in the wide ones, and one widget ends with a custom footer line about shipping prices.">
+        </picture>
+      </button>
+      <figcaption><b>Open, or just a title bar.</b> Shoppers reopen a collapsed widget with one tap, and their choice is remembered while they browse. The count badge drops the word "entries" when the title bar needs the room, so the title never wraps to a second line.</figcaption>
+    </figure>
+
+    <figure class="shot reveal">
+      <button class="shot__btn" type="button"
+              data-full="/assets/shots/widget-promotions-1400.webp"
+              data-caption="Promotions written out in plain language, with the discount code and a Copy button.">
+        <picture>
+          <source type="image/webp" srcset="/assets/shots/widget-promotions-700.webp 700w, /assets/shots/widget-promotions-1400.webp 1400w" sizes="(max-width: 1080px) 100vw, 1080px">
+          <img src="/assets/shots/widget-promotions-1200.jpg" width="1400" height="778" loading="lazy" decoding="async"
+               alt="Three Store Feed promotion entries: a buy four get one free offer listing the qualifying collections and the free products as links, a ten percent welcome discount with a minimum order, and a buy two get fifty percent off offer, each with its code, a Copy button and an end date.">
+        </picture>
+      </button>
+      <figcaption><b>Promotions, spelled out.</b> Buy X / get Y rules name the collections and products they apply to, and link to them. Discount codes are shown with a Copy button — and only when the code is available to every customer, or tagged <code>public</code>.</figcaption>
+    </figure>
+
+  </div>
+  </div>
+
+  <h3 class="shots__h">Inside the app</h3>
+  <div class="bleed">
+  <div class="shots">
+    <figure class="shot reveal">
+      <button class="shot__btn" type="button"
+              data-full="/assets/shots/panel-content-1400.webp"
+              data-caption="The Content tab: placement, sources, filters and how many entries to show.">
+        <picture>
+          <source type="image/webp" srcset="/assets/shots/panel-content-700.webp 700w, /assets/shots/panel-content-1400.webp 1400w" sizes="(max-width: 1080px) 100vw, 1080px">
+          <img src="/assets/shots/panel-content-1200.jpg" width="1400" height="788" loading="lazy" decoding="async"
+               alt="The Store Feed Content tab in the Shopify admin: a list of storefront places with Added and Hidden counts and an Add button for each, checkboxes for products, blog posts and promotions, filters for collections, blogs and excluded tags, a date range and max entries, visibility by device, and a live preview with the refresh card.">
+        </picture>
+      </button>
+      <figcaption><b>Everything on one screen.</b> Which pages already carry the widget — and which copies are hidden in the theme editor — what goes into the feed, how far back it reaches, how many entries fit and on which devices it shows.</figcaption>
+    </figure>
+  </div>
+  </div>
+
+  <div class="bleed">
+  <div class="shots shots--two">
+
+    <figure class="shot reveal">
+      <button class="shot__btn" type="button"
+              data-full="/assets/shots/panel-appearance-1400.webp"
+              data-caption="The Appearance tab, with a live preview that updates before you save.">
+        <picture>
+          <source type="image/webp" srcset="/assets/shots/panel-appearance-700.webp 700w, /assets/shots/panel-appearance-1400.webp 1400w" sizes="(max-width: 900px) 100vw, 528px">
+          <img src="/assets/shots/panel-appearance-1200.jpg" width="1400" height="788" loading="lazy" decoding="async"
+               alt="The Store Feed Appearance tab in the Shopify admin: widget title, accent colour, icon set, corner style, how the widget opens, height when open, close button and footer branding, next to a live preview of the widget.">
+        </picture>
+      </button>
+      <figcaption><b>Appearance, with a live preview.</b> Change the title, colour, icons, corners, opening state and footer, and see the result next to the form before you save.</figcaption>
+    </figure>
+
+    <figure class="shot reveal">
+      <button class="shot__btn" type="button"
+              data-full="/assets/shots/panel-analytics-1248.webp"
+              data-caption="The Analytics tab: impressions, clicks, click rate, week by week and per device.">
+        <picture>
+          <source type="image/webp" srcset="/assets/shots/panel-analytics-700.webp 700w, /assets/shots/panel-analytics-1248.webp 1248w" sizes="(max-width: 900px) 100vw, 528px">
+          <img src="/assets/shots/panel-analytics-1200.jpg" width="1248" height="703" loading="lazy" decoding="async"
+               alt="The Store Feed Analytics tab: impressions, clicks and click-through rate for the last 30 days, a week-by-week bar chart, and a table splitting the same numbers between desktop, mobile and tablet.">
+        </picture>
+      </button>
+      <figcaption><b>Statistics that answer one question.</b> How often the widget was seen, how often shoppers opened an entry, and on which device — for the last 7, 30 or 90 days. <span class="shots__note">Starter plan.</span></figcaption>
+    </figure>
+
+  </div>
+  </div>
+  </section>
+
+  <section id="doc" class="doc" aria-labelledby="doc-h">
+  <h2 id="doc-h">Documentation</h2>
+  <p class="sub">Store Feed shows a "What's new" list on your store: new products, blog posts and active promotions, collected automatically. Every section has a number (for example <strong>6.2</strong>) — if you write to support, you can simply point to it. Troubleshooting lives in the <a href="#faq">FAQ</a> below (section 8). Plain-text copy for reading offline or feeding to an assistant: <a href="/store-feed-what-s-new-app/store-feed-help.md">store-feed-help.md</a>.</p>
+
+  <h3 id="s1">1. Plans</h3>
+
+  <h4 id="s1-1">1.1 What each plan includes</h4>
+  <div class="tblwrap">
+  <table class="tbl">
+    <thead>
+      <tr><th scope="col">Feature</th><th scope="col">Free</th><th scope="col">Starter</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>New products</td><td>✓</td><td>✓</td></tr>
+      <tr><td>Blog posts</td><td>—</td><td>✓</td></tr>
+      <tr><td>Promotions and discount codes</td><td>—</td><td>✓</td></tr>
+      <tr><td>Number of entries in the widget</td><td>up to 5</td><td>5, 10 or 20</td></tr>
+      <tr><td>Time window (last 7, 14 or 30 days)</td><td>✓</td><td>✓</td></tr>
+      <tr><td>Widget title</td><td>✓</td><td>✓</td></tr>
+      <tr><td>Corner style</td><td>✓</td><td>✓</td></tr>
+      <tr><td>Close button</td><td>✓</td><td>✓</td></tr>
+      <tr><td>Show or hide on desktop / tablet / mobile</td><td>✓</td><td>✓</td></tr>
+      <tr><td>Place it on any page, in header or footer</td><td>✓</td><td>✓</td></tr>
+      <tr><td>Automatic daily refresh + manual refresh</td><td>✓</td><td>✓</td></tr>
+      <tr><td>Accent colour</td><td>—</td><td>✓</td></tr>
+      <tr><td>Icon style (Flat, 3D, Emoticon)</td><td>Emoticon only</td><td>✓</td></tr>
+      <tr><td>How the widget opens and its height</td><td>—</td><td>✓</td></tr>
+      <tr><td>Show only chosen collections and blogs</td><td>—</td><td>✓</td></tr>
+      <tr><td>Hide products with a chosen tag</td><td>—</td><td>✓</td></tr>
+      <tr><td>Store Feed icon in the widget footer</td><td>always shown</td><td>not shown</td></tr>
+      <tr><td>Your own footer text and link</td><td>—</td><td>✓</td></tr>
+      <tr><td>Statistics: views, clicks, click rate, by device</td><td>—</td><td>✓</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4 id="s1-2">1.2 Changing your plan</h4>
+  <ol>
+    <li>Open the Store Feed app in your Shopify admin.</li>
+    <li>Click <strong>Plans</strong> (or <strong>Change plan</strong>) in the top right corner.</li>
+    <li>Choose a plan and confirm it on the Shopify page.</li>
+  </ol>
+  <p>When you move to a lower plan, Shopify switches it at the end of your current billing period. Until then you keep the features you paid for.</p>
+
+  <h3 id="s2">2. Adding Store Feed to your store</h3>
+
+  <h4 id="s2-1">2.1 The quick way</h4>
+  <ol>
+    <li>Open the Store Feed app.</li>
+    <li>In <strong>Add Store Feed to your storefront</strong>, click <strong>Add</strong> next to the page where you want the widget (Home page, Product pages, Collection pages, and so on).</li>
+    <li>The theme editor opens with Store Feed already added. Drag it where you want it and click <strong>Save</strong>.</li>
+  </ol>
+  <p>The app shows which pages already have the widget ("Added") and which copies are hidden in the theme editor ("Hidden").</p>
+
+  <h4 id="s2-2">2.2 Adding it yourself</h4>
+  <ol>
+    <li>Go to <strong>Online Store › Themes › Customize</strong>.</li>
+    <li>Open the page you want.</li>
+    <li>Click <strong>Add section</strong> and choose <strong>Store Feed</strong> under <strong>Apps</strong>.</li>
+    <li>Click <strong>Save</strong>.</li>
+  </ol>
+  <p>If Store Feed is not on the list, your theme does not support app sections. This is the case for some older themes.</p>
+
+  <h4 id="s2-3">2.3 Where it works best</h4>
+  <ul>
+    <li><strong>As its own section on a page</strong> — the most common choice.</li>
+    <li><strong>In the header or footer</strong> — then it appears on every page.</li>
+    <li><strong>Not inside a product card or a product slider.</strong> There it is repeated for every product in the grid.</li>
+    <li><strong>It needs at least 200 px of width.</strong> In very narrow spots (for example the row of icons in a header) it stays hidden.</li>
+  </ul>
+
+  <h4 id="s2-4">2.4 More than one place</h4>
+  <p>You can add Store Feed in several places. Every copy shows the same list and uses the same settings from the app.</p>
+
+  <h3 id="s3">3. What appears in the feed</h3>
+
+  <h4 id="s3-1">3.1 Products</h4>
+  <p>A product appears when it is:</p>
+  <ul>
+    <li><strong>Active</strong> (not a draft or archived),</li>
+    <li><strong>available on the Online Store sales channel</strong>,</li>
+    <li><strong>published within the chosen time window</strong> (last 7, 14 or 30 days).</li>
+  </ul>
+  <div class="note">
+    <p>Tip: a product added through an import or an app is sometimes active but not available on the Online Store channel. Open the product in Shopify, check <strong>Sales channels</strong> and make sure <strong>Online Store</strong> is ticked.</p>
+  </div>
+  <p class="seealso">See also: <a href="#s3-7">3.7 Choosing what to include (Starter)</a></p>
+
+  <h4 id="s3-2">3.2 Blog posts (Starter)</h4>
+  <p>Published blog posts from the chosen time window (last 7, 14 or 30 days).</p>
+  <p class="seealso">See also: <a href="#s3-7">3.7 Choosing what to include (Starter)</a></p>
+
+  <h4 id="s3-3">3.3 Promotions (Starter)</h4>
+  <ul>
+    <li>Promotions must be <strong>active</strong> and must have <strong>started within the chosen time window</strong>.</li>
+    <li><strong>Automatic discounts</strong> appear automatically.</li>
+    <li><strong>Discount codes</strong> appear only when they are <strong>available to all customers</strong>.</li>
+    <li><strong>To show a code that is limited to some customers</strong>, add the tag <code>public</code> to that discount in Shopify. The code will then be shown to everyone who sees the widget.</li>
+    <li>"Buy X, get Y" discounts show what to buy and what you get, with links.</li>
+    <li>Products that are sold out are not listed in a promotion. If nothing in a promotion can be bought any more, the promotion is not shown.</li>
+    <li>If a promotion has an end date, the widget shows it.</li>
+  </ul>
+
+  <h4 id="s3-4">3.4 When there are more updates than places</h4>
+  <p>The number of entries is set in <strong>Max entries</strong> (Free: 5).</p>
+  <ol>
+    <li>Promotions are picked first, then blog posts, then products.</li>
+    <li>Within each kind, the newest are picked.</li>
+    <li>The chosen entries are then shown <strong>newest first</strong>.</li>
+  </ol>
+  <p>Example: 2 promotions, 3 blog posts and 6 new products, with 5 places — the widget shows the 2 promotions and 3 blog posts, sorted by date.</p>
+
+  <h4 id="s3-5">3.5 On the page of a listed item</h4>
+  <p>When a shopper is already on the page of a product or blog post from the list, that entry is skipped and the next one takes its place. Promotions stay and are marked <strong>Viewing</strong>.</p>
+
+  <h4 id="s3-6">3.6 Nothing new to show</h4>
+  <p>If there is nothing new in the chosen time window, the widget stays hidden. You can choose a longer window (30 days) in <strong>Date range</strong>.</p>
+
+  <h4 id="s3-7">3.7 Choosing what to include (Starter)</h4>
+  <ul>
+    <li><strong>Collections</strong> — show only products from the chosen collections.</li>
+    <li><strong>Blogs</strong> — show only posts from the chosen blogs.</li>
+    <li><strong>Exclude products with tag</strong> — products with any of these tags never appear (useful for items that are always on sale and are not really "new").</li>
+  </ul>
+
+  <h3 id="s4">4. Appearance: look and feel</h3>
+
+  <h4 id="s4-1">4.1 Widget title</h4>
+  <p>Shown at the top of the widget. You can use an emoji.</p>
+
+  <h4 id="s4-2">4.2 Accent colour (Starter)</h4>
+  <p>Used for labels ("Product", "Blog", "Promo"), the entry count and small details. Text on labels switches between black and white automatically, so it stays readable.</p>
+
+  <h4 id="s4-3">4.3 Icon style (Starter)</h4>
+  <p>Flat, 3D or Emoticon. Free plan uses Emoticon.</p>
+
+  <h4 id="s4-4">4.4 Corner style</h4>
+  <p>Sharp, Rounded or Pill.</p>
+
+  <h4 id="s4-5">4.5 How the widget opens and its height (Starter)</h4>
+  <ul>
+    <li><strong>Open</strong> — shoppers see the list straight away.</li>
+    <li><strong>Collapsed</strong> — only the title bar; shoppers open it with one tap.</li>
+    <li><strong>Height when open</strong> — how much of the screen the open widget may take.</li>
+  </ul>
+  <p>A shopper's own choice (opening or closing the list) is remembered while they browse your store.</p>
+
+  <h4 id="s4-6">4.6 Close button</h4>
+  <p>Lets shoppers hide the widget. It stays hidden for them until they close the browser tab.</p>
+
+  <h4 id="s4-7">4.7 Visibility by device</h4>
+  <p>Show or hide the widget separately on desktop, tablet and mobile.</p>
+
+  <h4 id="s4-8">4.8 Footer</h4>
+  <ul>
+    <li><strong>Free plan:</strong> a small Store Feed icon at the bottom of the widget.</li>
+    <li><strong>Starter:</strong> no footer, or your own text (for example "Free shipping over $50"), optionally with a link. If the text is empty, nothing is shown.</li>
+  </ul>
+
+  <h3 id="s5">5. Colours and background</h3>
+
+  <h4 id="s5-1">5.1 Where the colours come from</h4>
+  <p>You don't set a background for the widget. It takes the <strong>background and text colours of the section it sits in</strong>, so it looks like part of your theme.</p>
+
+  <h4 id="s5-2">5.2 Changing the widget background</h4>
+  <p>Change the colours of the section that holds the widget:</p>
+  <ol>
+    <li>Go to <strong>Online Store › Themes › Customize</strong>.</li>
+    <li>Click the section where Store Feed is placed.</li>
+    <li>Change its <strong>Color scheme</strong> to one with the background you want.</li>
+    <li>Click <strong>Save</strong>.</li>
+  </ol>
+  <p>The widget follows the new colours. If the text would be hard to read, it switches to black or white text colour on its own.</p>
+
+  <h4 id="s5-3">5.3 Section with a background image</h4>
+  <p>If the section uses an image as its background, the widget uses the section's <strong>colour scheme</strong> background as a solid colour, so the list stays readable. To change it, change the section's colour scheme (see <a href="#s5-2">5.2</a>).</p>
+
+  <h4 id="s5-4">5.4 Page with a gradient or image background</h4>
+  <p>If the whole page has a gradient or image background, the widget stays see-through so the background shows behind it.</p>
+
+  <h3 id="s6">6. Updates and changes</h3>
+
+  <h4 id="s6-1">6.1 Automatic update</h4>
+  <p>The list updates on its own every night (at 00:15 UTC).</p>
+
+  <h4 id="s6-2">6.2 Updating now</h4>
+  <p>Click <strong>Refresh now</strong> in the app. You can do this once every 5 minutes. If it was clicked recently, the button shows the time when it becomes available again.</p>
+
+  <h4 id="s6-3">6.3 After changing settings</h4>
+  <ol>
+    <li>Click <strong>Save</strong>.</li>
+    <li>Click <strong>Refresh now</strong> — this sends your new settings to your store.</li>
+    <li>Reload your store page (Ctrl+F5 on Windows, Cmd+Shift+R on Mac).</li>
+  </ol>
+  <p>Shoppers who are already browsing your shop may see the change up to 15 minutes later.</p>
+
+  <h4 id="s6-4">6.4 After changing your plan</h4>
+  <p>Open the Store Feed app once after the change. The widget then updates to the new plan by itself.</p>
+
+  <h3 id="s7">7. Analytics: Statistics (Starter)</h3>
+  <ul>
+    <li><strong>Views</strong> — how many times the widget was shown.</li>
+    <li><strong>Clicks</strong> — how many times shoppers clicked an entry.</li>
+    <li><strong>Click rate (CTR)</strong> — clicks divided by views.</li>
+    <li>Figures by device (desktop, tablet, mobile), for the last 7, 30 or 90 days.</li>
+  </ul>
+  <p>Statistics count the whole store together, not each copy of the widget separately.</p>
+
+  </section>
+
+  <section id="faq" class="doc" aria-labelledby="faq-h">
+  <h2 id="faq-h">FAQ</h2>
+  <p class="sub">Before you install — and, from section 8 on, what to check when something doesn't look right.</p>
+
+  <div class="faq">
+    <h3>Do I need to edit my theme code?</h3>
+    <p>No. Store Feed installs as a Shopify app block, so you place it from Theme Editor. Online Store 2.0 themes are supported.</p>
+  </div>
+  <div class="faq">
+    <h3>Does it collect data about my customers?</h3>
+    <p>No. The app requests read access to products, blog articles and price rules only — no customer scopes, no per-visitor tracking.</p>
+  </div>
+  <div class="faq">
+    <h3>How often does the feed refresh?</h3>
+    <p>Once a day, at 00:15 UTC. You can force an earlier refresh from the app dashboard, once every 5 minutes (<a href="#s6-2">6.2</a>).</p>
+  </div>
+  <div class="faq">
+    <h3>Will it slow my store down?</h3>
+    <p>The feed is cached, so it doesn't call the Shopify API on every page load.</p>
+  </div>
+  <div class="faq">
+    <h3>Can customers close the widget?</h3>
+    <p>Yes, and it stays closed for the rest of their session (<a href="#s4-6">4.6</a>).</p>
+  </div>
+  <div class="faq">
+    <h3>Can I put it in more than one place?</h3>
+    <p>Yes. Every copy shows the same list and the same settings (<a href="#s2-4">2.4</a>).</p>
+  </div>
+
+  <h3 id="s8">8. Something doesn't look right</h3>
+
+  <h4 id="s8-1">8.1 I can't see the widget on my store</h4>
+  <ol>
+    <li>Check that it is added to that page and not hidden (the app shows "Added" next to the page, not "Hidden", see <a href="#s2-1">2.1</a>).</li>
+    <li>Check <strong>Visibility by device</strong> (<a href="#s4-7">4.7</a>) for the device you are using.</li>
+    <li>Check that there is something new in the time window (<a href="#s3-6">3.6</a>).</li>
+    <li>If you clicked the close button, it stays hidden until you close the browser tab (<a href="#s4-6">4.6</a>).</li>
+    <li>If it sits in a very narrow spot, move it to its own section (<a href="#s2-3">2.3</a>).</li>
+  </ol>
+
+  <h4 id="s8-2">8.2 A new product is missing</h4>
+  <ol>
+    <li>The product is <strong>Active</strong> and available on <strong>Online Store</strong> (<a href="#s3-1">3.1</a>).</li>
+    <li>It was published within the time window (<a href="#s3-1">3.1</a>).</li>
+    <li>It doesn't have an excluded tag and belongs to the chosen collections (<a href="#s3-7">3.7</a>).</li>
+    <li>There are enough places — promotions and blog posts are picked first (<a href="#s3-4">3.4</a>).</li>
+    <li>Click <strong>Refresh now</strong> (<a href="#s6-2">6.2</a>).</li>
+  </ol>
+
+  <h4 id="s8-3">8.3 A discount code is missing (Starter)</h4>
+  <ol>
+    <li>The discount is active and started within the time window.</li>
+    <li>It is available to all customers, or it has the tag <code>public</code> (<a href="#s3-3">3.3</a>).</li>
+    <li>At least one of its products can still be bought (<a href="#s3-3">3.3</a>).</li>
+    <li>Click <strong>Refresh now</strong> (<a href="#s6-2">6.2</a>).</li>
+  </ol>
+
+  <h4 id="s8-4">8.4 The background colour doesn't match</h4>
+  <p>The widget uses the colours of its section. Change the section's colour scheme (see <a href="#s5-2">5.2</a>).</p>
+
+  <h4 id="s8-5">8.5 I changed the look and I don't see the changes</h4>
+  <ol>
+    <li>In the app, click <strong>Save</strong>.</li>
+    <li>Click <strong>Refresh now</strong>. If the button is locked, wait until the time shown on it (<a href="#s6-2">6.2</a>).</li>
+    <li>Wait for the green message <strong>"Feed refreshed — … entries in your widget"</strong>. Only then are your changes sent to your store. If you see a yellow message instead, try again in a few minutes.</li>
+    <li>Open your store page and reload it without the saved copy:
+      <ul>
+        <li><strong>Windows</strong> (Chrome, Edge, Firefox): press <strong>Ctrl + F5</strong> (or <strong>Ctrl + Shift + R</strong>).</li>
+        <li><strong>Mac</strong> (Chrome, Edge, Firefox): press <strong>Cmd + Shift + R</strong>.</li>
+        <li><strong>Mac</strong> (Safari): press <strong>Cmd + Option + R</strong>.</li>
+      </ul>
+    </li>
+    <li>Still the old look? Open your store in a private window:
+      <ul>
+        <li>Chrome and Edge: <strong>Ctrl + Shift + N</strong> (Windows), <strong>Cmd + Shift + N</strong> (Mac).</li>
+        <li>Firefox: <strong>Ctrl + Shift + P</strong> (Windows), <strong>Cmd + Shift + P</strong> (Mac).</li>
+        <li>Safari: <strong>Cmd + Shift + N</strong>.</li>
+      </ul>
+    </li>
+  </ol>
+  <p>Shoppers who are already browsing your shop may see the change up to 15 minutes later.</p>
+
+  <h4 id="s8-6">8.6 The widget repeats many times</h4>
+  <p>It was added inside a product card or slider. Remove it there and add it as its own section (<a href="#s2-3">2.3</a>).</p>
+
+  <h4 id="s8-7">8.7 Store Feed is not on the list of sections</h4>
+  <p>Your theme does not support app sections (<a href="#s2-2">2.2</a>).</p>
+
+  </section>
+
+  <section id="changelog" aria-labelledby="changelog-h">
+  <h2 id="changelog-h">Change log</h2>
+  <p class="sub">Every released version of Store Feed, newest first.</p>
+
+  <div class="chg">
+    <div class="chg__head">
+      <span class="chg__ver">v1</span>
+      <span class="chg__status">Submitted for review</span>
+      <span class="chg__date">Planned release: 15 October 2026</span>
+    </div>
+    <p>First version, submitted to the Shopify App Store review. It contains:</p>
+    <ul>
+      <li>A chronological "What's new" widget: new products, blog posts and active promotions in one list, newest first.</li>
+      <li>Installation as a Shopify app block — any page, header or footer, no theme code.</li>
+      <li>Time window of 7, 14 or 30 days and up to 5 (Free) or 20 (Starter) entries.</li>
+      <li>Discount codes shown only when they are available to all customers, or tagged <code>public</code>; "Buy X, get Y" rules written out with links.</li>
+      <li>Appearance taken from the section the widget sits in, with an accent colour, three icon styles and three corner styles.</li>
+      <li>Automatic nightly refresh at 00:15 UTC plus <strong>Refresh now</strong> in the app.</li>
+      <li>Statistics for Starter: views, clicks, click rate, split by device.</li>
+      <li>Free and Starter ($5.99/month) plans through Shopify billing.</li>
+    </ul>
+  </div>
+  </section>
+
+  <div class="cta">
+    <p class="cta__text">Store Feed goes live on 15 October 2026.</p>
+    <a class="cta__btn" href="#launch">Get the launch email</a>
+  </div>
+
+  <h2 id="contact">Contact</h2>
+  <p>Questions, bug reports, feature requests: <a href="mailto:support@growboost.pl">support@growboost.pl</a> — we reply within 24 hours on business days. If your question is about a documentation section, mention its number (for example 6.2).</p>
+
+  <p class="meta">
+    © 2026 GrowBoost ·
+    <a href="/">Projects</a> ·
+    <a href="/privacy-policy/">Privacy policy</a> ·
+    <a href="#" data-gb-consent-open>Cookie settings</a>
+  </p>
+</main>
+
+<dialog class="lb" id="lightbox" aria-label="Screenshot, full size">
+  <button class="lb__close" type="button" data-lb-close aria-label="Close">&times;</button>
+  <img alt="">
+  <p class="lb__cap"></p>
+</dialog>
+</body>
+</html>
