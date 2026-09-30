@@ -358,8 +358,23 @@ html { scroll-behavior: smooth; }
   max-width: 96vw; max-height: 96vh; overflow: visible;
 }
 .lb::backdrop { background: rgba(20, 18, 40, 0.82); }
-.lb img { display: block; max-width: 96vw; max-height: 84vh; width: auto; height: auto; border-radius: 10px; background: #fff; }
+.lb img {
+  display: block; max-width: 96vw; max-height: 84vh; width: auto; height: auto;
+  border-radius: 10px; background: #fff; cursor: zoom-in;
+}
+/* Powiekszenie 1:1 — zrzuty sa geste, na telefonie tekst w widgecie jest
+   nieczytelny, gdy caly obrazek miesci sie w ekranie. */
+.lb { overflow: auto; overscroll-behavior: contain; }
+.lb--zoom img { max-width: none; max-height: none; cursor: zoom-out; border-radius: 0; }
+.lb--zoom .lb__close { position: fixed; top: 12px; right: 12px; z-index: 2; }
+.lb--zoom .lb__cap {
+  position: fixed; left: 0; right: 0; bottom: 0; margin: 0;
+  max-width: none; padding: 10px 16px; text-align: center;
+  background: rgba(20, 18, 40, 0.88);
+}
 .lb__cap { color: #fff; font-size: 14px; margin: 12px 0 0; max-width: 70ch; }
+.lb__cap::after { content: " — tap the picture for full size."; opacity: .72; }
+.lb--zoom .lb__cap::after { content: " — tap again to fit the screen."; }
 .lb__close {
   position: absolute; top: -14px; right: -14px; width: 36px; height: 36px;
   border: 0; border-radius: 50%; background: #fff; color: var(--ink);
@@ -378,3 +393,32 @@ html { scroll-behavior: smooth; }
 }
 
 a.shot__btn { cursor: pointer; }
+
+/* ===========================================================
+   Responsywnosc — poprawki po pomiarach w przegladarce
+   (Chromium, 360 / 390 / 768 / 1024 / 1440 px, 2026-09-30)
+   =========================================================== */
+
+/* Pasek sekcji zajmowal 92 px wysokosci na telefonie (trzy rzedy
+   plakietek). Jeden rzad przewijany w bok schodzi do ~46 px. */
+@media (max-width: 700px) {
+  .pagenav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .pagenav::-webkit-scrollbar { display: none; }
+  .pagenav a { white-space: nowrap; flex: none; }
+  #overview, #screens, #doc, #faq, #changelog { scroll-margin-top: 58px; }
+  .doc h4, .doc > h3 { scroll-margin-top: 66px; }
+}
+
+/* Licznik lamal sie na dwa rzedy ponizej ~400 px (141 px wysokosci). */
+@media (max-width: 400px) {
+  .cd { gap: 6px; }
+  .cd__unit { min-width: 0; flex: 1 1 0; padding: 10px 2px; }
+  .cd__num { font-size: 21px; }
+  .cd__cap { font-size: 11px; }
+}

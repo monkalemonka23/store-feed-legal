@@ -17,7 +17,16 @@
         dlgImg.src = btn.getAttribute('data-full');
         dlgImg.alt = img ? img.alt : '';
         if (dlgCap) { dlgCap.textContent = btn.getAttribute('data-caption') || ''; }
+        dlg.classList.remove('lb--zoom');
         dlg.showModal();
+        return;
+      }
+
+      /* Screenshots are dense: on a phone the whole picture fits the screen
+         but the text inside the widget does not. One tap switches to full
+         size and the dialog pans. */
+      if (ev.target === dlgImg) {
+        dlg.classList.toggle('lb--zoom');
         return;
       }
       if (ev.target === dlg || (ev.target.closest && ev.target.closest('[data-lb-close]'))) {
@@ -25,7 +34,10 @@
       }
     }, false);
 
-    dlg.addEventListener('close', function () { dlgImg.removeAttribute('src'); });
+    dlg.addEventListener('close', function () {
+      dlgImg.removeAttribute('src');
+      dlg.classList.remove('lb--zoom');
+    });
   }
 
   /* ---------- reveal on scroll ---------- */

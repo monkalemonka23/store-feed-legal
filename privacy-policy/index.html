@@ -148,8 +148,10 @@
       .container { padding: 40px 18px 60px; }
       .sitenav a { font-size: 13px; padding: 5px 10px; }
       h1 { font-size: 26px; }
-      table { font-size: 13px; }
-      th, td { padding: 8px; }
+      /* Tabele wymuszaly poziomy pasek przewijania calej strony przy 360 px
+         (zmierzone w Chromium: scrollWidth 388 przy szerokosci 360). */
+      table { font-size: 13px; table-layout: fixed; width: 100%; }
+      th, td { padding: 8px; overflow-wrap: anywhere; }
     }
   </style>
 </head>
