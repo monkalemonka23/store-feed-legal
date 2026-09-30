@@ -105,12 +105,52 @@
   ]
 }
 </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Store Feed — contents of this page",
+  "itemListOrder": "https://schema.org/ItemListOrderAscending",
+  "numberOfItems": 6,
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Overview", "url": "https://growboost.pl/store-feed-what-s-new-app/#overview" },
+    { "@type": "ListItem", "position": 2, "name": "Screenshots", "url": "https://growboost.pl/store-feed-what-s-new-app/#screens" },
+    { "@type": "ListItem", "position": 3, "name": "Documentation", "url": "https://growboost.pl/store-feed-what-s-new-app/#doc" },
+    { "@type": "ListItem", "position": 4, "name": "FAQ", "url": "https://growboost.pl/store-feed-what-s-new-app/#faq" },
+    { "@type": "ListItem", "position": 5, "name": "Change log", "url": "https://growboost.pl/store-feed-what-s-new-app/#changelog" },
+    { "@type": "ListItem", "position": 6, "name": "Contact", "url": "https://growboost.pl/store-feed-what-s-new-app/#contact" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Store Feed documentation — sections",
+  "itemListOrder": "https://schema.org/ItemListOrderAscending",
+  "numberOfItems": 8,
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "1. Plans", "url": "https://growboost.pl/store-feed-what-s-new-app/#s1" },
+    { "@type": "ListItem", "position": 2, "name": "2. Adding Store Feed to your store", "url": "https://growboost.pl/store-feed-what-s-new-app/#s2" },
+    { "@type": "ListItem", "position": 3, "name": "3. What appears in the feed", "url": "https://growboost.pl/store-feed-what-s-new-app/#s3" },
+    { "@type": "ListItem", "position": 4, "name": "4. Appearance: look and feel", "url": "https://growboost.pl/store-feed-what-s-new-app/#s4" },
+    { "@type": "ListItem", "position": 5, "name": "5. Colours and background", "url": "https://growboost.pl/store-feed-what-s-new-app/#s5" },
+    { "@type": "ListItem", "position": 6, "name": "6. Updates and changes", "url": "https://growboost.pl/store-feed-what-s-new-app/#s6" },
+    { "@type": "ListItem", "position": 7, "name": "7. Analytics: Statistics", "url": "https://growboost.pl/store-feed-what-s-new-app/#s7" },
+    { "@type": "ListItem", "position": 8, "name": "8. Something doesn't look right", "url": "https://growboost.pl/store-feed-what-s-new-app/#s8" }
+  ]
+}
+</script>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WVR58V76"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-<main class="wrap">
+<a class="skip" href="#toc-h">Skip to contents</a>
+
+<main class="wrap" id="main">
 
   <a class="brand" href="/">
     <svg class="brand__mark" viewBox="0 0 48 48" width="34" height="34" aria-hidden="true">
@@ -179,6 +219,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="#changelog">Change log</a>
   </nav>
 
+
+  <nav class="toc toc--cols" aria-labelledby="toc-h">
+    <h2 class="toc__h" id="toc-h">Contents</h2>
+    <ol>
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#screens">Screenshots</a></li>
+      <li><a href="#doc">Documentation</a>
+        <ol>
+          <li><a href="#s1">Plans</a></li>
+          <li><a href="#s2">Adding Store Feed to your store</a></li>
+          <li><a href="#s3">What appears in the feed</a></li>
+          <li><a href="#s4">Appearance: look and feel</a></li>
+          <li><a href="#s5">Colours and background</a></li>
+          <li><a href="#s6">Updates and changes</a></li>
+          <li><a href="#s7">Analytics: Statistics</a></li>
+        </ol>
+      </li>
+      <li><a href="#faq">FAQ</a>
+        <ol start="8">
+          <li><a href="#s8">Something doesn't look right</a>
+            <ol>
+              <li><a href="#s8-1">I can't see the widget on my store</a></li>
+              <li><a href="#s8-2">A new product is missing</a></li>
+              <li><a href="#s8-3">A discount code is missing</a></li>
+              <li><a href="#s8-4">The background colour doesn't match</a></li>
+              <li><a href="#s8-5">I changed the look and I don't see the changes</a></li>
+              <li><a href="#s8-6">The widget repeats many times</a></li>
+              <li><a href="#s8-7">Store Feed is not on the list of sections</a></li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <li><a href="#changelog">Change log</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+    <p class="toc__note">Documentation sections keep their numbers (1.1, 6.2, 8.3 and so on) — quote the number when you write to support.</p>
+  </nav>
+
   <section id="overview" aria-labelledby="overview-h">
 
   <h2 id="overview-h">What your customers see</h2>
@@ -209,38 +287,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h2>Why it works</h2>
   <p class="sub">An announcement bar carries one message to everyone. A feed carries context — and context is what keeps people browsing.</p>
 
-  <div class="grid">
-    <div class="card">
+  <ul class="grid">
+    <li class="card">
       <h3>Proof of life</h3>
       <p>A first-time visitor can tell in two seconds whether anything happens in your store.</p>
-    </div>
-    <div class="card">
+    </li>
+    <li class="card">
       <h3>A reason to return</h3>
       <p>Returning customers see what changed since their last visit without digging through the catalogue.</p>
-    </div>
-    <div class="card">
+    </li>
+    <li class="card">
       <h3>Reaches everyone on site</h3>
       <p>Email and social reach a slice of your audience. The feed reaches the person already looking at your store.</p>
-    </div>
-  </div>
+    </li>
+  </ul>
 
   <h2>How it works</h2>
   <p class="sub">Three steps, no theme code.</p>
 
-  <div class="grid">
-    <div class="card">
+  <ul class="grid">
+    <li class="card">
       <h3>1 · Install</h3>
       <p>Add the app block in Theme Editor and drop the widget wherever it fits your layout.</p>
-    </div>
-    <div class="card">
+    </li>
+    <li class="card">
       <h3>2 · Choose sources</h3>
       <p>Pick products, blog articles, promotions — or all three. Set the time window and how many entries to show.</p>
-    </div>
-    <div class="card">
+    </li>
+    <li class="card">
       <h3>3 · Match your theme</h3>
       <p>One accent colour, three icon sets. The feed then updates itself from your store.</p>
-    </div>
-  </div>
+    </li>
+  </ul>
 
   <h2>Built without touching customer data</h2>
   <p>Store Feed reads three things from your store — products, blog articles and price rules. It requests no customer scopes and stores no personal data about your visitors. Dismissing the widget is remembered in the visitor's browser session, not on our servers. Full detail in the <a href="/privacy-policy/">privacy policy</a>.</p>
@@ -248,8 +326,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h2>Pricing</h2>
   <p class="sub">Start free. Upgrade when the feed earns it.</p>
 
-  <div class="plans">
-    <div class="plan">
+  <ul class="plans">
+    <li class="plan">
       <p class="plan__name">Free</p>
       <p class="plan__price">$0</p>
       <ul>
@@ -259,8 +337,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li>Emoticon icons</li>
         <li>Store Feed icon in the widget footer</li>
       </ul>
-    </div>
-    <div class="plan plan--hi">
+    </li>
+    <li class="plan plan--hi">
       <p class="plan__name">Starter</p>
       <p class="plan__price">$5.99 <small>/ month</small></p>
       <ul>
@@ -271,8 +349,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li>Views, clicks and click-rate statistics</li>
         <li>Your own footer text, or no footer</li>
       </ul>
-    </div>
-  </div>
+    </li>
+  </ul>
   <p class="sub">Full side-by-side list: <a href="#s1-1">Documentation 1.1</a>.</p>
 
   </section>
@@ -283,9 +361,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <p class="sub">The widget on live storefronts and the app itself. Click any picture to open it full size.</p>
 
   <div class="bleed">
-  <div class="shots">
+  <ul class="shots">
 
-    <figure class="shot reveal">
+    <li><figure class="shot reveal">
       <button class="shot__btn" type="button"
               data-full="/assets/shots/widget-light-themes-1400.webp"
               data-caption="The same feed with different titles, accent colours and icon sets, open and collapsed.">
@@ -296,9 +374,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </picture>
       </button>
       <figcaption><b>One widget, your theme's look.</b> Title, accent colour, icon set and corner style are yours; the background, text colour and font come from the section the widget sits in. Every copy can be left open or collapsed to just the title bar.</figcaption>
-    </figure>
+    </figure></li>
 
-    <figure class="shot reveal">
+    <li><figure class="shot reveal">
       <button class="shot__btn" type="button"
               data-full="/assets/shots/widget-dark-themes-1400.webp"
               data-caption="Store Feed on dark themes: the widget reads the section's colours instead of forcing its own.">
@@ -309,9 +387,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </picture>
       </button>
       <figcaption><b>Dark themes work the same way.</b> No white box dropped on a dark page — the widget takes the section's background and switches its text to stay readable.</figcaption>
-    </figure>
+    </figure></li>
 
-    <figure class="shot reveal">
+    <li><figure class="shot reveal">
       <button class="shot__btn" type="button"
               data-full="/assets/shots/widget-states-1284.webp"
               data-caption="Collapsed and open, on a dark theme and on a store's own red section colour.">
@@ -322,9 +400,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </picture>
       </button>
       <figcaption><b>Open, or just a title bar.</b> Shoppers reopen a collapsed widget with one tap, and their choice is remembered while they browse. The count badge drops the word "entries" when the title bar needs the room, so the title never wraps to a second line.</figcaption>
-    </figure>
+    </figure></li>
 
-    <figure class="shot reveal">
+    <li><figure class="shot reveal">
       <button class="shot__btn" type="button"
               data-full="/assets/shots/widget-promotions-1400.webp"
               data-caption="Promotions written out in plain language, with the discount code and a Copy button.">
@@ -335,15 +413,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </picture>
       </button>
       <figcaption><b>Promotions, spelled out.</b> Buy X / get Y rules name the collections and products they apply to, and link to them. Discount codes are shown with a Copy button — and only when the code is available to every customer, or tagged <code>public</code>.</figcaption>
-    </figure>
+    </figure></li>
 
-  </div>
+  </ul>
   </div>
 
   <h3 class="shots__h">Inside the app</h3>
   <div class="bleed">
-  <div class="shots">
-    <figure class="shot reveal">
+  <ul class="shots">
+    <li><figure class="shot reveal">
       <button class="shot__btn" type="button"
               data-full="/assets/shots/panel-content-1400.webp"
               data-caption="The Content tab: placement, sources, filters and how many entries to show.">
@@ -354,14 +432,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </picture>
       </button>
       <figcaption><b>Everything on one screen.</b> Which pages already carry the widget — and which copies are hidden in the theme editor — what goes into the feed, how far back it reaches, how many entries fit and on which devices it shows.</figcaption>
-    </figure>
-  </div>
+    </figure></li>
+  </ul>
   </div>
 
   <div class="bleed">
-  <div class="shots shots--two">
+  <ul class="shots shots--two">
 
-    <figure class="shot reveal">
+    <li><figure class="shot reveal">
       <button class="shot__btn" type="button"
               data-full="/assets/shots/panel-appearance-1400.webp"
               data-caption="The Appearance tab, with a live preview that updates before you save.">
@@ -372,9 +450,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </picture>
       </button>
       <figcaption><b>Appearance, with a live preview.</b> Change the title, colour, icons, corners, opening state and footer, and see the result next to the form before you save.</figcaption>
-    </figure>
+    </figure></li>
 
-    <figure class="shot reveal">
+    <li><figure class="shot reveal">
       <button class="shot__btn" type="button"
               data-full="/assets/shots/panel-analytics-1248.webp"
               data-caption="The Analytics tab: impressions, clicks, click rate, week by week and per device.">
@@ -385,9 +463,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </picture>
       </button>
       <figcaption><b>Statistics that answer one question.</b> How often the widget was seen, how often shoppers opened an entry, and on which device — for the last 7, 30 or 90 days. <span class="shots__note">Starter plan.</span></figcaption>
-    </figure>
+    </figure></li>
 
-  </div>
+  </ul>
   </div>
   </section>
 
@@ -398,31 +476,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h3 id="s1">1. Plans</h3>
 
   <h4 id="s1-1">1.1 What each plan includes</h4>
-  <div class="tblwrap">
+  <div class="tblwrap" role="region" aria-labelledby="s1-1" tabindex="0">
   <table class="tbl">
     <thead>
       <tr><th scope="col">Feature</th><th scope="col">Free</th><th scope="col">Starter</th></tr>
     </thead>
     <tbody>
-      <tr><td>New products</td><td>✓</td><td>✓</td></tr>
-      <tr><td>Blog posts</td><td>—</td><td>✓</td></tr>
-      <tr><td>Promotions and discount codes</td><td>—</td><td>✓</td></tr>
+      <tr><td>New products</td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
+      <tr><td>Blog posts</td><td><span aria-hidden="true">—</span><span class="sr-only">Not included</span></td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
+      <tr><td>Promotions and discount codes</td><td><span aria-hidden="true">—</span><span class="sr-only">Not included</span></td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
       <tr><td>Number of entries in the widget</td><td>up to 5</td><td>5, 10 or 20</td></tr>
-      <tr><td>Time window (last 7, 14 or 30 days)</td><td>✓</td><td>✓</td></tr>
-      <tr><td>Widget title</td><td>✓</td><td>✓</td></tr>
-      <tr><td>Corner style</td><td>✓</td><td>✓</td></tr>
-      <tr><td>Close button</td><td>✓</td><td>✓</td></tr>
-      <tr><td>Show or hide on desktop / tablet / mobile</td><td>✓</td><td>✓</td></tr>
-      <tr><td>Place it on any page, in header or footer</td><td>✓</td><td>✓</td></tr>
-      <tr><td>Automatic daily refresh + manual refresh</td><td>✓</td><td>✓</td></tr>
-      <tr><td>Accent colour</td><td>—</td><td>✓</td></tr>
-      <tr><td>Icon style (Flat, 3D, Emoticon)</td><td>Emoticon only</td><td>✓</td></tr>
-      <tr><td>How the widget opens and its height</td><td>—</td><td>✓</td></tr>
-      <tr><td>Show only chosen collections and blogs</td><td>—</td><td>✓</td></tr>
-      <tr><td>Hide products with a chosen tag</td><td>—</td><td>✓</td></tr>
+      <tr><td>Time window (last 7, 14 or 30 days)</td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
+      <tr><td>Widget title</td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
+      <tr><td>Corner style</td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
+      <tr><td>Close button</td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
+      <tr><td>Show or hide on desktop / tablet / mobile</td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
+      <tr><td>Place it on any page, in header or footer</td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
+      <tr><td>Automatic daily refresh + manual refresh</td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
+      <tr><td>Accent colour</td><td><span aria-hidden="true">—</span><span class="sr-only">Not included</span></td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
+      <tr><td>Icon style (Flat, 3D, Emoticon)</td><td>Emoticon only</td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
+      <tr><td>How the widget opens and its height</td><td><span aria-hidden="true">—</span><span class="sr-only">Not included</span></td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
+      <tr><td>Show only chosen collections and blogs</td><td><span aria-hidden="true">—</span><span class="sr-only">Not included</span></td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
+      <tr><td>Hide products with a chosen tag</td><td><span aria-hidden="true">—</span><span class="sr-only">Not included</span></td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
       <tr><td>Store Feed icon in the widget footer</td><td>always shown</td><td>not shown</td></tr>
-      <tr><td>Your own footer text and link</td><td>—</td><td>✓</td></tr>
-      <tr><td>Statistics: views, clicks, click rate, by device</td><td>—</td><td>✓</td></tr>
+      <tr><td>Your own footer text and link</td><td><span aria-hidden="true">—</span><span class="sr-only">Not included</span></td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
+      <tr><td>Statistics: views, clicks, click rate, by device</td><td><span aria-hidden="true">—</span><span class="sr-only">Not included</span></td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
     </tbody>
   </table>
   </div>

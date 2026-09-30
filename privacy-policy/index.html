@@ -43,7 +43,7 @@
       color: #1a1a1a;
     }
     .logo-name span {
-      color: #7F77DD;
+      color: #665CD0;
     }
     h1 {
       font-size: 32px;
@@ -53,7 +53,7 @@
     }
     .updated {
       font-size: 14px;
-      color: #888;
+      color: #6b6b78;
       margin-bottom: 48px;
     }
     h2 {
@@ -69,7 +69,7 @@
       color: #333;
     }
     ul li { margin-bottom: 6px; }
-    a { color: #7F77DD; text-decoration: none; }
+    a { color: #665CD0; text-decoration: none; }
     a:hover { text-decoration: underline; }
     code {
       font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
@@ -122,10 +122,41 @@
     footer {
       margin-top: 60px;
       font-size: 13px;
-      color: #aaa;
+      color: #6b6b78;
     }
-    footer a { color: #aaa; text-decoration: underline; }
-    footer a:hover { color: #7F77DD; }
+    footer a { color: #6b6b78; text-decoration: underline; }
+    footer a:hover { color: #665CD0; }
+    .skip {
+      position: absolute; left: 16px; top: -60px; z-index: 100;
+      background: #665CD0; color: #fff; font-size: 15px; font-weight: 600;
+      padding: 10px 18px; border-radius: 0 0 9px 9px; text-decoration: none;
+      transition: top .15s ease;
+    }
+    .skip:focus { top: 0; }
+    .toc {
+      border: 1px solid #ececf5;
+      border-radius: 14px;
+      padding: 20px 24px;
+      margin: 32px 0 40px;
+      background: #fcfcff;
+    }
+    .toc__h {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #534AB7;
+      margin: 0 0 12px;
+    }
+    .toc ol { margin: 0; padding-left: 1.45em; }
+    .toc li { font-size: 15px; color: #4a4a55; margin-bottom: 5px; }
+    .toc li::marker { color: #6b6b78; font-variant-numeric: tabular-nums; }
+    .toc a { color: #1a1a1a; text-decoration: none; }
+    .toc a:hover, .toc a:focus-visible { color: #665CD0; text-decoration: underline; }
+    @media (min-width: 640px) {
+      .toc ol { columns: 2; column-gap: 32px; }
+      .toc li { break-inside: avoid; }
+    }
     .sitenav {
       display: flex;
       flex-wrap: wrap;
@@ -154,12 +185,37 @@
       th, td { padding: 8px; overflow-wrap: anywhere; }
     }
   </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Privacy Policy — contents",
+  "itemListOrder": "https://schema.org/ItemListOrderAscending",
+  "numberOfItems": 11,
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "1. Information We Collect", "url": "https://growboost.pl/privacy-policy/#p1" },
+    { "@type": "ListItem", "position": 2, "name": "2. Information We Do Not Collect", "url": "https://growboost.pl/privacy-policy/#p2" },
+    { "@type": "ListItem", "position": 3, "name": "3. How We Use Your Information", "url": "https://growboost.pl/privacy-policy/#p3" },
+    { "@type": "ListItem", "position": 4, "name": "4. Data Storage and Security", "url": "https://growboost.pl/privacy-policy/#p4" },
+    { "@type": "ListItem", "position": 5, "name": "5. Data Retention", "url": "https://growboost.pl/privacy-policy/#p5" },
+    { "@type": "ListItem", "position": 6, "name": "6. Customer Data Requests", "url": "https://growboost.pl/privacy-policy/#p6" },
+    { "@type": "ListItem", "position": 7, "name": "7. Third-Party Services", "url": "https://growboost.pl/privacy-policy/#p7" },
+    { "@type": "ListItem", "position": 8, "name": "8. Cookies and Tracking in the Widget", "url": "https://growboost.pl/privacy-policy/#p8" },
+    { "@type": "ListItem", "position": 9, "name": "9. Cookies on This Website", "url": "https://growboost.pl/privacy-policy/#p9" },
+    { "@type": "ListItem", "position": 10, "name": "10. Launch Notification List", "url": "https://growboost.pl/privacy-policy/#p10" },
+    { "@type": "ListItem", "position": 11, "name": "11. Changes to This Policy", "url": "https://growboost.pl/privacy-policy/#p11" }
+  ]
+}
+</script>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WVR58V76"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <div class="container">
+  <a class="skip" href="#ptoc-h">Skip to contents</a>
+
+  <main class="container" id="main">
 
     <a class="logo" href="/">
       <img class="logo-mark" src="/assets/store-feed-icon.png" width="40" height="40" alt="">
@@ -185,7 +241,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       itself.
     </p>
 
-    <h2>1. Information We Collect</h2>
+
+    <nav class="toc" aria-labelledby="ptoc-h">
+      <h2 class="toc__h" id="ptoc-h">Contents</h2>
+      <ol>
+      <li><a href="#p1">Information We Collect</a></li>
+      <li><a href="#p2">Information We Do Not Collect</a></li>
+      <li><a href="#p3">How We Use Your Information</a></li>
+      <li><a href="#p4">Data Storage and Security</a></li>
+      <li><a href="#p5">Data Retention</a></li>
+      <li><a href="#p6">Customer Data Requests</a></li>
+      <li><a href="#p7">Third-Party Services</a></li>
+      <li><a href="#p8">Cookies and Tracking in the Widget</a></li>
+      <li><a href="#p9">Cookies on This Website</a></li>
+      <li><a href="#p10">Launch Notification List</a></li>
+      <li><a href="#p11">Changes to This Policy</a></li>
+        <li><a href="#pcontact">Contact us</a></li>
+      </ol>
+    </nav>
+
+    <h2 id="p1">1. Information We Collect</h2>
     <p>When you install Store Feed, we collect and store the following information:</p>
     <ul>
       <li><strong>Shop domain</strong> — your Shopify store's permanent domain (e.g. yourstore.myshopify.com)</li>
@@ -194,7 +269,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li><strong>Aggregated analytics</strong> — anonymous, aggregated counts of widget impressions and clicks per day, broken down by device type (desktop, tablet, mobile). We do not collect or store any personal data about your store visitors.</li>
     </ul>
 
-    <h2>2. Information We Do Not Collect</h2>
+    <h2 id="p2">2. Information We Do Not Collect</h2>
     <p>We do not collect:</p>
     <ul>
       <li>Personal data of your store's customers (names, emails, addresses, payment information)</li>
@@ -202,7 +277,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li>Any data beyond what is necessary to operate the App</li>
     </ul>
 
-    <h2>3. How We Use Your Information</h2>
+    <h2 id="p3">3. How We Use Your Information</h2>
     <p>We use the collected information exclusively to:</p>
     <ul>
       <li>Display the Store Feed widget on your storefront with your products, blog posts, and promotions</li>
@@ -212,7 +287,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </ul>
     <p>We do not sell, rent, share, or otherwise disclose your data to third parties for their own purposes.</p>
 
-    <h2>4. Data Storage and Security</h2>
+    <h2 id="p4">4. Data Storage and Security</h2>
     <p>
       Your data is stored in a PostgreSQL database hosted on Supabase (located in the United States).
       Access to the database is restricted through Row-Level Security (RLS) and is only accessible
@@ -223,7 +298,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       authorized API calls to your store. We do not log or share access tokens.
     </p>
 
-    <h2>5. Data Retention</h2>
+    <h2 id="p5">5. Data Retention</h2>
     <p>
       We retain your data for as long as the App is installed on your store. When you uninstall
       the App, we mark your store as uninstalled and stop accessing your Shopify store data.
@@ -232,7 +307,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       feed cache, analytics, and configuration.
     </p>
 
-    <h2>6. Customer Data Requests</h2>
+    <h2 id="p6">6. Customer Data Requests</h2>
     <p>
       As Store Feed does not collect any personal data about your store's customers, we have
       no customer data to provide or delete in response to customer data requests. We acknowledge
@@ -244,7 +319,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li><strong>shop/redact</strong> — all shop data is permanently deleted</li>
     </ul>
 
-    <h2>7. Third-Party Services</h2>
+    <h2 id="p7">7. Third-Party Services</h2>
     <p>Store Feed uses the following third-party services to operate:</p>
     <ul>
       <li><strong>Shopify</strong> — e-commerce platform and API provider (<a href="https://www.shopify.com/legal/privacy" target="_blank" rel="noopener">Shopify Privacy Policy</a>)</li>
@@ -252,7 +327,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li><strong>Fly.io</strong> — application hosting (<a href="https://fly.io/legal/privacy-policy/" target="_blank" rel="noopener">Fly.io Privacy Policy</a>)</li>
     </ul>
 
-    <h2>8. Cookies and Tracking in the Widget</h2>
+    <h2 id="p8">8. Cookies and Tracking in the Widget</h2>
     <p>
       The Store Feed widget uses <code>sessionStorage</code> (not cookies) to remember whether
       a visitor has dismissed or minimized the widget. This data is stored locally in the
@@ -260,7 +335,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       the browser session ends.
     </p>
 
-    <h2>9. Cookies on This Website</h2>
+    <h2 id="p9">9. Cookies on This Website</h2>
     <div class="note">
       <p>This section applies to <strong>growboost.pl</strong> only — not to the Store Feed widget running in merchant storefronts, which is described in section 8.</p>
     </div>
@@ -305,7 +380,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       Write to <a href="mailto:support@growboost.pl">support@growboost.pl</a> to exercise any of them.
     </p>
 
-    <h2>10. Launch Notification List</h2>
+    <h2 id="p10">10. Launch Notification List</h2>
     <p>
       If you enter your email address in the launch form on growboost.pl, we process that address
       for one purpose only: to send you a single email announcing that Store Feed is available.
@@ -332,7 +407,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       announcement at all.
     </p>
 
-    <h2>11. Changes to This Policy</h2>
+    <h2 id="p11">11. Changes to This Policy</h2>
     <p>
       We may update this Privacy Policy from time to time. We will notify merchants of any
       significant changes by updating the "Last updated" date at the top of this page.
@@ -343,7 +418,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <hr class="divider">
 
     <div class="contact-box">
-      <h2>Contact Us</h2>
+      <h2 id="pcontact">Contact Us</h2>
       <p>
         If you have any questions about this Privacy Policy or how we handle your data,
         please contact us at:
@@ -370,6 +445,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </p>
     </footer>
 
-  </div>
+  </main>
 </body>
 </html>
