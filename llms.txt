@@ -35,8 +35,26 @@ Key facts, so they are not guessed:
 - The Free plan shows a Store Feed icon in the widget footer; Starter does not.
 - The app requests no customer scopes and does no per-visitor tracking.
 
+Measured on a Shopify development store (Savor theme) with Lighthouse, September 2026:
+
+- The widget adds about 10 KB of compressed code: 7.0 KB of JavaScript and 3.4 KB of CSS.
+- Layout shift caused by the widget (CLS) is 0.0004 on mobile and 0.0001 on desktop.
+- The Lighthouse performance difference with the widget against without, in the same
+  session, is 0.6 points on the averages and 1.7 points on the medians; Shopify's limit
+  for app blocks is 10 points.
+- Lighthouse flagged no accessibility issues attributable to the widget.
+
+Accessibility: the website and the app are built against EN 301 549, which adopts
+WCAG 2.1 level AA. growboost.pl was self-assessed on 30 September 2026 with axe-core
+4.4.3 at 1280 px and 390 px with no violations reported, plus manual checks of reflow
+at 320 px, 200% text enlargement, the WCAG text-spacing overrides, keyboard operation,
+focus visibility and a skip link. Full statement, including the limit that depends on
+the merchant's theme colours:
+https://growboost.pl/privacy-policy/#p11
+
 ## Company
 
 - [Projects](https://growboost.pl/): the list of GrowBoost projects
 - [Privacy policy](https://growboost.pl/privacy-policy/): what the app and the site store
+- [Accessibility statement](https://growboost.pl/privacy-policy/#p11): standard, test method, known limits
 - Contact: support@growboost.pl, replies within 24 hours on business days

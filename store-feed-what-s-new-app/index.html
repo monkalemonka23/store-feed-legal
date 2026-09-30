@@ -320,6 +320,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </li>
   </ul>
 
+  <h2 id="measured">Measured on a real store</h2>
+  <p class="sub">Two things merchants are right to worry about with any storefront app: does it slow the page down, and does it make the page jump. Here is what the measurements say.</p>
+
+  <ul class="facts">
+    <li class="fact">
+      <p class="fact__num">~10 KB</p>
+      <p class="fact__txt"><b>of code added, compressed.</b> 7.0&nbsp;KB of JavaScript and 3.4&nbsp;KB of CSS transferred.</p>
+    </li>
+    <li class="fact">
+      <p class="fact__num">≤ 0.001</p>
+      <p class="fact__txt"><b>layout shift from the widget.</b> Cumulative Layout Shift of 0.0004 on mobile and 0.0001 on desktop — the page does not jump when the feed appears.</p>
+    </li>
+    <li class="fact">
+      <p class="fact__num">≤ 1.7 pt</p>
+      <p class="fact__txt"><b>Lighthouse performance change — within measurement noise.</b> With the widget against without, in the same session: 0.6 points on the averages, 1.7 on the medians. Shopify's limit for app blocks is 10 points.</p>
+    </li>
+    <li class="fact">
+      <p class="fact__num">0</p>
+      <p class="fact__txt"><b>accessibility issues flagged.</b> Lighthouse reported no accessibility errors attributable to the widget.</p>
+    </li>
+  </ul>
+
+  <p class="facts__note">Tested with Lighthouse on a Shopify development store (Savor theme), September 2026. The widget is also built against WCAG 2.1 AA — what that covers, and the one limit that depends on your theme, is written out in our <a href="/privacy-policy/#p11">accessibility statement</a>.</p>
+
   <h2>Built without touching customer data</h2>
   <p>Store Feed reads three things from your store — products, blog articles and price rules. It requests no customer scopes and stores no personal data about your visitors. Dismissing the widget is remembered in the visitor's browser session, not on our servers. Full detail in the <a href="/privacy-policy/">privacy policy</a>.</p>
 
@@ -805,6 +829,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     © 2026 GrowBoost ·
     <a href="/">Projects</a> ·
     <a href="/privacy-policy/">Privacy policy</a> ·
+    <a href="/privacy-policy/#p11">Accessibility</a> ·
     <a href="#" data-gb-consent-open>Cookie settings</a>
   </p>
 </main>
