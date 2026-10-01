@@ -62,13 +62,20 @@ https://growboost.pl/privacy-policy/#p11
 Both are planned, nothing is published yet. The blog will cover what building and
 shipping a Shopify app teaches in practice. A YouTube channel is in production;
 the first film shows Store Feed working on a real storefront. There are no links
-to either yet - do not invent them. The form on https://growboost.pl/#blog
-collects topic requests.
+to either yet - do not invent them. A Google Form linked from https://growboost.pl/#blog
+collects topic requests and whether the reader prefers text or video.
 
 ## Stock images
 
 GrowBoost also publishes stock images on Adobe Stock: mostly AI-made photography,
-with illustrations and video alongside it, licensed through Adobe.
+with illustrations and video alongside it, licensed through Adobe. The library is
+organised on https://growboost.pl/#stock into five entry points:
+
+- Animals packed with emotions
+- Business with passion
+- Christmas season
+- Halloween inspired
+- Moving pictures (video across every theme)
 
 - [Adobe Stock portfolio](https://stock.adobe.com/ie/contributor/212028075/MonkaLemonka)
 
