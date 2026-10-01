@@ -638,3 +638,89 @@ a.shot__btn { cursor: pointer; }
   .faq, .chg, .fact, .card, .plan, table { page-break-inside: avoid; }
   .doc > h3 { page-break-before: auto; }
 }
+
+/* ===========================================================
+   Polityka prywatnosci (2026-10-01)
+   Strona miala wlasny, rownolegly arkusz w <style>. Kazda zmiana
+   wygladu wymagala poprawki w dwoch miejscach i wlasnie dlatego
+   przez chwile miala inny naglowek. Tutaj zostaja tylko reguly,
+   ktorych nie da sie wziac ze wspolnych - reszta (reset, body,
+   linki, .skip, .sr-only, .pagehead, .toc) jest juz wyzej.
+   Wszystko w kolorach z :root, wiec zmiana odcienia marki
+   przechodzi i tu.
+   =========================================================== */
+
+.container { max-width: 720px; margin: 0 auto; padding: 52px 24px 80px; }
+
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-mark { width: 34px; height: 34px; border-radius: 8px; display: block; }
+.logo-name { font-size: 18px; font-weight: 600; color: var(--ink); }
+.logo-name span { color: var(--brand-ink); }
+
+.container h1 { font-size: 32px; font-weight: 700; letter-spacing: 0; margin-bottom: 8px; }
+.container h2 { font-size: 20px; font-weight: 600; letter-spacing: 0; margin: 40px 0 12px; }
+.container h3 { font-size: 16px; font-weight: 600; margin: 26px 0 8px; }
+.container p { margin-bottom: 16px; color: #333; }
+.container ul { margin: 0 0 16px 20px; color: #333; }
+.container ul li { margin-bottom: 6px; }
+.container code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.9em; background: var(--brand-soft); padding: 1px 5px;
+  border-radius: 4px; color: var(--brand-dark);
+}
+
+/* Elementy wspolne wewnatrz .container musza bic reguly .container p/h2,
+   ktore maja ta sama specyficznosc co pojedyncza klasa. */
+.container .updated { font-size: 14px; color: var(--ink-mute); margin-bottom: 48px; }
+.container .toc__h {
+  font-size: 13px; font-weight: 600; letter-spacing: 0.05em;
+  text-transform: uppercase; color: var(--brand-dark); margin: 0 0 12px;
+}
+.container .toc__note { font-size: 13.5px; color: var(--ink-mute); margin: 12px 0 0; }
+.divider { border: none; border-top: 1px solid var(--line); margin: 48px 0; }
+
+.container table { width: 100%; border-collapse: collapse; margin: 0 0 20px; font-size: 14px; }
+.container th, .container td {
+  text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line);
+  vertical-align: top; color: #333;
+}
+.container th { font-weight: 600; color: var(--ink); background: #fafaff; }
+
+.container .note {
+  background: #fafaff; border-left: 3px solid #d9d5f5; border-radius: 0 8px 8px 0;
+  padding: 14px 18px; margin-bottom: 20px; font-size: 15px; color: #555;
+}
+.container .note p:last-child { margin-bottom: 0; }
+
+.contact-box { background: var(--brand-soft); border-radius: 12px; padding: 24px; margin-top: 40px; }
+.contact-box h2 { margin-top: 0; }
+
+.container footer { margin-top: 60px; font-size: 13px; color: var(--ink-mute); }
+.container footer a { color: var(--ink-mute); text-decoration: underline; }
+.container footer a:hover { color: var(--brand-ink); }
+
+/* --- menu serwisu, rozdzielone na GrowBoost i Store Feed --- */
+.sitenav { display: grid; gap: 10px; margin: 0 0 40px; }
+.sitenav--bottom { margin: 40px 0 0; }
+.sitenav__group { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.sitenav__label {
+  flex: none; min-width: 88px; font-size: 12px; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-mute);
+}
+.sitenav ul { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 0; padding: 0; }
+.sitenav li, .container .sitenav li { margin: 0; }
+.sitenav a {
+  display: inline-block; font-size: 14px; font-weight: 600; text-decoration: none;
+  padding: 6px 13px; border-radius: 999px; background: var(--brand-soft); color: var(--brand-dark);
+}
+.sitenav a:hover { background: var(--brand-ink); color: #fff; text-decoration: none; }
+.sitenav a:focus-visible { outline: 2px solid var(--brand-ink); outline-offset: 2px; }
+
+@media (max-width: 560px) {
+  .container { padding: 36px 18px 60px; }
+  .container h1 { font-size: 26px; }
+  .container table { font-size: 13px; table-layout: fixed; }
+  .container th, .container td { padding: 8px; overflow-wrap: anywhere; }
+  .sitenav a { font-size: 13px; padding: 5px 10px; }
+  .sitenav__label { min-width: 0; flex-basis: 100%; }
+}
