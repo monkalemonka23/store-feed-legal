@@ -40,6 +40,35 @@
     });
   }
 
+
+  /* ---------- biezaca sekcja w przyklejonym pasku ---------- */
+  var nav = document.querySelector('.pagenav');
+  if (nav && 'IntersectionObserver' in window) {
+    var links = {}, targets = [];
+    Array.prototype.forEach.call(nav.querySelectorAll('a[href^="#"]'), function (a) {
+      var el = document.getElementById(a.getAttribute('href').slice(1));
+      if (el) { links[el.id] = a; targets.push(el); }
+    });
+    if (targets.length) {
+      var seen = {};
+      var spy = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { seen[e.target.id] = e.isIntersecting; });
+        /* Sekcje sa dlugie, wiec w pasku widoczne bywaja dwie naraz.
+           Bierzemy OSTATNIA w kolejnosci dokumentu - czyli te, w ktora
+           wlasnie weszlismy, nie te, z ktorej wychodzimy. */
+        var current = null;
+        for (var i = targets.length - 1; i >= 0; i--) {
+          if (seen[targets[i].id]) { current = targets[i].id; break; }
+        }
+        for (var id in links) {
+          if (id === current) { links[id].setAttribute('aria-current', 'true'); }
+          else { links[id].removeAttribute('aria-current'); }
+        }
+      }, { rootMargin: '-70px 0px -55% 0px', threshold: 0 });
+      targets.forEach(function (t) { spy.observe(t); });
+    }
+  }
+
   /* ---------- reveal on scroll ---------- */
   var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var items = document.querySelectorAll('.reveal');

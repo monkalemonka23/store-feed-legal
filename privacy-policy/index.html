@@ -22,6 +22,7 @@
 
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
   <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <meta name="theme-color" content="#7F77DD">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon-64.png">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
@@ -40,19 +41,32 @@
     .container {
       max-width: 720px;
       margin: 0 auto;
-      padding: 60px 24px 80px;
+      padding: 52px 24px 80px;
+    }
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; border: 0;
+    }
+    .pagehead {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px 20px;
+      padding-bottom: 16px;
+      margin-bottom: 30px;
+      border-bottom: 1px solid #ececf5;
     }
     .logo {
       display: flex;
       align-items: center;
       gap: 12px;
-      margin-bottom: 48px;
       text-decoration: none;
     }
     .logo-mark {
-      width: 40px;
-      height: 40px;
-      border-radius: 10px;
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
       display: block;
     }
     .logo-name {
@@ -222,7 +236,7 @@
     .sitenav a:hover { background: #665CD0; color: #fff; }
     .sitenav a:focus-visible { outline: 2px solid #665CD0; outline-offset: 2px; }
     @media (max-width: 560px) {
-      .container { padding: 40px 18px 60px; }
+      .container { padding: 36px 18px 60px; }
       .sitenav a { font-size: 13px; padding: 5px 10px; }
       .sitenav__label { min-width: 0; flex-basis: 100%; }
       h1 { font-size: 26px; }
@@ -290,10 +304,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <main class="container" id="main">
 
-    <a class="logo" href="/">
-      <img class="logo-mark" src="/assets/store-feed-icon.png" width="40" height="40" alt="">
-      <span class="logo-name">Store Feed <span>by GrowBoost</span></span>
-    </a>
+    <header class="pagehead">
+        <a class="logo" href="/">
+          <img class="logo-mark" src="/assets/store-feed-icon.png" width="34" height="34" alt="">
+          <span class="logo-name">Store Feed <span>by GrowBoost</span></span>
+        </a>
+    </header>
 
     <nav class="sitenav" aria-label="Site">
       <div class="sitenav__group">
@@ -407,9 +423,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 id="p7">7. Third-Party Services</h2>
     <p>Store Feed uses the following third-party services to operate:</p>
     <ul>
-      <li><strong>Shopify</strong> - e-commerce platform and API provider (<a href="https://www.shopify.com/legal/privacy" target="_blank" rel="noopener">Shopify Privacy Policy</a>)</li>
-      <li><strong>Supabase</strong> - database hosting (<a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase Privacy Policy</a>)</li>
-      <li><strong>Fly.io</strong> - application hosting (<a href="https://fly.io/legal/privacy-policy/" target="_blank" rel="noopener">Fly.io Privacy Policy</a>)</li>
+      <li><strong>Shopify</strong> - e-commerce platform and API provider (<a href="https://www.shopify.com/legal/privacy" target="_blank" rel="noopener">Shopify Privacy Policy<span class="sr-only"> (opens in a new tab)</span></a>)</li>
+      <li><strong>Supabase</strong> - database hosting (<a href="https://supabase.com/privacy" target="_blank" rel="noopener">Supabase Privacy Policy<span class="sr-only"> (opens in a new tab)</span></a>)</li>
+      <li><strong>Fly.io</strong> - application hosting (<a href="https://fly.io/legal/privacy-policy/" target="_blank" rel="noopener">Fly.io Privacy Policy<span class="sr-only"> (opens in a new tab)</span></a>)</li>
     </ul>
 
     <h2 id="p8">8. Cookies and Tracking in the Widget</h2>
