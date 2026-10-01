@@ -519,35 +519,26 @@ a.shot__btn { cursor: pointer; }
 }
 .soon--live { background: #E1F5EE; color: #085041; }
 
-/* --- formularz pomyslow na teksty --- */
+/* --- odnosnik do formularza pomyslow --- */
 .ideas {
   border: 1px solid var(--line); border-radius: 14px;
-  padding: 22px 24px; margin: 20px 0 0; background: #fcfcff;
+  padding: 20px 24px; margin: 20px 0 0; background: #fcfcff;
 }
-.ideas__label { display: block; font-size: 15px; font-weight: 600; margin-bottom: 8px; }
-.ideas textarea {
-  width: 100%; font: inherit; font-size: 15px; line-height: 1.55;
-  padding: 11px 14px; border: 1px solid #ddd9f2; border-radius: 9px;
-  background: #fff; color: var(--ink); resize: vertical; min-height: 92px;
-}
-.ideas textarea:focus { outline: 2px solid var(--brand-ink); outline-offset: 1px; border-color: transparent; }
-.ideas__fs { border: 0; padding: 0; margin: 18px 0 0; }
-.ideas__legend { font-size: 15px; font-weight: 600; padding: 0; margin-bottom: 8px; }
-.ideas__opts { display: flex; flex-wrap: wrap; gap: 8px 20px; }
-.ideas__opt { display: flex; align-items: center; gap: 8px; font-size: 15px; color: var(--ink-soft); }
-.ideas__opt input { width: 17px; height: 17px; accent-color: var(--brand-ink); }
 .ideas__btn {
-  font: inherit; font-size: 15px; font-weight: 600; margin-top: 18px;
+  font: inherit; font-size: 15px; font-weight: 600;
   padding: 11px 22px; border: 0; border-radius: 9px;
   background: var(--brand-ink); color: #fff; cursor: pointer;
 }
 .ideas__btn:hover { background: var(--brand-dark); }
 .ideas__note { font-size: 13.5px; color: var(--ink-mute); margin: 12px 0 0; }
-.ideas__err { font-size: 14px; color: #A32D2D; margin: 12px 0 0; }
 
-/* --- kafelek z praca ze stocku --- */
-.stock { display: grid; gap: 16px; align-items: start; }
-@media (min-width: 720px) { .stock { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+/* --- galeria prac ze stocku ---
+   Znak wodny jest wtopiony w pliki (assets/stock), nie dokladany CSS-em:
+   plik pobrany ze strony dalej niesie adres i nazwisko autorki. */
+.stockgrid { display: grid; gap: 22px; list-style: none; margin: 0 0 8px; padding: 0; }
+@media (min-width: 700px) { .stockgrid { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1060px) { .stockgrid { grid-template-columns: repeat(3, 1fr); } }
+
 .stock-shot {
   position: relative; display: block; border-radius: 14px; overflow: hidden;
   border: 1px solid var(--line); background: #fff; text-decoration: none;
@@ -559,10 +550,11 @@ a.shot__btn { cursor: pointer; }
 .stock-shot__tag {
   position: absolute; left: 0; right: 0; bottom: 0;
   background: rgba(22, 20, 42, 0.92); color: #fff;
-  font-size: 13.5px; font-weight: 600; padding: 10px 14px;
+  font-size: 14px; font-weight: 600; padding: 10px 14px; line-height: 1.35;
 }
-.stock-shot__tag span { font-weight: 400; opacity: 0.86; }
-.stock__copy p { font-size: 15.5px; }
+.stock-shot__tag span { display: block; font-size: 12.5px; font-weight: 400; opacity: 0.88; }
+.stock-shot__desc { font-size: 14.5px; color: var(--ink-mute); margin: 10px 0 0; }
+.stockgrid__note { margin-top: 26px; }
 .stock__btn {
   display: inline-block; font-size: 15px; font-weight: 600;
   padding: 11px 22px; border-radius: 9px;
@@ -572,3 +564,9 @@ a.shot__btn { cursor: pointer; }
 
 /* --- maly kafelek stocku na stronie 404 --- */
 .stock--404 { max-width: 420px; margin: 32px 0 0; display: block; }
+
+/* --- odnosnik do formularza pomyslow (Google Forms) --- */
+.ideas--link { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 18px; }
+.ideas__btn--link { display: inline-block; text-decoration: none; }
+.ideas__btn--link:hover { color: #fff; text-decoration: none; }
+.ideas--link .ideas__note { margin: 0; flex: 1 1 260px; }
