@@ -1,7 +1,7 @@
 <!-- Plain-text copy of https://growboost.pl/store-feed-what-s-new-app/#doc
      Kept in sync by hand with docs/help/store-feed-help.md in the app repo. -->
 
-# Store Feed — Help Center
+# Store Feed - Help Center
 
 Store Feed shows a "What's new" list on your store: new products, blog posts
 and active promotions, collected automatically. This guide explains how to set
@@ -18,9 +18,11 @@ simply point to it.
 
 | | Free | Starter |
 |---|---|---|
+| Price | free, no time limit | $5.99 / month or $59.90 / year |
+| Free trial | - | 14 days |
 | New products | ✓ | ✓ |
-| Blog posts | — | ✓ |
-| Promotions and discount codes | — | ✓ |
+| Blog posts | - | ✓ |
+| Promotions and discount codes | - | ✓ |
 | Number of entries in the widget | up to 5 | 5, 10 or 20 |
 | Time window (last 7, 14 or 30 days) | ✓ | ✓ |
 | Widget title | ✓ | ✓ |
@@ -29,16 +31,19 @@ simply point to it.
 | Show or hide on desktop / tablet / mobile | ✓ | ✓ |
 | Place it on any page, in header or footer | ✓ | ✓ |
 | Automatic daily refresh + manual refresh | ✓ | ✓ |
-| Accent color | — | ✓ |
+| Accent color | - | ✓ |
 | Icon style (Flat, 3D, Emoticon) | Emoticon only | ✓ |
-| How the widget opens and its height | — | ✓ |
-| Show only chosen collections and blogs | — | ✓ |
-| Hide products with a chosen tag | — | ✓ |
+| How the widget opens and its height | - | ✓ |
+| Show only chosen collections and blogs | - | ✓ |
+| Hide products with a chosen tag | - | ✓ |
 | Store Feed icon in the widget footer | always shown | not shown |
-| Your own footer text and link | — | ✓ |
-| Statistics: views, clicks, click rate, by device | — | ✓ |
+| Your own footer text and link | - | ✓ |
+| Statistics: views, clicks, click rate, by device | - | ✓ |
 
 ### 1.2 Changing your plan
+
+Starter begins with a **14-day free trial**. Paying yearly ($59.90) costs the same
+as ten monthly payments, so two months are free.
 
 1. Open the Store Feed app in your Shopify admin.
 2. Click **Plans** (or **Change plan**) in the top right corner.
@@ -65,7 +70,7 @@ are hidden in the theme editor ("Hidden").
 
 ### 2.2 Adding it yourself
 
-1. Go to **Online Store › Themes › Customize**.
+1. Go to **Online Store > Themes > Customize**.
 2. Open the page you want.
 3. Click **Add section** and choose **Store Feed** under **Apps**.
 4. Click **Save**.
@@ -75,8 +80,8 @@ This is the case for some older themes.
 
 ### 2.3 Where it works best
 
-- **As its own section on a page** — the most common choice.
-- **In the header or footer** — then it appears on every page.
+- **As its own section on a page** - the most common choice.
+- **In the header or footer** - then it appears on every page.
 - **Not inside a product card or a product slider.** There it is repeated for
   every product in the grid.
 - **It needs at least 200 px of width.** In very narrow spots (for example the
@@ -133,7 +138,7 @@ The number of entries is set in **Max entries** (Free: 5).
 2. Within each kind, the newest are picked.
 3. The chosen entries are then shown **newest first**.
 
-Example: 2 promotions, 3 blog posts and 6 new products, with 5 places — the
+Example: 2 promotions, 3 blog posts and 6 new products, with 5 places - the
 widget shows the 2 promotions and 3 blog posts, sorted by date.
 
 ### 3.5 On the page of a listed item
@@ -149,9 +154,9 @@ can choose a longer window (30 days) in **Date range**.
 
 ### 3.7 Choosing what to include (Starter)
 
-- **Collections** — show only products from the chosen collections.
-- **Blogs** — show only posts from the chosen blogs.
-- **Exclude products with tag** — products with any of these tags never
+- **Collections** - show only products from the chosen collections.
+- **Blogs** - show only posts from the chosen blogs.
+- **Exclude products with tag** - products with any of these tags never
   appear (useful for items that are always on sale and are not really "new").
 
 ---
@@ -178,9 +183,9 @@ Sharp, Rounded or Pill.
 
 ### 4.5 How the widget opens and its height (Starter)
 
-- **Open** — shoppers see the list straight away.
-- **Collapsed** — only the title bar; shoppers open it with one tap.
-- **Height when open** — how much of the screen the open widget may take.
+- **Open** - shoppers see the list straight away.
+- **Collapsed** - only the title bar; shoppers open it with one tap.
+- **Height when open** - how much of the screen the open widget may take.
 
 A shopper's own choice (opening or closing the list) is remembered while they
 browse your store.
@@ -213,7 +218,7 @@ colors of the section it sits in**, so it looks like part of your theme.
 
 Change the colors of the section that holds the widget:
 
-1. Go to **Online Store › Themes › Customize**.
+1. Go to **Online Store > Themes > Customize**.
 2. Click the section where Store Feed is placed.
 3. Change its **Color scheme** to one with the background you want.
 4. Click **Save**.
@@ -249,7 +254,7 @@ again.
 ### 6.3 After changing settings
 
 1. Click **Save**.
-2. Click **Refresh now** — this sends your new settings to your store.
+2. Click **Refresh now** - this sends your new settings to your store.
 3. Reload your store page (Ctrl+F5 on Windows, Cmd+Shift+R on Mac).
 
 Shoppers who are already browsing your shop may see the change up to 15 minutes later.
@@ -263,9 +268,9 @@ new plan by itself.
 
 ## 7. Analytics: Statistics (Starter)
 
-- **Views** — how many times the widget was shown.
-- **Clicks** — how many times shoppers clicked an entry.
-- **Click rate (CTR)** — clicks divided by views.
+- **Views** - how many times the widget was shown.
+- **Clicks** - how many times shoppers clicked an entry.
+- **Click rate (CTR)** - clicks divided by views.
 - Figures by device (desktop, tablet, mobile), for the last 7, 30 or 90 days.
 
 Statistics count the whole store together, not each copy of the widget
@@ -290,7 +295,7 @@ separately.
 1. The product is **Active** and available on **Online Store** (3.1).
 2. It was published within the time window (3.1).
 3. It doesn't have an excluded tag and belongs to the chosen collections (3.7).
-4. There are enough places — promotions and blog posts are picked first (3.4).
+4. There are enough places - promotions and blog posts are picked first (3.4).
 5. Click **Refresh now** (6.2).
 
 ### 8.3 A discount code is missing (Starter)
@@ -310,7 +315,7 @@ The widget uses the colors of its section. Change the section's color scheme
 1. In the app, click **Save**.
 2. Click **Refresh now**. If the button is locked, wait until the time shown
    on it (6.2).
-3. Wait for the green message **"Feed refreshed — … entries in your widget"**.
+3. Wait for the green message **"Feed refreshed - ... entries in your widget"**.
    Only then are your changes sent to your store. If you see a yellow message
    instead, try again in a few minutes.
 4. Open your store page and reload it without the saved copy:
@@ -339,5 +344,5 @@ Your theme does not support app sections (2.2).
 
 ## 9. Contact
 
-Email **support@growboost.pl** — we reply within 24 hours on business days.
+Email **support@growboost.pl** - we reply within 24 hours on business days.
 Mention the section number from this guide if it relates to your question.
