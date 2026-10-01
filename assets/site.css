@@ -570,3 +570,21 @@ a.shot__btn { cursor: pointer; }
 .ideas__btn--link { display: inline-block; text-decoration: none; }
 .ideas__btn--link:hover { color: #fff; text-decoration: none; }
 .ideas--link .ideas__note { margin: 0; flex: 1 1 260px; }
+
+/* --- formularz pomyslow: pola i potwierdzenie --- */
+.ideas__label { display: block; font-size: 15px; font-weight: 600; margin-bottom: 8px; }
+.ideas textarea {
+  width: 100%; font: inherit; font-size: 15px; line-height: 1.55;
+  padding: 11px 14px; border: 1px solid #ddd9f2; border-radius: 9px;
+  background: #fff; color: var(--ink); resize: vertical; min-height: 92px;
+}
+.ideas textarea:focus { outline: 2px solid var(--brand-ink); outline-offset: 1px; border-color: transparent; }
+.ideas__fs { border: 0; padding: 0; margin: 18px 0 0; }
+.ideas__legend { font-size: 15px; font-weight: 600; padding: 0; margin-bottom: 8px; }
+.ideas__opts { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+.ideas__opt { display: flex; align-items: center; gap: 8px; font-size: 15px; color: var(--ink-soft); }
+.ideas__opt input { width: 17px; height: 17px; accent-color: var(--brand-ink); }
+.ideas__btn { margin-top: 18px; }
+.ideas__btn:disabled { opacity: 0.6; cursor: default; }
+.ideas__err { font-size: 14px; color: #A32D2D; margin: 12px 0 0; }
+.ideas__ok { font-size: 16px; font-weight: 500; color: #0F6E56; margin: 20px 0 0; }
