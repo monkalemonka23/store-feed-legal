@@ -85,7 +85,7 @@
     }
 
     btnEl.disabled = true;
-    btnEl.textContent = 'Sending…';
+    btnEl.textContent = 'Sending...';
 
     var body = new FormData();
     body.append(ENTRY_EMAIL, email);

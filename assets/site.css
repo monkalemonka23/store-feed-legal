@@ -1,4 +1,4 @@
-/* growboost.pl — strona glowna. Baner cookies: assets/consent.css */
+/* growboost.pl - strona glowna. Baner cookies: assets/consent.css */
 
 :root {
   --paper: #ffffff;
@@ -176,7 +176,6 @@ h3 { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
 
 /* --- przewijanie do formularza --- */
 html { scroll-behavior: smooth; }
-#launch { scroll-margin-top: 24px; }
 
 .cta {
   display: flex; align-items: center; justify-content: space-between;
@@ -242,14 +241,12 @@ html { scroll-behavior: smooth; }
 .pagenav a:hover { background: var(--brand-ink); color: #fff; text-decoration: none; }
 
 /* --- dokumentacja --- */
-#overview, #screens, #doc, #faq, #changelog { scroll-margin-top: 78px; }
 .doc > h3 {
   font-size: 19px; font-weight: 700; letter-spacing: -0.01em;
   margin: 44px 0 6px; padding-top: 18px; border-top: 1px solid var(--line);
 }
 .doc h4 { font-size: 16px; font-weight: 600; margin: 26px 0 6px; }
 .doc h4:target, .doc > h3:target { color: var(--brand-dark); }
-.doc h4, .doc > h3 { scroll-margin-top: 86px; }
 .doc p, .doc li { font-size: 15px; color: var(--ink-soft); }
 .doc p.sub { font-size: 16px; color: var(--ink-mute); }
 .doc ol, .doc ul { margin: 0 0 16px 22px; }
@@ -297,8 +294,6 @@ html { scroll-behavior: smooth; }
   .project { flex-direction: column; gap: 12px; }
   .pagenav { gap: 6px; padding: 10px 0; }
   .pagenav a { font-size: 13px; padding: 5px 10px; }
-  #overview, #screens, #doc, #faq, #changelog { scroll-margin-top: 62px; }
-  .doc h4, .doc > h3 { scroll-margin-top: 70px; }
 }
 
 /* ===========================================================
@@ -346,7 +341,7 @@ html { scroll-behavior: smooth; }
   display: block; max-width: 96vw; max-height: 84vh; width: auto; height: auto;
   border-radius: 10px; background: #fff; cursor: zoom-in;
 }
-/* Powiekszenie 1:1 — zrzuty sa geste, na telefonie tekst w widgecie jest
+/* Powiekszenie 1:1 - zrzuty sa geste, na telefonie tekst w widgecie jest
    nieczytelny, gdy caly obrazek miesci sie w ekranie. */
 .lb { overflow: auto; overscroll-behavior: contain; }
 .lb--zoom img { max-width: none; max-height: none; cursor: zoom-out; border-radius: 0; }
@@ -357,8 +352,8 @@ html { scroll-behavior: smooth; }
   background: rgba(20, 18, 40, 0.88);
 }
 .lb__cap { color: #fff; font-size: 14px; margin: 12px 0 0; max-width: 70ch; }
-.lb__cap::after { content: " — tap the picture for full size."; opacity: .72; }
-.lb--zoom .lb__cap::after { content: " — tap again to fit the screen."; }
+.lb__cap::after { content: " - tap the picture for full size."; opacity: .72; }
+.lb--zoom .lb__cap::after { content: " - tap again to fit the screen."; }
 .lb__close {
   position: absolute; top: -14px; right: -14px; width: 36px; height: 36px;
   border: 0; border-radius: 50%; background: #fff; color: var(--ink);
@@ -380,7 +375,7 @@ html { scroll-behavior: smooth; }
 a.shot__btn { cursor: pointer; }
 
 /* ===========================================================
-   Responsywnosc — poprawki po pomiarach w przegladarce
+   Responsywnosc - poprawki po pomiarach w przegladarce
    (Chromium, 360 / 390 / 768 / 1024 / 1440 px, 2026-09-30)
    =========================================================== */
 
@@ -396,8 +391,6 @@ a.shot__btn { cursor: pointer; }
   }
   .pagenav::-webkit-scrollbar { display: none; }
   .pagenav a { white-space: nowrap; flex: none; }
-  #overview, #screens, #doc, #faq, #changelog { scroll-margin-top: 58px; }
-  .doc h4, .doc > h3 { scroll-margin-top: 66px; }
 }
 
 /* Licznik lamal sie na dwa rzedy ponizej ~400 px (141 px wysokosci). */
@@ -475,16 +468,13 @@ a.shot__btn { cursor: pointer; }
 .fact__txt { font-size: 15px; color: var(--ink-mute); margin: 0; }
 .fact__txt b { color: var(--ink-soft); font-weight: 600; }
 .facts__note { font-size: 13.5px; color: var(--ink-mute); margin: 0; }
-#measured { scroll-margin-top: 78px; }
-@media (max-width: 700px) { #measured { scroll-margin-top: 58px; } }
 
-/* Spis wewnatrz sekcji dokumentacji/FAQ — bez tego .doc p przebija .toc__note */
+/* Spis wewnatrz sekcji dokumentacji/FAQ - bez tego .doc p przebija .toc__note */
 .doc .toc__note { font-size: 13.5px; color: var(--ink-mute); }
 .doc .toc li { margin-bottom: 5px; }
-.toc__h { scroll-margin-top: 86px; }
 
 /* Spis FAQ: dwie osobne listy, bo pytania ogolne nie maja numerow sekcji,
-   a rozdzial 8 ma — jedna wspolna lista numerowala 8 jako 7. */
+   a rozdzial 8 ma - jedna wspolna lista numerowala 8 jako 7. */
 .toc__cols { display: grid; gap: 4px 34px; }
 @media (min-width: 760px) { .toc__cols { grid-template-columns: 1fr 1fr; } }
 .toc__group { font-size: 15px; font-weight: 600; color: var(--ink); margin: 0 0 6px; }
@@ -493,3 +483,22 @@ a.shot__btn { cursor: pointer; }
 .toc__cols > div + div { margin-top: 14px; }
 @media (min-width: 760px) { .toc__cols > div + div { margin-top: 0; } }
 .doc .toc__group { font-size: 15px; color: var(--ink); }
+
+/* --- ikonka sukcesu w kartach "Why it works" --- */
+.card__icon { display: block; margin-bottom: 10px; }
+
+/* --- cennik: rata roczna i okres probny --- */
+.plan__alt { font-size: 14.5px; color: var(--ink-soft); margin: -8px 0 10px; }
+.plan__alt strong { color: var(--ink); font-weight: 600; }
+.plan__trial {
+  display: inline-block; font-size: 12px; font-weight: 600;
+  letter-spacing: 0.03em; text-transform: uppercase;
+  padding: 4px 11px; border-radius: 999px; margin: 0 0 14px;
+  background: #E1F5EE; color: #085041;
+}
+
+/* --- kotwice: kazdy cel skoku schodzi spod przyklejonego paska sekcji.
+       Wczesniej regula obejmowala tylko wybrane naglowki, wiec np. #q1
+       ladowalo na y=-1, czyli pod paskiem (zmierzone w Chromium). --- */
+[id] { scroll-margin-top: 86px; }
+@media (max-width: 700px) { [id] { scroll-margin-top: 62px; } }
