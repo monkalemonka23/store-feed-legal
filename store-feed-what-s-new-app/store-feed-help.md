@@ -18,7 +18,7 @@ simply point to it.
 
 | | Free | Starter |
 |---|---|---|
-| Price | free, no time limit | $7.90 / month or $79.90 / year |
+| Price | free, no time limit | $7.99 / month or $79.90 / year |
 | Free trial | - | 14 days |
 | New products | ✓ | ✓ |
 | Blog posts | - | ✓ |
@@ -42,8 +42,8 @@ simply point to it.
 
 ### 1.2 Changing your plan
 
-Starter begins with a **14-day free trial**. Paying yearly ($79.90) saves 16%
-against twelve monthly payments, which is $14.90 a year.
+Starter begins with a **14-day free trial**. Paying yearly ($79.90) costs the same
+as ten monthly payments, so two months are free - 17% off.
 
 1. Open the Store Feed app in your Shopify admin.
 2. Click **Plans** (or **Change plan**) in the top right corner.
