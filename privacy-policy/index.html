@@ -181,14 +181,36 @@
       .toc ol { columns: 2; column-gap: 32px; }
       .toc li { break-inside: avoid; }
     }
-    .sitenav {
+    /* Dwie grupy, zeby bylo widac, co jest czescia GrowBoost,
+       a co podstrona wtyczki Store Feed. */
+    .sitenav { display: grid; gap: 10px; margin: 0 0 40px; }
+    .sitenav--bottom { margin: 40px 0 0; }
+    .sitenav__group {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px 12px;
+    }
+    .sitenav__label {
+      flex: none;
+      min-width: 88px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #6b6b78;
+    }
+    .sitenav ul {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin: 0 0 40px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
     }
-    .sitenav--bottom { margin: 40px 0 0; }
+    .sitenav li { margin: 0; }
     .sitenav a {
+      display: inline-block;
       font-size: 14px;
       font-weight: 600;
       text-decoration: none;
@@ -197,11 +219,12 @@
       background: #f5f4fe;
       color: #534AB7;
     }
-    .sitenav a:hover { background: #7F77DD; color: #fff; }
-    .sitenav a:focus-visible { outline: 2px solid #7F77DD; outline-offset: 2px; }
+    .sitenav a:hover { background: #665CD0; color: #fff; }
+    .sitenav a:focus-visible { outline: 2px solid #665CD0; outline-offset: 2px; }
     @media (max-width: 560px) {
       .container { padding: 40px 18px 60px; }
       .sitenav a { font-size: 13px; padding: 5px 10px; }
+      .sitenav__label { min-width: 0; flex-basis: 100%; }
       h1 { font-size: 26px; }
       /* Tabele wymuszaly poziomy pasek przewijania calej strony przy 360 px
          (zmierzone w Chromium: scrollWidth 388 przy szerokosci 360). */
@@ -273,13 +296,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </a>
 
     <nav class="sitenav" aria-label="Site">
-      <a href="/">Projects</a>
-      <a href="/store-feed-what-s-new-app/">Store Feed</a>
-      <a href="/store-feed-what-s-new-app/#screens">Screenshots</a>
-      <a href="/store-feed-what-s-new-app/#doc">Documentation</a>
-      <a href="/store-feed-what-s-new-app/#faq">FAQ</a>
-      <a href="/store-feed-what-s-new-app/#changelog">Change log</a>
-      <a href="#p11">Accessibility</a>
+      <div class="sitenav__group">
+        <span class="sitenav__label" id="nav-gb">GrowBoost</span>
+        <ul aria-labelledby="nav-gb">
+          <li><a href="/">Projects</a></li>
+          <li><a href="/#stock">Stock images</a></li>
+          <li><a href="#p11">Accessibility</a></li>
+        </ul>
+      </div>
+      <div class="sitenav__group">
+        <span class="sitenav__label" id="nav-sf">Store Feed</span>
+        <ul aria-labelledby="nav-sf">
+          <li><a href="/store-feed-what-s-new-app/">Overview</a></li>
+          <li><a href="/store-feed-what-s-new-app/#screens">Screenshots</a></li>
+          <li><a href="/store-feed-what-s-new-app/#doc">Documentation</a></li>
+          <li><a href="/store-feed-what-s-new-app/#faq">FAQ</a></li>
+          <li><a href="/store-feed-what-s-new-app/#changelog">Change log</a></li>
+        </ul>
+      </div>
     </nav>
 
     <h1>Privacy Policy</h1>
@@ -554,13 +588,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <nav class="sitenav sitenav--bottom" aria-label="Site, footer">
-      <a href="/">Projects</a>
-      <a href="/store-feed-what-s-new-app/">Store Feed</a>
-      <a href="/store-feed-what-s-new-app/#screens">Screenshots</a>
-      <a href="/store-feed-what-s-new-app/#doc">Documentation</a>
-      <a href="/store-feed-what-s-new-app/#faq">FAQ</a>
-      <a href="/store-feed-what-s-new-app/#changelog">Change log</a>
-      <a href="#p11">Accessibility</a>
+      <div class="sitenav__group">
+        <span class="sitenav__label" id="nav-gb-f">GrowBoost</span>
+        <ul aria-labelledby="nav-gb-f">
+          <li><a href="/">Projects</a></li>
+          <li><a href="/#stock">Stock images</a></li>
+          <li><a href="#p11">Accessibility</a></li>
+        </ul>
+      </div>
+      <div class="sitenav__group">
+        <span class="sitenav__label" id="nav-sf-f">Store Feed</span>
+        <ul aria-labelledby="nav-sf-f">
+          <li><a href="/store-feed-what-s-new-app/">Overview</a></li>
+          <li><a href="/store-feed-what-s-new-app/#screens">Screenshots</a></li>
+          <li><a href="/store-feed-what-s-new-app/#doc">Documentation</a></li>
+          <li><a href="/store-feed-what-s-new-app/#faq">FAQ</a></li>
+          <li><a href="/store-feed-what-s-new-app/#changelog">Change log</a></li>
+        </ul>
+      </div>
     </nav>
 
     <footer>
