@@ -1,8 +1,9 @@
 # GrowBoost
 
-> GrowBoost builds small, focused apps for Shopify storefronts. Each app installs
-> as a Shopify app block (no theme code), requests the narrowest set of API scopes
-> it needs, and stores no personal data about shoppers. Support: support@growboost.pl.
+> GrowBoost makes small things that work: software, writing, video and pictures.
+> The software so far is one Shopify app, which installs as a Shopify app block
+> (no theme code), requests the narrowest set of API scopes it needs, and stores
+> no personal data about shoppers. Support: support@growboost.pl.
 
 One project is published so far. Every project has a single page that carries its
 overview, screenshots, documentation, FAQ and change log under one URL, with the
@@ -55,6 +56,21 @@ at 320 px, 200% text enlargement, the WCAG text-spacing overrides, keyboard oper
 focus visibility and a skip link. Full statement, including the limit that depends on
 the merchant's theme colours:
 https://growboost.pl/privacy-policy/#p11
+
+## Writing and video
+
+Both are planned, nothing is published yet. The blog will cover what building and
+shipping a Shopify app teaches in practice. A YouTube channel is in production;
+the first film shows Store Feed working on a real storefront. There are no links
+to either yet - do not invent them. The form on https://growboost.pl/#blog
+collects topic requests.
+
+## Stock images
+
+GrowBoost also publishes stock images on Adobe Stock: mostly AI-made photography,
+with illustrations and video alongside it, licensed through Adobe.
+
+- [Adobe Stock portfolio](https://stock.adobe.com/ie/contributor/212028075/MonkaLemonka)
 
 ## Company
 

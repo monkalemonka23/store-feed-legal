@@ -484,8 +484,11 @@ a.shot__btn { cursor: pointer; }
 @media (min-width: 760px) { .toc__cols > div + div { margin-top: 0; } }
 .doc .toc__group { font-size: 15px; color: var(--ink); }
 
-/* --- ikonka sukcesu w kartach "Why it works" --- */
-.card__icon { display: block; margin-bottom: 10px; }
+/* --- ikonka sukcesu w kartach "Why it works" ---
+   Ikonka siedzi W naglowku, w jednej linii z tekstem. Osobny wiersz nad
+   tytulem wygladal jak zgubiony element (operatorka, 2026-10-01). */
+.card__h { display: flex; align-items: flex-start; gap: 9px; }
+.card__icon { flex: none; margin-top: 1px; }
 
 /* --- cennik: rata roczna i okres probny --- */
 .plan__alt { font-size: 14.5px; color: var(--ink-soft); margin: -8px 0 10px; }
@@ -502,3 +505,70 @@ a.shot__btn { cursor: pointer; }
        ladowalo na y=-1, czyli pod paskiem (zmierzone w Chromium). --- */
 [id] { scroll-margin-top: 86px; }
 @media (max-width: 700px) { [id] { scroll-margin-top: 62px; } }
+
+/* ===========================================================
+   Strona glowna: blog, wideo, stock (2026-10-01)
+   =========================================================== */
+
+/* --- zapowiedz: sekcja, ktorej tresci jeszcze nie ma --- */
+.soon {
+  display: inline-block; font-size: 12px; font-weight: 600;
+  letter-spacing: 0.04em; text-transform: uppercase;
+  padding: 4px 11px; border-radius: 999px; margin-bottom: 12px;
+  background: #FAECE7; color: #712B13;
+}
+.soon--live { background: #E1F5EE; color: #085041; }
+
+/* --- formularz pomyslow na teksty --- */
+.ideas {
+  border: 1px solid var(--line); border-radius: 14px;
+  padding: 22px 24px; margin: 20px 0 0; background: #fcfcff;
+}
+.ideas__label { display: block; font-size: 15px; font-weight: 600; margin-bottom: 8px; }
+.ideas textarea {
+  width: 100%; font: inherit; font-size: 15px; line-height: 1.55;
+  padding: 11px 14px; border: 1px solid #ddd9f2; border-radius: 9px;
+  background: #fff; color: var(--ink); resize: vertical; min-height: 92px;
+}
+.ideas textarea:focus { outline: 2px solid var(--brand-ink); outline-offset: 1px; border-color: transparent; }
+.ideas__fs { border: 0; padding: 0; margin: 18px 0 0; }
+.ideas__legend { font-size: 15px; font-weight: 600; padding: 0; margin-bottom: 8px; }
+.ideas__opts { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+.ideas__opt { display: flex; align-items: center; gap: 8px; font-size: 15px; color: var(--ink-soft); }
+.ideas__opt input { width: 17px; height: 17px; accent-color: var(--brand-ink); }
+.ideas__btn {
+  font: inherit; font-size: 15px; font-weight: 600; margin-top: 18px;
+  padding: 11px 22px; border: 0; border-radius: 9px;
+  background: var(--brand-ink); color: #fff; cursor: pointer;
+}
+.ideas__btn:hover { background: var(--brand-dark); }
+.ideas__note { font-size: 13.5px; color: var(--ink-mute); margin: 12px 0 0; }
+.ideas__err { font-size: 14px; color: #A32D2D; margin: 12px 0 0; }
+
+/* --- kafelek z praca ze stocku --- */
+.stock { display: grid; gap: 16px; align-items: start; }
+@media (min-width: 720px) { .stock { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } }
+.stock-shot {
+  position: relative; display: block; border-radius: 14px; overflow: hidden;
+  border: 1px solid var(--line); background: #fff; text-decoration: none;
+  transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+.stock-shot:hover { border-color: var(--brand-ink); box-shadow: 0 10px 30px rgba(83, 74, 183, 0.13); transform: translateY(-2px); text-decoration: none; }
+.stock-shot:focus-visible { outline: 2px solid var(--brand-ink); outline-offset: 3px; }
+.stock-shot img { display: block; width: 100%; height: auto; }
+.stock-shot__tag {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  background: rgba(22, 20, 42, 0.92); color: #fff;
+  font-size: 13.5px; font-weight: 600; padding: 10px 14px;
+}
+.stock-shot__tag span { font-weight: 400; opacity: 0.86; }
+.stock__copy p { font-size: 15.5px; }
+.stock__btn {
+  display: inline-block; font-size: 15px; font-weight: 600;
+  padding: 11px 22px; border-radius: 9px;
+  background: var(--brand-ink); color: #fff; text-decoration: none;
+}
+.stock__btn:hover { background: var(--brand-dark); color: #fff; text-decoration: none; }
+
+/* --- maly kafelek stocku na stronie 404 --- */
+.stock--404 { max-width: 420px; margin: 32px 0 0; display: block; }
