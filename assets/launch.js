@@ -104,7 +104,7 @@
     })['catch'](function () {
       btnEl.disabled = false;
       btnEl.textContent = 'Notify me';
-      fail('Something went wrong. Please email support@growboost.pl instead.');
+      fail('Something went wrong. Please email ' + 'support' + String.fromCharCode(64) + 'growboost.pl' + ' instead.');
     });
   });
 })();
