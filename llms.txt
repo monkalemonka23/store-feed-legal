@@ -3,7 +3,7 @@
 > GrowBoost makes small things that work: software, writing, video and pictures.
 > The software so far is one Shopify app, which installs as a Shopify app block
 > (no theme code), requests the narrowest set of API scopes it needs, and stores
-> no personal data about shoppers. Support: support@growboost.pl.
+> no personal data about shoppers. Support: support (at) growboost.pl.
 
 One project is published so far. Every project has a single page that carries its
 overview, screenshots, documentation, FAQ and change log under one URL, with the
@@ -85,4 +85,4 @@ organised on https://growboost.pl/#stock into five entry points:
 - [Projects](https://growboost.pl/): the list of GrowBoost projects
 - [Privacy policy](https://growboost.pl/privacy-policy/): what the app and the site store
 - [Accessibility statement](https://growboost.pl/privacy-policy/#p11): standard, test method, known limits
-- Contact: support@growboost.pl, replies within 24 hours on business days
+- Contact: support (at) growboost.pl, replies within 24 hours on business days

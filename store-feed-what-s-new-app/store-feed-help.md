@@ -344,5 +344,5 @@ Your theme does not support app sections (2.2).
 
 ## 9. Contact
 
-Email **support@growboost.pl** - we reply within 24 hours on business days.
+Email **support (at) growboost.pl** - we reply within 24 hours on business days.
 Mention the section number from this guide if it relates to your question.

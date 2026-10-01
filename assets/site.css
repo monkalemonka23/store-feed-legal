@@ -588,3 +588,19 @@ a.shot__btn { cursor: pointer; }
 .ideas__btn:disabled { opacity: 0.6; cursor: default; }
 .ideas__err { font-size: 14px; color: #A32D2D; margin: 12px 0 0; }
 .ideas__ok { font-size: 16px; font-weight: 500; color: #0F6E56; margin: 20px 0 0; }
+
+/* --- naglowek sekcji na stronie glownej ---
+   Kreska nad kazda sekcja rozdziela je wyrazniej niz sam odstep,
+   a plakietka stanu stoi w jednej linii z nazwa, nie pod nia. */
+.sechead {
+  display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 14px;
+  margin: 78px 0 10px; padding-top: 30px;
+  border-top: 2px solid var(--line);
+}
+.sechead h2 { margin: 0; }
+.sechead .soon { margin: 0; }
+.soon--review { background: var(--brand-soft); color: var(--brand-dark); }
+
+@media (max-width: 560px) {
+  .sechead { margin-top: 56px; padding-top: 24px; gap: 6px 12px; }
+}

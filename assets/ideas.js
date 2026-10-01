@@ -62,7 +62,7 @@
     })['catch'](function () {
       btnEl.disabled = false;
       btnEl.textContent = 'Send the idea';
-      errEl.textContent = 'Something went wrong. Please email support@growboost.pl instead.';
+      errEl.textContent = 'Something went wrong. Please email ' + 'support' + String.fromCharCode(64) + 'growboost.pl' + ' instead.';
       errEl.hidden = false;
     });
   });
