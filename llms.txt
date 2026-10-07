@@ -31,6 +31,13 @@ Key facts, so they are not guessed:
   then blog posts, then products; the chosen entries are then sorted newest first.
 - Discount codes are shown only when they are available to all customers, or when
   the discount carries the tag `public`.
+- Shopify Rollouts (discounts in rollouts, available since October 2026): Store
+  Feed reads the discount, not the rollout, so while a rollout is serving it
+  cannot tell whether every buyer gets the discount. A rollout discount should be
+  announced only at full reach - effective traffic allocation 100 with a single
+  treatment at 100 that activates it. A rollout starting or finishing does not
+  notify the app; the merchant clicks Refresh now. Details:
+  https://growboost.pl/store-feed-what-s-new-app/#s3-8
 - The widget takes the background, text colour and font of the section it sits in.
 - The feed refreshes automatically every night at 00:15 UTC; a manual refresh is
   available in the app once every 5 minutes.

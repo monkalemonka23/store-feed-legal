@@ -26,12 +26,12 @@
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon-64.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-<link rel="stylesheet" href="/assets/site.css?v=20261001d">
-<link rel="stylesheet" href="/assets/consent.css?v=20261001d">
-<script src="/assets/consent.js?v=20261001d"></script>
-<script src="/assets/launch.js?v=20261001d" defer></script>
-<script src="/assets/gallery.js?v=20261001d" defer></script>
-<script src="/assets/mail.js?v=20261001d" defer></script>
+<link rel="stylesheet" href="/assets/site.css?v=20261007">
+<link rel="stylesheet" href="/assets/consent.css?v=20261007">
+<script src="/assets/consent.js?v=20261007"></script>
+<script src="/assets/launch.js?v=20261007" defer></script>
+<script src="/assets/gallery.js?v=20261007" defer></script>
+<script src="/assets/mail.js?v=20261007" defer></script>
 
 <script type="application/ld+json">
 {
@@ -116,6 +116,8 @@
       "acceptedAnswer": { "@type": "Answer", "text": "Yes, and it stays closed for the rest of their browsing session." } },
     { "@type": "Question", "name": "Can I put the widget in more than one place?",
       "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every copy shows the same list and uses the same settings from the app." } },
+    { "@type": "Question", "name": "I schedule discounts with Shopify Rollouts. Will the widget pick them up?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes, but announce a rollout discount only when the rollout reaches every buyer. While a rollout is serving, a discount can read Scheduled or Expired and still be live for part of the traffic, or read Active while nobody gets it, and nothing on the discount itself says which. A rollout does not notify the app either, so click Refresh now after starting it and again after it finishes." } },
     { "@type": "Question", "name": "How much does Store Feed cost?",
       "acceptedAnswer": { "@type": "Answer", "text": "There is a free plan with up to 5 entries and new products only. The Starter plan is $7.99 per month, or $79.90 a year which is two months free, 17% off, and adds blog posts, promotions, up to 20 entries, custom colours and statistics. Starter begins with a 14-day free trial." } }
   ]
@@ -538,6 +540,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li><a href="#s3-5">On the page of a listed item</a></li>
           <li><a href="#s3-6">Nothing new to show</a></li>
           <li><a href="#s3-7">Choosing what to include (Starter)</a></li>
+          <li><a href="#s3-8">Discounts launched through Shopify Rollouts (Starter)</a></li>
         </ol>
       </li>
       <li><a href="#s4">Appearance: look and feel</a>
@@ -675,6 +678,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <li>Products that are sold out are not listed in a promotion. If nothing in a promotion can be bought any more, the promotion is not shown.</li>
     <li>If a promotion has an end date, the widget shows it.</li>
   </ul>
+  <p class="seealso">See also: <a href="#s3-8">3.8 Discounts launched through Shopify Rollouts</a></p>
 
   <h4 id="s3-4">3.4 When there are more updates than places</h4>
   <p>The number of entries is set in <strong>Max entries</strong> (Free: 5).</p>
@@ -697,6 +701,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <li><strong>Blogs</strong> - show only posts from the chosen blogs.</li>
     <li><strong>Exclude products with tag</strong> - products with any of these tags never appear (useful for items that are always on sale and are not really "new").</li>
   </ul>
+
+  <h4 id="s3-8">3.8 Discounts launched through Shopify Rollouts (Starter)</h4>
+  <p>Since October 2026 a Shopify <strong>Rollout</strong> can include a discount, so a campaign goes live together with your theme and checkout changes, or reaches only a share of buyers as a test. Two things decide whether that discount belongs in the feed.</p>
+
+  <p><strong>Announce only a discount every buyer can use.</strong> While a rollout is serving, the discount's own status stops telling the whole story: it can read Scheduled or Expired while the buyers one treatment reaches do get it, and read Active while nobody gets it. Store Feed reads the discount, not the rollout, so it cannot tell those cases apart. Treat a rollout discount as safe to announce only when the rollout serves it to everyone - effective traffic allocation 100, with a single treatment at 100 that activates the discount.</p>
+
+  <div class="note">
+    <p>Running a discount on part of your traffic, or testing two offers against each other? Keep it out of the feed until you take it to full traffic. The widget would tell every visitor about an offer only some of them can use, and there is no switch that hides one promotion.</p>
+  </div>
+
+  <p><strong>Nothing refreshes by itself.</strong> A rollout starting or finishing is not sent to Store Feed. The feed changes on its nightly refresh (<a href="#s6-1">6.1</a>) or when you click Refresh now (<a href="#s6-2">6.2</a>).</p>
+
+  <p>So, on the day:</p>
+  <ol>
+    <li>Set the rollout up in Shopify and start it.</li>
+    <li>Open Store Feed and click <strong>Refresh now</strong>.</li>
+    <li>Wait for the green message, then reload your store page (<a href="#s6-3">6.3</a>).</li>
+  </ol>
+  <p>Do the same when the rollout finishes, otherwise the widget keeps announcing the offer until the nightly refresh.</p>
 
   <h3 id="s4">4. Appearance: look and feel</h3>
 
@@ -799,6 +822,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li><a href="#q4">Will it slow my store down?</a></li>
           <li><a href="#q5">Can customers close the widget?</a></li>
           <li><a href="#q6">Can I put it in more than one place?</a></li>
+          <li><a href="#q8">I schedule discounts with Shopify Rollouts. Will the widget pick them up?</a></li>
           <li><a href="#q7">What does Starter cost, and can I try it first?</a></li>
         </ol>
       </div>
@@ -841,6 +865,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="faq">
     <h3 id="q6">Can I put it in more than one place?</h3>
     <p>Yes. Every copy shows the same list and the same settings (<a href="#s2-4">2.4</a>).</p>
+  </div>
+  <div class="faq">
+    <h3 id="q8">I schedule discounts with Shopify Rollouts. Will the widget pick them up?</h3>
+    <p>Yes, with one rule: announce a rollout discount only when the rollout reaches <strong>every</strong> buyer. While a rollout is serving, a discount can look Scheduled or Expired and still be live for part of your traffic, or look Active while nobody gets it - and nothing on the discount itself says which. The widget would then promise an offer some visitors cannot use. A rollout also does not notify the app, so click <strong>Refresh now</strong> after you start it and again after it finishes (<a href="#s3-8">3.8</a>).</p>
   </div>
   <div class="faq">
     <h3 id="q7">What does Starter cost, and can I try it first?</h3>
