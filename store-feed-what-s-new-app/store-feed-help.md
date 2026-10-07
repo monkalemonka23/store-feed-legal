@@ -130,6 +130,8 @@ See also: 3.7 Choosing what to include (Starter)
   promotion can be bought any more, the promotion is not shown.
 - If a promotion has an end date, the widget shows it.
 
+See also: 3.8 Discounts launched through Shopify Rollouts
+
 ### 3.4 When there are more updates than places
 
 The number of entries is set in **Max entries** (Free: 5).
@@ -160,6 +162,39 @@ can choose a longer window (30 days) in **Date range**.
   appear (useful for items that are always on sale and are not really "new").
 
 ---
+
+### 3.8 Discounts launched through Shopify Rollouts (Starter)
+
+Since October 2026 a Shopify **Rollout** can include a discount, so a campaign
+goes live together with your theme and checkout changes, or reaches only a share
+of buyers as a test. Two things decide whether that discount belongs in the feed.
+
+**Announce only a discount every buyer can use.** While a rollout is serving, the
+discount's own status stops telling the whole story: it can read Scheduled or
+Expired while the buyers one treatment reaches do get it, and read Active while
+nobody gets it. Store Feed reads the discount, not the rollout, so it cannot tell
+those cases apart. Treat a rollout discount as safe to announce only when the
+rollout serves it to everyone - effective traffic allocation 100, with a single
+treatment at 100 that activates the discount.
+
+Running a discount on part of your traffic, or testing two offers against each
+other? Keep it out of the feed until you take it to full traffic. The widget
+would tell every visitor about an offer only some of them can use, and there is
+no switch that hides one promotion.
+
+**Nothing refreshes by itself.** A rollout starting or finishing is not sent to
+Store Feed. The feed changes on its nightly refresh (6.1) or when you click
+Refresh now (6.2).
+
+So, on the day:
+
+1. Set the rollout up in Shopify and start it.
+2. Open Store Feed and click **Refresh now**.
+3. Wait for the green message, then reload your store page (6.3).
+
+Do the same when the rollout finishes, otherwise the widget keeps announcing the
+offer until the nightly refresh.
+
 
 ## 4. Appearance: look and feel
 
