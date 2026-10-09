@@ -3,14 +3,14 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://growboost.pl/</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <image:image>
       <image:loc>https://growboost.pl/assets/shots/widget-light-themes-1200.jpg</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://growboost.pl/store-feed-what-s-new-app/</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-09</lastmod>
     <image:image>
       <image:loc>https://growboost.pl/assets/shots/widget-light-themes-1200.jpg</image:loc>
     </image:image>
@@ -35,6 +35,6 @@
   </url>
   <url>
     <loc>https://growboost.pl/privacy-policy/</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-09</lastmod>
   </url>
 </urlset>

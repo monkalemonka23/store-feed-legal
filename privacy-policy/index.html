@@ -26,10 +26,10 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon-64.png">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-  <link rel="stylesheet" href="/assets/consent.css?v=20261007">
-  <script src="/assets/consent.js?v=20261007"></script>
-<script src="/assets/mail.js?v=20261007" defer></script>
-  <link rel="stylesheet" href="/assets/site.css?v=20261007">
+  <link rel="stylesheet" href="/assets/consent.css?v=20261009">
+  <script src="/assets/consent.js?v=20261009"></script>
+<script src="/assets/mail.js?v=20261009" defer></script>
+  <link rel="stylesheet" href="/assets/site.css?v=20261009">
 
 <script type="application/ld+json">
 {
@@ -74,7 +74,7 @@
   "url": "https://growboost.pl/privacy-policy/",
   "inLanguage": "en",
   "datePublished": "2026-08-17",
-  "dateModified": "2026-10-07",
+  "dateModified": "2026-10-09",
   "isPartOf": { "@type": "WebSite", "name": "GrowBoost", "url": "https://growboost.pl/" },
   "publisher": { "@type": "Organization", "name": "GrowBoost", "url": "https://growboost.pl/" }
 }
@@ -117,7 +117,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </nav>
 
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: October 7, 2026</p>
+    <p class="updated">Last updated: October 9, 2026</p>
 
     <p>
       This Privacy Policy describes how GrowBoost ("we", "us", or "our") collects, uses, and
@@ -140,7 +140,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li><a href="#p8">Cookies and Tracking in the Widget</a></li>
       <li><a href="#p9">Cookies on This Website</a></li>
       <li><a href="#p10">Launch Notification List</a></li>
-      <li><a href="#p11">Changes to This Policy</a></li>
+      <li><a href="#p11">Accessibility</a></li>
+      <li><a href="#p12">Changes to This Policy</a></li>
         <li><a href="#pcontact">Contact us</a></li>
       </ol>
     </nav>
@@ -149,16 +150,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>When you install Store Feed, we collect and store the following information:</p>
     <ul>
       <li><strong>Shop domain</strong> - your Shopify store's permanent domain (e.g. yourstore.myshopify.com)</li>
-      <li><strong>Access token</strong> - a Shopify API access token that allows the App to read your store's products, blog articles, and price rules in order to build the feed</li>
+      <li><strong>Access token</strong> - a Shopify API access token that allows the App to read your store's products, blog articles, discounts, discount rollouts and themes in order to build the feed (see the permissions below)</li>
       <li><strong>App configuration</strong> - your widget settings (title, colors, icon set, visibility preferences, etc.)</li>
       <li><strong>Aggregated analytics</strong> - anonymous, aggregated counts of widget impressions and clicks per day, broken down by device type (desktop, tablet, mobile). We do not collect or store any personal data about your store visitors.</li>
     </ul>
+
+    <p>
+      Store Feed stores only daily counts of widget views and clicks per device type. It does not
+      store shoppers' IP addresses or any personal data. The widget sends its counts through your
+      store's own address (the Shopify app proxy), and Shopify signs every request. To keep anyone
+      from inflating those counts, our server limits how many requests one sender may make per
+      minute; for that purpose it keeps a one-way hash (SHA-256) of the sender's IP address in
+      memory only, discards it after about two minutes, and never writes it to the database.
+      Requests from bots, crawlers and automated browsers are not counted at all.
+    </p>
+
+    <h3>Permissions the App requests</h3>
+    <div class="tblwrap" role="region" aria-labelledby="perm-h" tabindex="0">
+    <table class="tbl tbl--prose">
+      <caption id="perm-h" class="sr-only">Shopify permissions requested by Store Feed and what each one is used for</caption>
+      <thead>
+        <tr><th scope="col">Permission</th><th scope="col">What it is used for</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>read_products</code></td><td>Reads your products, so new arrivals can appear in the feed.</td></tr>
+        <tr><td><code>read_content</code></td><td>Reads your blog articles, so new posts can appear in the feed.</td></tr>
+        <tr><td><code>read_discounts</code></td><td>Reads your discounts, so running promotions can appear in the feed.</td></tr>
+        <tr><td><code>read_themes</code></td><td>Checks which sections of your theme carry the widget, so the app can show where it is added or hidden.</td></tr>
+        <tr><td><code>read_rollouts</code></td><td>Reads Shopify discount rollouts, so the widget only promotes discounts that every shopper gets.</td></tr>
+        <tr><td><code>write_app_proxy</code></td><td>Lets the widget send view and click counts through your store's own address, signed by Shopify.</td></tr>
+      </tbody>
+    </table>
+    </div>
 
     <h2 id="p2">2. Information We Do Not Collect</h2>
     <p>We do not collect:</p>
     <ul>
       <li>Personal data of your store's customers (names, emails, addresses, payment information)</li>
       <li>Customer browsing history or individual tracking data</li>
+      <li>Your store visitors' IP addresses (see section 1 for the one-way hash used only for rate limiting, held in memory and never stored)</li>
       <li>Any data beyond what is necessary to operate the App</li>
     </ul>
 

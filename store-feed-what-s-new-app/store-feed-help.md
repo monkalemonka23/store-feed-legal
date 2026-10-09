@@ -118,8 +118,10 @@ See also: 3.7 Choosing what to include (Starter)
 
 ### 3.3 Promotions (Starter)
 
-- Promotions must be **active** and must have **started within the chosen
-  time window**.
+- Promotions must be **active**.
+- Promotions that **started before the chosen time window** still appear while
+  they run, but only in places left free by everything else (3.4). They show
+  their end date, or **Active** when they have none, instead of a start date.
 - **Automatic discounts** appear automatically.
 - **Discount codes** appear only when they are **available to all customers**.
 - **To show a code that is limited to some customers**, add the tag `public`
@@ -128,9 +130,13 @@ See also: 3.7 Choosing what to include (Starter)
 - "Buy X, get Y" discounts show what to buy and what you get, with links.
 - Products that are sold out are not listed in a promotion. If nothing in a
   promotion can be bought any more, the promotion is not shown.
-- If a promotion has an end date, the widget shows it.
+- If a promotion has an end date, the widget shows the date and time it ends,
+  with the time zone, and how many days are left.
+- The widget shows the discount's terms: the amount, minimum purchase or
+  quantity, one use per customer, the total number of uses, how many times it
+  applies per order, and whether it can be combined with other discounts.
 
-See also: 3.8 Discounts launched through Shopify Rollouts
+See also: 3.8 Discounts in Shopify Rollouts (Starter)
 
 ### 3.4 When there are more updates than places
 
@@ -138,9 +144,11 @@ The number of entries is set in **Max entries** (Free: 5).
 
 1. Promotions are picked first, then blog posts, then products.
 2. Within each kind, the newest are picked.
-3. The chosen entries are then shown **newest first**.
+3. Promotions that started before the time window come last: they fill only
+   the places that are still free.
+4. The chosen entries are then shown **newest first**.
 
-Example: 2 promotions, 3 blog posts and 6 new products, with 5 places - the
+Example: 2 promotions, 3 blog posts and 6 new products, with 5 places, the
 widget shows the 2 promotions and 3 blog posts, sorted by date.
 
 ### 3.5 On the page of a listed item
@@ -151,8 +159,9 @@ marked **Viewing**.
 
 ### 3.6 Nothing new to show
 
-If there is nothing new in the chosen time window, the widget stays hidden. You
-can choose a longer window (30 days) in **Date range**.
+If there is nothing new in the chosen time window and no promotion is running,
+the widget stays hidden. You can choose a longer window (30 days) in
+**Date range**.
 
 ### 3.7 Choosing what to include (Starter)
 
@@ -161,40 +170,24 @@ can choose a longer window (30 days) in **Date range**.
 - **Exclude products with tag** - products with any of these tags never
   appear (useful for items that are always on sale and are not really "new").
 
+Your saved choices are shown as soon as the app opens. A collection or blog you
+have since deleted from your store is marked **Removed from store**, so you can
+untick it.
+
 ---
 
-### 3.8 Discounts launched through Shopify Rollouts (Starter)
+### 3.8 Discounts in Shopify Rollouts (Starter)
 
-Since October 2026 a Shopify **Rollout** can include a discount, so a campaign
-goes live together with your theme and checkout changes, or reaches only a share
-of buyers as a test. Two things decide whether that discount belongs in the feed.
+Since October 2026 a Shopify **Rollout** can turn a discount on or off, and it
+can do that for only a share of your traffic as a test.
 
-**Announce only a discount every buyer can use.** While a rollout is serving, the
-discount's own status stops telling the whole story: it can read Scheduled or
-Expired while the buyers one treatment reaches do get it, and read Active while
-nobody gets it. Store Feed reads the discount, not the rollout, so it cannot tell
-those cases apart. Treat a rollout discount as safe to announce only when the
-rollout serves it to everyone - effective traffic allocation 100, with a single
-treatment at 100 that activates the discount.
+Store Feed promotes only discounts that **every** shopper gets. A discount that
+a rollout gives to part of your traffic stays out of the widget until it reaches
+everyone. A discount that a rollout turns on for all traffic appears in the
+widget.
 
-Running a discount on part of your traffic, or testing two offers against each
-other? Keep it out of the feed until you take it to full traffic. The widget
-would tell every visitor about an offer only some of them can use, and there is
-no switch that hides one promotion.
-
-**Nothing refreshes by itself.** A rollout starting or finishing is not sent to
-Store Feed. The feed changes on its nightly refresh (6.1) or when you click
-Refresh now (6.2).
-
-So, on the day:
-
-1. Set the rollout up in Shopify and start it.
-2. Open Store Feed and click **Refresh now**.
-3. Wait for the green message, then reload your store page (6.3).
-
-Do the same when the rollout finishes, otherwise the widget keeps announcing the
-offer until the nightly refresh.
-
+You do not need to refresh anything: the widget updates on its own when a
+rollout starts, changes or finishes.
 
 ## 4. Appearance: look and feel
 
@@ -207,6 +200,8 @@ Shown at the top of the widget. You can use an emoji.
 Used for labels ("Product", "Blog", "Promo"), the entry count and small
 details. Text on labels switches between black and white automatically, so it
 stays readable.
+
+Enter the colour as a hex code in the `#RRGGBB` format, for example `#7F77DD`.
 
 ### 4.3 Icon style (Starter)
 
@@ -288,11 +283,13 @@ again.
 
 ### 6.3 After changing settings
 
-1. Click **Save**.
-2. Click **Refresh now** - this sends your new settings to your store.
+1. Click **Save**. The preview in the app now shows your real entries with
+   the new settings (how many, from which dates, collections and blogs).
+2. Saved settings reach your store with the nightly update. To send them
+   now, click **Refresh now**.
 3. Reload your store page (Ctrl+F5 on Windows, Cmd+Shift+R on Mac).
 
-Shoppers who are already browsing your shop may see the change up to 15 minutes later.
+Shoppers see the change on the next page they open.
 
 ### 6.4 After changing your plan
 
@@ -310,6 +307,15 @@ new plan by itself.
 
 Statistics count the whole store together, not each copy of the widget
 separately.
+
+The widget sends its counts through your store's own address (the Shopify app
+proxy), and Shopify signs every request, so no one can add numbers to another
+store's statistics. Bots, crawlers and automated browsers are not counted.
+
+If statistics stop updating: if you changed the app proxy address in
+**Settings > Apps and sales channels > Store Feed > App proxy > Customize URL**,
+change it back to `/apps/store-feed`. The widget sends its counts to that
+address.
 
 ---
 
@@ -335,7 +341,8 @@ separately.
 
 ### 8.3 A discount code is missing (Starter)
 
-1. The discount is active and started within the time window.
+1. The discount is active. If it started before the time window, it shows only
+   when there are free places left (3.4).
 2. It is available to all customers, or it has the tag `public` (3.3).
 3. At least one of its products can still be bought (3.3).
 4. Click **Refresh now** (6.2).
@@ -363,8 +370,7 @@ The widget uses the colors of its section. Change the section's color scheme
    - Firefox: **Ctrl + Shift + P** (Windows), **Cmd + Shift + P** (Mac).
    - Safari: **Cmd + Shift + N**.
 
-Shoppers who are already browsing your shop may see the change up to 15 minutes
-later.
+Shoppers see the change on the next page they open.
 
 ### 8.6 The widget repeats many times
 

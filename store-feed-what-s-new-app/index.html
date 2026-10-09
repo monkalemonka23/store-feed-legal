@@ -26,12 +26,12 @@
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon-64.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-<link rel="stylesheet" href="/assets/site.css?v=20261007">
-<link rel="stylesheet" href="/assets/consent.css?v=20261007">
-<script src="/assets/consent.js?v=20261007"></script>
-<script src="/assets/launch.js?v=20261007" defer></script>
-<script src="/assets/gallery.js?v=20261007" defer></script>
-<script src="/assets/mail.js?v=20261007" defer></script>
+<link rel="stylesheet" href="/assets/site.css?v=20261009">
+<link rel="stylesheet" href="/assets/consent.css?v=20261009">
+<script src="/assets/consent.js?v=20261009"></script>
+<script src="/assets/launch.js?v=20261009" defer></script>
+<script src="/assets/gallery.js?v=20261009" defer></script>
+<script src="/assets/mail.js?v=20261009" defer></script>
 
 <script type="application/ld+json">
 {
@@ -50,11 +50,13 @@
     "New products, blog posts and active promotions in one chronological feed",
     "Installs as a Shopify app block - any page, header or footer, no theme code",
     "Discount codes shown only when they are available to all customers",
+    "Full discount terms: minimum purchase, usage limits, one use per customer and combinations",
     "Buy X get Y promotions written out with links to the collections and products",
+    "Shopify discount rollouts: only discounts that every shopper gets are promoted, and the widget updates when a rollout changes",
     "Takes the background, text colours and font of the section it sits in",
     "Time window of 7, 14 or 30 days and up to 20 entries",
     "Nightly automatic refresh at 00:15 UTC plus manual refresh",
-    "Impressions, clicks and click-rate statistics split by device"
+    "Impressions, clicks and click-rate statistics split by device, sent through the store's signed Shopify app proxy"
   ],
   "screenshot": [
     "https://growboost.pl/assets/shots/widget-light-themes-1400.webp",
@@ -107,17 +109,21 @@
     { "@type": "Question", "name": "Do I need to edit my theme code?",
       "acceptedAnswer": { "@type": "Answer", "text": "No. Store Feed installs as a Shopify app block, so you place it from Theme Editor. Online Store 2.0 themes are supported." } },
     { "@type": "Question", "name": "Does Store Feed collect data about my customers?",
-      "acceptedAnswer": { "@type": "Answer", "text": "No. The app requests read access to products, blog articles and price rules only - no customer scopes, no per-visitor tracking." } },
+      "acceptedAnswer": { "@type": "Answer", "text": "No. The app reads products, blog articles, discounts and discount rollouts, and which theme sections carry the widget. It requests no customer scopes and does no per-visitor tracking. Views and clicks are counted as daily totals per device type, never per visitor." } },
     { "@type": "Question", "name": "How often does the feed refresh?",
       "acceptedAnswer": { "@type": "Answer", "text": "Once a day, at 00:15 UTC. You can force an earlier refresh from the app dashboard, once every 5 minutes." } },
     { "@type": "Question", "name": "Will the widget slow my store down?",
-      "acceptedAnswer": { "@type": "Answer", "text": "The feed is cached, so it does not call the Shopify API on every page load." } },
+      "acceptedAnswer": { "@type": "Answer", "text": "No. The feed comes built into the store's pages, so nothing has to be fetched to show it after the page loads. That keeps pages fast and Core Web Vitals healthy." } },
     { "@type": "Question", "name": "Can customers close the widget?",
       "acceptedAnswer": { "@type": "Answer", "text": "Yes, and it stays closed for the rest of their browsing session." } },
     { "@type": "Question", "name": "Can I put the widget in more than one place?",
       "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every copy shows the same list and uses the same settings from the app." } },
-    { "@type": "Question", "name": "I schedule discounts with Shopify Rollouts. Will the widget pick them up?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes, but announce a rollout discount only when the rollout reaches every buyer. While a rollout is serving, a discount can read Scheduled or Expired and still be live for part of the traffic, or read Active while nobody gets it, and nothing on the discount itself says which. A rollout does not notify the app either, so click Refresh now after starting it and again after it finishes." } },
+    { "@type": "Question", "name": "Does Store Feed work with Shopify discount rollouts?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Store Feed only promotes discounts that every shopper gets. A discount that a rollout gives to only part of your traffic stays hidden until it reaches everyone. A discount that a rollout turns on for all traffic appears in the widget, and the widget updates automatically when a rollout changes." } },
+    { "@type": "Question", "name": "How are views and clicks counted?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The widget sends its counts through the store's own address (the Shopify app proxy), and Shopify signs every request, so no one can add numbers to another store's statistics. Bots, crawlers and automated browsers are not counted. What is stored is a daily total of views and clicks per device type." } },
+    { "@type": "Question", "name": "My statistics stopped updating. What should I check?",
+      "acceptedAnswer": { "@type": "Answer", "text": "If you changed the app proxy address in Settings > Apps and sales channels > Store Feed > App proxy > Customize URL, change it back to /apps/store-feed. The widget sends its counts to that address." } },
     { "@type": "Question", "name": "How much does Store Feed cost?",
       "acceptedAnswer": { "@type": "Answer", "text": "There is a free plan with up to 5 entries and new products only. The Starter plan is $7.99 per month, or $79.90 a year which is two months free, 17% off, and adds blog posts, promotions, up to 20 entries, custom colours and statistics. Starter begins with a 14-day free trial." } }
   ]
@@ -358,7 +364,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <p class="facts__note">Tested with Lighthouse on a Shopify development store (Savor theme), September 2026. The widget is also built against WCAG 2.1 AA - what that covers, and the one limit that depends on your theme, is written out in our <a href="/privacy-policy/#p11">accessibility statement</a>.</p>
 
   <h2>Built without touching customer data</h2>
-  <p>Store Feed reads three things from your store - products, blog articles and price rules. It requests no customer scopes and stores no personal data about your visitors. Dismissing the widget is remembered in the visitor's browser session, not on our servers. Full detail in the <a href="/privacy-policy/">privacy policy</a>.</p>
+  <p>Store Feed reads your products, blog articles, discounts and discount rollouts, plus which of your theme's sections carry the widget. It requests no customer scopes and stores no personal data about your visitors: views and clicks are kept as daily totals per device type, and your visitors' IP addresses are never stored. Dismissing the widget is remembered in the visitor's browser session, not on our servers. Full detail in the <a href="/privacy-policy/">privacy policy</a>.</p>
 
   <h2>Pricing</h2>
   <p class="sub">Start free. Try Starter for 14 days without paying, monthly or yearly, and keep it only if the feed earns it.</p>
@@ -540,7 +546,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li><a href="#s3-5">On the page of a listed item</a></li>
           <li><a href="#s3-6">Nothing new to show</a></li>
           <li><a href="#s3-7">Choosing what to include (Starter)</a></li>
-          <li><a href="#s3-8">Discounts launched through Shopify Rollouts (Starter)</a></li>
+          <li><a href="#s3-8">Discounts in Shopify Rollouts (Starter)</a></li>
         </ol>
       </li>
       <li><a href="#s4">Appearance: look and feel</a>
@@ -670,30 +676,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <h4 id="s3-3">3.3 Promotions (Starter)</h4>
   <ul>
-    <li>Promotions must be <strong>active</strong> and must have <strong>started within the chosen time window</strong>.</li>
+    <li>Promotions must be <strong>active</strong>.</li>
+    <li>Promotions that <strong>started before the chosen time window</strong> still appear while they run, but only in places left free by everything else (<a href="#s3-4">3.4</a>). They show their end date, or <strong>Active</strong> when they have none, instead of a start date.</li>
     <li><strong>Automatic discounts</strong> appear automatically.</li>
     <li><strong>Discount codes</strong> appear only when they are <strong>available to all customers</strong>.</li>
     <li><strong>To show a code that is limited to some customers</strong>, add the tag <code>public</code> to that discount in Shopify. The code will then be shown to everyone who sees the widget.</li>
     <li>"Buy X, get Y" discounts show what to buy and what you get, with links.</li>
     <li>Products that are sold out are not listed in a promotion. If nothing in a promotion can be bought any more, the promotion is not shown.</li>
-    <li>If a promotion has an end date, the widget shows it.</li>
+    <li>If a promotion has an end date, the widget shows the date and time it ends, with the time zone, and how many days are left.</li>
+    <li>The widget shows the discount's terms: the amount, minimum purchase or quantity, one use per customer, the total number of uses, how many times it applies per order, and whether it can be combined with other discounts.</li>
   </ul>
-  <p class="seealso">See also: <a href="#s3-8">3.8 Discounts launched through Shopify Rollouts</a></p>
+  <p class="seealso">See also: <a href="#s3-8">3.8 Discounts in Shopify Rollouts (Starter)</a></p>
 
   <h4 id="s3-4">3.4 When there are more updates than places</h4>
   <p>The number of entries is set in <strong>Max entries</strong> (Free: 5).</p>
   <ol>
     <li>Promotions are picked first, then blog posts, then products.</li>
     <li>Within each kind, the newest are picked.</li>
+    <li>Promotions that started before the time window come last: they fill only the places that are still free.</li>
     <li>The chosen entries are then shown <strong>newest first</strong>.</li>
   </ol>
-  <p>Example: 2 promotions, 3 blog posts and 6 new products, with 5 places - the widget shows the 2 promotions and 3 blog posts, sorted by date.</p>
+  <p>Example: 2 promotions, 3 blog posts and 6 new products, with 5 places, the widget shows the 2 promotions and 3 blog posts, sorted by date.</p>
 
   <h4 id="s3-5">3.5 On the page of a listed item</h4>
   <p>When a shopper is already on the page of a product or blog post from the list, that entry is skipped and the next one takes its place. Promotions stay and are marked <strong>Viewing</strong>.</p>
 
   <h4 id="s3-6">3.6 Nothing new to show</h4>
-  <p>If there is nothing new in the chosen time window, the widget stays hidden. You can choose a longer window (30 days) in <strong>Date range</strong>.</p>
+  <p>If there is nothing new in the chosen time window and no promotion is running, the widget stays hidden. You can choose a longer window (30 days) in <strong>Date range</strong>.</p>
 
   <h4 id="s3-7">3.7 Choosing what to include (Starter)</h4>
   <ul>
@@ -701,25 +710,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <li><strong>Blogs</strong> - show only posts from the chosen blogs.</li>
     <li><strong>Exclude products with tag</strong> - products with any of these tags never appear (useful for items that are always on sale and are not really "new").</li>
   </ul>
+  <p>Your saved choices are shown as soon as the app opens. A collection or blog you have since deleted from your store is marked <strong>Removed from store</strong>, so you can untick it.</p>
 
-  <h4 id="s3-8">3.8 Discounts launched through Shopify Rollouts (Starter)</h4>
-  <p>Since October 2026 a Shopify <strong>Rollout</strong> can include a discount, so a campaign goes live together with your theme and checkout changes, or reaches only a share of buyers as a test. Two things decide whether that discount belongs in the feed.</p>
-
-  <p><strong>Announce only a discount every buyer can use.</strong> While a rollout is serving, the discount's own status stops telling the whole story: it can read Scheduled or Expired while the buyers one treatment reaches do get it, and read Active while nobody gets it. Store Feed reads the discount, not the rollout, so it cannot tell those cases apart. Treat a rollout discount as safe to announce only when the rollout serves it to everyone - effective traffic allocation 100, with a single treatment at 100 that activates the discount.</p>
-
-  <div class="note">
-    <p>Running a discount on part of your traffic, or testing two offers against each other? Keep it out of the feed until you take it to full traffic. The widget would tell every visitor about an offer only some of them can use, and there is no switch that hides one promotion.</p>
-  </div>
-
-  <p><strong>Nothing refreshes by itself.</strong> A rollout starting or finishing is not sent to Store Feed. The feed changes on its nightly refresh (<a href="#s6-1">6.1</a>) or when you click Refresh now (<a href="#s6-2">6.2</a>).</p>
-
-  <p>So, on the day:</p>
-  <ol>
-    <li>Set the rollout up in Shopify and start it.</li>
-    <li>Open Store Feed and click <strong>Refresh now</strong>.</li>
-    <li>Wait for the green message, then reload your store page (<a href="#s6-3">6.3</a>).</li>
-  </ol>
-  <p>Do the same when the rollout finishes, otherwise the widget keeps announcing the offer until the nightly refresh.</p>
+  <h4 id="s3-8">3.8 Discounts in Shopify Rollouts (Starter)</h4>
+  <p>Since October 2026 a Shopify <strong>Rollout</strong> can turn a discount on or off, and it can do that for only a share of your traffic as a test.</p>
+  <p>Store Feed promotes only discounts that <strong>every</strong> shopper gets. A discount that a rollout gives to part of your traffic stays out of the widget until it reaches everyone. A discount that a rollout turns on for all traffic appears in the widget.</p>
+  <p>You do not need to refresh anything: the widget updates on its own when a rollout starts, changes or finishes.</p>
 
   <h3 id="s4">4. Appearance: look and feel</h3>
 
@@ -728,6 +724,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <h4 id="s4-2">4.2 Accent colour (Starter)</h4>
   <p>Used for labels ("Product", "Blog", "Promo"), the entry count and small details. Text on labels switches between black and white automatically, so it stays readable.</p>
+  <p>Enter the colour as a hex code in the <code>#RRGGBB</code> format, for example <code>#7F77DD</code>.</p>
 
   <h4 id="s4-3">4.3 Icon style (Starter)</h4>
   <p>Flat, 3D or Emoticon. Free plan uses Emoticon.</p>
@@ -786,11 +783,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <h4 id="s6-3">6.3 After changing settings</h4>
   <ol>
-    <li>Click <strong>Save</strong>.</li>
-    <li>Click <strong>Refresh now</strong> - this sends your new settings to your store.</li>
+    <li>Click <strong>Save</strong>. The preview in the app now shows your real entries with the new settings (how many, from which dates, collections and blogs).</li>
+    <li>Saved settings reach your store with the nightly update. To send them now, click <strong>Refresh now</strong>.</li>
     <li>Reload your store page (Ctrl+F5 on Windows, Cmd+Shift+R on Mac).</li>
   </ol>
-  <p>Shoppers who are already browsing your shop may see the change up to 15 minutes later.</p>
+  <p>Shoppers see the change on the next page they open.</p>
 
   <h4 id="s6-4">6.4 After changing your plan</h4>
   <p>Open the Store Feed app once after the change. The widget then updates to the new plan by itself.</p>
@@ -803,18 +800,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <li>Figures by device (desktop, tablet, mobile), for the last 7, 30 or 90 days.</li>
   </ul>
   <p>Statistics count the whole store together, not each copy of the widget separately.</p>
+  <p>The widget sends its counts through your store's own address (the Shopify app proxy), and Shopify signs every request, so no one can add numbers to another store's statistics. Bots, crawlers and automated browsers are not counted.</p>
 
   </section>
 
   <section id="faq" class="doc" aria-labelledby="faq-h">
   <h2 id="faq-h">FAQ</h2>
-  <p class="sub">Before you install - and, from section 8 on, what to check when something doesn't look right.</p>
+  <p class="sub">The questions merchants ask first - and, from section 8 on, what to check when something doesn't look right.</p>
 
   <nav class="toc" aria-labelledby="faqtoc-h">
     <h3 class="toc__h" id="faqtoc-h">FAQ - contents</h3>
     <div class="toc__cols">
       <div>
-        <p class="toc__group">Before you install</p>
+        <p class="toc__group">General questions</p>
         <ol>
           <li><a href="#q1">Do I need to edit my theme code?</a></li>
           <li><a href="#q2">Does it collect data about my customers?</a></li>
@@ -822,7 +820,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li><a href="#q4">Will it slow my store down?</a></li>
           <li><a href="#q5">Can customers close the widget?</a></li>
           <li><a href="#q6">Can I put it in more than one place?</a></li>
-          <li><a href="#q8">I schedule discounts with Shopify Rollouts. Will the widget pick them up?</a></li>
+          <li><a href="#q8">Does Store Feed work with Shopify discount rollouts?</a></li>
+          <li><a href="#q9">How are views and clicks counted?</a></li>
+          <li><a href="#q10">My statistics stopped updating</a></li>
           <li><a href="#q7">What does Starter cost, and can I try it first?</a></li>
         </ol>
       </div>
@@ -848,7 +848,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div class="faq">
     <h3 id="q2">Does it collect data about my customers?</h3>
-    <p>No. The app requests read access to products, blog articles and price rules only - no customer scopes, no per-visitor tracking.</p>
+    <p>No. The app reads your products, blog articles, discounts and discount rollouts, and which of your theme's sections carry the widget. It requests no customer scopes and does no per-visitor tracking. Views and clicks are counted as daily totals per device type, never per visitor (<a href="#q9">below</a>).</p>
   </div>
   <div class="faq">
     <h3 id="q3">How often does the feed refresh?</h3>
@@ -856,7 +856,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div class="faq">
     <h3 id="q4">Will it slow my store down?</h3>
-    <p>The feed is cached, so it doesn't call the Shopify API on every page load.</p>
+    <p>No. The feed comes built into your store's pages, so nothing has to be fetched to show it after the page loads. That keeps pages fast and your Core Web Vitals healthy - the numbers are in <a href="#measured">Measured on a real store</a>.</p>
   </div>
   <div class="faq">
     <h3 id="q5">Can customers close the widget?</h3>
@@ -867,8 +867,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>Yes. Every copy shows the same list and the same settings (<a href="#s2-4">2.4</a>).</p>
   </div>
   <div class="faq">
-    <h3 id="q8">I schedule discounts with Shopify Rollouts. Will the widget pick them up?</h3>
-    <p>Yes, with one rule: announce a rollout discount only when the rollout reaches <strong>every</strong> buyer. While a rollout is serving, a discount can look Scheduled or Expired and still be live for part of your traffic, or look Active while nobody gets it - and nothing on the discount itself says which. The widget would then promise an offer some visitors cannot use. A rollout also does not notify the app, so click <strong>Refresh now</strong> after you start it and again after it finishes (<a href="#s3-8">3.8</a>).</p>
+    <h3 id="q8">Does Store Feed work with Shopify discount rollouts?</h3>
+    <p>Yes. Store Feed only promotes discounts that every shopper gets. A discount that a rollout gives to only part of your traffic stays hidden until it reaches everyone. A discount that a rollout turns on for all traffic appears in the widget, and the widget updates automatically when a rollout changes (<a href="#s3-8">3.8</a>).</p>
+  </div>
+  <div class="faq">
+    <h3 id="q9">How are views and clicks counted?</h3>
+    <p>The widget sends its counts through your store's own address (the Shopify app proxy), and Shopify signs every request, so no one can add numbers to another store's statistics. Bots, crawlers and automated browsers are not counted. What is stored is a daily total of views and clicks per device type - nothing about the individual shopper (<a href="#s7">7</a>).</p>
+  </div>
+  <div class="faq">
+    <h3 id="q10">My statistics stopped updating</h3>
+    <p>If you changed the app proxy address in <strong>Settings > Apps and sales channels > Store Feed > App proxy > Customize URL</strong>, change it back to <code>/apps/store-feed</code>. The widget sends its counts to that address.</p>
   </div>
   <div class="faq">
     <h3 id="q7">What does Starter cost, and can I try it first?</h3>
@@ -897,7 +905,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <h4 id="s8-3">8.3 A discount code is missing (Starter)</h4>
   <ol>
-    <li>The discount is active and started within the time window.</li>
+    <li>The discount is active. If it started before the time window, it shows only when there are free places left (<a href="#s3-4">3.4</a>).</li>
     <li>It is available to all customers, or it has the tag <code>public</code> (<a href="#s3-3">3.3</a>).</li>
     <li>At least one of its products can still be bought (<a href="#s3-3">3.3</a>).</li>
     <li>Click <strong>Refresh now</strong> (<a href="#s6-2">6.2</a>).</li>
@@ -926,7 +934,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </ul>
     </li>
   </ol>
-  <p>Shoppers who are already browsing your shop may see the change up to 15 minutes later.</p>
+  <p>Shoppers see the change on the next page they open.</p>
 
   <h4 id="s8-6">8.6 The widget repeats many times</h4>
   <p>It was added inside a product card or slider. Remove it there and add it as its own section (<a href="#s2-3">2.3</a>).</p>
@@ -938,7 +946,63 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <section id="changelog" aria-labelledby="changelog-h">
   <h2 id="changelog-h">Change log</h2>
-  <p class="sub">Every released version of Store Feed, newest first.</p>
+  <p class="sub">What changed in Store Feed, newest first. Version 1 has not shipped yet, so everything below went into the version that will be released on launch day.</p>
+
+  <div class="chg">
+    <div class="chg__head">
+      <span class="chg__ver">9 October 2026</span>
+    </div>
+    <ul>
+      <li>Running promotions stay in the widget after the date range, in the places left free by new content.</li>
+      <li>Accent colour is checked as a hex code before saving.</li>
+      <li>Collection and blog filters show your saved choices as soon as the app opens.</li>
+      <li>"Viewing" marks and skipping the current page now work on stores with language folders.</li>
+      <li>Bots and automated browsers are not counted in statistics.</li>
+      <li>Copy button no longer says "Copied" when the browser blocked copying.</li>
+      <li>Widgets that start hidden in a narrow spot (for example a closed drawer) work fully once they get wider.</li>
+      <li>Security and dependency updates.</li>
+    </ul>
+  </div>
+
+  <div class="chg">
+    <div class="chg__head">
+      <span class="chg__ver">8 October 2026</span>
+    </div>
+    <ul>
+      <li>Statistics are sent through your store's app proxy and signed by Shopify.</li>
+    </ul>
+  </div>
+
+  <div class="chg">
+    <div class="chg__head">
+      <span class="chg__ver">7 October 2026</span>
+    </div>
+    <ul>
+      <li>Support for Shopify discount rollouts: only discounts that every shopper gets are promoted.</li>
+      <li>The widget updates automatically when a rollout changes.</li>
+    </ul>
+  </div>
+
+  <div class="chg">
+    <div class="chg__head">
+      <span class="chg__ver">2 October 2026</span>
+    </div>
+    <ul>
+      <li>Promotion end date shows the time and time zone.</li>
+      <li>The app preview shows your real entries, descriptions and discount terms after Save.</li>
+      <li>No layout shift when the widget loads (CLS 0 on Horizon).</li>
+    </ul>
+  </div>
+
+  <div class="chg">
+    <div class="chg__head">
+      <span class="chg__ver">1 October 2026</span>
+    </div>
+    <ul>
+      <li>The widget shows all discount terms: usage limits, one use per customer, uses per order and combinations.</li>
+      <li>"Add to footer" and "Add to header" open the right section in the theme editor.</li>
+    </ul>
+  </div>
 
   <div class="chg">
     <div class="chg__head">

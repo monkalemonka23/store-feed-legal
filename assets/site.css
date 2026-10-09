@@ -276,6 +276,9 @@ html { scroll-behavior: smooth; }
 .tbl thead th { border-bottom: 2px solid var(--line); }
 .tbl td + td, .tbl th + th { text-align: center; width: 90px; }
 .tbl td:first-child { color: var(--ink-soft); }
+/* Tabela, w ktorej druga kolumna to zdania, nie znaczniki (np. uprawnienia
+   aplikacji w polityce prywatnosci): bez centrowania i bez stalej szerokosci. */
+.tbl--prose td + td, .tbl--prose th + th { text-align: left; width: auto; }
 
 .note {
   border-left: 3px solid var(--brand); background: var(--brand-soft);
