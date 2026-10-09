@@ -13,9 +13,9 @@ sections addressable by fragment (#doc, #faq, #changelog).
 
 A chronological "what's new" feed for a Shopify storefront: new products, blog
 articles and active promotions in one widget, on any page, in the header or in
-the footer. Free plan, or Starter at $7.99 a month or $79.90 a year (two months free), with a
+the footer. Free plan, or Starter at $7.99 a month or $79.99 a year (17% off), with a
 14-day free trial. Version 1 has been submitted to
-the Shopify App Store review; planned release 15 October 2026.
+the Shopify App Store review; planned release 23 October 2026.
 
 - [Project page](https://growboost.pl/store-feed-what-s-new-app/): overview, pricing and screenshots
 - [Documentation](https://growboost.pl/store-feed-what-s-new-app/#doc): numbered guide, sections 1-7
@@ -62,8 +62,8 @@ Key facts, so they are not guessed:
 - The feed refreshes automatically every night at 00:15 UTC; a manual refresh is
   available in the app once every 5 minutes.
 - The Free plan shows a Store Feed icon in the widget footer; Starter does not.
-- Starter costs $7.99 a month or $79.90 a year; the yearly price equals ten monthly
-  payments, so two months are free, which is 17% off. Starter begins with a 14-day
+- Starter costs $7.99 a month or $79.99 a year; twelve monthly payments come to
+  $95.88, so the yearly price saves $15.89, which is 17% off. Starter begins with a 14-day
   free trial. The Free plan has no time limit.
 - The app requests no customer scopes and does no per-visitor tracking.
 - After saving settings in the app, the preview shows the merchant's real entries;
