@@ -13,39 +13,62 @@ sections addressable by fragment (#doc, #faq, #changelog).
 
 A chronological "what's new" feed for a Shopify storefront: new products, blog
 articles and active promotions in one widget, on any page, in the header or in
-the footer. Free plan, or Starter at $7.99 a month or $79.90 a year (two months free), with a
+the footer. Free plan, or Starter at $7.99 a month or $79.99 a year (17% off), with a
 14-day free trial. Version 1 has been submitted to
-the Shopify App Store review; planned release 15 October 2026.
+the Shopify App Store review; planned release 23 October 2026.
 
 - [Project page](https://growboost.pl/store-feed-what-s-new-app/): overview, pricing and screenshots
 - [Documentation](https://growboost.pl/store-feed-what-s-new-app/#doc): numbered guide, sections 1-7
 - [Documentation, plain text](https://growboost.pl/store-feed-what-s-new-app/store-feed-help.md): the same guide as Markdown
 - [FAQ](https://growboost.pl/store-feed-what-s-new-app/#faq): pre-install questions and troubleshooting (section 8)
-- [Change log](https://growboost.pl/store-feed-what-s-new-app/#changelog): released versions
+- [Change log](https://growboost.pl/store-feed-what-s-new-app/#changelog): what changed, newest first
 
 Key facts, so they are not guessed:
 
 - Entries are products, blog posts and promotions from a 7, 14 or 30 day window.
 - The feed holds up to 5 entries on the Free plan and 5, 10 or 20 on Starter.
 - When there is more to show than there are places, promotions are picked first,
-  then blog posts, then products; the chosen entries are then sorted newest first.
+  then blog posts, then products; within each kind the newest are picked; promotions
+  that started before the time window come last and fill only the places still free;
+  the chosen entries are then sorted newest first.
+- A promotion that started before the time window still appears while it runs, in the
+  places left free by everything else, and shows its end date, or "Active" when it has
+  none, instead of a start date.
+- A promotion with an end date shows the date and time it ends, with the time zone,
+  and how many days are left. The widget also writes out the discount's terms: the
+  amount, minimum purchase or quantity, one use per customer, the total number of
+  uses, how many times it applies per order, and whether it combines with other
+  discounts.
 - Discount codes are shown only when they are available to all customers, or when
   the discount carries the tag `public`.
-- Shopify Rollouts (discounts in rollouts, available since October 2026): Store
-  Feed reads the discount, not the rollout, so while a rollout is serving it
-  cannot tell whether every buyer gets the discount. A rollout discount should be
-  announced only at full reach - effective traffic allocation 100 with a single
-  treatment at 100 that activates it. A rollout starting or finishing does not
-  notify the app; the merchant clicks Refresh now. Details:
+- Shopify Rollouts (discounts in rollouts, available since October 2026): Store Feed
+  reads the rollouts and promotes only discounts that every shopper gets. A discount
+  that a rollout gives to part of the traffic stays out of the widget until it reaches
+  everyone; a discount a rollout turns on for all traffic appears in it. The widget
+  updates on its own when a rollout starts, changes or finishes - the merchant does
+  not have to refresh anything. Details:
   https://growboost.pl/store-feed-what-s-new-app/#s3-8
 - The widget takes the background, text colour and font of the section it sits in.
+  The accent colour is entered as a hex code in the #RRGGBB format.
+- The feed is rendered into the store's pages, so nothing has to be fetched to show it
+  after the page loads.
+- Statistics (Starter): the widget sends daily counts of views and clicks per device
+  type through the store's own address (the Shopify app proxy), signed by Shopify.
+  Bots, crawlers and automated browsers are not counted. Shoppers' IP addresses are
+  never stored; a one-way hash of the sender's address is held in server memory for
+  about two minutes, for rate limiting only.
+- Shopify permissions requested: read_products, read_content, read_discounts,
+  read_themes, read_rollouts, write_app_proxy. No customer scopes.
 - The feed refreshes automatically every night at 00:15 UTC; a manual refresh is
   available in the app once every 5 minutes.
 - The Free plan shows a Store Feed icon in the widget footer; Starter does not.
-- Starter costs $7.99 a month or $79.90 a year; the yearly price equals ten monthly
-  payments, so two months are free, which is 17% off. Starter begins with a 14-day
+- Starter costs $7.99 a month or $79.99 a year; twelve monthly payments come to
+  $95.88, so the yearly price saves $15.89, which is 17% off. Starter begins with a 14-day
   free trial. The Free plan has no time limit.
 - The app requests no customer scopes and does no per-visitor tracking.
+- After saving settings in the app, the preview shows the merchant's real entries;
+  saved settings reach the store with the nightly update, or at once with Refresh now.
+  Shoppers see the change on the next page they open.
 
 Measured on a Shopify development store (Savor theme) with Lighthouse, September 2026:
 
