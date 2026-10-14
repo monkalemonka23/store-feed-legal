@@ -185,6 +185,8 @@ See also: 3.7 Choosing what to include (Starter)
   from a button). In a narrow card Copy shows only its icon, so the code and
   the buttons always stay in one row.
 
+See also: 3.8 Discounts in Shopify Rollouts (Starter)
+
 ### 3.4 When there are more updates than places
 
 The number of entries is set in **Max entries** (Free: 5).
@@ -220,6 +222,19 @@ the widget stays hidden. You can choose a longer window (30 days) in
 Your saved choices are shown as soon as the app opens. A collection or blog you
 have since deleted from your store is marked **Removed from store**, so you can
 untick it.
+
+### 3.8 Discounts in Shopify Rollouts (Starter)
+
+A Shopify **Rollout** can turn a discount on or off, and it can do that for only
+a share of your traffic as a test.
+
+Store Feed promotes only discounts that **every** shopper gets. A discount that
+a rollout gives to part of your traffic stays out of the widget until it reaches
+everyone. A discount that a rollout turns on for all traffic appears in the
+widget.
+
+You do not need to refresh anything: the widget updates on its own when a
+rollout starts, changes or finishes.
 
 ---
 

@@ -45,7 +45,8 @@ Key facts, so they are not guessed:
   gets. A discount that a rollout gives to part of the traffic stays out of the widget
   until it reaches everyone; a discount a rollout turns on for all traffic appears in
   it. The widget updates on its own when a rollout changes - the merchant does not
-  have to refresh anything.
+  have to refresh anything. Details:
+  https://growboost.pl/store-feed-what-s-new-app/#s3-8
 - Every discount code in the widget has a Use code button that puts the code into the
   shopper's cart, and a Copy button for pasting it at checkout. Codes containing a
   comma show Copy only. Automatic discounts show "Applied automatically" instead.
