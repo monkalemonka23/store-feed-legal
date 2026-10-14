@@ -69,6 +69,9 @@ billing period. Until then you keep the features you paid for.
 The app shows which pages already have the widget ("Added") and which copies
 are hidden in the theme editor ("Hidden").
 
+Next to **Add Store Feed to your storefront** the app shows whether the widget
+is live: **Active on your store**, or **Not on your store yet**.
+
 ### 2.2 Adding it yourself
 
 1. Go to **Online Store > Themes > Customize**.
@@ -354,8 +357,10 @@ again.
 
 ### 6.3 After changing settings
 
-1. Click **Save**. The preview in the app now shows your real entries with
-   the new settings (how many, from which dates, collections and blogs).
+1. Click **Save** - either in the preview column or on the bar Shopify shows at
+   the top when you have unsaved changes. The preview in the app now shows your
+   real entries with the new settings (how many, from which dates, collections
+   and blogs).
 2. Saved settings reach your store with the nightly update. To send them
    now, click **Refresh now**.
 3. Reload your store page (Ctrl+F5 on Windows, Cmd+Shift+R on Mac).
@@ -394,13 +399,15 @@ address.
 
 ### 8.1 I can't see the widget on my store
 
-1. Check that it is added to that page and not hidden (the app shows "Added"
+1. Look at the badge next to **Add Store Feed to your storefront**. If it reads
+   **Not on your store yet**, the widget has not been placed in your theme (2.1).
+2. Check that it is added to that page and not hidden (the app shows "Added"
    next to the page, not "Hidden", see 2.1).
-2. Check **Visibility by device** (4.7) for the device you are using.
-3. Check that there is something new in the time window (3.6).
-4. If you clicked the close button, it stays hidden until you close the
+3. Check **Visibility by device** (4.7) for the device you are using.
+4. Check that there is something new in the time window (3.6).
+5. If you clicked the close button, it stays hidden until you close the
    browser tab (4.6).
-5. If it sits in a very narrow spot, move it to its own section (2.3).
+6. If it sits in a very narrow spot, move it to its own section (2.3).
 
 ### 8.2 A new product is missing
 
