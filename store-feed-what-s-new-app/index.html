@@ -26,12 +26,12 @@
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon-64.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-<link rel="stylesheet" href="/assets/site.css?v=20261009b">
-<link rel="stylesheet" href="/assets/consent.css?v=20261009b">
-<script src="/assets/consent.js?v=20261009b"></script>
-<script src="/assets/launch.js?v=20261009b" defer></script>
-<script src="/assets/gallery.js?v=20261009b" defer></script>
-<script src="/assets/mail.js?v=20261009b" defer></script>
+<link rel="stylesheet" href="/assets/site.css?v=20261014">
+<link rel="stylesheet" href="/assets/consent.css?v=20261014">
+<script src="/assets/consent.js?v=20261014"></script>
+<script src="/assets/launch.js?v=20261014" defer></script>
+<script src="/assets/gallery.js?v=20261014" defer></script>
+<script src="/assets/mail.js?v=20261014" defer></script>
 
 <script type="application/ld+json">
 {
@@ -50,10 +50,14 @@
     "New products, blog posts and active promotions in one chronological feed",
     "Installs as a Shopify app block - any page, header or footer, no theme code",
     "Discount codes shown only when they are available to all customers",
+    "Use code button that puts a discount code straight into the shopper's cart, with Copy as the alternative",
     "Full discount terms: minimum purchase, usage limits, one use per customer and combinations",
     "Buy X get Y promotions written out with links to the collections and products",
+    "Product and blog images in the feed, or icons in one of three styles",
+    "Widget labels and date formats in eight languages, following the store's language",
     "Shopify discount rollouts: only discounts that every shopper gets are promoted, and the widget updates when a rollout changes",
     "Takes the background, text colours and font of the section it sits in",
+    "Sits in the header on every page and folds to its title bar after a shopper opens an entry",
     "Time window of 7, 14 or 30 days and up to 20 entries",
     "Nightly automatic refresh at 00:15 UTC plus manual refresh",
     "Impressions, clicks and click-rate statistics split by device, sent through the store's signed Shopify app proxy"
@@ -118,6 +122,10 @@
       "acceptedAnswer": { "@type": "Answer", "text": "Yes, and it stays closed for the rest of their browsing session." } },
     { "@type": "Question", "name": "Can I put the widget in more than one place?",
       "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every copy shows the same list and uses the same settings from the app." } },
+    { "@type": "Question", "name": "Where is the widget best placed?",
+      "acceptedAnswer": { "@type": "Answer", "text": "In the header. It appears on every page, near the top, where shoppers look first. After a shopper clicks an entry, the widget on the next page folds to its title bar, so it never covers what they came to see." } },
+    { "@type": "Question", "name": "Can shoppers apply a code without typing it?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every discount code in the widget has a Use code button that adds it to the cart. The Copy button stays for shoppers who prefer to paste the code at checkout." } },
     { "@type": "Question", "name": "Does Store Feed work with Shopify discount rollouts?",
       "acceptedAnswer": { "@type": "Answer", "text": "Yes. Store Feed only promotes discounts that every shopper gets. A discount that a rollout gives to only part of your traffic stays hidden until it reaches everyone. A discount that a rollout turns on for all traffic appears in the widget, and the widget updates automatically when a rollout changes." } },
     { "@type": "Question", "name": "How are views and clicks counted?",
@@ -459,7 +467,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                alt="Three Store Feed promotion entries: a buy four get one free offer listing the qualifying collections and the free products as links, a ten percent welcome discount with a minimum order, and a buy two get fifty percent off offer, each with its code, a Copy button and an end date.">
         </picture>
       </button>
-      <figcaption><b>Promotions, spelled out.</b> Buy X / get Y rules name the collections and products they apply to, and link to them. Discount codes are shown with a Copy button - and only when the code is available to every customer, or tagged <code>public</code>.</figcaption>
+      <figcaption><b>Promotions, spelled out.</b> Buy X / get Y rules name the collections and products they apply to, and link to them. Every code carries a <strong>Use code</strong> button that puts it straight into the cart, and a <strong>Copy</strong> button for shoppers who would rather paste it at checkout. Codes appear only when they are available to every customer, or tagged <code>public</code>.</figcaption>
     </figure></li>
 
   </ul>
@@ -546,14 +554,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li><a href="#s3-5">On the page of a listed item</a></li>
           <li><a href="#s3-6">Nothing new to show</a></li>
           <li><a href="#s3-7">Choosing what to include (Starter)</a></li>
-          <li><a href="#s3-8">Discounts in Shopify Rollouts (Starter)</a></li>
         </ol>
       </li>
       <li><a href="#s4">Appearance: look and feel</a>
         <ol>
           <li><a href="#s4-1">Widget title</a></li>
           <li><a href="#s4-2">Accent colour (Starter)</a></li>
-          <li><a href="#s4-3">Icon style (Starter)</a></li>
+          <li><a href="#s4-3">Icon style (Starter)</a>
+            <ul>
+              <li><a href="#s4-3a">4.3a Product and blog images (Starter)</a></li>
+              <li><a href="#s4-3b">4.3b Language of the widget</a></li>
+            </ul>
+          </li>
           <li><a href="#s4-4">Corner style</a></li>
           <li><a href="#s4-5">How the widget opens and its height (Starter)</a></li>
           <li><a href="#s4-6">Close button</a></li>
@@ -594,25 +606,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <tbody>
       <tr><td>Price</td><td>free, no time limit</td><td>$7.99 / month or $79.99 / year</td></tr>
       <tr><td>Free trial</td><td><span aria-hidden="true">-</span><span class="sr-only">Not applicable</span></td><td>14 days</td></tr>
-      <tr><td>New products</td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
-      <tr><td>Blog posts</td><td><span aria-hidden="true">-</span><span class="sr-only">Not included</span></td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
-      <tr><td>Promotions and discount codes</td><td><span aria-hidden="true">-</span><span class="sr-only">Not included</span></td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
+      <tr><td>New products</td><td><span aria-hidden="true">&#10003;</span><span class="sr-only">Included</span></td><td><span aria-hidden="true">&#10003;</span><span class="sr-only">Included</span></td></tr>
+      <tr><td>Blog posts</td><td><span aria-hidden="true">-</span><span class="sr-only">Not included</span></td><td><span aria-hidden="true">&#10003;</span><span class="sr-only">Included</span></td></tr>
+      <tr><td>Promotions and discount codes</td><td><span aria-hidden="true">-</span><span class="sr-only">Not included</span></td><td><span aria-hidden="true">&#10003;</span><span class="sr-only">Included</span></td></tr>
       <tr><td>Number of entries in the widget</td><td>up to 5</td><td>5, 10 or 20</td></tr>
-      <tr><td>Time window (last 7, 14 or 30 days)</td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
-      <tr><td>Widget title</td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
-      <tr><td>Corner style</td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
-      <tr><td>Close button</td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
-      <tr><td>Show or hide on desktop / tablet / mobile</td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
-      <tr><td>Place it on any page, in header or footer</td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
-      <tr><td>Automatic daily refresh + manual refresh</td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
-      <tr><td>Accent colour</td><td><span aria-hidden="true">-</span><span class="sr-only">Not included</span></td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
-      <tr><td>Icon style (Flat, 3D, Emoticon)</td><td>Emoticon only</td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
-      <tr><td>How the widget opens and its height</td><td><span aria-hidden="true">-</span><span class="sr-only">Not included</span></td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
-      <tr><td>Show only chosen collections and blogs</td><td><span aria-hidden="true">-</span><span class="sr-only">Not included</span></td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
-      <tr><td>Hide products with a chosen tag</td><td><span aria-hidden="true">-</span><span class="sr-only">Not included</span></td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
+      <tr><td>Time window (last 7, 14 or 30 days)</td><td><span aria-hidden="true">&#10003;</span><span class="sr-only">Included</span></td><td><span aria-hidden="true">&#10003;</span><span class="sr-only">Included</span></td></tr>
+      <tr><td>Widget title</td><td><span aria-hidden="true">&#10003;</span><span class="sr-only">Included</span></td><td><span aria-hidden="true">&#10003;</span><span class="sr-only">Included</span></td></tr>
+      <tr><td>Corner style</td><td><span aria-hidden="true">&#10003;</span><span class="sr-only">Included</span></td><td><span aria-hidden="true">&#10003;</span><span class="sr-only">Included</span></td></tr>
+      <tr><td>Close button</td><td><span aria-hidden="true">&#10003;</span><span class="sr-only">Included</span></td><td><span aria-hidden="true">&#10003;</span><span class="sr-only">Included</span></td></tr>
+      <tr><td>Show or hide on desktop / tablet / mobile</td><td><span aria-hidden="true">&#10003;</span><span class="sr-only">Included</span></td><td><span aria-hidden="true">&#10003;</span><span class="sr-only">Included</span></td></tr>
+      <tr><td>Place it on any page, in header or footer</td><td><span aria-hidden="true">&#10003;</span><span class="sr-only">Included</span></td><td><span aria-hidden="true">&#10003;</span><span class="sr-only">Included</span></td></tr>
+      <tr><td>Automatic daily refresh + manual refresh</td><td><span aria-hidden="true">&#10003;</span><span class="sr-only">Included</span></td><td><span aria-hidden="true">&#10003;</span><span class="sr-only">Included</span></td></tr>
+      <tr><td>Accent colour</td><td><span aria-hidden="true">-</span><span class="sr-only">Not included</span></td><td><span aria-hidden="true">&#10003;</span><span class="sr-only">Included</span></td></tr>
+      <tr><td>Product and blog images</td><td><span aria-hidden="true">-</span><span class="sr-only">Not included</span></td><td><span aria-hidden="true">&#10003;</span><span class="sr-only">Included</span></td></tr>
+      <tr><td>Icon style (Flat, 3D, Emoticon)</td><td>Emoticon only</td><td><span aria-hidden="true">&#10003;</span><span class="sr-only">Included</span></td></tr>
+      <tr><td>How the widget opens and its height</td><td><span aria-hidden="true">-</span><span class="sr-only">Not included</span></td><td><span aria-hidden="true">&#10003;</span><span class="sr-only">Included</span></td></tr>
+      <tr><td>Show only chosen collections and blogs</td><td><span aria-hidden="true">-</span><span class="sr-only">Not included</span></td><td><span aria-hidden="true">&#10003;</span><span class="sr-only">Included</span></td></tr>
+      <tr><td>Hide products with a chosen tag</td><td><span aria-hidden="true">-</span><span class="sr-only">Not included</span></td><td><span aria-hidden="true">&#10003;</span><span class="sr-only">Included</span></td></tr>
       <tr><td>Store Feed icon in the widget footer</td><td>always shown</td><td>not shown</td></tr>
-      <tr><td>Your own footer text and link</td><td><span aria-hidden="true">-</span><span class="sr-only">Not included</span></td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
-      <tr><td>Statistics: views, clicks, click rate, by device</td><td><span aria-hidden="true">-</span><span class="sr-only">Not included</span></td><td><span aria-hidden="true">✓</span><span class="sr-only">Included</span></td></tr>
+      <tr><td>Your own footer text and link</td><td><span aria-hidden="true">-</span><span class="sr-only">Not included</span></td><td><span aria-hidden="true">&#10003;</span><span class="sr-only">Included</span></td></tr>
+      <tr><td>Statistics: views, clicks, click rate, by device</td><td><span aria-hidden="true">-</span><span class="sr-only">Not included</span></td><td><span aria-hidden="true">&#10003;</span><span class="sr-only">Included</span></td></tr>
     </tbody>
   </table>
   </div>
@@ -647,8 +660,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <h4 id="s2-3">2.3 Where it works best</h4>
   <ul>
-    <li><strong>As its own section on a page</strong> - the most common choice.</li>
-    <li><strong>In the header or footer</strong> - then it appears on every page.</li>
+    <li><strong>In the header (recommended)</strong> - it appears on every page, near the top, where shoppers look first. After a shopper clicks an entry, the widget on the next page folds to its title bar (when it sits in the top half of the screen), so it never covers what they came to see. One tap opens it again.</li>
+    <li><strong>As its own section on a page</strong> - good for the home page or a collection.</li>
+    <li><strong>In the footer</strong> - it appears on every page, but fewer shoppers scroll that far.</li>
     <li><strong>Not inside a product card or a product slider.</strong> There it is repeated for every product in the grid.</li>
     <li><strong>It needs at least 200 px of width.</strong> In very narrow spots (for example the row of icons in a header) it stays hidden.</li>
   </ul>
@@ -675,18 +689,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <p class="seealso">See also: <a href="#s3-7">3.7 Choosing what to include (Starter)</a></p>
 
   <h4 id="s3-3">3.3 Promotions (Starter)</h4>
+
+  <p><strong>Which promotions appear</strong></p>
   <ul>
     <li>Promotions must be <strong>active</strong>.</li>
-    <li>Promotions that <strong>started before the chosen time window</strong> still appear while they run, but only in places left free by everything else (<a href="#s3-4">3.4</a>). They show their end date, or <strong>Active</strong> when they have none, instead of a start date.</li>
+    <li>Promotions that <strong>started before the chosen time window</strong> still appear while they run, but only in places left free by everything else (<a href="#s3-4">3.4</a>).</li>
     <li><strong>Automatic discounts</strong> appear automatically.</li>
     <li><strong>Discount codes</strong> appear only when they are <strong>available to all customers</strong>.</li>
     <li><strong>To show a code that is limited to some customers</strong>, add the tag <code>public</code> to that discount in Shopify. The code will then be shown to everyone who sees the widget.</li>
-    <li>"Buy X, get Y" discounts show what to buy and what you get, with links.</li>
     <li>Products that are sold out are not listed in a promotion. If nothing in a promotion can be bought any more, the promotion is not shown.</li>
-    <li>If a promotion has an end date, the widget shows the date and time it ends, with the time zone, and how many days are left.</li>
-    <li>The widget shows the discount's terms: the amount, minimum purchase or quantity, one use per customer, the total number of uses, how many times it applies per order, and whether it can be combined with other discounts.</li>
   </ul>
-  <p class="seealso">See also: <a href="#s3-8">3.8 Discounts in Shopify Rollouts (Starter)</a></p>
+
+  <p><strong>What the card shows</strong></p>
+  <ul>
+    <li>Every card starts with a short hook: for promotions the discount value (for example "15% off" or "Get 1 item free") in bold, for products "New product", for blog posts "New post". The name is the second line. If a discount code has no name of its own in Shopify, the card shows only the value, and the code stays in the code box.</li>
+    <li>Promotions show their end date, or <strong>Active</strong> when they have none. They do not show a start date: shoppers care when a deal ends, not when it began.</li>
+    <li>When a promotion has an end date, the widget shows the date and time it ends. Each shopper sees it in their own time zone and in the date format they are used to (for example "Nov 30, 5:59 PM" in New York or "30 Nov, 22:59" in London). In the last 6 days it also counts down ("Ends in 3 days"). When 3 days or fewer are left, the end date is shown in bold with a dot in your accent colour.</li>
+    <li>"Buy X, get Y" discounts show what to buy and what you get, with links. When both come from the same collection, the widget shows it once, as "Buy and get from: Bars".</li>
+    <li>The widget shows the discount's terms: the amount, minimum purchase or quantity, one use per customer, the total number of uses, how many times it applies per order, and whether it can be combined with other discounts. The most useful terms come first (minimum purchase, where it applies, then usage limits and combinations). The first 2 lines are visible, and "more" at the end of the second line shows the rest. Collections and products take up to 2 lines too, with "and N more".</li>
+  </ul>
+
+  <p><strong>Using the code</strong></p>
+  <ul>
+    <li>Automatic discounts (no code) show "Applied automatically" where other cards have the code buttons.</li>
+    <li><strong>Use code</strong> adds the code to the shopper's cart, so they don't have to type it at checkout. Codes already in the cart stay there. Shopify decides which codes apply, and the widget tells the shopper the result:
+      <ul>
+        <li>the code applies: "Code added to your cart.", plus which other codes still apply and which stopped applying because they can't be combined with it;</li>
+        <li>another code in the cart already applies and can't be combined with this one: the shopper sees which code that is and can tap "Use this code instead";</li>
+        <li>the cart doesn't meet the discount's terms yet (for example it's empty): the code waits in the cart and applies once the cart meets them.</li>
+      </ul>
+      If adding fails, the shopper is asked to use Copy instead.
+    </li>
+    <li><strong>Copy</strong> copies the code, for shoppers who prefer to paste it at checkout.</li>
+    <li>Codes that contain a comma show only Copy (Shopify's cart can't take them from a button). In a narrow card Copy shows only its icon, so the code and the buttons always stay in one row.</li>
+  </ul>
 
   <h4 id="s3-4">3.4 When there are more updates than places</h4>
   <p>The number of entries is set in <strong>Max entries</strong> (Free: 5).</p>
@@ -712,11 +748,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </ul>
   <p>Your saved choices are shown as soon as the app opens. A collection or blog you have since deleted from your store is marked <strong>Removed from store</strong>, so you can untick it.</p>
 
-  <h4 id="s3-8">3.8 Discounts in Shopify Rollouts (Starter)</h4>
-  <p>Since October 2026 a Shopify <strong>Rollout</strong> can turn a discount on or off, and it can do that for only a share of your traffic as a test.</p>
-  <p>Store Feed promotes only discounts that <strong>every</strong> shopper gets. A discount that a rollout gives to part of your traffic stays out of the widget until it reaches everyone. A discount that a rollout turns on for all traffic appears in the widget.</p>
-  <p>You do not need to refresh anything: the widget updates on its own when a rollout starts, changes or finishes.</p>
-
   <h3 id="s4">4. Appearance: look and feel</h3>
 
   <h4 id="s4-1">4.1 Widget title</h4>
@@ -729,6 +760,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h4 id="s4-3">4.3 Icon style (Starter)</h4>
   <p>Flat, 3D or Emoticon. Free plan uses Emoticon.</p>
 
+  <h4 id="s4-3a">4.3a Product and blog images (Starter)</h4>
+  <p><strong>Show product and blog images</strong> (on by default): products and blog posts show their main image instead of an icon. Entries without an image, and promotions, keep the icon.</p>
+
+  <h4 id="s4-3b">4.3b Language of the widget</h4>
+  <p>Labels in the widget (Copy, Promo, Ends in..., dates, Viewing) follow your store's language: English, Polish, German, French, Spanish (Latin America), Italian, Dutch and Portuguese (Brazil). Other languages use English. Dates and times follow the usual format of each language, for example "18 oct 2026, 6:05 p.m." in Spanish. The widget title is your own text. Discount terms come from Shopify and are shown in English.</p>
+
   <h4 id="s4-4">4.4 Corner style</h4>
   <p>Sharp, Rounded or Pill.</p>
 
@@ -736,9 +773,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <ul>
     <li><strong>Open</strong> - shoppers see the list straight away.</li>
     <li><strong>Collapsed</strong> - only the title bar; shoppers open it with one tap.</li>
-    <li><strong>Height when open</strong> - how much of the screen the open widget may take.</li>
+    <li><strong>Height when open</strong> - how much of the screen the open widget may take. When the list is longer, shoppers can scroll it inside the widget, or tap <strong>Show all</strong> below it to open the whole list. <strong>Show less</strong> brings it back to this height.</li>
   </ul>
   <p>A shopper's own choice (opening or closing the list) is remembered while they browse your store.</p>
+  <p>After a shopper clicks an entry, the widget on the page they land on starts folded to its title bar if it sits in the top half of the screen. The list does not cover the product or post they wanted to see, and one tap opens it.</p>
 
   <h4 id="s4-6">4.6 Close button</h4>
   <p>Lets shoppers hide the widget. It stays hidden for them until they close the browser tab.</p>
@@ -815,11 +853,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="toc__group">General questions</p>
         <ol>
           <li><a href="#q1">Do I need to edit my theme code?</a></li>
+          <li><a href="#q12">Where is the widget best placed?</a></li>
           <li><a href="#q2">Does it collect data about my customers?</a></li>
           <li><a href="#q3">How often does the feed refresh?</a></li>
           <li><a href="#q4">Will it slow my store down?</a></li>
           <li><a href="#q5">Can customers close the widget?</a></li>
           <li><a href="#q6">Can I put it in more than one place?</a></li>
+          <li><a href="#q11">Can shoppers apply a code without typing it?</a></li>
           <li><a href="#q8">Does Store Feed work with Shopify discount rollouts?</a></li>
           <li><a href="#q9">How are views and clicks counted?</a></li>
           <li><a href="#q10">My statistics stopped updating</a></li>
@@ -847,6 +887,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>No. Store Feed installs as a Shopify app block, so you place it from Theme Editor. Online Store 2.0 themes are supported.</p>
   </div>
   <div class="faq">
+    <h3 id="q12">Where is the widget best placed?</h3>
+    <p>In the header. It appears on every page, near the top, where shoppers look first. After a shopper clicks an entry, the widget on the next page folds to its title bar, so it never covers what they came to see (<a href="#s2-3">2.3</a>).</p>
+  </div>
+  <div class="faq">
     <h3 id="q2">Does it collect data about my customers?</h3>
     <p>No. The app reads your products, blog articles, discounts and discount rollouts, and which of your theme's sections carry the widget. It requests no customer scopes and does no per-visitor tracking. Views and clicks are counted as daily totals per device type, never per visitor (<a href="#q9">below</a>).</p>
   </div>
@@ -867,8 +911,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>Yes. Every copy shows the same list and the same settings (<a href="#s2-4">2.4</a>).</p>
   </div>
   <div class="faq">
+    <h3 id="q11">Can shoppers apply a code without typing it?</h3>
+    <p>Yes. Every discount code in the widget has a <strong>Use code</strong> button that adds it to the cart. The <strong>Copy</strong> button stays for shoppers who prefer to paste the code at checkout (<a href="#s3-3">3.3</a>).</p>
+  </div>
+  <div class="faq">
     <h3 id="q8">Does Store Feed work with Shopify discount rollouts?</h3>
-    <p>Yes. Store Feed only promotes discounts that every shopper gets. A discount that a rollout gives to only part of your traffic stays hidden until it reaches everyone. A discount that a rollout turns on for all traffic appears in the widget, and the widget updates automatically when a rollout changes (<a href="#s3-8">3.8</a>).</p>
+    <p>Yes. Store Feed only promotes discounts that every shopper gets. A discount that a rollout gives to only part of your traffic stays hidden until it reaches everyone. A discount that a rollout turns on for all traffic appears in the widget, and the widget updates automatically when a rollout changes.</p>
   </div>
   <div class="faq">
     <h3 id="q9">How are views and clicks counted?</h3>
@@ -946,82 +994,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <section id="changelog" aria-labelledby="changelog-h">
   <h2 id="changelog-h">Change log</h2>
-  <p class="sub">What changed in Store Feed, newest first. Version 1 has not shipped yet, so everything below went into the version that will be released on launch day.</p>
-
-  <div class="chg">
-    <div class="chg__head">
-      <span class="chg__ver">9 October 2026</span>
-    </div>
-    <ul>
-      <li>Running promotions stay in the widget after the date range, in the places left free by new content.</li>
-      <li>Accent colour is checked as a hex code before saving.</li>
-      <li>Collection and blog filters show your saved choices as soon as the app opens.</li>
-      <li>"Viewing" marks and skipping the current page now work on stores with language folders.</li>
-      <li>Bots and automated browsers are not counted in statistics.</li>
-      <li>Copy button no longer says "Copied" when the browser blocked copying.</li>
-      <li>Widgets that start hidden in a narrow spot (for example a closed drawer) work fully once they get wider.</li>
-      <li>Security and dependency updates.</li>
-    </ul>
-  </div>
-
-  <div class="chg">
-    <div class="chg__head">
-      <span class="chg__ver">8 October 2026</span>
-    </div>
-    <ul>
-      <li>Statistics are sent through your store's app proxy and signed by Shopify.</li>
-    </ul>
-  </div>
-
-  <div class="chg">
-    <div class="chg__head">
-      <span class="chg__ver">7 October 2026</span>
-    </div>
-    <ul>
-      <li>Support for Shopify discount rollouts: only discounts that every shopper gets are promoted.</li>
-      <li>The widget updates automatically when a rollout changes.</li>
-    </ul>
-  </div>
-
-  <div class="chg">
-    <div class="chg__head">
-      <span class="chg__ver">2 October 2026</span>
-    </div>
-    <ul>
-      <li>Promotion end date shows the time and time zone.</li>
-      <li>The app preview shows your real entries, descriptions and discount terms after Save.</li>
-      <li>No layout shift when the widget loads (CLS 0 on Horizon).</li>
-    </ul>
-  </div>
-
-  <div class="chg">
-    <div class="chg__head">
-      <span class="chg__ver">1 October 2026</span>
-    </div>
-    <ul>
-      <li>The widget shows all discount terms: usage limits, one use per customer, uses per order and combinations.</li>
-      <li>"Add to footer" and "Add to header" open the right section in the theme editor.</li>
-    </ul>
-  </div>
-
-  <div class="chg">
-    <div class="chg__head">
-      <span class="chg__ver">v1</span>
-      <span class="chg__status">Submitted for review</span>
-      <span class="chg__date">Planned release: 23 October 2026</span>
-    </div>
-    <p>First version, submitted to the Shopify App Store review. It contains:</p>
-    <ul>
-      <li>A chronological "What's new" widget: new products, blog posts and active promotions in one list, newest first.</li>
-      <li>Installation as a Shopify app block - any page, header or footer, no theme code.</li>
-      <li>Time window of 7, 14 or 30 days and up to 5 (Free) or 20 (Starter) entries.</li>
-      <li>Discount codes shown only when they are available to all customers, or tagged <code>public</code>; "Buy X, get Y" rules written out with links.</li>
-      <li>Appearance taken from the section the widget sits in, with an accent colour, three icon styles and three corner styles.</li>
-      <li>Automatic nightly refresh at 00:15 UTC plus <strong>Refresh now</strong> in the app.</li>
-      <li>Statistics for Starter: views, clicks, click rate, split by device.</li>
-      <li>Free and Starter ($7.99/month, or $79.99/year) plans through Shopify billing.</li>
-    </ul>
-  </div>
+  <p class="sub">Store Feed has not been released yet. From launch day this section lists every released version, newest first, so you can see what changed before you update anything on your store.</p>
+  <p>Version 1 is in review for the Shopify App Store, with a planned release on 23 October 2026. Until then, the <a href="#doc">documentation</a> describes the app exactly as it will ship.</p>
   </section>
 
   <div class="cta">

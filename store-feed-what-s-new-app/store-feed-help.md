@@ -19,26 +19,27 @@ simply point to it.
 | | Free | Starter |
 |---|---|---|
 | Price | free, no time limit | $7.99 / month or $79.99 / year |
-| Free trial | - | 14 days |
-| New products | ✓ | ✓ |
-| Blog posts | - | ✓ |
-| Promotions and discount codes | - | ✓ |
+| Free trial | not applicable | 14 days |
+| New products | Yes | Yes |
+| Blog posts | No | Yes |
+| Promotions and discount codes | No | Yes |
 | Number of entries in the widget | up to 5 | 5, 10 or 20 |
-| Time window (last 7, 14 or 30 days) | ✓ | ✓ |
-| Widget title | ✓ | ✓ |
-| Corner style | ✓ | ✓ |
-| Close button | ✓ | ✓ |
-| Show or hide on desktop / tablet / mobile | ✓ | ✓ |
-| Place it on any page, in header or footer | ✓ | ✓ |
-| Automatic daily refresh + manual refresh | ✓ | ✓ |
-| Accent color | - | ✓ |
-| Icon style (Flat, 3D, Emoticon) | Emoticon only | ✓ |
-| How the widget opens and its height | - | ✓ |
-| Show only chosen collections and blogs | - | ✓ |
-| Hide products with a chosen tag | - | ✓ |
+| Time window (last 7, 14 or 30 days) | Yes | Yes |
+| Widget title | Yes | Yes |
+| Corner style | Yes | Yes |
+| Close button | Yes | Yes |
+| Show or hide on desktop / tablet / mobile | Yes | Yes |
+| Place it on any page, in header or footer | Yes | Yes |
+| Automatic daily refresh + manual refresh | Yes | Yes |
+| Accent colour | No | Yes |
+| Product and blog images | No | Yes |
+| Icon style (Flat, 3D, Emoticon) | Emoticon only | Yes |
+| How the widget opens and its height | No | Yes |
+| Show only chosen collections and blogs | No | Yes |
+| Hide products with a chosen tag | No | Yes |
 | Store Feed icon in the widget footer | always shown | not shown |
-| Your own footer text and link | - | ✓ |
-| Statistics: views, clicks, click rate, by device | - | ✓ |
+| Your own footer text and link | No | Yes |
+| Statistics: views, clicks, click rate, by device | No | Yes |
 
 ### 1.2 Changing your plan
 
@@ -80,8 +81,13 @@ This is the case for some older themes.
 
 ### 2.3 Where it works best
 
-- **As its own section on a page** - the most common choice.
-- **In the header or footer** - then it appears on every page.
+- **In the header (recommended)** - it appears on every page, near the top,
+  where shoppers look first. After a shopper clicks an entry, the widget on
+  the next page folds to its title bar (when it sits in the top half of the
+  screen), so it never covers what they came to see. One tap opens it again.
+- **As its own section on a page** - good for the home page or a collection.
+- **In the footer** - it appears on every page, but fewer shoppers scroll
+  that far.
 - **Not inside a product card or a product slider.** There it is repeated for
   every product in the grid.
 - **It needs at least 200 px of width.** In very narrow spots (for example the
@@ -118,25 +124,66 @@ See also: 3.7 Choosing what to include (Starter)
 
 ### 3.3 Promotions (Starter)
 
+**Which promotions appear**
+
 - Promotions must be **active**.
 - Promotions that **started before the chosen time window** still appear while
-  they run, but only in places left free by everything else (3.4). They show
-  their end date, or **Active** when they have none, instead of a start date.
+  they run, but only in places left free by everything else (3.4).
 - **Automatic discounts** appear automatically.
 - **Discount codes** appear only when they are **available to all customers**.
 - **To show a code that is limited to some customers**, add the tag `public`
   to that discount in Shopify. The code will then be shown to everyone who sees
   the widget.
-- "Buy X, get Y" discounts show what to buy and what you get, with links.
 - Products that are sold out are not listed in a promotion. If nothing in a
   promotion can be bought any more, the promotion is not shown.
-- If a promotion has an end date, the widget shows the date and time it ends,
-  with the time zone, and how many days are left.
+
+**What the card shows**
+
+- Every card starts with a short hook: for promotions the discount value
+  (for example "15% off" or "Get 1 item free") in bold, for products "New
+  product", for blog posts "New post". The name is the second line. If a
+  discount code has no name of its own in Shopify, the card shows only the
+  value, and the code stays in the code box.
+- Promotions show their end date, or **Active** when they have none. They do
+  not show a start date: shoppers care when a deal ends, not when it began.
+- When a promotion has an end date, the widget shows the date and time it ends.
+  Each shopper sees it in their own time zone and in the date format they are
+  used to (for example "Nov 30, 5:59 PM" in New York or "30 Nov, 22:59" in
+  London). In the last 6 days it also counts down ("Ends in 3 days"). When
+  3 days or fewer are left, the end date is shown in bold with a dot in your
+  accent colour.
+- "Buy X, get Y" discounts show what to buy and what you get, with links.
+  When both come from the same collection, the widget shows it once, as
+  "Buy and get from: Bars".
 - The widget shows the discount's terms: the amount, minimum purchase or
   quantity, one use per customer, the total number of uses, how many times it
   applies per order, and whether it can be combined with other discounts.
+  The most useful terms come first (minimum purchase, where it applies,
+  then usage limits and combinations). The first 2 lines are visible, and
+  "more" at the end of the second line shows the rest. Collections and
+  products take up to 2 lines too, with "and N more".
 
-See also: 3.8 Discounts in Shopify Rollouts (Starter)
+**Using the code**
+
+- Automatic discounts (no code) show "Applied automatically" where other
+  cards have the code buttons.
+- **Use code** adds the code to the shopper's cart, so they don't have to
+  type it at checkout. Codes already in the cart stay there. Shopify decides
+  which codes apply, and the widget tells the shopper the result:
+  - the code applies: "Code added to your cart.", plus which other codes
+    still apply and which stopped applying because they can't be combined
+    with it;
+  - another code in the cart already applies and can't be combined with
+    this one: the shopper sees which code that is and can tap "Use this
+    code instead";
+  - the cart doesn't meet the discount's terms yet (for example it's
+    empty): the code waits in the cart and applies once the cart meets them.
+
+  If adding fails, the shopper is asked to use Copy instead.
+- **Copy** copies the code, for shoppers who prefer to paste it at checkout.
+- Codes that contain a comma show only Copy (Shopify's cart can't take them
+  from a button). In a narrow card Copy shows only its icon, so the code and
+  the buttons always stay in one row.
 
 ### 3.4 When there are more updates than places
 
@@ -176,26 +223,13 @@ untick it.
 
 ---
 
-### 3.8 Discounts in Shopify Rollouts (Starter)
-
-Since October 2026 a Shopify **Rollout** can turn a discount on or off, and it
-can do that for only a share of your traffic as a test.
-
-Store Feed promotes only discounts that **every** shopper gets. A discount that
-a rollout gives to part of your traffic stays out of the widget until it reaches
-everyone. A discount that a rollout turns on for all traffic appears in the
-widget.
-
-You do not need to refresh anything: the widget updates on its own when a
-rollout starts, changes or finishes.
-
 ## 4. Appearance: look and feel
 
 ### 4.1 Widget title
 
 Shown at the top of the widget. You can use an emoji.
 
-### 4.2 Accent color (Starter)
+### 4.2 Accent colour (Starter)
 
 Used for labels ("Product", "Blog", "Promo"), the entry count and small
 details. Text on labels switches between black and white automatically, so it
@@ -207,6 +241,21 @@ Enter the colour as a hex code in the `#RRGGBB` format, for example `#7F77DD`.
 
 Flat, 3D or Emoticon. Free plan uses Emoticon.
 
+### 4.3a Product and blog images (Starter)
+
+**Show product and blog images** (on by default): products and blog posts show
+their main image instead of an icon. Entries without an image, and promotions,
+keep the icon.
+
+### 4.3b Language of the widget
+
+Labels in the widget (Copy, Promo, Ends in..., dates, Viewing) follow your
+store's language: English, Polish, German, French, Spanish (Latin America),
+Italian, Dutch and Portuguese (Brazil). Other languages use English. Dates
+and times follow the usual format of each language, for example
+"18 oct 2026, 6:05 p.m." in Spanish. The widget title is your own text.
+Discount terms come from Shopify and are shown in English.
+
 ### 4.4 Corner style
 
 Sharp, Rounded or Pill.
@@ -215,10 +264,17 @@ Sharp, Rounded or Pill.
 
 - **Open** - shoppers see the list straight away.
 - **Collapsed** - only the title bar; shoppers open it with one tap.
-- **Height when open** - how much of the screen the open widget may take.
+- **Height when open** - how much of the screen the open widget may take. When
+  the list is longer, shoppers can scroll it inside the widget, or tap
+  **Show all** below it to open the whole list. **Show less** brings it back
+  to this height.
 
 A shopper's own choice (opening or closing the list) is remembered while they
 browse your store.
+
+After a shopper clicks an entry, the widget on the page they land on starts
+folded to its title bar if it sits in the top half of the screen. The list
+does not cover the product or post they wanted to see, and one tap opens it.
 
 ### 4.6 Close button
 
@@ -237,30 +293,30 @@ Show or hide the widget separately on desktop, tablet and mobile.
 
 ---
 
-## 5. Colors and background
+## 5. Colours and background
 
-### 5.1 Where the colors come from
+### 5.1 Where the colours come from
 
 You don't set a background for the widget. It takes the **background and text
-colors of the section it sits in**, so it looks like part of your theme.
+colours of the section it sits in**, so it looks like part of your theme.
 
 ### 5.2 Changing the widget background
 
-Change the colors of the section that holds the widget:
+Change the colours of the section that holds the widget:
 
 1. Go to **Online Store > Themes > Customize**.
 2. Click the section where Store Feed is placed.
 3. Change its **Color scheme** to one with the background you want.
 4. Click **Save**.
 
-The widget follows the new colors. If the text would be hard to read, it
-switches to black or white text color on its own.
+The widget follows the new colours. If the text would be hard to read, it
+switches to black or white text colour on its own.
 
 ### 5.3 Section with a background image
 
 If the section uses an image as its background, the widget uses the section's
-**color scheme** background as a solid color, so the list stays readable. To
-change it, change the section's color scheme (see 5.2).
+**colour scheme** background as a solid colour, so the list stays readable. To
+change it, change the section's colour scheme (see 5.2).
 
 ### 5.4 Page with a gradient or image background
 
@@ -336,7 +392,7 @@ address.
 1. The product is **Active** and available on **Online Store** (3.1).
 2. It was published within the time window (3.1).
 3. It doesn't have an excluded tag and belongs to the chosen collections (3.7).
-4. There are enough places - promotions and blog posts are picked first (3.4).
+4. There are enough places. Promotions and blog posts are picked first (3.4).
 5. Click **Refresh now** (6.2).
 
 ### 8.3 A discount code is missing (Starter)
@@ -347,9 +403,9 @@ address.
 3. At least one of its products can still be bought (3.3).
 4. Click **Refresh now** (6.2).
 
-### 8.4 The background color doesn't match
+### 8.4 The background colour doesn't match
 
-The widget uses the colors of its section. Change the section's color scheme
+The widget uses the colours of its section. Change the section's colour scheme
 (See: 5.2).
 
 ### 8.5 I changed the look and I don't see the changes
@@ -357,7 +413,7 @@ The widget uses the colors of its section. Change the section's color scheme
 1. In the app, click **Save**.
 2. Click **Refresh now**. If the button is locked, wait until the time shown
    on it (6.2).
-3. Wait for the green message **"Feed refreshed - ... entries in your widget"**.
+3. Wait for the green message **"Feed refreshed: N entries in your widget"**.
    Only then are your changes sent to your store. If you see a yellow message
    instead, try again in a few minutes.
 4. Open your store page and reload it without the saved copy:
