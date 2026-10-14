@@ -155,6 +155,14 @@ See also: 3.7 Choosing what to include (Starter)
   London). In the last 6 days it also counts down ("Ends in 3 days"). When
   3 days or fewer are left, the end date is shown in bold with a dot in your
   accent colour.
+- How the date format is chosen: first from the shopper's browser, if it has
+  the store language with a region (for example "en-GB" gives
+  "30 Nov, 22:59"). Only when the browser has no such setting, the widget uses
+  the country selected in your store (Shopify Markets), for example Spanish
+  with Mexico gives "30 nov, 11:59 p.m.". So changing the country in your
+  store changes the format only for shoppers whose browser has no regional
+  setting for the store language. Some combinations look the same: English
+  with Mexico uses the same format as English with the United States.
 - "Buy X, get Y" discounts show what to buy and what you get, with links.
   When both come from the same collection, the widget shows it once, as
   "Buy and get from: Bars".
@@ -273,6 +281,9 @@ Italian, Dutch and Portuguese (Brazil). Other languages use English. Dates
 and times follow the usual format of each language, for example
 "18 oct 2026, 6:05 p.m." in Spanish. The widget title is your own text.
 Discount terms come from Shopify and are shown in English.
+
+See also: 3.3 Promotions (Starter), for where the regional date format comes
+from
 
 ### 4.4 Corner style
 

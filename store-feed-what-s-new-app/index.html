@@ -707,6 +707,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <li>Every card starts with a short hook: for promotions the discount value (for example "15% off" or "Get 1 item free") in bold, for products "New product", for blog posts "New post". The name is the second line. If a discount code has no name of its own in Shopify, the card shows only the value, and the code stays in the code box.</li>
     <li>Promotions show their end date, or <strong>Active</strong> when they have none. They do not show a start date: shoppers care when a deal ends, not when it began.</li>
     <li>When a promotion has an end date, the widget shows the date and time it ends. Each shopper sees it in their own time zone and in the date format they are used to (for example "Nov 30, 5:59 PM" in New York or "30 Nov, 22:59" in London). In the last 6 days it also counts down ("Ends in 3 days"). When 3 days or fewer are left, the end date is shown in bold with a dot in your accent colour.</li>
+    <li>How the date format is chosen: first from the shopper's browser, if it has the store language with a region (for example "en-GB" gives "30 Nov, 22:59"). Only when the browser has no such setting, the widget uses the country selected in your store (Shopify Markets), for example Spanish with Mexico gives "30 nov, 11:59 p.m.". So changing the country in your store changes the format only for shoppers whose browser has no regional setting for the store language. Some combinations look the same: English with Mexico uses the same format as English with the United States.</li>
     <li>"Buy X, get Y" discounts show what to buy and what you get, with links. When both come from the same collection, the widget shows it once, as "Buy and get from: Bars".</li>
     <li>The widget shows the discount's terms: the amount, minimum purchase or quantity, one use per customer, the total number of uses, how many times it applies per order, and whether it can be combined with other discounts. The most useful terms come first (minimum purchase, where it applies, then usage limits and combinations). The first 2 lines are visible, and "more" at the end of the second line shows the rest. Collections and products take up to 2 lines too, with "and N more".</li>
   </ul>
@@ -773,6 +774,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <h4 id="s4-3b">4.3b Language of the widget</h4>
   <p>Labels in the widget (Copy, Promo, Ends in..., dates, Viewing) follow your store's language: English, Polish, German, French, Spanish (Latin America), Italian, Dutch and Portuguese (Brazil). Other languages use English. Dates and times follow the usual format of each language, for example "18 oct 2026, 6:05 p.m." in Spanish. The widget title is your own text. Discount terms come from Shopify and are shown in English.</p>
+  <p class="seealso">See also: <a href="#s3-3">3.3 Promotions (Starter)</a>, for where the regional date format comes from</p>
 
   <h4 id="s4-4">4.4 Corner style</h4>
   <p>Sharp, Rounded or Pill.</p>

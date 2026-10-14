@@ -67,6 +67,9 @@ Key facts, so they are not guessed:
 - Widget labels and date formats follow the store's language: English, Polish, German,
   French, Spanish (Latin America), Italian, Dutch and Portuguese (Brazil). Other
   languages fall back to English. Discount terms come from Shopify, in English.
+- The date format comes from the shopper's browser when it carries the store language
+  with a region (for example en-GB); only without such a setting does the widget fall
+  back to the country selected in the store (Shopify Markets).
 - The widget takes the background, text colour and font of the section it sits in.
   The accent colour is entered as a hex code in the #RRGGBB format.
 - The feed is rendered into the store's pages, so nothing has to be fetched to show it
