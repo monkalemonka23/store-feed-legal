@@ -21,7 +21,7 @@ the Shopify App Store review; planned release 23 October 2026.
 - [Documentation](https://growboost.pl/store-feed-what-s-new-app/#doc): numbered guide, sections 1-7
 - [Documentation, plain text](https://growboost.pl/store-feed-what-s-new-app/store-feed-help.md): the same guide as Markdown
 - [FAQ](https://growboost.pl/store-feed-what-s-new-app/#faq): pre-install questions and troubleshooting (section 8)
-- [Change log](https://growboost.pl/store-feed-what-s-new-app/#changelog): what changed, newest first
+- [Change log](https://growboost.pl/store-feed-what-s-new-app/#changelog): empty until release day
 
 Key facts, so they are not guessed:
 
@@ -41,13 +41,32 @@ Key facts, so they are not guessed:
   discounts.
 - Discount codes are shown only when they are available to all customers, or when
   the discount carries the tag `public`.
-- Shopify Rollouts (discounts in rollouts, available since October 2026): Store Feed
-  reads the rollouts and promotes only discounts that every shopper gets. A discount
-  that a rollout gives to part of the traffic stays out of the widget until it reaches
-  everyone; a discount a rollout turns on for all traffic appears in it. The widget
-  updates on its own when a rollout starts, changes or finishes - the merchant does
-  not have to refresh anything. Details:
+- Shopify discount rollouts: Store Feed promotes only discounts that every shopper
+  gets. A discount that a rollout gives to part of the traffic stays out of the widget
+  until it reaches everyone; a discount a rollout turns on for all traffic appears in
+  it. The widget updates on its own when a rollout changes - the merchant does not
+  have to refresh anything. Details:
   https://growboost.pl/store-feed-what-s-new-app/#s3-8
+- Every discount code in the widget has a Use code button that puts the code into the
+  shopper's cart, and a Copy button for pasting it at checkout. Codes containing a
+  comma show Copy only. Automatic discounts show "Applied automatically" instead.
+- A promotion card leads with the discount value ("15% off", "Get 1 item free");
+  product cards lead with "New product" and blog cards with "New post". The name is
+  the second line.
+- Promotions show an end date, or "Active" when they have none, never a start date.
+  The end date is rendered in each shopper's own time zone and date format, counts
+  down in the last 6 days, and is emphasised when 3 days or fewer are left.
+- The first 2 lines of a discount's terms are visible; "more" opens the rest.
+- The recommended placement is the header. After a shopper opens an entry, the widget
+  on the next page starts folded to its title bar when it sits in the top half of the
+  screen.
+- When the list is longer than the chosen height, shoppers scroll it inside the widget
+  or tap Show all; Show less returns it to that height.
+- Products and blog posts show their own image on Starter (Show product and blog
+  images, on by default); entries without an image, and promotions, keep an icon.
+- Widget labels and date formats follow the store's language: English, Polish, German,
+  French, Spanish (Latin America), Italian, Dutch and Portuguese (Brazil). Other
+  languages fall back to English. Discount terms come from Shopify, in English.
 - The widget takes the background, text colour and font of the section it sits in.
   The accent colour is entered as a hex code in the #RRGGBB format.
 - The feed is rendered into the store's pages, so nothing has to be fetched to show it
