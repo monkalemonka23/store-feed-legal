@@ -282,6 +282,9 @@ and times follow the usual format of each language, for example
 "18 oct 2026, 6:05 p.m." in Spanish. The widget title is your own text.
 Discount terms come from Shopify and are shown in English.
 
+See also: 3.3 Promotions (Starter), for where the regional date format comes
+from
+
 ### 4.4 Corner style
 
 Sharp, Rounded or Pill.
