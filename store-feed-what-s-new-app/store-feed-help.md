@@ -133,10 +133,9 @@ See also: 3.7 Choosing what to include (Starter)
 - Promotions that **started before the chosen time window** still appear while
   they run, but only in places left free by everything else (3.4).
 - **Automatic discounts** appear automatically.
-- **Discount codes** appear only when they are **available to all customers**.
-- **To show a code that is limited to some customers**, add the tag `public`
-  to that discount in Shopify. The code will then be shown to everyone who sees
-  the widget.
+- **Discount codes** appear when they are **available to all customers**, or
+  when you add the tag `public` to a code that is limited to some customers.
+  A tagged code is shown to everyone who sees the widget.
 - Products that are sold out are not listed in a promotion. If nothing in a
   promotion can be bought any more, the promotion is not shown.
 
@@ -147,8 +146,8 @@ See also: 3.7 Choosing what to include (Starter)
   product", for blog posts "New post". The name is the second line. If a
   discount code has no name of its own in Shopify, the card shows only the
   value, and the code stays in the code box.
-- Promotions show their end date, or **Active** when they have none. They do
-  not show a start date: shoppers care when a deal ends, not when it began.
+- Promotions show their end date, or **No end date** when they have none. They
+  do not show a start date: shoppers care when a deal ends, not when it began.
 - When a promotion has an end date, the widget shows the date and time it ends.
   Each shopper sees it in their own time zone and in the date format they are
   used to (for example "Nov 30, 5:59 PM" in New York or "30 Nov, 22:59" in
@@ -170,9 +169,13 @@ See also: 3.7 Choosing what to include (Starter)
   quantity, one use per customer, the total number of uses, how many times it
   applies per order, and whether it can be combined with other discounts.
   The most useful terms come first (minimum purchase, where it applies,
-  then usage limits and combinations). The first 2 lines are visible, and
-  "more" at the end of the second line shows the rest. Collections and
-  products take up to 2 lines too, with "and N more".
+  then usage limits and combinations). The discount value already shown in
+  the hook is not repeated in the terms, and amounts drop empty cents
+  ("$15 off", not "$15.00 off"). The first 2 lines are visible; they end
+  after a whole term, never in the middle of a word, and "more" shows the
+  rest. Collections and products take up to 2 lines too, with "and N more".
+  "more" and "and N more" have a small arrow and no underline: they open
+  text in place, while underlined names lead to another page.
 
 **Using the code**
 
@@ -182,19 +185,38 @@ See also: 3.7 Choosing what to include (Starter)
   type it at checkout. Codes already in the cart stay there. Shopify decides
   which codes apply, and the widget tells the shopper the result:
   - the code applies: "Code added to your cart.", plus which other codes
-    still apply and which stopped applying because they can't be combined
-    with it;
-  - another code in the cart already applies and can't be combined with
-    this one: the shopper sees which code that is and can tap "Use this
-    code instead";
+    still apply and which codes or automatic discounts stopped applying
+    because they can't be combined with it;
+  - another discount in the cart already applies and, by the settings of
+    both discounts, can't be combined with this one: the shopper sees which
+    one it is. For another code they can tap "Use this code instead"; an
+    automatic discount can't be removed from the cart, so there is no such
+    button, and the message says that the automatic discount gives the
+    bigger saving for this cart;
+  - the cart already has 5 product or order discount codes that apply
+    (Shopify's limit per order): the shopper is asked to remove one first;
+  - shipping discount codes: the shipping discount shows at checkout, after
+    the address is known. A code only for other countries than the shopper's
+    market says which countries it is for;
   - the cart doesn't meet the discount's terms yet (for example it's
     empty): the code waits in the cart and applies once the cart meets them.
 
-  If adding fails, the shopper is asked to use Copy instead.
+  If the cart doesn't return the code (it ended or was turned off), the
+  shopper is told the code isn't active anymore. If adding fails, the shopper
+  is asked to use Copy instead. A code that is already in the cart shows
+  "Added" and "This code is already in your cart." when the page loads.
+- In the terms, a discount code lists the store's automatic discounts it
+  can't be combined with, and says that the store applies the one that
+  saves more.
 - **Copy** copies the code, for shoppers who prefer to paste it at checkout.
 - Codes that contain a comma show only Copy (Shopify's cart can't take them
-  from a button). In a narrow card Copy shows only its icon, so the code and
-  the buttons always stay in one row.
+  from a button). The code is never shortened: the buttons that fit stand
+  next to it, the rest go to the next row.
+- Codes for selected customers only (a customer segment or a list of
+  customers, shown because of the `public` tag) say "For selected customers
+  only" in their terms. Shopify checks at checkout whether the shopper
+  qualifies, so after **Use code** the shopper is told that the code is for
+  selected customers and that checkout shows whether it applies.
 
 See also: 3.8 Discounts in Shopify Rollouts (Starter)
 

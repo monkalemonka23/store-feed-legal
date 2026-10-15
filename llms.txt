@@ -32,8 +32,8 @@ Key facts, so they are not guessed:
   that started before the time window come last and fill only the places still free;
   the chosen entries are then sorted newest first.
 - A promotion that started before the time window still appears while it runs, in the
-  places left free by everything else, and shows its end date, or "Active" when it has
-  none, instead of a start date.
+  places left free by everything else, and shows its end date, or "No end date" when
+  it has none, instead of a start date.
 - A promotion with an end date shows the date and time it ends, with the time zone,
   and how many days are left. The widget also writes out the discount's terms: the
   amount, minimum purchase or quantity, one use per customer, the total number of
@@ -50,10 +50,18 @@ Key facts, so they are not guessed:
 - Every discount code in the widget has a Use code button that puts the code into the
   shopper's cart, and a Copy button for pasting it at checkout. Codes containing a
   comma show Copy only. Automatic discounts show "Applied automatically" instead.
+  After Use code the widget reports what Shopify did: which discounts still apply,
+  which stopped applying because they cannot be combined, Shopify's limit of five
+  discount codes per order, shipping codes that only show at checkout, and a code
+  that is no longer active.
+- A code limited to a customer segment, shown because of the public tag, says "For
+  selected customers only" in its terms; Shopify decides at checkout whether the
+  shopper qualifies.
 - A promotion card leads with the discount value ("15% off", "Get 1 item free");
   product cards lead with "New product" and blog cards with "New post". The name is
   the second line.
-- Promotions show an end date, or "Active" when they have none, never a start date.
+- Promotions show an end date, or "No end date" when they have none, never a start
+  date.
   The end date is rendered in each shopper's own time zone and date format, counts
   down in the last 6 days, and is emphasised when 3 days or fewer are left.
 - The first 2 lines of a discount's terms are visible; "more" opens the rest.
