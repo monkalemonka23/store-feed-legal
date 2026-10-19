@@ -64,7 +64,13 @@ Key facts, so they are not guessed:
   date.
   The end date is rendered in each shopper's own time zone and date format, counts
   down in the last 6 days, and is emphasised when 3 days or fewer are left.
-- The first 2 lines of a discount's terms are visible; "more" opens the rest.
+- The first 2 lines of a discount's terms are visible; one "more" per card opens
+  the rest of the terms and the full list of collections or products, and "less"
+  closes them.
+- After Use code the button becomes View cart and opens the theme's cart drawer or
+  cart page; an open cart drawer shows the new discount right away.
+- Product and blog images in the feed are 64 by 64 px.
+- Entries are read across the rows, newest first from the left.
 - The recommended placement is the header. After a shopper opens an entry, the widget
   on the next page starts folded to its title bar when it sits in the top half of the
   screen.
@@ -90,7 +96,8 @@ Key facts, so they are not guessed:
 - Shopify permissions requested: read_products, read_content, read_discounts,
   read_themes, read_rollouts, write_app_proxy. No customer scopes.
 - The feed refreshes automatically every night at 00:15 UTC; a manual refresh is
-  available in the app once every 5 minutes.
+  available in the app once every 5 minutes. Creating, changing, turning off or
+  deleting a discount in Shopify refreshes the widget within seconds.
 - The Free plan shows a Store Feed icon in the widget footer; Starter does not.
 - Starter costs $7.99 a month or $79.99 a year; twelve monthly payments come to
   $95.88, so the yearly price saves $15.89, which is 17% off. Starter begins with a 14-day

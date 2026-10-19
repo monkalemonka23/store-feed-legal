@@ -172,18 +172,26 @@ See also: 3.7 Choosing what to include (Starter)
   then usage limits and combinations). The discount value already shown in
   the hook is not repeated in the terms, and amounts drop empty cents
   ("$15 off", not "$15.00 off"). The first 2 lines are visible; they end
-  after a whole term, never in the middle of a word, and "more" shows the
-  rest. Collections and products take up to 2 lines too, with "and N more".
-  "more" and "and N more" have a small arrow and no underline: they open
-  text in place, while underlined names lead to another page.
+  after a whole term, never in the middle of a word. Collections and products
+  take up to 2 lines too, with "and N more". Each card has one "more", after
+  the first part that is cut: it opens the terms and the collections or
+  products together, and "less" at the very end closes them. "more" has a
+  small arrow and no underline: it opens text in place, while underlined
+  names lead to another page.
 
 **Using the code**
 
 - Automatic discounts (no code) show "Applied automatically" where other
   cards have the code buttons.
 - **Use code** adds the code to the shopper's cart, so they don't have to
-  type it at checkout. Codes already in the cart stay there. Shopify decides
-  which codes apply, and the widget tells the shopper the result:
+  type it at checkout. Codes already in the cart stay there. After the code is
+  added, the button changes to **View cart** and opens the cart: the theme's
+  cart drawer, or the cart page when the theme has none. The button keeps the
+  same size for every label, so nothing on the card moves when it changes. The
+  widget uses Shopify's built-in cart action, so an open cart drawer or cart
+  section of the theme shows the new discount right away; themes Shopify
+  doesn't recognise reload the page, and the message still shows. Shopify
+  decides which codes apply, and the widget tells the shopper the result:
   - the code applies: "Code added to your cart.", plus which other codes
     still apply and which codes or automatic discounts stopped applying
     because they can't be combined with it;
@@ -193,30 +201,52 @@ See also: 3.7 Choosing what to include (Starter)
     automatic discount can't be removed from the cart, so there is no such
     button, and the message says that the automatic discount gives the
     bigger saving for this cart;
-  - the cart already has 5 product or order discount codes that apply
-    (Shopify's limit per order): the shopper is asked to remove one first;
+  - 5 product or order codes already apply (Shopify's limit per order) and
+    the new code can be combined with all of them: the widget doesn't add it,
+    the button stays **Use code**, and the shopper is asked to remove one
+    first. Codes can be removed at checkout;
   - shipping discount codes: the shipping discount shows at checkout, after
     the address is known. A code only for other countries than the shopper's
     market says which countries it is for;
   - the cart doesn't meet the discount's terms yet (for example it's
     empty): the code waits in the cart and applies once the cart meets them.
 
-  If the cart doesn't return the code (it ended or was turned off), the
+  If the cart doesn't return the code, or its end date has passed, the
   shopper is told the code isn't active anymore. If adding fails, the shopper
   is asked to use Copy instead. A code that is already in the cart shows
-  "Added" and "This code is already in your cart." when the page loads.
+  **View cart** when the page loads, and at the end of its terms, under
+  "more", so nothing on the page moves: "This code is already in your cart.",
+  plus the reason when it doesn't apply - another discount it can't be
+  combined with, or a country it isn't for.
 - In the terms, a discount code lists the store's automatic discounts it
   can't be combined with, and says that the store applies the one that
   saves more.
 - **Copy** copies the code, for shoppers who prefer to paste it at checkout.
 - Codes that contain a comma show only Copy (Shopify's cart can't take them
-  from a button). The code is never shortened: the buttons that fit stand
-  next to it, the rest go to the next row.
+  from a button). The code is never shortened. The code and its buttons stand
+  under the card's text; when the code or the two buttons don't fit there, the
+  row starts under the card's icon and uses the card's full width. When the
+  code and the buttons still don't fit side by side, the code goes above the
+  buttons, and **Use code** and **Copy** stay together.
 - Codes for selected customers only (a customer segment or a list of
   customers, shown because of the `public` tag) say "For selected customers
   only" in their terms. Shopify checks at checkout whether the shopper
   qualifies, so after **Use code** the shopper is told that the code is for
   selected customers and that checkout shows whether it applies.
+
+**Naming discounts so the cards read well**
+
+The widget shows the discount value ("2% off") on its own line above the name,
+and reads the conditions from the discount's settings. Two habits make the
+cards easier to read:
+
+- Let the name say why or for whom, not how much, and leave thresholds out of
+  it. "Review Reward", "Early Holiday Access" and "Welcome Savings" read
+  better than "Review Reward: 2% off", "15% off Bars and Bites" or "10% off
+  over $50", which repeat what the card already shows.
+- Short codes are easier to read, and easier to type when copying fails:
+  `SWEET2` works better than `EARLYACCESS15`. The code is never shortened on
+  the card.
 
 See also: 3.8 Discounts in Shopify Rollouts (Starter)
 
@@ -228,7 +258,10 @@ The number of entries is set in **Max entries** (Free: 5).
 2. Within each kind, the newest are picked.
 3. Promotions that started before the time window come last: they fill only
    the places that are still free.
-4. The chosen entries are then shown **newest first**.
+4. The chosen entries are then shown **newest first**, read across the rows:
+   the newest is first on the left, the next one to its right, and so on, row
+   by row. Cards in a column can have different heights, so the columns may
+   end at different heights.
 
 Example: 2 promotions, 3 blog posts and 6 new products, with 5 places, the
 widget shows the 2 promotions and 3 blog posts, sorted by date.
@@ -292,8 +325,8 @@ Flat, 3D or Emoticon. Free plan uses Emoticon.
 ### 4.3a Product and blog images (Starter)
 
 **Show product and blog images** (on by default): products and blog posts show
-their main image instead of an icon. Entries without an image, and promotions,
-keep the icon.
+their main image, 64 by 64 px, instead of an icon. Entries without an image,
+and promotions, keep the icon.
 
 ### 4.3b Language of the widget
 
@@ -380,7 +413,9 @@ see-through so the background shows behind it.
 
 ### 6.1 Automatic update
 
-The list updates on its own every night (at 00:15 UTC).
+The list updates on its own every night (at 00:15 UTC). When you create,
+change, turn off or delete a discount in Shopify, the widget updates on its
+own a few seconds later.
 
 ### 6.2 Updating now
 

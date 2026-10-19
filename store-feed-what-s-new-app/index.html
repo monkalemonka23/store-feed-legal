@@ -26,12 +26,12 @@
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon-64.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-<link rel="stylesheet" href="/assets/site.css?v=20261015">
-<link rel="stylesheet" href="/assets/consent.css?v=20261015">
-<script src="/assets/consent.js?v=20261015"></script>
-<script src="/assets/launch.js?v=20261015" defer></script>
-<script src="/assets/gallery.js?v=20261015" defer></script>
-<script src="/assets/mail.js?v=20261015" defer></script>
+<link rel="stylesheet" href="/assets/site.css?v=20261019">
+<link rel="stylesheet" href="/assets/consent.css?v=20261019">
+<script src="/assets/consent.js?v=20261019"></script>
+<script src="/assets/launch.js?v=20261019" defer></script>
+<script src="/assets/gallery.js?v=20261019" defer></script>
+<script src="/assets/mail.js?v=20261019" defer></script>
 
 <script type="application/ld+json">
 {
@@ -708,26 +708,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <li>When a promotion has an end date, the widget shows the date and time it ends. Each shopper sees it in their own time zone and in the date format they are used to (for example "Nov 30, 5:59 PM" in New York or "30 Nov, 22:59" in London). In the last 6 days it also counts down ("Ends in 3 days"). When 3 days or fewer are left, the end date is shown in bold with a dot in your accent colour.</li>
     <li>How the date format is chosen: first from the shopper's browser, if it has the store language with a region (for example "en-GB" gives "30 Nov, 22:59"). Only when the browser has no such setting, the widget uses the country selected in your store (Shopify Markets), for example Spanish with Mexico gives "30 nov, 11:59 p.m.". So changing the country in your store changes the format only for shoppers whose browser has no regional setting for the store language. Some combinations look the same: English with Mexico uses the same format as English with the United States.</li>
     <li>"Buy X, get Y" discounts show what to buy and what you get, with links. When both come from the same collection, the widget shows it once, as "Buy and get from: Bars".</li>
-    <li>The widget shows the discount's terms: the amount, minimum purchase or quantity, one use per customer, the total number of uses, how many times it applies per order, and whether it can be combined with other discounts. The most useful terms come first (minimum purchase, where it applies, then usage limits and combinations). The discount value already shown in the hook is not repeated in the terms, and amounts drop empty cents ("$15 off", not "$15.00 off"). The first 2 lines are visible; they end after a whole term, never in the middle of a word, and "more" shows the rest. Collections and products take up to 2 lines too, with "and N more". "more" and "and N more" have a small arrow and no underline: they open text in place, while underlined names lead to another page.</li>
+    <li>The widget shows the discount's terms: the amount, minimum purchase or quantity, one use per customer, the total number of uses, how many times it applies per order, and whether it can be combined with other discounts. The most useful terms come first (minimum purchase, where it applies, then usage limits and combinations). The discount value already shown in the hook is not repeated in the terms, and amounts drop empty cents ("$15 off", not "$15.00 off"). The first 2 lines are visible; they end after a whole term, never in the middle of a word. Collections and products take up to 2 lines too, with "and N more". Each card has one "more", after the first part that is cut: it opens the terms and the collections or products together, and "less" at the very end closes them. "more" has a small arrow and no underline: it opens text in place, while underlined names lead to another page.</li>
   </ul>
 
   <p><strong>Using the code</strong></p>
   <ul>
     <li>Automatic discounts (no code) show "Applied automatically" where other cards have the code buttons.</li>
-    <li><strong>Use code</strong> adds the code to the shopper's cart, so they don't have to type it at checkout. Codes already in the cart stay there. Shopify decides which codes apply, and the widget tells the shopper the result:
+    <li><strong>Use code</strong> adds the code to the shopper's cart, so they don't have to type it at checkout. Codes already in the cart stay there. After the code is added, the button changes to <strong>View cart</strong> and opens the cart: the theme's cart drawer, or the cart page when the theme has none. The button keeps the same size for every label, so nothing on the card moves when it changes. The widget uses Shopify's built-in cart action, so an open cart drawer or cart section of the theme shows the new discount right away; themes Shopify doesn't recognise reload the page, and the message still shows. Shopify decides which codes apply, and the widget tells the shopper the result:
       <ul>
         <li>the code applies: "Code added to your cart.", plus which other codes still apply and which codes or automatic discounts stopped applying because they can't be combined with it;</li>
         <li>another discount in the cart already applies and, by the settings of both discounts, can't be combined with this one: the shopper sees which one it is. For another code they can tap "Use this code instead"; an automatic discount can't be removed from the cart, so there is no such button, and the message says that the automatic discount gives the bigger saving for this cart;</li>
-        <li>the cart already has 5 product or order discount codes that apply (Shopify's limit per order): the shopper is asked to remove one first;</li>
+        <li>5 product or order codes already apply (Shopify's limit per order) and the new code can be combined with all of them: the widget doesn't add it, the button stays <strong>Use code</strong>, and the shopper is asked to remove one first. Codes can be removed at checkout;</li>
         <li>shipping discount codes: the shipping discount shows at checkout, after the address is known. A code only for other countries than the shopper's market says which countries it is for;</li>
         <li>the cart doesn't meet the discount's terms yet (for example it's empty): the code waits in the cart and applies once the cart meets them.</li>
       </ul>
-      If the cart doesn't return the code (it ended or was turned off), the shopper is told the code isn't active anymore. If adding fails, the shopper is asked to use Copy instead. A code that is already in the cart shows "Added" and "This code is already in your cart." when the page loads.
+      If the cart doesn't return the code, or its end date has passed, the shopper is told the code isn't active anymore. If adding fails, the shopper is asked to use Copy instead. A code that is already in the cart shows <strong>View cart</strong> when the page loads, and at the end of its terms, under "more", so nothing on the page moves: "This code is already in your cart.", plus the reason when it doesn't apply - another discount it can't be combined with, or a country it isn't for.
     </li>
     <li>In the terms, a discount code lists the store's automatic discounts it can't be combined with, and says that the store applies the one that saves more.</li>
     <li><strong>Copy</strong> copies the code, for shoppers who prefer to paste it at checkout.</li>
-    <li>Codes that contain a comma show only Copy (Shopify's cart can't take them from a button). The code is never shortened: the buttons that fit stand next to it, the rest go to the next row.</li>
+    <li>Codes that contain a comma show only Copy (Shopify's cart can't take them from a button). The code is never shortened. The code and its buttons stand under the card's text; when the code or the two buttons don't fit there, the row starts under the card's icon and uses the card's full width. When the code and the buttons still don't fit side by side, the code goes above the buttons, and <strong>Use code</strong> and <strong>Copy</strong> stay together.</li>
     <li>Codes for selected customers only (a customer segment or a list of customers, shown because of the <code>public</code> tag) say "For selected customers only" in their terms. Shopify checks at checkout whether the shopper qualifies, so after <strong>Use code</strong> the shopper is told that the code is for selected customers and that checkout shows whether it applies.</li>
+  </ul>
+
+  <p><strong>Naming discounts so the cards read well</strong></p>
+  <p>The widget shows the discount value ("2% off") on its own line above the name, and reads the conditions from the discount's settings. Two habits make the cards easier to read:</p>
+  <ul>
+    <li>Let the name say why or for whom, not how much, and leave thresholds out of it. "Review Reward", "Early Holiday Access" and "Welcome Savings" read better than "Review Reward: 2% off", "15% off Bars and Bites" or "10% off over $50", which repeat what the card already shows.</li>
+    <li>Short codes are easier to read, and easier to type when copying fails: <code>SWEET2</code> works better than <code>EARLYACCESS15</code>. The code is never shortened on the card.</li>
   </ul>
 
   <p class="seealso">See also: <a href="#s3-8">3.8 Discounts in Shopify Rollouts (Starter)</a></p>
@@ -738,7 +745,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <li>Promotions are picked first, then blog posts, then products.</li>
     <li>Within each kind, the newest are picked.</li>
     <li>Promotions that started before the time window come last: they fill only the places that are still free.</li>
-    <li>The chosen entries are then shown <strong>newest first</strong>.</li>
+    <li>The chosen entries are then shown <strong>newest first</strong>, read across the rows: the newest is first on the left, the next one to its right, and so on, row by row. Cards in a column can have different heights, so the columns may end at different heights.</li>
   </ol>
   <p>Example: 2 promotions, 3 blog posts and 6 new products, with 5 places, the widget shows the 2 promotions and 3 blog posts, sorted by date.</p>
 
@@ -774,7 +781,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <p>Flat, 3D or Emoticon. Free plan uses Emoticon.</p>
 
   <h4 id="s4-3a">4.3a Product and blog images (Starter)</h4>
-  <p><strong>Show product and blog images</strong> (on by default): products and blog posts show their main image instead of an icon. Entries without an image, and promotions, keep the icon.</p>
+  <p><strong>Show product and blog images</strong> (on by default): products and blog posts show their main image, 64 by 64 px, instead of an icon. Entries without an image, and promotions, keep the icon.</p>
 
   <h4 id="s4-3b">4.3b Language of the widget</h4>
   <p>Labels in the widget (Copy, Promo, Ends in..., dates, Viewing) follow your store's language: English, Polish, German, French, Spanish (Latin America), Italian, Dutch and Portuguese (Brazil). Other languages use English. Dates and times follow the usual format of each language, for example "18 oct 2026, 6:05 p.m." in Spanish. The widget title is your own text. Discount terms come from Shopify and are shown in English.</p>
@@ -828,7 +835,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h3 id="s6">6. Updates and changes</h3>
 
   <h4 id="s6-1">6.1 Automatic update</h4>
-  <p>The list updates on its own every night (at 00:15 UTC).</p>
+  <p>The list updates on its own every night (at 00:15 UTC). When you create, change, turn off or delete a discount in Shopify, the widget updates on its own a few seconds later.</p>
 
   <h4 id="s6-2">6.2 Updating now</h4>
   <p>Click <strong>Refresh now</strong> in the app. You can do this once every 5 minutes. If it was clicked recently, the button shows the time when it becomes available again.</p>
