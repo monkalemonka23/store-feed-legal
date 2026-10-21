@@ -26,7 +26,9 @@ the Shopify App Store review; planned release 23 October 2026.
 Key facts, so they are not guessed:
 
 - Entries are products, blog posts and promotions from a 7, 14 or 30 day window.
-- The feed holds up to 5 entries on the Free plan and 5, 10 or 20 on Starter.
+- The feed holds up to 6 entries on the Free plan and 6, 12 or 24 on Starter.
+  Those numbers fill whole rows: the widget uses 2 columns from about 600 px of
+  width and 3 from about 900 px.
 - When there is more to show than there are places, promotions are picked first,
   then blog posts, then products; within each kind the newest are picked; promotions
   that started before the time window come last and fill only the places still free;
@@ -64,7 +66,20 @@ Key facts, so they are not guessed:
   date.
   The end date is rendered in each shopper's own time zone and date format, counts
   down in the last 6 days, and is emphasised when 3 days or fewer are left.
-- The first 2 lines of a discount's terms are visible; "more" opens the rest.
+- The first 2 lines of a discount's terms are visible; one "more" per card opens
+  the rest of the terms and the full list of collections or products, and "less"
+  closes them.
+- After Use code the button becomes View cart and opens the theme's cart drawer or
+  cart page; once the cart has been opened and holds products it becomes Check out.
+  A code waiting for the cart to meet its terms shows Shop now instead, and a
+  "buy X, get Y" code shows no button, only the message.
+- An automatic discount shows its state in the cart: already applied, applying once
+  the terms are met, or not applied because another discount saves more.
+- A promotion that already applies in the shopper's cart is moved to the end of the
+  list; on the page a promotion applies to it is moved to the top and marked
+  "Viewing", or "Reward from this page" for the reward side of a buy X get Y offer.
+- Product and blog images in the feed are 64 by 64 px.
+- Entries are read across the rows, newest first from the left.
 - The recommended placement is the header. After a shopper opens an entry, the widget
   on the next page starts folded to its title bar when it sits in the top half of the
   screen.
@@ -90,7 +105,8 @@ Key facts, so they are not guessed:
 - Shopify permissions requested: read_products, read_content, read_discounts,
   read_themes, read_rollouts, write_app_proxy. No customer scopes.
 - The feed refreshes automatically every night at 00:15 UTC; a manual refresh is
-  available in the app once every 5 minutes.
+  available in the app once every 5 minutes. Creating, changing, turning off or
+  deleting a discount in Shopify refreshes the widget within seconds.
 - The Free plan shows a Store Feed icon in the widget footer; Starter does not.
 - Starter costs $7.99 a month or $79.99 a year; twelve monthly payments come to
   $95.88, so the yearly price saves $15.89, which is 17% off. Starter begins with a 14-day
