@@ -26,7 +26,9 @@ the Shopify App Store review; planned release 23 October 2026.
 Key facts, so they are not guessed:
 
 - Entries are products, blog posts and promotions from a 7, 14 or 30 day window.
-- The feed holds up to 5 entries on the Free plan and 5, 10 or 20 on Starter.
+- The feed holds up to 6 entries on the Free plan and 6, 12 or 24 on Starter.
+  Those numbers fill whole rows: the widget uses 2 columns from about 600 px of
+  width and 3 from about 900 px.
 - When there is more to show than there are places, promotions are picked first,
   then blog posts, then products; within each kind the newest are picked; promotions
   that started before the time window come last and fill only the places still free;
@@ -68,7 +70,14 @@ Key facts, so they are not guessed:
   the rest of the terms and the full list of collections or products, and "less"
   closes them.
 - After Use code the button becomes View cart and opens the theme's cart drawer or
-  cart page; an open cart drawer shows the new discount right away.
+  cart page; once the cart has been opened and holds products it becomes Check out.
+  A code waiting for the cart to meet its terms shows Shop now instead, and a
+  "buy X, get Y" code shows no button, only the message.
+- An automatic discount shows its state in the cart: already applied, applying once
+  the terms are met, or not applied because another discount saves more.
+- A promotion that already applies in the shopper's cart is moved to the end of the
+  list; on the page a promotion applies to it is moved to the top and marked
+  "Viewing", or "Reward from this page" for the reward side of a buy X get Y offer.
 - Product and blog images in the feed are 64 by 64 px.
 - Entries are read across the rows, newest first from the left.
 - The recommended placement is the header. After a shopper opens an entry, the widget
