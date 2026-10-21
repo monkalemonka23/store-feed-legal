@@ -178,8 +178,9 @@ See also: 3.7 Choosing what to include (Starter)
   ("$15 off", not "$15.00 off"). Terms that only repeat the collections or
   products listed on the card ("2 products") are left out, and general terms
   ("One-time purchase products", "For all countries") come last, after the
-  discounts it can't be combined with. The first 2 lines are visible; they end
-  after a whole term, never in the middle of a word. Collections and products
+  discounts it can't be combined with. The first 2 lines are visible and
+  filled; they end on a whole word, never in the middle of a word, so the card
+  keeps its height when the page finishes loading. Collections and products
   take up to 2 lines too, with "and N more". Each card has one "more", after
   the first part that is cut: it opens the terms and the collections or
   products together, and "less" at the very end closes them. Opened terms,
@@ -401,7 +402,9 @@ Sharp, Rounded or Pill.
 - **Height when open** - how much of the screen the open widget may take. When
   the list is longer, shoppers can scroll it inside the widget, or tap
   **Show all** below it to open the whole list. **Show less** brings it back
-  to this height.
+  to this height. Opening the list, the terms ("more" and "less") or the whole
+  widget keeps the entry the shopper is reading in the same place on the
+  screen; **Show less** puts that entry at the top of the shorter list.
 
 A shopper's own choice (opening or closing the list) is remembered while they
 browse your store.
