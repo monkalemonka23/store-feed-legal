@@ -23,15 +23,15 @@
 <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
 <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 <meta name="theme-color" content="#7F77DD">
-<link rel="icon" href="/favicon.ico?v=20261028" sizes="any">
+<link rel="icon" href="/favicon.ico?v=20261029" sizes="any">
 <link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon-64-v2.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon-v2.png">
-<link rel="stylesheet" href="/assets/site.css?v=20261028">
-<link rel="stylesheet" href="/assets/consent.css?v=20261028">
-<script src="/assets/consent.js?v=20261028"></script>
-<script src="/assets/launch.js?v=20261028" defer></script>
-<script src="/assets/gallery.js?v=20261028" defer></script>
-<script src="/assets/mail.js?v=20261028" defer></script>
+<link rel="stylesheet" href="/assets/site.css?v=20261029">
+<link rel="stylesheet" href="/assets/consent.css?v=20261029">
+<script src="/assets/consent.js?v=20261029"></script>
+<script src="/assets/launch.js?v=20261029" defer></script>
+<script src="/assets/gallery.js?v=20261029" defer></script>
+<script src="/assets/mail.js?v=20261029" defer></script>
 
 <script type="application/ld+json">
 {
@@ -643,6 +643,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <li>In <strong>Add Store Feed to your storefront</strong>, click <strong>Add</strong> next to the page where you want the widget (Home page, Product pages, Collection pages, and so on).</li>
     <li>The theme editor opens with Store Feed already added. Drag it where you want it and click <strong>Save</strong>.</li>
   </ol>
+  <p>On product pages, <strong>Add</strong> puts Store Feed in the product section, under the photos and product details. The best spot is in the column with <strong>Add to cart</strong>: in the theme editor, drag Store Feed into that column, under the button. Shoppers see the product first and your promotions right where they decide to buy. A widget above the product photo pushes the photo down on phones, which slows the page and gets in the shopper's way. If you place it above the photo anyway, in the header or in a section before the product, on product pages it starts collapsed: only the title bar, one tap opens it. A shopper who opened it earlier in the visit sees it open.</p>
+  <p>If your theme has more than one template for a page type, for example a second product template, the app lists each template separately with its own <strong>Add</strong> button. Products, collections or pages that use a given template show the widget only when it is added to that template.</p>
   <p>The app shows which pages already have the widget ("Added") and which copies are hidden in the theme editor ("Hidden").</p>
   <p>Next to <strong>Add Store Feed to your storefront</strong> the app shows whether the widget is live: <strong>Active on your store</strong>, or <strong>Not on your store yet</strong>.</p>
 
@@ -704,7 +706,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <li>How the date format is chosen: first from the shopper's browser, if it has the store language with a region (for example "en-GB" gives "30 Nov, 22:59"). Only when the browser has no such setting, the widget uses the country selected in your store (Shopify Markets), for example Spanish with Mexico gives "30 nov, 11:59 p.m.". So changing the country in your store changes the format only for shoppers whose browser has no regional setting for the store language. Some combinations look the same: English with Mexico uses the same format as English with the United States.</li>
     <li>"Buy X, get Y" discounts show what to buy and what you get, with links. When both come from the same collection, the widget shows it once, as "Buy and get from: Bars".</li>
     <li>A discount on selected variants of a product, for example only some colours, lists the product with those variants - "The Complete Snowboard (Ice, Dawn)" - and the link opens the product with the first of them selected.</li>
-    <li>The widget shows the discount's terms: the amount, minimum purchase or quantity, one use per customer, the total number of uses, how many times it applies per order, and whether it can be combined with other discounts. The most useful terms come first (minimum purchase, where it applies, then usage limits and combinations). The discount value already shown in the hook is not repeated in the terms, and amounts drop empty cents ("$15 off", not "$15.00 off"). Terms that only repeat the collections or products listed on the card ("2 products") are left out, and general terms ("One-time purchase products", "For all countries") come last, after the discounts it can't be combined with. The first 2 lines are visible and filled; they end on a whole word, never in the middle of a word, so the card keeps its height when the page finishes loading. Collections and products take up to 2 lines too, with "and N more". Each card has one "more", after the first part that is cut: it opens the terms and the collections or products together, and "less" at the very end closes them. Opened terms, collections and products are shown as a list, one per line. "more" has a small arrow and no underline: it opens text in place, while underlined names lead to another page.</li>
+    <li>The widget shows the discount's terms: the amount, minimum purchase or quantity, one use per customer, the total number of uses, how many times it applies per order, and whether it can be combined with other discounts. The most useful terms come first (minimum purchase, where it applies, then usage limits and combinations). The discount value already shown in the hook is not repeated in the terms, and amounts drop empty cents ("$15 off", not "$15.00 off"). Terms that only repeat the collections or products listed on the card ("2 products") are left out, and general terms ("One-time purchase products", "For all countries") come last, after the discounts it can't be combined with. The first 2 lines are visible and filled; they end on a whole word, never in the middle of a word, so the card keeps its height when the page finishes loading. Collections and products show the first names that fit about one line, two lines when the card has no separate "Buy" and "Get", and the rest as "and N more". Each card has one "more", after the first part that is cut: it opens the terms and the collections or products together, and "less" at the very end closes them. Opened terms, collections and products are shown as a list, one per line. "more" has a small arrow and no underline: it opens text in place, while underlined names lead to another page.</li>
   </ul>
 
   <p><strong>Using the code</strong></p>
