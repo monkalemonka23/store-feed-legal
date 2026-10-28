@@ -66,6 +66,21 @@ billing period. Until then you keep the features you paid for.
 3. The theme editor opens with Store Feed already added. Drag it where you want
    it and click **Save**.
 
+On product pages, **Add** puts Store Feed in the product section, under the
+photos and product details. The best spot is in the column with **Add to
+cart**: in the theme editor, drag Store Feed into that column, under the
+button. Shoppers see the product first and your promotions right where they
+decide to buy. A widget above the product photo pushes the photo down on
+phones, which slows the page and gets in the shopper's way. If you place it
+above the photo anyway, in the header or in a section before the product, on
+product pages it starts collapsed: only the title bar, one tap opens it.
+A shopper who opened it earlier in the visit sees it open.
+
+If your theme has more than one template for a page type, for example a second
+product template, the app lists each template separately with its own **Add**
+button. Products, collections or pages that use a given template show the
+widget only when it is added to that template.
+
 The app shows which pages already have the widget ("Added") and which copies
 are hidden in the theme editor ("Hidden").
 
@@ -181,7 +196,8 @@ See also: 3.7 Choosing what to include (Starter)
   discounts it can't be combined with. The first 2 lines are visible and
   filled; they end on a whole word, never in the middle of a word, so the card
   keeps its height when the page finishes loading. Collections and products
-  take up to 2 lines too, with "and N more". Each card has one "more", after
+  show the first names that fit about one line, two lines when the card has no
+  separate "Buy" and "Get", and the rest as "and N more". Each card has one "more", after
   the first part that is cut: it opens the terms and the collections or
   products together, and "less" at the very end closes them. Opened terms,
   collections and products are shown as a list, one per line. "more" has a
