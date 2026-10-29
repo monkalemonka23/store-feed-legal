@@ -23,13 +23,13 @@
   <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
   <link rel="dns-prefetch" href="https://www.googletagmanager.com">
   <meta name="theme-color" content="#7F77DD">
-  <link rel="icon" href="/favicon.ico?v=20261029" sizes="any">
+  <link rel="icon" href="/favicon.ico?v=20261029b" sizes="any">
   <link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon-64-v2.png">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon-v2.png">
-  <link rel="stylesheet" href="/assets/consent.css?v=20261029">
-  <script src="/assets/consent.js?v=20261029"></script>
-<script src="/assets/mail.js?v=20261029" defer></script>
-  <link rel="stylesheet" href="/assets/site.css?v=20261029">
+  <link rel="stylesheet" href="/assets/consent.css?v=20261029b">
+  <script src="/assets/consent.js?v=20261029b"></script>
+<script src="/assets/mail.js?v=20261029b" defer></script>
+  <link rel="stylesheet" href="/assets/site.css?v=20261029b">
 
 <script type="application/ld+json">
 {
@@ -244,9 +244,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <h2 id="p8">8. Cookies and Tracking in the Widget</h2>
     <p>
-      The Store Feed widget uses <code>sessionStorage</code> (not cookies) to remember whether
-      a visitor has dismissed or minimized the widget. This data is stored locally in the
-      visitor's browser and is not transmitted to our servers. It is automatically cleared when
+      The Store Feed widget uses <code>sessionStorage</code> (not cookies) to remember, for that
+      visitor only, that they closed or folded the widget, that they have just clicked an entry
+      (so the widget folds on the next page), and a discount code they are adding to the cart.
+      This data stays in the visitor's browser, is not sent to our servers, and is cleared when
       the browser session ends.
     </p>
 
