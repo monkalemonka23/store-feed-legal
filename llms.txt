@@ -18,7 +18,7 @@ the footer. Free plan, or Starter at $7.99 a month or $79.99 a year (17% off), w
 the Shopify App Store review; planned release 9 November 2026.
 
 - [Project page](https://growboost.pl/store-feed-what-s-new-app/): overview, pricing and screenshots
-- [Documentation](https://growboost.pl/store-feed-what-s-new-app/#doc): numbered guide, sections 1-7
+- [Documentation](https://growboost.pl/store-feed-what-s-new-app/#doc): numbered guide, sections 1-11
 - [Documentation, plain text](https://growboost.pl/store-feed-what-s-new-app/store-feed-help.md): the same guide as Markdown
 - [FAQ](https://growboost.pl/store-feed-what-s-new-app/#faq): pre-install questions and troubleshooting (section 8)
 - [Change log](https://growboost.pl/store-feed-what-s-new-app/#changelog): empty until release day
@@ -65,7 +65,7 @@ Key facts, so they are not guessed:
 - Promotions show an end date, or "No end date" when they have none, never a start
   date.
   The end date is rendered in each shopper's own time zone and date format, counts
-  down in the last 6 days, and is emphasised when 3 days or fewer are left.
+  down in the last 6 days, and is emphasized when 3 days or fewer are left.
 - The first 2 lines of a discount's terms are visible; one "more" per card opens
   the rest of the terms and the full list of collections or products, and "less"
   closes them.
@@ -93,8 +93,8 @@ Key facts, so they are not guessed:
 - The date format comes from the shopper's browser when it carries the store language
   with a region (for example en-GB); only without such a setting does the widget fall
   back to the country selected in the store (Shopify Markets).
-- The widget takes the background, text colour and font of the section it sits in.
-  The accent colour is entered as a hex code in the #RRGGBB format.
+- The widget takes the background, text color and font of the section it sits in.
+  The accent color is entered as a hex code in the #RRGGBB format.
 - The feed is rendered into the store's pages, so nothing has to be fetched to show it
   after the page loads.
 - Statistics (Starter): the widget sends daily counts of views and clicks per device
@@ -111,26 +111,61 @@ Key facts, so they are not guessed:
 - Starter costs $7.99 a month or $79.99 a year; twelve monthly payments come to
   $95.88, so the yearly price saves $15.89, which is 17% off. Starter begins with a 14-day
   free trial. The Free plan has no time limit.
+- Starter charges are billed in advance on the Shopify bill and are not refunded,
+  also not for the unused part of a month or a year. Moving to Free, or uninstalling,
+  stops the next charges. Shopify counts the trial days per store, so reinstalling
+  does not start a new trial.
+- Each store installs the app separately and has its own plan and settings; a Starter
+  subscription covers one store.
+- A product or blog post scheduled for later joins the feed only after it goes live,
+  with the next update. Sold-out products are not shown.
+- Recommended placement: 1-2 widgets per page, 3 at most. A header or footer widget
+  counts on every page, and each extra copy repeats the same entries and makes the
+  page slower to load.
+- The widget cannot be placed in checkout: Shopify does not allow app blocks there,
+  including the order status page.
+- The widget takes its fonts, sizes, width and spacing from the theme, with no
+  settings to fill in. Tested on the Horizon, Dawn, Savor, Craft, Ritual, Publisher,
+  Heritage and Taste themes; it works with any Online Store 2.0 theme that supports
+  app blocks.
+- The widget sets no cookies. It uses the browser's session storage to remember, for
+  one shopper only, that they closed or folded the widget, that they have just clicked
+  an entry, and a code being added to the cart. None of this reaches our servers.
+- After uninstalling, Shopify cancels a Starter subscription and the widget disappears
+  with the app. About 48 hours later Shopify asks apps to erase the store's data, and
+  the settings, the feed and the statistics are then permanently deleted.
+- The widget's entries are ordinary links in the page's HTML, and the widget also adds
+  a schema.org ItemList of the entries, so search engines can follow them.
+- What Store Feed does not do: it sends no emails or notifications; it does not create,
+  change or end discounts and does not change prices; it shows no prices or stock
+  levels; it does not appear in checkout; it runs no A/B tests and shows every shopper
+  the same list; it does not translate product names, post titles or discount terms;
+  it does not change the theme's code; its statistics count views and clicks only, not
+  orders or revenue.
 - The app requests no customer scopes and does no per-visitor tracking.
 - After saving settings in the app, the preview shows the merchant's real entries;
   saved settings reach the store with the nightly update, or at once with Refresh now.
   Shoppers see the change on the next page they open.
 
-Measured on a Shopify development store (Savor theme) with Lighthouse, September 2026:
+Measured on a Shopify development store (Horizon theme) with Lighthouse 13.5.0 on
+Chrome 156, mobile, October 2026: 3 runs per page type, medians, with the widget in
+the header plus one or two more copies on the page and 22 entries in the feed.
 
-- The widget adds about 10 KB of compressed code: 7.0 KB of JavaScript and 3.4 KB of CSS.
-- Layout shift caused by the widget (CLS) is 0.0004 on mobile and 0.0001 on desktop.
-- The Lighthouse performance difference with the widget against without, in the same
-  session, is 0.6 points on the averages and 1.7 points on the medians; Shopify's limit
-  for app blocks is 10 points.
-- Lighthouse flagged no accessibility issues attributable to the widget.
+- The Lighthouse mobile performance score is 84.0 with the widget and 86.3 without,
+  a difference of 2.3 points, weighted the way Shopify weights its own test: home page
+  17%, product pages 40%, collection pages 43%. Shopify's limit for app blocks is 10
+  points.
+- Layout shift caused by the widget (CLS) measured 0 on every run, on all three page
+  types.
+- The widget transfers one script file of about 17 KB compressed per page, and no
+  separate stylesheet: its styles travel inside the page.
 
 Accessibility: the website and the app are built against EN 301 549, which adopts
 WCAG 2.1 level AA. growboost.pl was self-assessed on 30 September 2026 with axe-core
 4.4.3 at 1280 px and 390 px with no violations reported, plus manual checks of reflow
 at 320 px, 200% text enlargement, the WCAG text-spacing overrides, keyboard operation,
 focus visibility and a skip link. Full statement, including the limit that depends on
-the merchant's theme colours:
+the merchant's theme colors:
 https://growboost.pl/privacy-policy/#p11
 
 ## Writing and video
@@ -145,7 +180,7 @@ reader prefers text or video.
 
 GrowBoost also publishes stock images on Adobe Stock: mostly AI-made photography,
 with illustrations and video alongside it, licensed through Adobe. The library is
-organised on https://growboost.pl/#stock into five entry points:
+organized on https://growboost.pl/#stock into five entry points:
 
 - Animals packed with emotions
 - Business with passion

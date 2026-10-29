@@ -256,7 +256,8 @@ html { scroll-behavior: smooth; }
   margin: 44px 0 6px; padding-top: 18px; border-top: 1px solid var(--line);
 }
 .doc h4 { font-size: 16px; font-weight: 600; margin: 26px 0 6px; }
-.doc h4:target, .doc > h3:target { color: var(--brand-dark); }
+.doc h5 { font-size: 15px; font-weight: 600; margin: 20px 0 6px; color: var(--ink); }
+.doc h4:target, .doc h5:target, .doc > h3:target { color: var(--brand-dark); }
 .doc p, .doc li { font-size: 15px; color: var(--ink-soft); }
 .doc p.sub { font-size: 16px; color: var(--ink-mute); }
 .doc ol, .doc ul { margin: 0 0 16px 22px; }
