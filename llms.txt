@@ -197,3 +197,5 @@ organized on https://growboost.pl/#stock into five entry points:
 - [Privacy policy](https://growboost.pl/privacy-policy/): what the app and the site store
 - [Accessibility statement](https://growboost.pl/privacy-policy/#p11): standard, test method, known limits
 - Contact: support (at) growboost.pl, replies within 24 hours on business days
+- Data controller and service provider: Miskier Monika Szatyłowicz (GrowBoost),
+  NIP PL5422882692, Hugo Kołłątaja 19 m 9, 15-774 Białystok, Poland
