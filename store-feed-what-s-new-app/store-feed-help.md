@@ -88,6 +88,9 @@ A Starter subscription covers the one store it was bought for.
 3. The theme editor opens with Store Feed already added. Drag it where you want
    it and click **Save**.
 
+Nothing changes on your store until you click **Save**: the theme editor is
+your preview, with your own products and your own theme.
+
 On product pages, **Add** puts Store Feed in the product section, under the
 photos and product details. The best spot is in the column with **Add to
 cart**: in the theme editor, drag Store Feed into that column, under the
@@ -104,6 +107,9 @@ widget only when it is added to that template.
 
 The app shows which pages already have the widget ("Added") and which copies
 are hidden in the theme editor ("Hidden").
+
+The widget belongs to the theme you added it to. After you publish another
+theme, the app shows its pages as not added yet: click **Add** again.
 
 Next to **Add Store Feed to your storefront** the app shows whether the widget
 is live: **Active on your store**, or **Not on your store yet**.
@@ -448,6 +454,14 @@ rollout starts, changes or finishes.
 
 Shown at the top of the widget. You can use an emoji.
 
+Ideas: a short title that says there is something new, in your store's
+voice. Keep it to 2-4 words, so it fits on one line on a phone.
+
+- General: "What's New", "New in store", "Fresh this week", "Just in"
+- Deals first: "New & on sale", "Latest drops and deals"
+- With an emoji: "✨ What's New", "🔥 Hot right now", "🎁 New for you"
+- Seasonal: "New for autumn", "Holiday picks", "Back to school"
+
 ### 4.2 Accent color (Starter)
 
 Starter only. On the Free plan these details use the text color of the
@@ -492,7 +506,8 @@ Choosing **Open** or **Collapsed** and the height is Starter only. On the
 Free plan the widget is set to Open with the default height. The rules in
 "When the widget starts folded" below work on every plan.
 
-- **Open (recommended)**: shoppers see the list straight away.
+- **Open (recommended)**: shoppers see the list straight away. On product
+  pages, a widget above the product photo starts folded (rule 4 below).
 - **Collapsed**: only the title bar; shoppers open it with one tap.
 - **Height when open**: how much of the screen the open widget may take. When
   the list is longer, shoppers can scroll it inside the widget, or tap
@@ -534,6 +549,15 @@ Show or hide the widget separately on desktop, tablet and mobile.
 - **Starter:** no footer, or your own text (for example "Free shipping over
   $50"), optionally with a link. If the text is empty, nothing is shown.
 
+Ideas for the Starter footer: one short line that gives one more reason to
+buy or to come back, with a link where it helps.
+
+- Shipping: "Free shipping over $50", "Same-day dispatch before 2 pm"
+- Returns and trust: "30-day free returns", "Handmade in small batches"
+- Coming back: "New arrivals every Friday", "Get 10% off: join our newsletter"
+  (link to the sign-up page)
+- Help: "Questions? Write to us" (link to your contact page)
+
 ### 4.9 How it matches your theme
 
 The widget takes its look from your theme when the page loads, with no
@@ -543,7 +567,7 @@ settings to fill in:
   theme's section headings; entry titles use those of your product card
   titles; the rest uses your theme's text font.
 - **Sizes:** text follows your theme's text size (between 12 and 18 px) and
-  line spacing. Entry titles are between 16 px and slightly larger than the
+  line spacing. Entry titles are at least 16 px and never smaller than the
   text. The widget title follows your headings (16-26 px) and is always a
   little larger than the entry titles.
 - **Width:** never wider than your theme's content area, centered, with the
@@ -593,8 +617,11 @@ see-through so the background shows behind it.
 
 ### 6.1 Automatic update
 
-The list updates on its own every night (at 00:15 UTC). When you create,
-change, turn off or delete a discount in Shopify, or a Shopify Rollout
+The list updates on its own every night at 00:15 UTC (for example 7:15 or
+8:15 pm the evening before in New York, 1:15 or 2:15 am in Paris, depending
+on daylight saving time). The app shows this time in your store's time zone,
+under **Refresh now**. When you create, change, turn off or delete a
+discount in Shopify, or a Shopify Rollout
 changes, the widget updates on its own a few seconds later. New products
 and blog posts wait for the nightly update, or for **Refresh now** (6.2).
 
@@ -627,25 +654,48 @@ new plan by itself.
 
 Starter only.
 
-- **Views**: how many pages showed the widget.
-- **Clicks**: how many times shoppers clicked an entry.
-- **Click rate (CTR)**: clicks divided by views.
-- Figures by device (desktop, tablet, mobile), for the last 7, 30 or 90 days.
+What the numbers in the app mean:
+
+- **Views** ("pages where shoppers saw the widget"): on how many pages
+  shoppers saw the widget on their screen.
+- **Clicks** ("clicks on entries and Use code"): how many times shoppers
+  clicked an entry, a collection or product name on a promotion card, or
+  **Use code**. **Copy** is not counted.
+- **CTR** ("clicks / views"): clicks divided by views. For example, 5%
+  means 5 clicks for every 100 views.
+- **By device**: the same numbers for desktop, tablet and mobile, for the
+  last 7, 30 or 90 days.
+- **By widget setup**: each copy of the widget on its own. **Widget title**
+  is the title it showed, **Started** says whether it started open or
+  folded to its title bar, **Entries** how many entries it showed. Change
+  the title or the number of entries and compare the CTR before and after.
 
 How they are counted:
 
+- **A view counts when the widget appears on the shopper's screen** (at
+  least its title bar), not when the page loads. A widget lower on the page
+  counts only once the shopper scrolls to it.
 - **One view per page**, however many copies of the widget the page shows.
   A page with the widget in the header and another on the home page counts
   as one view, not two. A widget folded to its title bar counts too.
 - **Every click counts once**, in whichever copy it happens: an entry, a
   collection or product name on a promotion card, or **Use code**.
   **Copy** is not counted.
-- Statistics count the whole store together, not each copy of the widget
-  separately.
+- Views, clicks and click rate at the top count the whole store together.
+  **By widget setup** counts each copy separately, so a page with two
+  copies adds a view to each, and its views can add up to more than the
+  total.
 
 The widget sends its counts through your store's own address (the Shopify app
 proxy), and Shopify signs every request, so no one can add numbers to another
 store's statistics. Bots, crawlers and automated browsers are not counted.
+The widget counts a shopper only when your store allows analytics for them
+(Shopify's customer privacy settings and cookie banner): shoppers who
+decline analytics are not counted at all.
+
+Statistics are kept for 180 days; the app shows the last 90. Older days are
+deleted every night. After you uninstall, all statistics are deleted with
+the rest of your store's data (9.3).
 
 If statistics stop updating: if you changed the app proxy address in
 **Settings > Apps and sales channels > Store Feed > App proxy > Customize URL**,
@@ -733,8 +783,9 @@ Store Feed reads your products, blog articles, discounts and discount
 rollouts, and which sections of your theme carry the widget. It requests no
 customer permissions and stores no personal data about your shoppers. It
 stores your store's address, the access Shopify gives the app, your widget
-settings, the current feed, and daily totals of views and clicks per device
-type (7). Details: the privacy policy on growboost.pl.
+settings, the current feed, daily totals of views and clicks per device
+type, and on Starter the same totals per widget title, starting state
+(open or folded) and number of entries (7). Details: the privacy policy on growboost.pl.
 
 ### 9.2 Cookies
 
@@ -744,13 +795,17 @@ that they have just clicked an entry (4.5), and a code they are adding to
 the cart. Nothing of this is sent to our servers, and the browser clears it
 when the session ends.
 
+The widget's view and click counts follow your store's customer privacy
+settings: they are sent only when the shopper allows analytics (7).
+
 ### 9.3 Your data after you uninstall
 
 When you uninstall the app, we mark your store as uninstalled and stop
 reading your store's data. About 48 hours later Shopify asks apps to erase a
 store's data, and we then permanently delete everything stored for your
-store: settings, the feed and statistics. The widget disappears from your
-store together with the app (1.3).
+store: settings, the feed and statistics. If Shopify's request does not
+arrive, we delete it ourselves 20 days after you uninstall. The widget
+disappears from your store together with the app (1.3).
 
 ### 9.4 Page speed and layout shift
 
@@ -767,8 +822,9 @@ store together with the app (1.3).
 
 The widget is built against WCAG 2.1 AA:
 
-- Every button and link has a name for screen readers; **Use code** and
-  **Copy** name the code they act on.
+- Every button and link has a name for screen readers that includes the
+  words you see on it; **Use code** and **Copy** also name the code they
+  act on.
 - Screen readers announce the result of **Use code** and **Copy**.
 - Everything works with the keyboard, with a visible focus outline.
 - On touch screens, "more", "less" and the names in lists have tap areas
@@ -803,7 +859,13 @@ structured data (schema.org ItemList).
   products, or discount codes limited to some customers (unless you tag
   them `public`, 3.3.1).
 - It does not translate your product names, post titles or discount terms
-  (4.3b).
+  (4.3b). Names and titles are shown in your store's default language, also
+  when you translated them with Translate & Adapt, and the widget title is
+  one text for all languages.
+- It does not adjust the list to Shopify Markets or B2B catalogs: shoppers
+  in every market see the same entries.
+- It does not work on headless storefronts (Hydrogen or your own
+  front end): the widget is a block for Online Store themes.
 - It does not change your theme's code. Removing the block, or the app,
   removes the widget (1.3).
 - It does not collect data about your shoppers and does not use cookies
@@ -879,3 +941,6 @@ We look at every report, and a fix in the app reaches every store.
 
 Email **support (at) growboost.pl** - we reply within 24 hours on business days.
 Mention the section number from this guide if it relates to your question.
+
+Store Feed is made by Miskier Monika Szatyłowicz (GrowBoost), Hugo
+Kołłątaja 19 m 9, 15-774 Białystok, Poland, VAT ID PL5422882692.
