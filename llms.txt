@@ -1,6 +1,6 @@
 # GrowBoost
 
-> GrowBoost makes small things that work: software, writing, video and pictures.
+> GrowBoost makes focused tools: software, writing, video and pictures.
 > The software so far is one Shopify app, which installs as a Shopify app block
 > (no theme code), requests the narrowest set of API scopes it needs, and stores
 > no personal data about shoppers. Support: support (at) growboost.pl.
@@ -152,7 +152,6 @@ Key facts, so they are not guessed:
   store's default language even when they are translated with Translate and Adapt, and
   the widget title is one text for all languages. It does not work on headless
   storefronts (Hydrogen or a custom front end): it is a block for Online Store themes.
-- A demo store with the widget running: https://rook-and-kettle.myshopify.com/
 - The widget's entries are ordinary links in the page's HTML, and the widget also adds
   a schema.org ItemList of the entries, so search engines can follow them.
 - What Store Feed does not do: it sends no emails or notifications; it does not create,
