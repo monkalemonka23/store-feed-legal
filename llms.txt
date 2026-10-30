@@ -98,13 +98,23 @@ Key facts, so they are not guessed:
 - The feed is rendered into the store's pages, so nothing has to be fetched to show it
   after the page loads.
 - Statistics (Starter): the widget sends daily counts of views and clicks per device
-  type through the store's own address (the Shopify app proxy), signed by Shopify.
-  Bots, crawlers and automated browsers are not counted. Shoppers' IP addresses are
-  never stored; a one-way hash of the sender's address is held in server memory for
-  about two minutes, for rate limiting only.
+  type through the store's own address (the Shopify app proxy), signed by Shopify, and
+  the same counts per widget copy (its title, whether it started open or folded, how
+  many entries it showed). A view counts when the widget appears on the shopper's
+  screen, not when the page loads; a click counts for an entry, a collection or product
+  name, or Use code, but not Copy. Counts are sent only for shoppers who allow analytics
+  in the store's customer privacy settings; bots, crawlers and automated browsers are
+  never counted. Statistics are kept for 180 days and the app shows the last 90.
+  Shoppers' IP addresses are never stored; a one-way hash of the sender's address is
+  held in server memory for about two minutes, for rate limiting only.
 - Shopify permissions requested: read_products, read_content, read_discounts,
   read_themes, read_rollouts, write_app_proxy. No customer scopes.
-- The feed refreshes automatically every night at 00:15 UTC; a manual refresh is
+- Servers and database are hosted in the United States (Virginia) by Fly.io and
+  Supabase, which process data under data processing agreements; transfers from the
+  European Economic Area rely on the Standard Contractual Clauses adopted by the
+  European Commission (Implementing Decision (EU) 2021/914).
+- The feed refreshes automatically every night at 00:15 UTC, shown in the app in the
+  store's own time zone; a manual refresh is
   available in the app once every 5 minutes. Creating, changing, turning off or
   deleting a discount in Shopify refreshes the widget within seconds.
 - The Free plan shows a Store Feed icon in the widget footer; Starter does not.
@@ -133,7 +143,16 @@ Key facts, so they are not guessed:
   an entry, and a code being added to the cart. None of this reaches our servers.
 - After uninstalling, Shopify cancels a Starter subscription and the widget disappears
   with the app. About 48 hours later Shopify asks apps to erase the store's data, and
-  the settings, the feed and the statistics are then permanently deleted.
+  the settings, the feed and the statistics are then permanently deleted; if that
+  request never arrives, everything is deleted 20 days after uninstalling.
+- The widget belongs to the theme it was added to. After another theme is published,
+  the app lists its pages as not added yet and the block has to be added again.
+- Markets, B2B and translations: every shopper sees the same entries. The widget does
+  not adjust the list to a market or a B2B catalog, shows names and titles in the
+  store's default language even when they are translated with Translate and Adapt, and
+  the widget title is one text for all languages. It does not work on headless
+  storefronts (Hydrogen or a custom front end): it is a block for Online Store themes.
+- A demo store with the widget running: https://rook-and-kettle.myshopify.com/
 - The widget's entries are ordinary links in the page's HTML, and the widget also adds
   a schema.org ItemList of the entries, so search engines can follow them.
 - What Store Feed does not do: it sends no emails or notifications; it does not create,
@@ -159,6 +178,7 @@ the header plus one or two more copies on the page and 22 entries in the feed.
   types.
 - The widget transfers one script file of about 17 KB compressed per page, and no
   separate stylesheet: its styles travel inside the page.
+- Lighthouse reports no accessibility issues attributable to the widget.
 
 Accessibility: the website and the app are built against EN 301 549, which adopts
 WCAG 2.1 level AA. growboost.pl was self-assessed on 30 September 2026 with axe-core

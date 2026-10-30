@@ -112,12 +112,20 @@
   "mainEntity": [
     { "@type": "Question", "name": "Do I need to edit my theme code?",
       "acceptedAnswer": { "@type": "Answer", "text": "No. Store Feed installs as a Shopify app block, so you place it from Theme Editor. Online Store 2.0 themes are supported (2.2)." } },
+    { "@type": "Question", "name": "Can I see how it looks on my store before shoppers do?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Add in the app opens the theme editor with Store Feed already in place, showing your own products in your own theme, and nothing changes on your store until you click Save. After Save the widget is on your store, and the entries it shows arrive with the next feed update: click Refresh now to send them straight away, or wait for the nightly one. To see it running on a live store first, open our demo store: Rook & Kettle (2.1, 6.1, 6.2)." } },
     { "@type": "Question", "name": "Where on my store should I put the widget?",
       "acceptedAnswer": { "@type": "Answer", "text": "The header is the best place - the widget then appears on every page, near the top, where shoppers look first. Page by page: Home page: the header, or its own section near the top, so new visitors see the store is active. Product pages: the header, or a section below the product details. A promotion that covers the product is marked Viewing (3.5). Collection pages: a section above or below the product grid. Blog posts: a section below the article - a short way from reading to shopping. Checkout: not possible, Shopify doesn't allow app blocks there. A code added with Use code is already in the cart when the shopper gets to checkout (3.3.3). Full guidance: 2.3." } },
     { "@type": "Question", "name": "Will it match my theme?",
       "acceptedAnswer": { "@type": "Answer", "text": "Yes, with no settings to fill in. The widget takes its fonts from your theme's headings, product card titles and text, its colors from the section it sits in, and its width and spacing from your theme's content area. The widget title is always a little larger than the entry titles (4.9, 5.1)." } },
+    { "@type": "Question", "name": "What should I call the widget, and what can I put in the footer?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A short title that says there is something new, in your store's voice - 2-4 words, so it fits on one line on a phone: \"What's New\", \"Fresh this week\", \"New & on sale\", \"&#128293; Hot right now\". In the footer (Starter) put one more reason to buy or to come back, with a link where it helps: \"Free shipping over $50\", \"30-day free returns\", \"New arrivals every Friday\" (4.1, 4.8)." } },
     { "@type": "Question", "name": "Which themes is it tested on?",
       "acceptedAnswer": { "@type": "Answer", "text": "Horizon, Dawn, Savor, Craft, Ritual, Publisher, Heritage and Taste. It works with any Online Store 2.0 theme that supports app blocks, so a theme not on this list, or a customized one, will most likely work too. If something doesn't look right, write to us with the theme name, the page address and a screenshot: a fix in the app reaches every store (11.4)." } },
+    { "@type": "Question", "name": "Does it work with Shopify Markets, B2B or a headless storefront?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Markets and B2B: every shopper sees the same entries - the widget does not adjust the list to a market or to a B2B catalog. Translations: names and titles appear in your store's default language, also when you have translated them with Translate & Adapt, and the widget title is one text for all languages. Headless storefronts (Hydrogen or your own front end): no, the widget is a block for Online Store themes (10, 4.3b)." } },
+    { "@type": "Question", "name": "What happens when I switch themes?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The widget belongs to the theme you added it to. After you publish another theme, the app shows its pages as not added yet - click Add again and the widget is back, with the same settings (2.1)." } },
     { "@type": "Question", "name": "Will it slow my store down?",
       "acceptedAnswer": { "@type": "Answer", "text": "The widget comes built into your store's pages, so nothing has to be fetched to show it after the page loads, and its script starts only once the shopper moves, taps, scrolls or types. The measured difference is in Measured on a real store. Every copy still adds to the page, so use 1-2 per page, 3 at most (9.4, 2.4)." } },
     { "@type": "Question", "name": "Does it collect data about my customers?",
@@ -125,7 +133,7 @@
     { "@type": "Question", "name": "Can search engines see the widget?",
       "acceptedAnswer": { "@type": "Answer", "text": "Yes. The widget is part of your page's HTML, so its entries are ordinary links that search engines can follow. It also adds a short list of the entries in structured data, schema.org ItemList (9.6)." } },
     { "@type": "Question", "name": "How often does the feed refresh?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Every night at 00:15 UTC. Changes to your discounts in Shopify, and Shopify Rollouts, reach the widget on their own a few seconds later. You can force an earlier refresh from the app dashboard, once every 5 minutes (6.1, 6.2)." } },
+      "acceptedAnswer": { "@type": "Answer", "text": "Every night at 00:15 UTC - the app shows that time in your store's own time zone, under Refresh now. Changes to your discounts in Shopify, and Shopify Rollouts, reach the widget on their own a few seconds later. You can force an earlier refresh from the app dashboard, once every 5 minutes (6.1, 6.2)." } },
     { "@type": "Question", "name": "Can customers close the widget?",
       "acceptedAnswer": { "@type": "Answer", "text": "Yes, and it stays closed for the rest of their session (4.6)." } },
     { "@type": "Question", "name": "Can I put it in more than one place?",
@@ -135,13 +143,13 @@
     { "@type": "Question", "name": "Does Store Feed work with Shopify discount rollouts?",
       "acceptedAnswer": { "@type": "Answer", "text": "Yes. Store Feed only promotes discounts that every shopper gets. A discount that a rollout gives to only part of your traffic stays hidden until it reaches everyone. A discount that a rollout turns on for all traffic appears in the widget, and the widget updates automatically when a rollout changes (3.8)." } },
     { "@type": "Question", "name": "What happens if I uninstall the app?",
-      "acceptedAnswer": { "@type": "Answer", "text": "The widget disappears from your store together with the app, and you don't need to edit your theme. Shopify cancels a Starter subscription automatically. About 48 hours later Shopify asks apps to erase the store's data, and we then permanently delete your settings, the feed and the statistics (1.3, 9.3)." } },
+      "acceptedAnswer": { "@type": "Answer", "text": "The widget disappears from your store together with the app, and you don't need to edit your theme. Shopify cancels a Starter subscription automatically. About 48 hours later Shopify asks apps to erase the store's data, and we then permanently delete your settings, the feed and the statistics. If that request never arrives, we delete everything ourselves 20 days after you uninstall (1.3, 9.3)." } },
     { "@type": "Question", "name": "I run a large store. Will it keep up?",
       "acceptedAnswer": { "@type": "Answer", "text": "Yes. The widget is part of your store's pages and Shopify serves it with them, so our servers are not involved in showing it and heavy traffic does not slow it down. The size of your catalog does not matter either: each update reads only the newest products from the time window, the newest posts and your active discounts (11.1)." } },
     { "@type": "Question", "name": "I have few new products. Is it still worth it?",
       "acceptedAnswer": { "@type": "Answer", "text": "With few new products the list can be short or empty. Choose the 30-day time window and add blog posts and promotions (Starter) to keep it full. The Free plan has no time limit, so you can see how it looks on your own store before deciding (11.2)." } },
     { "@type": "Question", "name": "How are views and clicks counted?",
-      "acceptedAnswer": { "@type": "Answer", "text": "One view per page, however many copies of the widget the page shows: the widget in the header and another on the home page count as one view. Every click on an entry, a collection or product name, or Use code counts once, in whichever copy it happens. The widget sends its counts through your store's own address (the Shopify app proxy), and Shopify signs every request, so no one can add numbers to another store's statistics. Bots, crawlers and automated browsers are not counted (7)." } },
+      "acceptedAnswer": { "@type": "Answer", "text": "A view counts when the widget appears on the shopper's screen - at least its title bar - not when the page loads, so a widget lower down counts only once the shopper scrolls to it. One view per page, however many copies the page shows. A click counts once for an entry, a collection or product name on a promotion card, or Use code; Copy is not counted. Counts are sent only for shoppers who allow analytics in your store's customer privacy settings, and bots and crawlers are never counted. The widget sends them through your store's own address (the Shopify app proxy), signed by Shopify, so no one can add numbers to another store's statistics. Statistics are kept for 180 days and the app shows the last 90 (7)." } },
     { "@type": "Question", "name": "My statistics stopped updating",
       "acceptedAnswer": { "@type": "Answer", "text": "If you changed the app proxy address in Settings > Apps and sales channels > Store Feed > App proxy > Customize URL, change it back to /apps/store-feed. The widget sends its counts to that address (7)." } },
     { "@type": "Question", "name": "What does Starter cost, and can I try it first?",
@@ -373,12 +381,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="fact__txt"><b>layout shift from the widget.</b> Cumulative Layout Shift measured 0 on every run, on all three page types - the page does not jump when the feed appears.</p>
     </li>
     <li class="fact">
+      <p class="fact__num">0</p>
+      <p class="fact__txt"><b>accessibility issues in the widget.</b> Lighthouse reports none attributable to Store Feed; what it still flags on the page belongs to the theme.</p>
+    </li>
+    <li class="fact">
       <p class="fact__num">17 KB</p>
       <p class="fact__txt"><b>of code added, compressed.</b> One script file transferred per page, and no extra stylesheet request: the widget's styles travel inside the page.</p>
     </li>
   </ul>
 
-  <p class="facts__note">Tested with Lighthouse 13.5.0 on Chrome 156, mobile, on a Shopify development store with the Horizon theme, October 2026: 3 runs per page type, medians, with the widget in the header plus one or two more copies on the page and 22 entries in the feed. The widget is also built against WCAG 2.1 AA - what that covers, and the one limit that depends on your theme, is written out in our <a href="/privacy-policy/#p11">accessibility statement</a>.</p>
+  <p class="facts__note">Tested with Lighthouse on Chrome and Edge, mobile, on a Shopify development store with the Horizon theme, October 2026: several runs per page type, medians, with the widget in the header plus one or two more copies on the page and 22 entries in the feed. The widget is also built against WCAG 2.1 AA - what that covers, and the one limit that depends on your theme, is written out in our <a href="/privacy-policy/#p11">accessibility statement</a>.</p>
 
   <h2>Built without touching customer data</h2>
   <p>Store Feed reads your products, blog articles, discounts and discount rollouts, plus which of your theme's sections carry the widget. It requests no customer scopes and stores no personal data about your visitors: views and clicks are kept as daily totals per device type, and your visitors' IP addresses are never stored. Dismissing the widget is remembered in the visitor's browser session, not on our servers. Full detail in the <a href="/privacy-policy/">privacy policy</a>.</p>
@@ -420,7 +432,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <section id="screens" aria-labelledby="screens-h">
   <h2 id="screens-h">Screenshots</h2>
-  <p class="sub">What your customers see: one feed, newest first, every entry linking straight to the product, article or collection behind it. And what you see in the app. Click any picture to open it full size.</p>
+  <p class="sub">What your customers see: one feed, newest first, every entry linking straight to the product, article or collection behind it. And what you see in the app. Click any picture to open it full size. Prefer to click around? The widget is running on our demo store, <a href="https://rook-and-kettle.myshopify.com/" rel="noopener">Rook &amp; Kettle</a>.</p>
 
   <h3 class="shots__h shots__h--first">On your storefront</h3>
 
@@ -713,6 +725,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <li>The theme editor opens with Store Feed already added. Drag it where you want
      it and click <strong>Save</strong>.</li>
   </ol>
+  <p>Nothing changes on your store until you click <strong>Save</strong>: the theme editor is
+  your preview, with your own products and your own theme.</p>
   <p>On product pages, <strong>Add</strong> puts Store Feed in the product section, under the
   photos and product details. The best spot is in the column with <strong>Add to
   cart</strong>: in the theme editor, drag Store Feed into that column, under the
@@ -727,6 +741,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   widget only when it is added to that template.</p>
   <p>The app shows which pages already have the widget ("Added") and which copies
   are hidden in the theme editor ("Hidden").</p>
+  <p>The widget belongs to the theme you added it to. After you publish another
+  theme, the app shows its pages as not added yet: click <strong>Add</strong> again.</p>
   <p>Next to <strong>Add Store Feed to your storefront</strong> the app shows whether the widget
   is live: <strong>Active on your store</strong>, or <strong>Not on your store yet</strong>.</p>
   <h4 id="s2-2">2.2 Adding it yourself</h4>
@@ -1039,6 +1055,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h3 id="s4">4. Appearance: look and feel</h3>
   <h4 id="s4-1">4.1 Widget title</h4>
   <p>Shown at the top of the widget. You can use an emoji.</p>
+  <p>Ideas: a short title that says there is something new, in your store's
+  voice. Keep it to 2-4 words, so it fits on one line on a phone.</p>
+  <ul>
+  <li>General: "What's New", "New in store", "Fresh this week", "Just in"</li>
+  <li>Deals first: "New &amp; on sale", "Latest drops and deals"</li>
+  <li>With an emoji: "&#10024; What's New", "&#128293; Hot right now", "&#127873; New for you"</li>
+  <li>Seasonal: "New for autumn", "Holiday picks", "Back to school"</li>
+  </ul>
   <h4 id="s4-2">4.2 Accent color (Starter)</h4>
   <p>Starter only. On the Free plan these details use the text color of the
   section the widget sits in.</p>
@@ -1069,7 +1093,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   Free plan the widget is set to Open with the default height. The rules in
   "When the widget starts folded" below work on every plan.</p>
   <ul>
-  <li><strong>Open (recommended)</strong>: shoppers see the list straight away.</li>
+  <li><strong>Open (recommended)</strong>: shoppers see the list straight away. On product
+    pages, a widget above the product photo starts folded (rule 4 below).</li>
   <li><strong>Collapsed</strong>: only the title bar; shoppers open it with one tap.</li>
   <li><strong>Height when open</strong>: how much of the screen the open widget may take. When
     the list is longer, shoppers can scroll it inside the widget, or tap
@@ -1106,6 +1131,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <li><strong>Starter:</strong> no footer, or your own text (for example "Free shipping over
     $50"), optionally with a link. If the text is empty, nothing is shown.</li>
   </ul>
+  <p>Ideas for the Starter footer: one short line that gives one more reason to
+  buy or to come back, with a link where it helps.</p>
+  <ul>
+  <li>Shipping: "Free shipping over $50", "Same-day dispatch before 2 pm"</li>
+  <li>Returns and trust: "30-day free returns", "Handmade in small batches"</li>
+  <li>Coming back: "New arrivals every Friday", "Get 10% off: join our newsletter"
+    (link to the sign-up page)</li>
+  <li>Help: "Questions? Write to us" (link to your contact page)</li>
+  </ul>
   <h4 id="s4-9">4.9 How it matches your theme</h4>
   <p>The widget takes its look from your theme when the page loads, with no
   settings to fill in:</p>
@@ -1114,7 +1148,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     theme's section headings; entry titles use those of your product card
     titles; the rest uses your theme's text font.</li>
   <li><strong>Sizes:</strong> text follows your theme's text size (between 12 and 18 px) and
-    line spacing. Entry titles are between 16 px and slightly larger than the
+    line spacing. Entry titles are at least 16 px and never smaller than the
     text. The widget title follows your headings (16-26 px) and is always a
     little larger than the entry titles.</li>
   <li><strong>Width:</strong> never wider than your theme's content area, centered, with the
@@ -1153,8 +1187,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <h3 id="s6">6. Updates and changes</h3>
   <h4 id="s6-1">6.1 Automatic update</h4>
-  <p>The list updates on its own every night (at 00:15 UTC). When you create,
-  change, turn off or delete a discount in Shopify, or a Shopify Rollout
+  <p>The list updates on its own every night at 00:15 UTC (for example 7:15 or
+  8:15 pm the evening before in New York, 1:15 or 2:15 am in Paris, depending
+  on daylight saving time). The app shows this time in your store's time zone,
+  under <strong>Refresh now</strong>. When you create, change, turn off or delete a
+  discount in Shopify, or a Shopify Rollout
   changes, the widget updates on its own a few seconds later. New products
   and blog posts wait for the nightly update, or for <strong>Refresh now</strong> (<a href="#s6-2">6.2</a>).</p>
   <h4 id="s6-2">6.2 Updating now</h4>
@@ -1179,26 +1216,47 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <h3 id="s7">7. Analytics: Statistics (Starter)</h3>
   <p>Starter only.</p>
+  <p>What the numbers in the app mean:</p>
   <ul>
-  <li><strong>Views</strong>: how many pages showed the widget.</li>
-  <li><strong>Clicks</strong>: how many times shoppers clicked an entry.</li>
-  <li><strong>Click rate (CTR)</strong>: clicks divided by views.</li>
-  <li>Figures by device (desktop, tablet, mobile), for the last 7, 30 or 90 days.</li>
+  <li><strong>Views</strong> ("pages where shoppers saw the widget"): on how many pages
+    shoppers saw the widget on their screen.</li>
+  <li><strong>Clicks</strong> ("clicks on entries and Use code"): how many times shoppers
+    clicked an entry, a collection or product name on a promotion card, or
+    <strong>Use code</strong>. <strong>Copy</strong> is not counted.</li>
+  <li><strong>CTR</strong> ("clicks / views"): clicks divided by views. For example, 5%
+    means 5 clicks for every 100 views.</li>
+  <li><strong>By device</strong>: the same numbers for desktop, tablet and mobile, for the
+    last 7, 30 or 90 days.</li>
+  <li><strong>By widget setup</strong>: each copy of the widget on its own. <strong>Widget title</strong>
+    is the title it showed, <strong>Started</strong> says whether it started open or
+    folded to its title bar, <strong>Entries</strong> how many entries it showed. Change
+    the title or the number of entries and compare the CTR before and after.</li>
   </ul>
   <p>How they are counted:</p>
   <ul>
+  <li><strong>A view counts when the widget appears on the shopper's screen</strong> (at
+    least its title bar), not when the page loads. A widget lower on the page
+    counts only once the shopper scrolls to it.</li>
   <li><strong>One view per page</strong>, however many copies of the widget the page shows.
     A page with the widget in the header and another on the home page counts
     as one view, not two. A widget folded to its title bar counts too.</li>
   <li><strong>Every click counts once</strong>, in whichever copy it happens: an entry, a
     collection or product name on a promotion card, or <strong>Use code</strong>.
     <strong>Copy</strong> is not counted.</li>
-  <li>Statistics count the whole store together, not each copy of the widget
-    separately.</li>
+  <li>Views, clicks and click rate at the top count the whole store together.
+    <strong>By widget setup</strong> counts each copy separately, so a page with two
+    copies adds a view to each, and its views can add up to more than the
+    total.</li>
   </ul>
   <p>The widget sends its counts through your store's own address (the Shopify app
   proxy), and Shopify signs every request, so no one can add numbers to another
-  store's statistics. Bots, crawlers and automated browsers are not counted.</p>
+  store's statistics. Bots, crawlers and automated browsers are not counted.
+  The widget counts a shopper only when your store allows analytics for them
+  (Shopify's customer privacy settings and cookie banner): shoppers who
+  decline analytics are not counted at all.</p>
+  <p>Statistics are kept for 180 days; the app shows the last 90. Older days are
+  deleted every night. After you uninstall, all statistics are deleted with
+  the rest of your store's data (<a href="#s9-3">9.3</a>).</p>
   <p>If statistics stop updating: if you changed the app proxy address in
   <strong>Settings &gt; Apps and sales channels &gt; Store Feed &gt; App proxy &gt; Customize URL</strong>,
   change it back to <code>/apps/store-feed</code>. The widget sends its counts to that
@@ -1211,20 +1269,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   rollouts, and which sections of your theme carry the widget. It requests no
   customer permissions and stores no personal data about your shoppers. It
   stores your store's address, the access Shopify gives the app, your widget
-  settings, the current feed, and daily totals of views and clicks per device
-  type (<a href="#s7">7</a>). Details: the privacy policy on growboost.pl.</p>
+  settings, the current feed, daily totals of views and clicks per device
+  type, and on Starter the same totals per widget title, starting state
+  (open or folded) and number of entries (<a href="#s7">7</a>). Details: the privacy policy on growboost.pl.</p>
   <h4 id="s9-2">9.2 Cookies</h4>
   <p>The widget sets no cookies. It uses the browser's session storage to
   remember, for that shopper only: that they closed or folded the widget,
   that they have just clicked an entry (<a href="#s4-5">4.5</a>), and a code they are adding to
   the cart. Nothing of this is sent to our servers, and the browser clears it
   when the session ends.</p>
+  <p>The widget's view and click counts follow your store's customer privacy
+  settings: they are sent only when the shopper allows analytics (<a href="#s7">7</a>).</p>
   <h4 id="s9-3">9.3 Your data after you uninstall</h4>
   <p>When you uninstall the app, we mark your store as uninstalled and stop
   reading your store's data. About 48 hours later Shopify asks apps to erase a
   store's data, and we then permanently delete everything stored for your
-  store: settings, the feed and statistics. The widget disappears from your
-  store together with the app (<a href="#s1-3">1.3</a>).</p>
+  store: settings, the feed and statistics. If Shopify's request does not
+  arrive, we delete it ourselves 20 days after you uninstall. The widget
+  disappears from your store together with the app (<a href="#s1-3">1.3</a>).</p>
   <h4 id="s9-4">9.4 Page speed and layout shift</h4>
   <ul>
   <li>The widget comes built into your store's pages, so nothing has to be
@@ -1239,8 +1301,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <h4 id="s9-5">9.5 Accessibility</h4>
   <p>The widget is built against WCAG 2.1 AA:</p>
   <ul>
-  <li>Every button and link has a name for screen readers; <strong>Use code</strong> and
-    <strong>Copy</strong> name the code they act on.</li>
+  <li>Every button and link has a name for screen readers that includes the
+    words you see on it; <strong>Use code</strong> and <strong>Copy</strong> also name the code they
+    act on.</li>
   <li>Screen readers announce the result of <strong>Use code</strong> and <strong>Copy</strong>.</li>
   <li>Everything works with the keyboard, with a visible focus outline.</li>
   <li>On touch screens, "more", "less" and the names in lists have tap areas
@@ -1273,7 +1336,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     products, or discount codes limited to some customers (unless you tag
     them <code>public</code>, <a href="#s3-3-1">3.3.1</a>).</li>
   <li>It does not translate your product names, post titles or discount terms
-    (<a href="#s4-3b">4.3b</a>).</li>
+    (<a href="#s4-3b">4.3b</a>). Names and titles are shown in your store's default language, also
+    when you translated them with Translate &amp; Adapt, and the widget title is
+    one text for all languages.</li>
+  <li>It does not adjust the list to Shopify Markets or B2B catalogs: shoppers
+    in every market see the same entries.</li>
+  <li>It does not work on headless storefronts (Hydrogen or your own
+    front end): the widget is a block for Online Store themes.</li>
   <li>It does not change your theme's code. Removing the block, or the app,
     removes the widget (<a href="#s1-3">1.3</a>).</li>
   <li>It does not collect data about your shoppers and does not use cookies
@@ -1351,9 +1420,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="toc__group">General questions</p>
         <ol>
           <li><a href="#q1">Do I need to edit my theme code?</a></li>
+          <li><a href="#q22">Can I see how it looks on my store before shoppers do?</a></li>
           <li><a href="#q12">Where on my store should I put the widget?</a></li>
           <li><a href="#q13">Will it match my theme?</a></li>
+          <li><a href="#q19">What should I call the widget, and what can I put in the footer?</a></li>
           <li><a href="#q14">Which themes is it tested on?</a></li>
+          <li><a href="#q20">Does it work with Shopify Markets, B2B or a headless storefront?</a></li>
+          <li><a href="#q21">What happens when I switch themes?</a></li>
           <li><a href="#q4">Will it slow my store down?</a></li>
           <li><a href="#q2">Does it collect data about my customers?</a></li>
           <li><a href="#q15">Can search engines see the widget?</a></li>
@@ -1391,6 +1464,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>No. Store Feed installs as a Shopify app block, so you place it from Theme Editor. Online Store 2.0 themes are supported (<a href="#s2-2">2.2</a>).</p>
   </div>
   <div class="faq">
+    <h3 id="q22">Can I see how it looks on my store before shoppers do?</h3>
+    <p>Yes. <strong>Add</strong> in the app opens the theme editor with Store Feed already in place, showing your own products in your own theme, and nothing changes on your store until you click <strong>Save</strong>. After Save the widget is on your store, and the entries it shows arrive with the next feed update: click <strong>Refresh now</strong> to send them straight away, or wait for the nightly one. To see it running on a live store first, open our demo store: <a href="https://rook-and-kettle.myshopify.com/" rel="noopener">Rook &amp; Kettle</a> (<a href="#s2-1">2.1</a>, <a href="#s6-1">6.1</a>, <a href="#s6-2">6.2</a>).</p>
+  </div>
+  <div class="faq">
     <h3 id="q12">Where on my store should I put the widget?</h3>
     <p><strong>The header is the best place</strong> - the widget then appears on every page, near the top, where shoppers look first. Page by page:</p>
     <ul>
@@ -1407,8 +1484,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>Yes, with no settings to fill in. The widget takes its fonts from your theme's headings, product card titles and text, its colors from the section it sits in, and its width and spacing from your theme's content area. The widget title is always a little larger than the entry titles (<a href="#s4-9">4.9</a>, <a href="#s5-1">5.1</a>).</p>
   </div>
   <div class="faq">
+    <h3 id="q19">What should I call the widget, and what can I put in the footer?</h3>
+    <p>A short title that says there is something new, in your store's voice - 2-4 words, so it fits on one line on a phone: "What's New", "Fresh this week", "New &amp; on sale", "&#128293; Hot right now". In the footer (Starter) put one more reason to buy or to come back, with a link where it helps: "Free shipping over $50", "30-day free returns", "New arrivals every Friday" (<a href="#s4-1">4.1</a>, <a href="#s4-8">4.8</a>).</p>
+  </div>
+  <div class="faq">
     <h3 id="q14">Which themes is it tested on?</h3>
     <p>Horizon, Dawn, Savor, Craft, Ritual, Publisher, Heritage and Taste. It works with any Online Store 2.0 theme that supports app blocks, so a theme not on this list, or a customized one, will most likely work too. If something doesn't look right, write to us with the theme name, the page address and a screenshot: a fix in the app reaches every store (<a href="#s11-4">11.4</a>).</p>
+  </div>
+  <div class="faq">
+    <h3 id="q20">Does it work with Shopify Markets, B2B or a headless storefront?</h3>
+    <p>Markets and B2B: every shopper sees the same entries - the widget does not adjust the list to a market or to a B2B catalog. Translations: names and titles appear in your store's default language, also when you have translated them with Translate &amp; Adapt, and the widget title is one text for all languages. Headless storefronts (Hydrogen or your own front end): no, the widget is a block for Online Store themes (<a href="#s10">10</a>, <a href="#s4-3b">4.3b</a>).</p>
+  </div>
+  <div class="faq">
+    <h3 id="q21">What happens when I switch themes?</h3>
+    <p>The widget belongs to the theme you added it to. After you publish another theme, the app shows its pages as not added yet - click <strong>Add</strong> again and the widget is back, with the same settings (<a href="#s2-1">2.1</a>).</p>
   </div>
   <div class="faq">
     <h3 id="q4">Will it slow my store down?</h3>
@@ -1424,7 +1513,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div class="faq">
     <h3 id="q3">How often does the feed refresh?</h3>
-    <p>Every night at 00:15 UTC. Changes to your discounts in Shopify, and Shopify Rollouts, reach the widget on their own a few seconds later. You can force an earlier refresh from the app dashboard, once every 5 minutes (<a href="#s6-1">6.1</a>, <a href="#s6-2">6.2</a>).</p>
+    <p>Every night at 00:15 UTC - the app shows that time in your store's own time zone, under <strong>Refresh now</strong>. Changes to your discounts in Shopify, and Shopify Rollouts, reach the widget on their own a few seconds later. You can force an earlier refresh from the app dashboard, once every 5 minutes (<a href="#s6-1">6.1</a>, <a href="#s6-2">6.2</a>).</p>
   </div>
   <div class="faq">
     <h3 id="q5">Can customers close the widget?</h3>
@@ -1444,7 +1533,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div class="faq">
     <h3 id="q16">What happens if I uninstall the app?</h3>
-    <p>The widget disappears from your store together with the app, and you don't need to edit your theme. Shopify cancels a Starter subscription automatically. About 48 hours later Shopify asks apps to erase the store's data, and we then permanently delete your settings, the feed and the statistics (<a href="#s1-3">1.3</a>, <a href="#s9-3">9.3</a>).</p>
+    <p>The widget disappears from your store together with the app, and you don't need to edit your theme. Shopify cancels a Starter subscription automatically. About 48 hours later Shopify asks apps to erase the store's data, and we then permanently delete your settings, the feed and the statistics. If that request never arrives, we delete everything ourselves 20 days after you uninstall (<a href="#s1-3">1.3</a>, <a href="#s9-3">9.3</a>).</p>
   </div>
   <div class="faq">
     <h3 id="q17">I run a large store. Will it keep up?</h3>
@@ -1456,7 +1545,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div class="faq">
     <h3 id="q9">How are views and clicks counted?</h3>
-    <p>One view per page, however many copies of the widget the page shows: the widget in the header and another on the home page count as one view. Every click on an entry, a collection or product name, or <strong>Use code</strong> counts once, in whichever copy it happens. The widget sends its counts through your store's own address (the Shopify app proxy), and Shopify signs every request, so no one can add numbers to another store's statistics. Bots, crawlers and automated browsers are not counted (<a href="#s7">7</a>).</p>
+    <p><strong>A view counts when the widget appears on the shopper's screen</strong> - at least its title bar - not when the page loads, so a widget lower down counts only once the shopper scrolls to it. One view per page, however many copies the page shows. <strong>A click</strong> counts once for an entry, a collection or product name on a promotion card, or <strong>Use code</strong>; <strong>Copy</strong> is not counted. Counts are sent only for shoppers who allow analytics in your store's customer privacy settings, and bots and crawlers are never counted. The widget sends them through your store's own address (the Shopify app proxy), signed by Shopify, so no one can add numbers to another store's statistics. Statistics are kept for 180 days and the app shows the last 90 (<a href="#s7">7</a>).</p>
   </div>
   <div class="faq">
     <h3 id="q10">My statistics stopped updating</h3>

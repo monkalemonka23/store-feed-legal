@@ -117,7 +117,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </nav>
 
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: October 29, 2026</p>
+    <p class="updated">Last updated: October 30, 2026</p>
 
     <p>
       This Privacy Policy describes how GrowBoost ("we", "us", or "our") collects, uses, and
@@ -161,12 +161,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <li><strong>Shop domain</strong> - your Shopify store's permanent domain (e.g. yourstore.myshopify.com)</li>
       <li><strong>Access token</strong> - a Shopify API access token that allows the App to read your store's products, blog articles, discounts, discount rollouts and themes in order to build the feed (see the permissions below)</li>
       <li><strong>App configuration</strong> - your widget settings (title, colors, icon set, visibility preferences, etc.)</li>
-      <li><strong>Aggregated analytics</strong> - anonymous, aggregated counts of widget impressions and clicks per day, broken down by device type (desktop, tablet, mobile). We do not collect or store any personal data about your store visitors.</li>
+      <li><strong>Aggregated analytics</strong> - anonymous, aggregated counts of widget impressions and clicks per day, broken down by device type (desktop, tablet, mobile). On the Starter plan the same daily counts are also kept per widget copy: the widget title it showed, whether it started open or folded, and how many entries it showed, so you can compare which setup works best. We do not collect or store any personal data about your store visitors.</li>
     </ul>
 
     <p>
-      Store Feed stores only daily counts of widget views and clicks per device type. It does not
-      store shoppers' IP addresses or any personal data. The widget sends its counts through your
+      Store Feed stores only daily counts of widget views and clicks per device type, and on the
+      Starter plan also per widget title, starting state (open or folded) and number of entries, to
+      show you which widget setup works best. It does not
+      store shoppers' IP addresses or any personal data. The widget sends these counts only when the
+      shopper allows analytics in your store's customer privacy settings (Shopify Customer Privacy
+      API): shoppers who decline analytics are not counted at all. The widget sends its counts through your
       store's own address (the Shopify app proxy), and Shopify signs every request. To keep anyone
       from inflating those counts, our server limits how many requests one sender may make per
       minute; for that purpose it keeps a one-way hash (SHA-256) of the sender's IP address in
@@ -218,6 +222,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       by the App's backend. We use industry-standard security practices to protect your data.
     </p>
     <p>
+      <strong>Where we store data.</strong> Store Feed's servers and database are hosted in the
+      United States (Virginia) by Fly.io, Inc. and Supabase Pte. Ltd. They process data only on our
+      behalf, under data processing agreements. Transfers of personal data from the European
+      Economic Area to the United States are protected by the Standard Contractual Clauses adopted
+      by the European Commission (Implementing Decision (EU) 2021/914), included in those agreements.
+    </p>
+    <p>
       Your Shopify access token is stored securely in our database and is used solely to make
       authorized API calls to your store. We do not log or share access tokens.
     </p>
@@ -228,7 +239,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       the App, we mark your store as uninstalled and stop accessing your Shopify store data.
       Upon receiving a <em>shop/redact</em> webhook from Shopify (typically 48 hours after
       uninstall), we permanently delete all data associated with your store, including the
-      feed cache, analytics, and configuration.
+      feed cache, analytics, and configuration. If that request never arrives, we delete
+      everything ourselves 20 days after you uninstall.
+    </p>
+    <p>
+      Statistics are kept for 180 days and the app shows the last 90; older days are deleted
+      every night.
     </p>
 
     <h2 id="p6">6. Customer Data Requests</h2>
