@@ -15,7 +15,7 @@ A chronological "what's new" feed for a Shopify storefront: new products, blog
 articles and active promotions in one widget, on any page, in the header or in
 the footer. Free plan, or Starter at $7.99 a month or $79.99 a year (17% off), with a
 14-day free trial. Version 1 has been submitted to
-the Shopify App Store review; planned release 9 November 2026.
+the Shopify App Store review; planned release 21 November 2026.
 
 - [Project page](https://growboost.pl/store-feed-what-s-new-app/): overview, pricing and screenshots
 - [Documentation](https://growboost.pl/store-feed-what-s-new-app/#doc): numbered guide, sections 1-11
@@ -187,16 +187,15 @@ Key facts, so they are not guessed:
   saved settings reach the store with the nightly update, or at once with Refresh now.
   Shoppers see the change on the next page they open.
 
-Measured on a Shopify development store (Horizon theme) with Lighthouse 13.5.0 on
-Chrome 156, mobile, October 2026: 3 runs per page type, medians, with the widget in
-the header plus one or two more copies on the page and 22 entries in the feed.
+Measured on a live test store with Shopify's Horizon theme, November 2026, using
+Google PageSpeed Insights: 296 mobile test runs, 24 entries in the feed.
 
-- The Lighthouse mobile performance score is 84.0 with the widget and 86.3 without,
-  a difference of 2.3 points, weighted the way Shopify weights its own test: home page
-  17%, product pages 40%, collection pages 43%. Shopify's limit for app blocks is 10
-  points.
-- Layout shift caused by the widget (CLS) measured 0 on every run, on all three page
-  types.
+- Pages with Store Feed scored no lower than the same pages without it, also when
+  weighted the way Shopify weights its own test: home page 17%, product pages 40%,
+  collection pages 43%. On product pages the two were within measurement noise:
+  71.1 with the widget and 69.3 without. Shopify's limit for app blocks is 10 points.
+- Layout shift caused by the widget (CLS) was 0 in the median run and never above
+  0.01.
 - The widget transfers one script file of about 17 KB compressed per page, and no
   separate stylesheet: its styles travel inside the page.
 - Lighthouse reports no accessibility issues attributable to the widget.
