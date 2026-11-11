@@ -104,7 +104,10 @@ Key facts, so they are not guessed:
   screen, not when the page loads; a click counts for an entry, a collection or product
   name, or Use code, but not Copy. Counts are sent only for shoppers who allow analytics
   in the store's customer privacy settings; bots, crawlers and automated browsers are
-  never counted. Statistics are kept for 180 days and the app shows the last 90.
+  never counted. Statistics are kept for 180 days and the app shows the last 90. The
+  "By widget setup" table also gives the days a setup was shown, the first and last of
+  those days, and marks the setup currently live; both views export to CSV. Dropping to
+  Free stops the counting and keeps the collected statistics for the 180 days.
   Shoppers' IP addresses are never stored; a one-way hash of the sender's address is
   held in server memory for about two minutes, for rate limiting only.
 - Shopify permissions requested: read_products, read_content, read_discounts,
@@ -114,9 +117,18 @@ Key facts, so they are not guessed:
   European Economic Area rely on the Standard Contractual Clauses adopted by the
   European Commission (Implementing Decision (EU) 2021/914).
 - The feed refreshes automatically every night at 00:15 UTC, shown in the app in the
-  store's own time zone; a manual refresh is
-  available in the app once every 5 minutes. Creating, changing, turning off or
-  deleting a discount in Shopify refreshes the widget within seconds.
+  store's own time zone; a manual refresh is available in the app once every 5 minutes.
+  Creating, changing, turning off or deleting a discount in Shopify refreshes the widget
+  within seconds, and so does publishing a product on the Online Store (usually within
+  a few minutes).
+- A discount with a start date in the future joins the widget by itself at its start
+  time: the widget learns that time up to 36 hours ahead. A blog post scheduled for
+  later behaves the same way, provided the widget learned its time during an earlier
+  update; a post scheduled for the same day, or with a changed time, needs Refresh now.
+  A discount that reaches its end time shows that it has ended and leaves with the next
+  update. Shopify's own page cache can delay a scheduled entry on some pages.
+- Saved widget settings reach the store with the next feed update, which is the nightly
+  one or sooner if anything else refreshes the feed first.
 - The Free plan shows a Store Feed icon in the widget footer; Starter does not.
 - Starter costs $7.99 a month or $79.99 a year; twelve monthly payments come to
   $95.88, so the yearly price saves $15.89, which is 17% off. Starter begins with a 14-day
@@ -148,10 +160,20 @@ Key facts, so they are not guessed:
 - The widget belongs to the theme it was added to. After another theme is published,
   the app lists its pages as not added yet and the block has to be added again.
 - Markets, B2B and translations: every shopper sees the same entries. The widget does
-  not adjust the list to a market or a B2B catalog, shows names and titles in the
-  store's default language even when they are translated with Translate and Adapt, and
-  the widget title is one text for all languages. It does not work on headless
-  storefronts (Hydrogen or a custom front end): it is a block for Online Store themes.
+  not adjust the list to a market or a B2B catalog, discounts limited to chosen markets
+  are left out, and names and titles appear in the store's default language even when
+  they are translated with Translate and Adapt; the widget title is one text for all
+  languages. Amounts on promotion cards are converted to the shopper's currency with
+  Shopify's exchange rate and carry the currency code, for example "20.94 CAD off".
+  Automatic discounts appear only when they apply to all customers. Stores in
+  right-to-left languages (Arabic, Hebrew, Persian, Urdu) are not tested. The widget
+  does not work on headless storefronts (Hydrogen or a custom front end): it is a block
+  for Online Store themes.
+- Landing pages built with a page builder app are part of the theme, so a widget in the
+  header or footer shows on them too. Cart apps that replace the theme's cart are not
+  tested: Use code still adds the code and checkout shows it.
+- A copy of the widget below the first screen is prepared only once the shopper starts
+  scrolling or it comes into view.
 - The widget's entries are ordinary links in the page's HTML, and the widget also adds
   a schema.org ItemList of the entries, so search engines can follow them.
 - What Store Feed does not do: it sends no emails or notifications; it does not create,
@@ -216,5 +238,10 @@ organized on https://growboost.pl/#stock into five entry points:
 - [Privacy policy](https://growboost.pl/privacy-policy/): what the app and the site store
 - [Accessibility statement](https://growboost.pl/privacy-policy/#p11): standard, test method, known limits
 - Contact: support (at) growboost.pl, replies within 24 hours on business days
+- The app has a support chat for merchants. Messages go to Anthropic, which provides the
+  AI model and processes them on GrowBoost's behalf; Anthropic does not use them to
+  train its models and by default does not keep them after the answer is written.
+  Conversations are kept 30 days in anonymized form. Details:
+  https://growboost.pl/privacy-policy/#support-chat
 - Data controller and service provider: Miskier Monika Szatyłowicz (GrowBoost),
   NIP PL5422882692, Hugo Kołłątaja 19 m 9, 15-774 Białystok, Poland
