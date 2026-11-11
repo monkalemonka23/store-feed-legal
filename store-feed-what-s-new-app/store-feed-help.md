@@ -89,7 +89,11 @@ A Starter subscription covers the one store it was bought for.
    it and click **Save**.
 
 Nothing changes on your store until you click **Save**: the theme editor is
-your preview, with your own products and your own theme.
+your preview, with your own products and your own theme. That **Save** in the
+theme editor places the widget. Settings you change in the Store Feed app
+(title, entries, look) are a separate **Save** in the app, and they reach
+your store with the nightly update, or right away when you click
+**Refresh now** (6.3).
 
 On product pages, **Add** puts Store Feed in the product section, under the
 photos and product details. The best spot is in the column with **Add to
@@ -124,6 +128,10 @@ is live: **Active on your store**, or **Not on your store yet**.
 If Store Feed is not on the list, your theme does not support app sections.
 This is the case for some older themes.
 
+The block has no settings in the theme editor: you only place it there. All
+settings (title, entries, look) are in the Store Feed app, and they apply to
+every copy of the widget (2.4).
+
 ### 2.3 Where it works best
 
 - **In the header (recommended)**: it appears on every page, near the top,
@@ -138,6 +146,9 @@ This is the case for some older themes.
   every product in the grid.
 - **It needs at least 200 px of width.** In very narrow spots (for example the
   row of icons in a header) it stays hidden.
+- **Pages made with a page builder app** (landing pages built outside the
+  theme editor): add Store Feed in the header or footer. They are part of
+  your theme, so the widget shows on those pages too.
 
 **Page by page:**
 
@@ -184,11 +195,12 @@ Tip: a product added through an import or an app is sometimes active but not
 available on the Online Store channel. Open the product in Shopify, check
 **Sales channels** and make sure **Online Store** is ticked.
 
-New products reach the widget with the next update: every night, or right
-away with **Refresh now** (6.1, 6.2). The date that counts is the date the
-product was published on the Online Store. A product scheduled to go live
-later is not on the Online Store until that time, so it can join the feed
-only with an update after it goes live.
+A new product reaches the widget on its own shortly after it is published
+on the Online Store, usually within a few minutes. This includes a product
+scheduled to go live later: it joins the widget when it goes live, not
+before. The date that counts is the date the product was published on the
+Online Store. If a product is missing, click **Refresh now** (6.2); the
+nightly update (6.1) also picks up every product.
 
 Products that are sold out are not shown.
 
@@ -197,8 +209,14 @@ See also: 3.7 Choosing what to include (Starter)
 ### 3.2 Blog posts (Starter)
 
 Starter only. Published blog posts from the chosen time window (last 7, 14
-or 30 days). A post scheduled for later appears after it is published, with
-the next update (6.1, 6.2).
+or 30 days).
+
+A post scheduled for later appears in the widget at its publish time. The
+widget learns about scheduled posts during an update (6.1), up to 36 hours
+ahead, so a post planned a day or more in advance needs nothing from you. If
+you schedule a post for later the same day, or change its publish time, click
+**Refresh now** (6.2). Without it the widget shows the post with the next
+nightly update, or at the time it knew before.
 
 See also: 3.7 Choosing what to include (Starter)
 
@@ -210,10 +228,17 @@ and tips for naming discounts in Shopify (3.3.4).
 
 #### 3.3.1 Which promotions appear
 
-- Promotions must be **active**.
+- Promotions must be **active**. A promotion with a start date in the future
+  appears in the widget on its own when it starts (6.1). Before that it is
+  not shown and does not count towards the number of entries.
 - Promotions that **started before the chosen time window** still appear while
   they run, but only in places left free by everything else (3.4).
-- **Automatic discounts** appear automatically.
+- **Automatic discounts** appear automatically when they apply to all
+  customers. An automatic discount for selected customers only (a customer
+  segment or a list of customers) doesn't appear.
+- **Discounts for specific markets** (for example only Canada) don't
+  appear, also with the tag `public`: the widget shows the same list in
+  every market (10).
 - **Discount codes** appear when they are **available to all customers**, or
   when you add the tag `public` to a code that is limited to some customers.
   A tagged code is shown to everyone who sees the widget.
@@ -275,6 +300,13 @@ and tips for naming discounts in Shopify (3.3.4).
 - In the terms, a discount code lists the store's automatic discounts it
   can't be combined with, and says that the store applies the one that
   saves more.
+- Amounts on promotion cards (in discount names, values and terms) are
+  shown in the shopper's currency. When a shopper shops in another currency
+  than your store's (Shopify Markets), the widget converts them with
+  Shopify's exchange rate and adds the currency code, for example "$15 off"
+  becomes "20.94 CAD off" for a shopper in Canada. Checkout applies the
+  discount in the shopper's currency; small differences from rounding are
+  possible.
 - Automatic discounts (no code) show, where other cards have the code
   buttons, "Already applied in your cart" when the discount already
   applies in the shopper's cart, or "Applies automatically once you meet
@@ -348,6 +380,10 @@ a status line instead (3.3.2).
   can't be combined with, or a country it isn't for). When the shopper
   changes the products in the theme's cart, the widget reads the cart
   again and updates the buttons and these notes.
+- Cart apps that replace the theme's cart (for example a slide-out cart
+  from another app) are not tested. **Use code** still adds the code to the
+  shopper's cart, and checkout shows it; the other app's cart may show it
+  only after it refreshes.
 - **Copy** copies the code, for shoppers who prefer to paste it at checkout.
 Codes that contain a comma show only Copy (Shopify's cart can't take them
 from a button). The code is never shortened. The code and its buttons
@@ -622,8 +658,21 @@ The list updates on its own every night at 00:15 UTC (for example 7:15 or
 on daylight saving time). The app shows this time in your store's time zone,
 under **Refresh now**. When you create, change, turn off or delete a
 discount in Shopify, or a Shopify Rollout
-changes, the widget updates on its own a few seconds later. New products
-and blog posts wait for the nightly update, or for **Refresh now** (6.2).
+changes, the widget updates on its own a few seconds later. The same
+happens when a product is published on the Online Store (3.1). New blog
+posts wait for the nightly update, or for **Refresh now** (6.2).
+
+A discount with a start date in the future joins the widget on its own at
+its start time: the widget knows that time in advance, up to 36 hours ahead,
+and every change to the discount updates it. The same goes for a blog post
+scheduled for later (3.2). When the list is full, the new entry takes the
+place of the entry that would be left out anyway (3.4).
+
+A discount that reaches its end time shows that it has ended and leaves the
+widget with the next update: the nightly one, or **Refresh now** (6.2).
+
+Shopify sometimes serves a page from its own cache, so on some pages a
+scheduled entry can appear a little later than its start time.
 
 ### 6.2 Updating now
 
@@ -637,16 +686,25 @@ again.
    at the top when you have unsaved changes. The preview in the app now shows
    your real entries with the new settings (how many, from which dates,
    collections and blogs).
-2. Saved settings reach your store with the nightly update. To send them
-   now, click **Refresh now**.
+2. Saved settings reach your store with the next feed update: the nightly
+   one, or sooner if something else updates the feed first, for example a
+   change to one of your discounts. To send them now, click **Refresh now**.
 3. Reload your store page (Ctrl+F5 on Windows, Cmd+Shift+R on Mac).
 
-Shoppers see the change on the next page they open.
+Shoppers see the change on the next page they open. Shopify sometimes serves
+a page from its own cache, so on a busy store the change can appear a little
+later on some pages.
 
 ### 6.4 After changing your plan
 
 Open the Store Feed app once after the change. The widget then updates to the
 new plan by itself.
+
+On the Free plan, blog posts and promotions leave the widget, it shows up to
+6 products, and Starter-only settings use the Free defaults (1.1). The widget
+stops counting views and clicks. Statistics collected on Starter are kept for
+180 days; when you return to Starter, the app shows them again (the last 90
+days, 7).
 
 ---
 
@@ -667,8 +725,17 @@ What the numbers in the app mean:
   last 7, 30 or 90 days.
 - **By widget setup**: each copy of the widget on its own. **Widget title**
   is the title it showed, **Started** says whether it started open or
-  folded to its title bar, **Entries** how many entries it showed. Change
+  folded to its title bar, **Entries** how many entries it showed,
+  **Days shown** on how many days it had at least one view or click in the
+  chosen period, and **Dates** the first and last of those days. Change
   the title or the number of entries and compare the CTR before and after.
+  **Active** marks the setup your store shows now (from the last
+  **Refresh now** or nightly update). Click a column name to sort the
+  table; it shows 10 setups per page.
+- **Export CSV**: next to the period buttons, the day-by-day numbers for the
+  chosen period (views and clicks, also by device); next to **By widget
+  setup**, all setups of that period. The files open in Excel, Numbers and
+  Google Sheets.
 
 How they are counted:
 
@@ -815,12 +882,16 @@ disappears from your store together with the app (1.3).
   types, or about 10 seconds after the page has loaded.
 - The widget's place on the page is set before the page is shown, so the
   page does not jump when the widget appears.
+- A copy of the widget below the first screen is prepared only after the
+  shopper starts scrolling or tapping, or when it comes into view. A second
+  or third copy lower on the page shows its list only then.
 - Every copy of the widget adds to the page. Use 1-2 per page, 3 at most
   (2.4).
 
 ### 9.5 Accessibility
 
-The widget is built against WCAG 2.1 AA:
+The widget is built against WCAG 2.1 AA, and its tap and click targets also
+follow the WCAG 2.2 rule on target size:
 
 - Every button and link has a name for screen readers that includes the
   words you see on it; **Use code** and **Copy** also name the code they
@@ -830,7 +901,10 @@ The widget is built against WCAG 2.1 AA:
 - On touch screens, "more", "less" and the names in lists have tap areas
   of about 44 px.
 - Text color switches to black or white when the section's colors would
-  make it hard to read (5.2).
+  make it hard to read (5.2). Text on the accent color (4.2) is black or
+  white, whichever has a contrast of at least 4.5:1.
+- Names of collections and products on promotion cards have room around
+  them, so a click or tap doesn't hit the wrong one.
 - Titles are never smaller than 16 px, and descriptions, dates, labels and
   discount terms never smaller than 13 px, whatever the theme uses.
 - With "reduce motion" set on the device, the small repeating hint on the
@@ -863,7 +937,9 @@ structured data (schema.org ItemList).
   when you translated them with Translate & Adapt, and the widget title is
   one text for all languages.
 - It does not adjust the list to Shopify Markets or B2B catalogs: shoppers
-  in every market see the same entries.
+  in every market see the same entries, so discounts set for specific
+  markets are left out (3.3.1). Amounts on promotion cards are
+  converted to the shopper's currency (3.3.2).
 - It does not work on headless storefronts (Hydrogen or your own
   front end): the widget is a block for Online Store themes.
 - It does not change your theme's code. Removing the block, or the app,
@@ -913,9 +989,10 @@ For example 20 products and 5,000 visits a month:
 
 - **Slower pages.** Every copy of the widget adds to the page. Use 1-2 per
   page, 3 at most (2.4, 9.4).
-- **Out-of-date entries for a while.** New products and blog posts reach
-  the widget with the nightly update, or with **Refresh now** (6.1, 6.2).
-  Discounts update within seconds.
+- **Out-of-date entries for a while.** New blog posts reach the widget
+  with the nightly update, or with **Refresh now** (6.1, 6.2). Discounts
+  and newly published products update on their own, usually within a few
+  minutes.
 - **A code that some shoppers can't use.** A code you tag `public` is shown
   to everyone, but Shopify still checks at checkout who may use it (3.3.2).
 - **Missing statistics.** If counts can't be sent, some views and clicks
@@ -934,6 +1011,11 @@ theme that supports app blocks (2.2) and takes its look from your theme
 will most likely work too. If something doesn't look right on your theme,
 write to us (12) with the theme name, the page address and a screenshot.
 We look at every report, and a fix in the app reaches every store.
+
+Store Feed is not tested on stores in right-to-left languages (Arabic,
+Hebrew, Persian, Urdu). The widget may work there, but some parts may sit
+on the wrong side. If you run your store in one of these languages and see
+a problem, please write to us (12) with the page address and a screenshot.
 
 ---
 
