@@ -156,10 +156,13 @@ every copy of the widget (2.4).
   the main banner). New visitors see right away that the store is active:
   new arrivals, recent posts and running deals.
 - **Product pages:** in the header, or as a section below the product
-  details. A promotion that covers the product (or its collection) moves to
-  the top and is marked **Viewing** (3.5), so the shopper sees the deal while
-  deciding. A widget above the product photo starts folded, so the photo
-  and the price stay in view (4.5).
+  details. On a product page the best spot is the column with **Add to cart**,
+  under the button, which is where **Add** in the app puts it (2.1); the
+  header is the recommendation for the store as a whole. A promotion that
+  covers the product (or its collection) moves to the top and is marked
+  **Viewing** (3.5), so the shopper sees the deal while deciding. A widget
+  above the product photo starts folded, so the photo and the price stay in
+  view (4.5).
 - **Collection pages:** as a section above or below the product grid.
   Promotions on that collection are marked **Viewing** (3.5).
 - **Blog posts:** as a section below the article. A reader who finishes
@@ -604,7 +607,8 @@ settings to fill in:
   titles; the rest uses your theme's text font.
 - **Sizes:** text follows your theme's text size (between 12 and 18 px) and
   line spacing. Entry titles are at least 16 px and never smaller than the
-  text. The widget title follows your headings (16-26 px) and is always a
+  text. Descriptions, dates, labels and discount terms never go below 13 px,
+  whatever the theme uses (9.5). The widget title follows your headings (16-26 px) and is always a
   little larger than the entry titles.
 - **Width:** never wider than your theme's content area, centered, with the
   same spacing above and below as your theme's sections (at least 16 px).
@@ -658,9 +662,11 @@ The list updates on its own every night at 00:15 UTC (for example 7:15 or
 on daylight saving time). The app shows this time in your store's time zone,
 under **Refresh now**. When you create, change, turn off or delete a
 discount in Shopify, or a Shopify Rollout
-changes, the widget updates on its own a few seconds later. The same
-happens when a product is published on the Online Store (3.1). New blog
-posts wait for the nightly update, or for **Refresh now** (6.2).
+changes, the widget updates on its own, usually within a few minutes. The
+same happens when a product is published on the Online Store (3.1). The feed
+itself is rebuilt as soon as Shopify tells the app about the change; shoppers
+see the new entry on the next page they open. New blog posts wait for the
+nightly update, or for **Refresh now** (6.2).
 
 A discount with a start date in the future joins the widget on its own at
 its start time: the widget knows that time in advance, up to 36 hours ahead,
@@ -817,8 +823,9 @@ The widget uses the colors of its section. Change the section's color scheme
 2. Click **Refresh now**. If the button is locked, wait until the time shown
    on it (6.2).
 3. Wait for the green message **"Feed refreshed: N entries in your widget"**.
-   Only then are your changes sent to your store. If you see a yellow message
-   instead, try again in a few minutes.
+   Only then are your changes sent to your store right away. Without
+   **Refresh now** they go with the nightly update (6.3). If you see a yellow
+   message instead, try again in a few minutes.
 4. Open your store page and reload it without the saved copy:
    - **Windows** (Chrome, Edge, Firefox): press **Ctrl + F5**
      (or **Ctrl + Shift + R**).
@@ -852,7 +859,17 @@ customer permissions and stores no personal data about your shoppers. It
 stores your store's address, the access Shopify gives the app, your widget
 settings, the current feed, daily totals of views and clicks per device
 type, and on Starter the same totals per widget title, starting state
-(open or folded) and number of entries (7). Details: the privacy policy on growboost.pl.
+(open or folded) and number of entries (7). Why the install screen mentions blog contributors: Shopify grants access to
+blog content at the level of the whole blog, and that area also covers
+comments on posts. A comment carries its author's e-mail address, IP address,
+browser and operating system, so the install screen lists them among the data
+the permission could reach. Shopify has no narrower permission that would give
+post titles without comments. From each published post Store Feed reads five
+fields: the title, the handle, the publish date, the summary and the image. It
+never reads the post's author, the comments on it, or the data of the people
+who write them, and stores none of that.
+
+Details: the privacy policy on growboost.pl.
 
 ### 9.2 Cookies
 
@@ -926,9 +943,12 @@ structured data (schema.org ItemList).
 - It does not show prices or stock levels on its cards.
 - It does not appear in checkout. Shopify's checkout does not show theme
   sections.
-- It does not run A/B tests and does not show different lists to different
-  shoppers. Every shopper sees the same list; only the notes about their
-  own cart and the **Viewing** mark (3.5) differ.
+- It does not run A/B tests and does not pick different entries for
+  different shoppers. Every shopper sees the same entries, chosen the same
+  way. What can differ for one shopper: an entry is skipped when they are
+  already on its page (3.5), a promotion they already have in their cart
+  moves to the end of the list (3.4), and the notes about their own cart and
+  the **Viewing** mark (3.5).
 - It does not show drafts, archived or unpublished products, sold-out
   products, or discount codes limited to some customers (unless you tag
   them `public`, 3.3.1).

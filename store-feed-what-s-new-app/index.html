@@ -23,15 +23,15 @@
 <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
 <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 <meta name="theme-color" content="#7F77DD">
-<link rel="icon" href="/favicon.ico?v=20261029b" sizes="any">
+<link rel="icon" href="/favicon.ico?v=20261112" sizes="any">
 <link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon-64-v2.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon-v2.png">
-<link rel="stylesheet" href="/assets/site.css?v=20261029b">
-<link rel="stylesheet" href="/assets/consent.css?v=20261029b">
-<script src="/assets/consent.js?v=20261029b"></script>
-<script src="/assets/launch.js?v=20261029b" defer></script>
-<script src="/assets/gallery.js?v=20261029b" defer></script>
-<script src="/assets/mail.js?v=20261029b" defer></script>
+<link rel="stylesheet" href="/assets/site.css?v=20261112">
+<link rel="stylesheet" href="/assets/consent.css?v=20261112">
+<script src="/assets/consent.js?v=20261112"></script>
+<script src="/assets/launch.js?v=20261112" defer></script>
+<script src="/assets/gallery.js?v=20261112" defer></script>
+<script src="/assets/mail.js?v=20261112" defer></script>
 
 <script type="application/ld+json">
 {
@@ -115,7 +115,7 @@
     { "@type": "Question", "name": "Can I see how it looks on my store before shoppers do?",
       "acceptedAnswer": { "@type": "Answer", "text": "Yes. Add in the app opens the theme editor with Store Feed already in place, showing your own products in your own theme, and nothing changes on your store until you click Save. After Save the widget is on your store, and the entries it shows arrive with the next feed update: click Refresh now to send them straight away, or wait for the nightly one (2.1, 6.1, 6.2)." } },
     { "@type": "Question", "name": "Where on my store should I put the widget?",
-      "acceptedAnswer": { "@type": "Answer", "text": "The header is the best place - the widget then appears on every page, near the top, where shoppers look first. Page by page: Home page: the header, or its own section near the top, so new visitors see the store is active. Product pages: the header, or a section below the product details. A promotion that covers the product is marked Viewing (3.5). Collection pages: a section above or below the product grid. Blog posts: a section below the article - a short way from reading to shopping. Pages from a page builder app: landing pages built outside the theme editor are still part of your theme, so a widget in the header or footer shows on them too. Checkout: not possible, Shopify doesn't allow app blocks there. A code added with Use code is already in the cart when the shopper gets to checkout (3.3.3). Full guidance: 2.3." } },
+      "acceptedAnswer": { "@type": "Answer", "text": "The header is the best place - the widget then appears on every page, near the top, where shoppers look first. Page by page: Home page: the header, or its own section near the top, so new visitors see the store is active. Product pages: the header, or a section below the product details - best of all in the column with Add to cart, under the button, which is where Add in the app puts it. A promotion that covers the product is marked Viewing (3.5). Collection pages: a section above or below the product grid. Blog posts: a section below the article - a short way from reading to shopping. Pages from a page builder app: landing pages built outside the theme editor are still part of your theme, so a widget in the header or footer shows on them too. Checkout: not possible, Shopify doesn't allow app blocks there. A code added with Use code is already in the cart when the shopper gets to checkout (3.3.3). Full guidance: 2.3." } },
     { "@type": "Question", "name": "Will it match my theme?",
       "acceptedAnswer": { "@type": "Answer", "text": "Yes, with no settings to fill in. The widget takes its fonts from your theme's headings, product card titles and text, its colors from the section it sits in, and its width and spacing from your theme's content area. The widget title is always a little larger than the entry titles (4.9, 5.1)." } },
     { "@type": "Question", "name": "What should I call the widget, and what can I put in the footer?",
@@ -229,7 +229,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
   <section class="launch" id="launch" aria-labelledby="launch-h">
-    <p class="launch__label" id="launch-h">Planned release date: 9 November 2026</p>
+    <p class="launch__label" id="launch-h">Planned release date: 21 November 2026</p>
 
     <div class="cd" id="countdown">
       <span class="cd__unit"><strong class="cd__num" id="cd-days">-</strong><span class="cd__cap">days</span></span>
@@ -373,12 +373,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <ul class="facts">
     <li class="fact">
-      <p class="fact__num">2.3 pt</p>
-      <p class="fact__txt"><b>the Lighthouse mobile performance difference.</b> 84.0 with Store Feed against 86.3 without, weighted the way Shopify weights its own test: home page 17%, product pages 40%, collection pages 43%. Shopify's limit for app blocks is 10 points.</p>
+      <p class="fact__num">296</p>
+      <p class="fact__txt"><b>mobile test runs with Google PageSpeed Insights.</b> Pages with Store Feed scored no lower than the same pages without it, also when weighted the way Shopify weights its own test: home page 17%, product pages 40%, collection pages 43%. On product pages the two were within measurement noise: 71.1 with, 69.3 without.</p>
     </li>
     <li class="fact">
       <p class="fact__num">0</p>
-      <p class="fact__txt"><b>layout shift from the widget.</b> Cumulative Layout Shift measured 0 on every run, on all three page types - the page does not jump when the feed appears.</p>
+      <p class="fact__txt"><b>layout shift from the widget.</b> Cumulative Layout Shift was 0 in the median run and never above 0.01 - the page does not jump when the feed appears.</p>
     </li>
     <li class="fact">
       <p class="fact__num">0</p>
@@ -390,7 +390,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </li>
   </ul>
 
-  <p class="facts__note">Tested with Lighthouse on Chrome and Edge, mobile, on a Shopify development store with the Horizon theme, October 2026: several runs per page type, medians, with the widget in the header plus one or two more copies on the page and 22 entries in the feed. The widget is also built against WCAG 2.1 AA - what that covers, and the one limit that depends on your theme, is written out in our <a href="/privacy-policy/#p11">accessibility statement</a>.</p>
+  <p class="facts__note">Measured on a live test store with Shopify's Horizon theme, November 2026, with 24 entries in the feed. The widget is also built against WCAG 2.1 AA - what that covers, and the one limit that depends on your theme, is written out in our <a href="/privacy-policy/#p11">accessibility statement</a>.</p>
 
   <h2>Built without touching customer data</h2>
   <p>Store Feed reads your products, blog articles, discounts and discount rollouts, plus which of your theme's sections carry the widget. It requests no customer scopes and stores no personal data about your visitors: views and clicks are kept as daily totals per device type, and your visitors' IP addresses are never stored. Dismissing the widget is remembered in the visitor's browser session, not on our servers. Full detail in the <a href="/privacy-policy/">privacy policy</a>.</p>
@@ -785,10 +785,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     the main banner). New visitors see right away that the store is active:
     new arrivals, recent posts and running deals.</li>
   <li><strong>Product pages:</strong> in the header, or as a section below the product
-    details. A promotion that covers the product (or its collection) moves to
-    the top and is marked <strong>Viewing</strong> (<a href="#s3-5">3.5</a>), so the shopper sees the deal while
-    deciding. A widget above the product photo starts folded, so the photo
-    and the price stay in view (<a href="#s4-5">4.5</a>).</li>
+    details. On a product page the best spot is the column with <strong>Add to cart</strong>,
+    under the button, which is where <strong>Add</strong> in the app puts it (<a href="#s2-1">2.1</a>); the
+    header is the recommendation for the store as a whole. A promotion that
+    covers the product (or its collection) moves to the top and is marked
+    <strong>Viewing</strong> (<a href="#s3-5">3.5</a>), so the shopper sees the deal while deciding. A widget
+    above the product photo starts folded, so the photo and the price stay in
+    view (<a href="#s4-5">4.5</a>).</li>
   <li><strong>Collection pages:</strong> as a section above or below the product grid.
     Promotions on that collection are marked <strong>Viewing</strong> (<a href="#s3-5">3.5</a>).</li>
   <li><strong>Blog posts:</strong> as a section below the article. A reader who finishes
@@ -1183,7 +1186,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     titles; the rest uses your theme's text font.</li>
   <li><strong>Sizes:</strong> text follows your theme's text size (between 12 and 18 px) and
     line spacing. Entry titles are at least 16 px and never smaller than the
-    text. The widget title follows your headings (16-26 px) and is always a
+    text. Descriptions, dates, labels and discount terms never go below 13 px,
+    whatever the theme uses (<a href="#s9-5">9.5</a>). The widget title follows your headings (16-26 px) and is always a
     little larger than the entry titles.</li>
   <li><strong>Width:</strong> never wider than your theme's content area, centered, with the
     same spacing above and below as your theme's sections (at least 16 px).
@@ -1226,9 +1230,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   on daylight saving time). The app shows this time in your store's time zone,
   under <strong>Refresh now</strong>. When you create, change, turn off or delete a
   discount in Shopify, or a Shopify Rollout
-  changes, the widget updates on its own a few seconds later. The same
-  happens when a product is published on the Online Store (<a href="#s3-1">3.1</a>). New blog
-  posts wait for the nightly update, or for <strong>Refresh now</strong> (<a href="#s6-2">6.2</a>).</p>
+  changes, the widget updates on its own, usually within a few minutes. The
+  same happens when a product is published on the Online Store (<a href="#s3-1">3.1</a>). The feed
+  itself is rebuilt as soon as Shopify tells the app about the change; shoppers
+  see the new entry on the next page they open. New blog posts wait for the
+  nightly update, or for <strong>Refresh now</strong> (<a href="#s6-2">6.2</a>).</p>
   <p>A discount with a start date in the future joins the widget on its own at
   its start time: the widget knows that time in advance, up to 36 hours ahead,
   and every change to the discount updates it. The same goes for a blog post
@@ -1332,7 +1338,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   stores your store's address, the access Shopify gives the app, your widget
   settings, the current feed, daily totals of views and clicks per device
   type, and on Starter the same totals per widget title, starting state
-  (open or folded) and number of entries (<a href="#s7">7</a>). Details: the privacy policy on growboost.pl.</p>
+  (open or folded) and number of entries (<a href="#s7">7</a>). Why the install screen mentions blog contributors: Shopify grants access to
+  blog content at the level of the whole blog, and that area also covers
+  comments on posts. A comment carries its author's e-mail address, IP address,
+  browser and operating system, so the install screen lists them among the data
+  the permission could reach. Shopify has no narrower permission that would give
+  post titles without comments. From each published post Store Feed reads five
+  fields: the title, the handle, the publish date, the summary and the image. It
+  never reads the post's author, the comments on it, or the data of the people
+  who write them, and stores none of that.</p>
+  <p>Details: the privacy policy on growboost.pl.</p>
   <h4 id="s9-2">9.2 Cookies</h4>
   <p>The widget sets no cookies. It uses the browser's session storage to
   remember, for that shopper only: that they closed or folded the widget,
@@ -1397,9 +1412,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <li>It does not show prices or stock levels on its cards.</li>
   <li>It does not appear in checkout. Shopify's checkout does not show theme
     sections.</li>
-  <li>It does not run A/B tests and does not show different lists to different
-    shoppers. Every shopper sees the same list; only the notes about their
-    own cart and the <strong>Viewing</strong> mark (<a href="#s3-5">3.5</a>) differ.</li>
+  <li>It does not run A/B tests and does not pick different entries for
+    different shoppers. Every shopper sees the same entries, chosen the same
+    way. What can differ for one shopper: an entry is skipped when they are
+    already on its page (<a href="#s3-5">3.5</a>), a promotion they already have in their cart
+    moves to the end of the list (<a href="#s3-4">3.4</a>), and the notes about their own cart and
+    the <strong>Viewing</strong> mark (<a href="#s3-5">3.5</a>).</li>
   <li>It does not show drafts, archived or unpublished products, sold-out
     products, or discount codes limited to some customers (unless you tag
     them <code>public</code>, <a href="#s3-3-1">3.3.1</a>).</li>
@@ -1545,7 +1563,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div class="faq">
     <h3 id="q12">Where on my store should I put the widget?</h3>
-    <p><strong>The header is the best place</strong> - the widget then appears on every page, near the top, where shoppers look first. Page by page:</p> <ul> <li><strong>Home page:</strong> the header, or its own section near the top, so new visitors see the store is active.</li> <li><strong>Product pages:</strong> the header, or a section below the product details. A promotion that covers the product is marked <strong>Viewing</strong> (<a href="#s3-5">3.5</a>).</li> <li><strong>Collection pages:</strong> a section above or below the product grid.</li> <li><strong>Blog posts:</strong> a section below the article - a short way from reading to shopping.</li> <li><strong>Pages from a page builder app:</strong> landing pages built outside the theme editor are still part of your theme, so a widget in the header or footer shows on them too.</li> <li><strong>Checkout:</strong> not possible, Shopify doesn't allow app blocks there. A code added with <strong>Use code</strong> is already in the cart when the shopper gets to checkout (<a href="#s3-3-3">3.3.3</a>).</li> </ul> <p>Full guidance: <a href="#s2-3">2.3</a>.</p>
+    <p><strong>The header is the best place</strong> - the widget then appears on every page, near the top, where shoppers look first. Page by page:</p> <ul> <li><strong>Home page:</strong> the header, or its own section near the top, so new visitors see the store is active.</li> <li><strong>Product pages:</strong> the header, or a section below the product details - best of all in the column with <strong>Add to cart</strong>, under the button, which is where <strong>Add</strong> in the app puts it. A promotion that covers the product is marked <strong>Viewing</strong> (<a href="#s3-5">3.5</a>).</li> <li><strong>Collection pages:</strong> a section above or below the product grid.</li> <li><strong>Blog posts:</strong> a section below the article - a short way from reading to shopping.</li> <li><strong>Pages from a page builder app:</strong> landing pages built outside the theme editor are still part of your theme, so a widget in the header or footer shows on them too.</li> <li><strong>Checkout:</strong> not possible, Shopify doesn't allow app blocks there. A code added with <strong>Use code</strong> is already in the cart when the shopper gets to checkout (<a href="#s3-3-3">3.3.3</a>).</li> </ul> <p>Full guidance: <a href="#s2-3">2.3</a>.</p>
   </div>
   <div class="faq">
     <h3 id="q13">Will it match my theme?</h3>
@@ -1666,8 +1684,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <li>Click <strong>Refresh now</strong>. If the button is locked, wait until the time shown
      on it (<a href="#s6-2">6.2</a>).</li>
   <li>Wait for the green message <strong>"Feed refreshed: N entries in your widget"</strong>.
-     Only then are your changes sent to your store. If you see a yellow message
-     instead, try again in a few minutes.</li>
+     Only then are your changes sent to your store right away. Without
+     <strong>Refresh now</strong> they go with the nightly update (<a href="#s6-3">6.3</a>). If you see a yellow
+     message instead, try again in a few minutes.</li>
   <li>Open your store page and reload it without the saved copy:<ul>
   <li><strong>Windows</strong> (Chrome, Edge, Firefox): press <strong>Ctrl + F5</strong>
      (or <strong>Ctrl + Shift + R</strong>).</li>
@@ -1695,11 +1714,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <section id="changelog" aria-labelledby="changelog-h">
   <h2 id="changelog-h">Change log</h2>
   <p class="sub">Store Feed has not been released yet. From launch day this section lists every released version, newest first, so you can see what changed before you update anything on your store.</p>
-  <p>Version 1 is in review for the Shopify App Store, with a planned release on 9 November 2026. Until then, the <a href="#doc">documentation</a> describes the app exactly as it will ship.</p>
+  <p>Version 1 is in review for the Shopify App Store, with a planned release on 21 November 2026. Until then, the <a href="#doc">documentation</a> describes the app exactly as it will ship.</p>
   </section>
 
   <div class="cta">
-    <p class="cta__text">Store Feed goes live on 9 November 2026.</p>
+    <p class="cta__text">Store Feed goes live on 21 November 2026.</p>
     <a class="cta__btn" href="#launch">Get the launch email</a>
   </div>
 
