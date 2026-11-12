@@ -234,6 +234,9 @@ organized on https://growboost.pl/#stock into five entry points:
 ## Company
 
 - [Projects](https://growboost.pl/): the list of GrowBoost projects
+- [Terms of Service](https://growboost.pl/terms/): the merchant agreement - the service,
+  plans and charges, the four provisions Shopify requires about its own role (section 4,
+  anchor #shopify), and a data processing agreement (section 5, anchor #dpa)
 - [Privacy policy](https://growboost.pl/privacy-policy/): what the app and the site store
 - [Accessibility statement](https://growboost.pl/privacy-policy/#p11): standard, test method, known limits
 - Contact: support (at) growboost.pl, replies within 24 hours on business days
