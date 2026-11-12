@@ -13,7 +13,7 @@ import sys
 from axe_core_python.async_playwright import Axe
 from playwright.async_api import async_playwright
 
-PAGES = ['/', '/store-feed-what-s-new-app/', '/privacy-policy/', '/404.html']
+PAGES = ['/', '/store-feed-what-s-new-app/', '/privacy-policy/', '/terms/', '/404.html']
 WIDTHS_AXE = [1280, 390]
 WIDTHS_SCROLL = [320, 390, 768, 1024, 1280, 1440]
 RULES = ['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']
