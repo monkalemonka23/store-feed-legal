@@ -75,6 +75,10 @@ billing period. Until then you keep the features you paid for.
 Each store installs Store Feed separately and has its own plan and settings.
 A Starter subscription covers the one store it was bought for.
 
+Store Feed only sees the store it is installed on, so the app, including the
+chat, can't tell you which of your other stores have it. To check a store,
+open its admin and go to **Settings > Apps and sales channels** (1.3).
+
 ---
 
 ## 2. Adding Store Feed to your store
