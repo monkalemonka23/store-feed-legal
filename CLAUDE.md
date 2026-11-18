@@ -79,7 +79,7 @@ Lokalnie `python3 -m http.server 8899` w katalogu repo, potem Chromium
 ## Pliki, o ktorych latwo zapomniec przy zmianie tresci
 
 - `llms.txt` — fakty dla modeli jezykowych.
-- `store-feed-what-s-new-app/store-feed-help.md` — kopia dokumentacji,
+- `store-feed-new-arrivals/store-feed-help.md` — kopia dokumentacji,
   ma byc zgodna z sekcja `#doc`.
 - `sitemap.xml` — `lastmod`.
 - Dane strukturalne: `SoftwareApplication`, `FAQPage`, `ItemList`,
