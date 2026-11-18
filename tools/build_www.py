@@ -5,8 +5,8 @@ Store Feed z pomocy w repozytorium wtyczki.
   python3 tools/build_www.py ../4.5_store_feed/docs/help/store-feed-help.md
 
 Zmienia:
-  store-feed-what-s-new-app/index.html      sekcje #doc i #faq, FAQPage, ItemList
-  store-feed-what-s-new-app/store-feed-help.md   kopia pomocy (adres zaciemniony)
+  store-feed-new-arrivals/index.html      sekcje #doc i #faq, FAQPage, ItemList
+  store-feed-new-arrivals/store-feed-help.md   kopia pomocy (adres zaciemniony)
 
 Tresc pytan FAQ jest w tools/faq_items.py i to ja sie edytuje recznie.
 Pomoc pochodzi z wtyczki i NIE jest tu poprawiana: zmiany tresci zglasza sie
@@ -22,9 +22,9 @@ import build_doc as B
 import faq_items as F
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PAGE = os.path.join(ROOT, 'store-feed-what-s-new-app', 'index.html')
-HELP_COPY = os.path.join(ROOT, 'store-feed-what-s-new-app', 'store-feed-help.md')
-URL = 'https://growboost.pl/store-feed-what-s-new-app/'
+PAGE = os.path.join(ROOT, 'store-feed-new-arrivals', 'index.html')
+HELP_COPY = os.path.join(ROOT, 'store-feed-new-arrivals', 'store-feed-help.md')
+URL = 'https://growboost.pl/store-feed-new-arrivals/'
 
 # Sekcja 8 (rozwiazywanie problemow) mieszka w #faq, 12 (Contact) w sekcji
 # Contact strony; reszta w #doc.

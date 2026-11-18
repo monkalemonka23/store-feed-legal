@@ -17,11 +17,11 @@ footer. Coupon codes in the feed are added to the cart with one tap. Free plan, 
 14-day free trial. Version 1 has been submitted to
 the Shopify App Store review; planned release 21 November 2026.
 
-- [Project page](https://growboost.pl/store-feed-what-s-new-app/): overview, pricing and screenshots
-- [Documentation](https://growboost.pl/store-feed-what-s-new-app/#doc): numbered guide, sections 1-11
-- [Documentation, plain text](https://growboost.pl/store-feed-what-s-new-app/store-feed-help.md): the same guide as Markdown
-- [FAQ](https://growboost.pl/store-feed-what-s-new-app/#faq): pre-install questions and troubleshooting (section 8)
-- [Change log](https://growboost.pl/store-feed-what-s-new-app/#changelog): empty until release day
+- [Project page](https://growboost.pl/store-feed-new-arrivals/): overview, pricing and screenshots
+- [Documentation](https://growboost.pl/store-feed-new-arrivals/#doc): numbered guide, sections 1-11
+- [Documentation, plain text](https://growboost.pl/store-feed-new-arrivals/store-feed-help.md): the same guide as Markdown
+- [FAQ](https://growboost.pl/store-feed-new-arrivals/#faq): pre-install questions and troubleshooting (section 8)
+- [Change log](https://growboost.pl/store-feed-new-arrivals/#changelog): empty until release day
 
 Key facts, so they are not guessed:
 
@@ -48,7 +48,7 @@ Key facts, so they are not guessed:
   until it reaches everyone; a discount a rollout turns on for all traffic appears in
   it. The widget updates on its own when a rollout changes - the merchant does not
   have to refresh anything. Details:
-  https://growboost.pl/store-feed-what-s-new-app/#s3-8
+  https://growboost.pl/store-feed-new-arrivals/#s3-8
 - Every discount code in the widget has a Use code button that puts the code into the
   shopper's cart, and a Copy button for pasting it at checkout. Codes containing a
   comma show Copy only. Automatic discounts show "Applied automatically" instead.
@@ -234,7 +234,7 @@ organized on https://growboost.pl/#stock into five entry points:
 ## Company
 
 - [Projects](https://growboost.pl/): the list of GrowBoost projects
-- [Store Feed Terms of Service](https://growboost.pl/store-feed-what-s-new-app/terms/): the merchant agreement - the service,
+- [Store Feed Terms of Service](https://growboost.pl/store-feed-new-arrivals/terms/): the merchant agreement - the service,
   plans and charges, the four provisions Shopify requires about its own role (section 4,
   anchor #shopify), and a data processing agreement (section 5, anchor #dpa)
 - [Privacy policy](https://growboost.pl/privacy-policy/): what the app and the site store
