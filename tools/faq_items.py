@@ -50,7 +50,7 @@ FAQ = [
   "Yes. Every copy shows the same list and the same settings. We recommend 1-2 widgets per page, 3 at most: a header or footer widget counts on every page, and each extra copy repeats the same entries and makes the page slower to load (<a href=\"#s2-4\">2.4</a>)."),
 
  ("q11", "Can shoppers apply a code without typing it?",
-  "Yes. Every discount code in the widget has a <strong>Use code</strong> button that adds it to the cart. The <strong>Copy</strong> button stays for shoppers who prefer to paste the code at checkout (<a href=\"#s3-3-3\">3.3.3</a>)."),
+  "Yes. Every discount code in the widget - the coupon code your shoppers would otherwise type at checkout - has a <strong>Use code</strong> button that adds it to the cart. The <strong>Copy</strong> button stays for shoppers who prefer to paste the code at checkout (<a href=\"#s3-3-3\">3.3.3</a>)."),
 
  ("q8", "Does Store Feed work with Shopify discount rollouts?",
   "Yes. Store Feed only promotes discounts that every shopper gets. A discount that a rollout gives to only part of your traffic stays hidden until it reaches everyone. A discount that a rollout turns on for all traffic appears in the widget, and the widget updates automatically when a rollout changes (<a href=\"#s3-8\">3.8</a>)."),
