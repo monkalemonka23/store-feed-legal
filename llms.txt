@@ -9,11 +9,11 @@ One project is published so far. Every project has a single page that carries it
 overview, screenshots, documentation, FAQ and change log under one URL, with the
 sections addressable by fragment (#doc, #faq, #changelog).
 
-## Store Feed - What's New Web Widget
+## Store Feed: New Arrivals
 
-A chronological "what's new" feed for a Shopify storefront: new products, blog
-articles and active promotions in one widget, on any page, in the header or in
-the footer. Free plan, or Starter at $7.99 a month or $79.99 a year (17% off), with a
+A feed of new arrivals, blog articles, deals and promotions for a Shopify
+storefront, newest first, in one widget on any page, in the header or in the
+footer. Coupon codes in the feed are added to the cart with one tap. Free plan, or Starter at $7.99 a month or $79.99 a year (17% off), with a
 14-day free trial. Version 1 has been submitted to
 the Shopify App Store review; planned release 21 November 2026.
 

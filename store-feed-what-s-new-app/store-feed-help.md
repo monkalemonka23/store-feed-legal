@@ -1041,6 +1041,20 @@ Hebrew, Persian, Urdu). The widget may work there, but some parts may sit
 on the wrong side. If you run your store in one of these languages and see
 a problem, please write to us (12) with the page address and a screenshot.
 
+### 11.5 Which stores use Store Feed? Can I see one?
+
+We don't tell anyone which stores use Store Feed, and that includes you.
+A store's apps are its own business: we don't publish the list, we don't
+share it with other merchants, and nobody can learn from us that your store
+uses Store Feed. The same protection that stops us naming other stores is
+the one that stops others learning about yours.
+
+What we can show you is our own demo store, where the widget runs with real
+entries. Write to us (12) and we will send you the link.
+
+Store Feed also never reads anything outside the store it is installed on,
+so it can't see your other stores or anyone else's (1.4, 9.1).
+
 ---
 
 ## 12. Contact
