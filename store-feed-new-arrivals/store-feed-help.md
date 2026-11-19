@@ -1,6 +1,6 @@
 # Store Feed: Help Center
 
-Store Feed shows a "What's new" list on your store: new products, blog posts
+Store Feed shows a list of what is new on your store: new products, blog posts
 and active promotions, collected automatically. This guide explains how to set
 it up and what to do when something doesn't look right.
 
@@ -502,8 +502,21 @@ voice. Keep it to 2-4 words, so it fits on one line on a phone.
 
 - General: "What's New", "New in store", "Fresh this week", "Just in"
 - Deals first: "New & on sale", "Latest drops and deals"
-- With an emoji: "✨ What's New", "🔥 Hot right now", "🎁 New for you"
+- With an emoji: "✨ New in store", "🔥 Hot right now", "🎁 New for you"
 - Seasonal: "New for autumn", "Holiday picks", "Back to school"
+
+**Emoji to copy.** Put one at the start, then a space, then the words. The
+widget gives the emoji its own spot, so the title and the date under it stay
+lined up.
+
+- New and fresh: ✨ 🆕 🌟 🌸
+- Hot and fast: 🔥 ⚡ 💥 🚀
+- Shopping: 🛍️ 📦 🏷️ 🛒
+- Treats and rewards: 🎁 ⭐ 💎 👑
+- Christmas: 🎄 🎅 ❄️ 🔔 ⛄ 🎀 🧦 🥂
+- Other seasons: 🍂 ☀️ 🍀 🌈
+
+One emoji is enough: a second one eats the space your words need on a phone.
 
 ### 4.2 Accent color (Starter)
 
