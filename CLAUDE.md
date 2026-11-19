@@ -68,10 +68,13 @@ Lokalnie `python3 -m http.server 8899` w katalogu repo, potem Chromium
   siedza w `data-u`/`data-d` zakodowane ROT13, sklada je
   `assets/mail.js`. Dotyczy takze `.js`, `.md`, `llms.txt` i danych
   strukturalnych.
-- Ceny i rabaty **przeliczac**, nie przepisywac. Stan na 2026-10-01:
-  Starter $7.99/mies. lub $79.90/rok = rowno dziesiec rat, czyli dwa
-  miesiace gratis, 17%. Zmiana ktorejkolwiek liczby uniewaznia oba
-  sformulowania — sprawdzic rachunek od nowa.
+- Ceny i rabaty **przeliczac**, nie przepisywac. Stan na 2026-11-19
+  (zgodny z `docs/help/store-feed-help.md` we wtyczce): Starter
+  $7.99/mies. lub $79.99/rok. Dwanascie rat to $95.88, rocznie oszczedza
+  $15.89, czyli 16,57%, na stronie zaokraglone do 17%. To NIE jest
+  "rowno dziesiec rat" ani "dwa miesiace gratis" (79.99 / 7.99 = 10,01):
+  tak bylo przy dawnym $79.90, nie uzywac tych sformulowan. Zmiana
+  ktorejkolwiek liczby uniewaznia rachunek: przeliczyc od nowa.
 - Cena, ktora sprzedawca realnie placi, ustawiana jest w Shopify
   Partner Dashboard (managed pricing). W kodzie aplikacji sa tylko
   napisy informacyjne.
