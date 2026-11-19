@@ -746,15 +746,15 @@ What the numbers in the app mean:
   means 5 clicks for every 100 views.
 - **By device**: the same numbers for desktop, tablet and mobile, for the
   last 7, 30 or 90 days.
-- **By widget setup**: each copy of the widget on its own. **Widget title**
-  is the title it showed, **Started** says whether it started open or
-  folded to its title bar, **Entries** how many entries it showed,
-  **Days shown** on how many days it had at least one view or click in the
-  chosen period, and **Dates** the first and last of those days. Change
-  the title or the number of entries and compare the CTR before and after.
-  **Active** marks the setup your store shows now (from the last
-  **Refresh now** or nightly update). Click a column name to sort the
-  table; it shows 10 setups per page.
+- **By widget setup**: each copy of the widget on its own. The first
+  column shows the title it showed and, under it, whether it started open
+  or folded to its title bar, how many entries it showed, on how many days
+  it had at least one view or click in the chosen period, and the first
+  and last of those days. Change the title or the number of entries and
+  compare the CTR before and after. **Active** marks the setup your store
+  shows now (from the last **Refresh now** or nightly update). Click
+  **Widget setup**, **Views**, **Clicks** or **CTR** to sort the table; it
+  shows 10 setups per page.
 - **Export CSV**: next to the period buttons, the day-by-day numbers for the
   chosen period (views and clicks, also by device); next to **By widget
   setup**, all setups of that period. The files open in Excel, Numbers and
