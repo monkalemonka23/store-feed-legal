@@ -466,7 +466,12 @@ the widget stays hidden. You can choose a longer window (30 days) in
 Starter only. On the Free plan, all new products can appear.
 
 - **Collections**: show only products from the chosen collections.
-- **Blogs**: show only posts from the chosen blogs.
+- **Blogs**: show only posts from the chosen blogs. A Shopify store can
+  have more than one blog, each with its own posts: a new store starts with
+  a single blog called News, and you can add others in your Shopify admin,
+  under Online Store. If you keep, for example, recipes in one blog and
+  shop news in another, tick only the one you want in the widget. Leave the
+  field empty and posts from every blog can appear.
 - **Exclude products with tag**: products with any of these tags never
   appear (useful for items that are always on sale and are not really "new").
 
@@ -750,7 +755,8 @@ What the numbers in the app mean:
   column shows the title it showed and, under it, whether it started open
   or folded to its title bar, how many entries it showed, on how many days
   it had at least one view or click in the chosen period, and the first
-  and last of those days. Change the title or the number of entries and
+  and last of those days, for example "Open · 24 e · 8 days · Nov 2 -
+  Nov 19" (e: entries). Change the title or the number of entries and
   compare the CTR before and after. **Active** marks the setup your store
   shows now (from the last **Refresh now** or nightly update). Click
   **Widget setup**, **Views**, **Clicks** or **CTR** to sort the table; it
