@@ -3,42 +3,57 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://growboost.pl/</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-23</lastmod>
     <image:image>
-      <image:loc>https://growboost.pl/assets/shots/widget-light-themes-1200.jpg</image:loc>
+      <image:loc>https://growboost.pl/assets/shots/feed-starter-1200.jpg</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://growboost.pl/store-feed-new-arrivals/</loc>
     <lastmod>2026-11-23</lastmod>
     <image:image>
-      <image:loc>https://growboost.pl/assets/shots/widget-light-themes-1200.jpg</image:loc>
+      <image:loc>https://growboost.pl/assets/shots/feed-starter-1200.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://growboost.pl/assets/shots/widget-dark-themes-1200.jpg</image:loc>
+      <image:loc>https://growboost.pl/assets/shots/feed-free-1200.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://growboost.pl/assets/shots/widget-states-1200.jpg</image:loc>
+      <image:loc>https://growboost.pl/assets/shots/widget-theme-1200.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://growboost.pl/assets/shots/widget-promotions-1200.jpg</image:loc>
+      <image:loc>https://growboost.pl/assets/shots/widget-resize-1200.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://growboost.pl/assets/shots/panel-content-1200.jpg</image:loc>
+      <image:loc>https://growboost.pl/assets/shots/widget-collapsed-1200.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://growboost.pl/assets/shots/panel-appearance-1200.jpg</image:loc>
+      <image:loc>https://growboost.pl/assets/shots/promotion-rules-1200.jpg</image:loc>
     </image:image>
     <image:image>
-      <image:loc>https://growboost.pl/assets/shots/panel-analytics-1200.jpg</image:loc>
+      <image:loc>https://growboost.pl/assets/shots/panel-setup-1200.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://growboost.pl/assets/shots/panel-sources-1200.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://growboost.pl/assets/shots/panel-look-1200.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://growboost.pl/assets/shots/stats-overview-1200.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://growboost.pl/assets/shots/stats-setups-1200.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://growboost.pl/assets/shots/panel-chat-1200.jpg</image:loc>
     </image:image>
   </url>
   <url>
     <loc>https://growboost.pl/store-feed-new-arrivals/terms/</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-23</lastmod>
   </url>
   <url>
     <loc>https://growboost.pl/privacy-policy/</loc>
-    <lastmod>2026-11-19</lastmod>
+    <lastmod>2026-11-23</lastmod>
   </url>
 </urlset>
