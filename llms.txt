@@ -15,7 +15,7 @@ A feed of new arrivals, blog articles, deals and promotions for a Shopify
 storefront, newest first, in one widget on any page, in the header or in the
 footer. Coupon codes in the feed are added to the cart with one tap. Free plan, or Starter at $7.99 a month or $79.99 a year (17% off), with a
 14-day free trial. Version 1 has been submitted to
-the Shopify App Store review; planned release 21 November 2026.
+the Shopify App Store review; planned release 30 November 2026.
 
 - [Project page](https://growboost.pl/store-feed-new-arrivals/): overview, pricing and screenshots
 - [Documentation](https://growboost.pl/store-feed-new-arrivals/#doc): numbered guide, sections 1-11
