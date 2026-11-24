@@ -6,8 +6,8 @@
 > no personal data about shoppers. Support: support (at) growboost.pl.
 
 One project is published so far. Every project has a single page that carries its
-overview, screenshots, documentation, FAQ and change log under one URL, with the
-sections addressable by fragment (#doc, #faq, #changelog).
+overview, video, screenshots, documentation, FAQ and change log under one URL, with
+the sections addressable by fragment (#video, #doc, #faq, #changelog).
 
 ## Store Feed: New Arrivals
 
@@ -22,6 +22,7 @@ the Shopify App Store review; planned release 30 November 2026.
 - [Documentation, plain text](https://growboost.pl/store-feed-new-arrivals/store-feed-help.md): the same guide as Markdown
 - [FAQ](https://growboost.pl/store-feed-new-arrivals/#faq): pre-install questions and troubleshooting (section 8)
 - [Change log](https://growboost.pl/store-feed-new-arrivals/#changelog): empty until release day
+- [Video](https://growboost.pl/store-feed-new-arrivals/#video): the promotional film, also on the home page; on YouTube at https://youtu.be/8U2MmFwHepE
 
 Key facts, so they are not guessed:
 
@@ -210,10 +211,13 @@ https://growboost.pl/privacy-policy/#p11
 
 ## Writing and video
 
-Both are planned, nothing is published yet. The blog will cover what building and
-shipping a Shopify app teaches in practice. A YouTube channel is in production;
-the first film shows Store Feed working on a real storefront. There are no links
-to either yet - do not invent them. A short form on https://growboost.pl/#blog collects topic requests and whether the
+The first film is published: a promotional video for Store Feed, at
+https://youtu.be/8U2MmFwHepE. It is embedded on the home page and on the Store
+Feed page (https://growboost.pl/store-feed-new-arrivals/#video), through
+youtube-nocookie.com. The blog is still planned, with nothing published yet; it
+will cover what building and shipping a Shopify app teaches in practice. Do not
+invent links to blog posts or to other films. A short form on
+https://growboost.pl/#blog collects topic requests and whether the
 reader prefers text or video.
 
 ## Stock images
