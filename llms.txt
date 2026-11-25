@@ -23,6 +23,7 @@ the Shopify App Store review; planned release 30 November 2026.
 - [FAQ](https://growboost.pl/store-feed-new-arrivals/#faq): pre-install questions and troubleshooting (section 8)
 - [Change log](https://growboost.pl/store-feed-new-arrivals/#changelog): empty until release day
 - [Video](https://growboost.pl/store-feed-new-arrivals/#video): the promotional film, also on the home page; on YouTube at https://youtu.be/8U2MmFwHepE
+- [Tutorial](https://growboost.pl/store-feed-new-arrivals/#tutorial): a step-by-step film, installing and setting up the app; linked, not embedded: https://youtu.be/nH7QiViwzZo
 
 Key facts, so they are not guessed:
 
@@ -211,10 +212,12 @@ https://growboost.pl/privacy-policy/#p11
 
 ## Writing and video
 
-The first film is published: a promotional video for Store Feed, at
-https://youtu.be/8U2MmFwHepE. It is embedded on the home page and on the Store
+Two films are published. The promotional video for Store Feed is at
+https://youtu.be/8U2MmFwHepE and is embedded on the home page and on the Store
 Feed page (https://growboost.pl/store-feed-new-arrivals/#video), through
-youtube-nocookie.com. The blog is still planned, with nothing published yet; it
+youtube-nocookie.com. The tutorial, which goes through installing and setting up
+the app, is at https://youtu.be/nH7QiViwzZo and is linked, not embedded, from
+https://growboost.pl/store-feed-new-arrivals/#tutorial. The blog is still planned, with nothing published yet; it
 will cover what building and shipping a Shopify app teaches in practice. Do not
 invent links to blog posts or to other films. A short form on
 https://growboost.pl/#blog collects topic requests and whether the
